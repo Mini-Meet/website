@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+
+.card {
+  width: 56% !important;
+}
+
+.review-cards {
+  .slick-dots li.slick-active button:before  {
+    color: $primary;
+    opacity: 1;
+  }
+  .slick-dots li button:before {
+  color: $primary;
+  opacity: 0.4;
+  }
+}

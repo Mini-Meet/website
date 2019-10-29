@@ -1,5 +1,5 @@
 import React from 'react'
-import Colour from '../../images/Colour.png'
+import Colour from '../../images/ColourWhite.png'
 
 import './Footer.scss'
 
@@ -7,7 +7,7 @@ import './Footer.scss'
 function  Footer() {
   return (
     <div className='footer'>
-      <img src={Colour} className='logo' />
+      <img src={Colour} className='logo-white' />
         <ul className='footer-link-list'>
           <li><a href='#'>HOME</a></li>
           <li><a href='#'>ABOUT</a></li>
