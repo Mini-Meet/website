@@ -20,10 +20,6 @@ class ExamplePage extends Component {
         typed: false,
     };
   }
-  clicked = () => {
-   console.log('clicked')
-  this.setState({ typed: false})
-  }
 
   whenTyped = (state) => {
     this.setState({ typed: state })
@@ -53,28 +49,27 @@ render() {
       slidesToShow: 1,
       slidesToScroll: 1,
       appendDots: (dots) => {
-        return <MagicSliderDots dots={dots} numDotsToShow={4} dotWidth={30} />
+        return <MagicSliderDots dots={dots} numDotsToShow={3} dotWidth={20} />
       }
     };
 
     return (
-          <div>
+          <div className='example-page-div'>
             <div className='phone'>
               <div className='phone-text'>
-            {questionsAndAnswers.map((qAndA) => {
-              return (
-              <Slider {...settings}>
-                <AnimatedTyping
-                      key={qAndA.question}
-                      question={qAndA.question}
-                      answer={ qAndA.answer}
-                      whenTyped={this.whenTyped}
-                      typed={this.state.typed}
-                    />
-              </Slider>)
-               })}
+               <Slider {...settings}>
+                {questionsAndAnswers.map((qAndA) => {
+                  return (
+                    <AnimatedTyping
+                          key={qAndA.question}
+                          question={qAndA.question}
+                          answer={ qAndA.answer}
+                          whenTyped={this.whenTyped}
+                          typed={this.state.typed}
+                        />)
+                   })}
+               </Slider>
                </div>
-              <span className={typed} onClick={this.clicked}> {element}</span>
             </div>
             <ol>
               <li>Morning & evening questions to frame & reflect on your day</li>

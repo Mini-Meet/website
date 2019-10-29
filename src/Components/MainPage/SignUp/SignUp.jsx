@@ -11,12 +11,9 @@ class SignUp extends Component {
 render() {
     return (
       <div>
-        <h1>Optimize your day.</h1>
-        <h1>Optimize you.</h1>
-        <span>
-           Habitualise defining, reflecting upon & iterating your goals
-           with our guide to journaling
-        </span>
+        <h1>{this.props.firstH1}</h1>
+        <h1>{this.props.secondH1}</h1>
+        <span>{this.props.span}</span>
         <MailchimpSubscribe
            url={url}
            render={({ subscribe, status, message }) => (

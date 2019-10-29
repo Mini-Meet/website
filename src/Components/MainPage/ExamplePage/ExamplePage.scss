@@ -1,5 +1,12 @@
 @import '../../../styles/variables.scss';
 
+.example-page-div {
+  background-color: $smoke-white;
+  display: flex;
+  flex-direction: column;
+  padding: 36px;
+}
+
 .phone {
   display: flex;
   flex-direction: column;
@@ -8,6 +15,9 @@
   height: 404px;
   background: $dark;
   border-radius: 25px;
+  border: white 15px solid;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+
   p {
     color: $white;
     opacity: 0.8;
@@ -17,6 +27,38 @@
     align-self: flex-end;
     color: $white;
    }
+}
+.slick-slider {
+  top: 66px;
+
+}
+
+.slick-prev:before {
+  content: none;
+  display: none;
+}
+
+.slick-next {
+    position: relative;
+    top: 23px;
+    right: -160px;
+    transform: rotate(85deg);
+  }
+
+.slick-dots {
+  position: relative;
+  bottom: 280px;
+  left: 49px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $white;
+  opacity: 1;
+}
+
+ .slick-dots li button:before {
+  color: $white;
+  opacity: 0.4;
 }
 
 .phone-text {

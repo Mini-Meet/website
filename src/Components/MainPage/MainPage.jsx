@@ -8,7 +8,11 @@ render() {
     return (
       <div>
         <Navbar />
-        <SignUp />
+        <SignUp
+          firstH1={'Optimize your day.'}
+          secondH1={'Optimize you.'}
+          span={'Habitualise defining, reflecting upon & iterating your goals with our guide to journaling'}
+        />
         <ExamplePage />
       </div>
       )
