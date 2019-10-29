@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+
+.sign-up-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+  }
+  input {
+    background-color: $white;
+    height: 42px;
+    border: 1px solid #D3D3D3;
+    box-sizing: border-box;
+  }
+  button {
+    margin-top: 5px;
+    height: 42px;
+    background-color: $primary;
+    color: $white;
+  }
+}

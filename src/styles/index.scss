@@ -1,0 +1,16 @@
+@import 'variables.scss';
+
+
+h1, p, li, span {
+  color: $dark;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 11px;
+  letter-spacing: 2.76923px;
+}
+
+h1 {
+  font-size: 20px;
+}
