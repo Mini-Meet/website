@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Navbar from '../Navbar/Navbar.jsx'
 import SignUp from './SignUp/SignUp.jsx';
 import ExamplePage from './ExamplePage/ExamplePage.jsx';
 
@@ -7,7 +6,6 @@ class MainPage extends Component {
 render() {
     return (
       <div>
-        <Navbar />
         <SignUp
           firstH1={'Optimize your day.'}
           secondH1={'Optimize you.'}

@@ -6,14 +6,14 @@ import './Footer.scss'
 
 function  Footer() {
   return (
-    <div>
+    <div className='footer'>
       <img src={Colour} className='logo' />
-        <ul>
-          <li>HOME</li>
-          <li>ABOUT</li>
-          <li>BLOG</li>
-          <li>PRIVACY POLICY</li>
-          <li>TERMS & CONDITIONS</li>
+        <ul className='footer-link-list'>
+          <li><a href='#'>HOME</a></li>
+          <li><a href='#'>ABOUT</a></li>
+          <li><a href='#'>BLOG</a></li>
+          <li><a href='#'>PRIVACY POLICY</a></li>
+          <li><a href='#'>TERMS & CONDITIONS</a></li>
         </ul>
     </div>
   );

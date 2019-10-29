@@ -1,7 +1,7 @@
 @import '../../../styles/variables.scss';
 
 .example-page-div {
-  background-color: $smoke-white;
+  background-color: $light-gray;
   display: flex;
   flex-direction: column;
   padding: 36px;
@@ -19,8 +19,7 @@
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
 
   p {
-    color: $white;
-    opacity: 0.8;
+    color: $smoke-white;
   }
   span {
     margin-right: 20px;
@@ -32,6 +31,10 @@
   top: 66px;
 
 }
+.slick-vertical .slick-slide {
+  height: 143px;
+  transform: rotate(-0.5deg);
+  }
 
 .slick-prev:before {
   content: none;
@@ -43,6 +46,7 @@
     top: 23px;
     right: -160px;
     transform: rotate(85deg);
+    cursor: pointer;
   }
 
 .slick-dots {
@@ -65,19 +69,3 @@
   margin-left: 22px;
 }
 
-.svg-inline--fa.fa-w-14 {
-  align-self: flex-end;
-  width: 1.3em;
-}
-
-.black, .purple {
-  cursor: pointer;
-}
-
-.purple {
-  width: 17px;
-  height: 19px;
-  padding: 0px 0px 4px 4px;
-  border-radius: 2px;
-  background: $logo-purple-dark;
-}

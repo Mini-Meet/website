@@ -14,19 +14,7 @@ const element = <FontAwesomeIcon icon={faChevronDown} />
 
 
 class ExamplePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        typed: false,
-    };
-  }
-
-  whenTyped = (state) => {
-    this.setState({ typed: state })
-  }
-
 render() {
-    let typed = this.state.typed ? 'purple' : 'black'
     const questionsAndAnswers = [
       {
         question: 'How are you today ?',
@@ -46,6 +34,7 @@ render() {
       arrows: true,
       infinite: false,
       speed: 500,
+      vertical: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       appendDots: (dots) => {
@@ -64,8 +53,6 @@ render() {
                           key={qAndA.question}
                           question={qAndA.question}
                           answer={ qAndA.answer}
-                          whenTyped={this.whenTyped}
-                          typed={this.state.typed}
                         />)
                    })}
                </Slider>

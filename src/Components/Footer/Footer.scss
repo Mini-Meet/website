@@ -1,1 +1,24 @@
-Footer.scss
+@import '../../styles/variables.scss';
+
+.footer {
+  background-color: $dark;
+  padding-bottom: 28px;
+
+  .logo {
+    display: block;
+    text-align: right;
+  }
+}
+
+.footer-link-list {
+  list-style: none;
+  text-align: left;
+  a {
+    text-decoration: none;
+    color: $smoke-white;
+    cursor: pointer;
+      &:hover {
+      color:$white;
+    }
+  }
+}

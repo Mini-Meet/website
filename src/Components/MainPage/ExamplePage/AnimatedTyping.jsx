@@ -2,16 +2,6 @@ import React, { Component } from 'react';
 import Typing from 'react-typing-animation';
 
 class AnimatedTyping extends Component {
-   constructor(props) {
-    super(props);
-    this.state = {
-      newAnswer: null
-    }
-  }
-
-  AfterType = () => {
-    this.props.whenTyped(true)
-  }
 
 render() {
 
