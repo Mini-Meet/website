@@ -13,12 +13,19 @@
 .footer-link-list {
   list-style: none;
   text-align: left;
+
+  .active {
+    color: $white;
+  }
+
   a {
     text-decoration: none;
     color: $smoke-white;
     cursor: pointer;
       &:hover {
-      color:$white;
+      color: $white;
     }
   }
 }
+
+
