@@ -6,12 +6,24 @@
 }
 
 .review-cards {
+  display: flex;
+  flex-direction: column;
+  text-align: -webkit-center;
+
+  .slick-list {
+    height: 300px;
+  }
+  .slick-dots {
+    bottom: 83px;
+    left: 0px;
+  }
+
   .slick-dots li.slick-active button:before  {
     color: $primary;
     opacity: 1;
   }
   .slick-dots li button:before {
-  color: $primary;
+  color: $dark;
   opacity: 0.4;
   }
 }

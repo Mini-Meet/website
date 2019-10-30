@@ -1,20 +1,45 @@
 import React, { Component } from "react";
 
+import Card from './Card/Card.jsx'
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import MagicSliderDots from 'react-magic-slider-dots';
 
-import Entrepreneur from '../../images/Entrepreneur.png';
-import Entrepreneur1 from '../../images/Entrepreneur.png';
-import Entrepreneur2 from '../../images/Entrepreneur.png';
+import ExamplePicture from '../../images/ExamplePicture.png';
 
 import './Reviews.scss'
 
 
 class Reviews extends Component {
 render() {
-    const reviewCards = [Entrepreneur, Entrepreneur1, Entrepreneur2]
+    const reviewCards = [
+      {
+        photo: ExamplePicture,
+        name: 'Tim Ferris',
+        title: 'Author, entrepreneur & philosopher',
+        comment:'"I ask myself these questions every morning to help me frame my day."'
+
+      },
+
+      {
+        photo: ExamplePicture,
+        name: 'John Ferris',
+        title: 'Author, entrepreneur & philosopher',
+        comment:'"I ask myself these questions every morning to help me frame my day."'
+
+      },
+
+      {
+        photo: ExamplePicture,
+        name: 'Larry Ferris',
+        title: 'Author, entrepreneur & philosopher',
+        comment:'"I ask myself these questions every morning to help me frame my day."'
+
+      }
+
+    ]
     const settings = {
       dots: true,
       arrows: false,
@@ -22,20 +47,24 @@ render() {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      cssEase: 'linear',
       autoplay: true,
       autoplaySpeed: 5000,
-      appendDots: (dots) => {
-        return <MagicSliderDots dots={dots} numDotsToShow={3} dotWidth={20} />
-      }
+
     };
 
     return (
         <div className='review-cards'>
          <Slider {...settings}>
-          {reviewCards.map((card) => {
+          {reviewCards.map((person) => {
+            console.log(person)
             return (
-              <img src={card}  className='card'/>)
+              <Card
+                className='card'
+                photo={person.photo}
+                name={person.name}
+                title={person.title}
+                comment={person.comment}
+              />)
              })}
          </Slider>
          </div>
