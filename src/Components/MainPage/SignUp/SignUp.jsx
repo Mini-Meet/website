@@ -6,14 +6,12 @@ import'./SignUp.scss'
 const url = "https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04";
 
 const CustomForm = ({ status, message, onValidated }) => {
-  let email, name;
+  let email;
   const submit = () =>
     email &&
-    name &&
     email.value.indexOf("@") > -1 &&
     onValidated({
       EMAIL: email.value,
-      NAME: name.value
     });
 
   return (
