@@ -5,7 +5,45 @@ import'./SignUp.scss'
 
 const url = "https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04";
 
-const SimpleForm = () => <MailchimpSubscribe url={url}/>
+const CustomForm = ({ status, message, onValidated }) => {
+  let email, name;
+  const submit = () =>
+    email &&
+    name &&
+    email.value.indexOf("@") > -1 &&
+    onValidated({
+      EMAIL: email.value,
+      NAME: name.value
+    });
+
+  return (
+    <div
+    >
+      {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+      {status === "error" && (
+        <div
+          style={{ color: "red" }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      {status === "success" && (
+        <div
+          style={{ color: "green" }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      <input
+        ref={node => (email = node)}
+        type="email"
+        placeholder="Your email"
+      />
+      <br />
+      <button  onClick={submit}>
+       Start Optmizing
+      </button>
+    </div>
+  );
+};
 
 class SignUp extends Component {
 render() {
@@ -18,7 +56,11 @@ render() {
            url={url}
            render={({ subscribe, status, message }) => (
              <div className='sign-up-form'>
-               <SimpleForm onSubmitted={formData => subscribe(formData)} button={'Start Optmizing'}/>
+               <CustomForm
+                  status={status}
+                  message={message}
+                  onValidated={formData => subscribe(formData)}
+                />
              </div>
            )}
          />

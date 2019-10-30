@@ -56,10 +56,10 @@ render() {
         <div className='review-cards'>
          <Slider {...settings}>
           {reviewCards.map((person) => {
-            console.log(person)
             return (
               <Card
                 className='card'
+                key={person.name}
                 photo={person.photo}
                 name={person.name}
                 title={person.title}
