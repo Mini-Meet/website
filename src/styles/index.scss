@@ -58,7 +58,7 @@ input:focus {
   }
 
 
-button {
+.btn-primary {
   font-size: 14px;
   text-transform: uppercase;
   align-items: center;
@@ -111,7 +111,7 @@ button:focus {
 
 @media only screen and (max-width: 420px) {
   h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   h2 {

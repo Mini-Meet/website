@@ -1,17 +1,14 @@
 @import '../../../styles/variables.scss';
 
-.example-page-div {
+.example-page-container {
   background-color: $light-grey;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 36px;
-  ol {
-    width: 265px;
-  }
 }
 
-.phone {
+.phone-frame {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -22,15 +19,13 @@
   border: white 15px solid;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
 
-  p {
-    color: $smoke-white;
-  }
-  span {
-    margin-right: 20px;
-    align-self: flex-end;
-    color: $white;
-   }
 }
+
+
+
+// Slick Slider
+
+
 .slick-slider {
   top: 66px;
 
@@ -41,22 +36,31 @@
   }
 
 .slick-prev:before {
+  display: none;
+}
+
+.slick-prev:before {
   content: none;
   display: none;
 }
 
 .slick-next {
     position: relative;
-    top: 23px;
-    right: -160px;
-    transform: rotate(85deg);
+    top: 86px;
+    right: -192px;
+    transform: rotate(90deg);
     cursor: pointer;
+  }
+
+  .slick-next:hover {
+    transform: rotate(90deg);
   }
 
 .slick-dots {
   position: relative;
-  bottom: 280px;
-  left: 49px;
+  bottom: 310px;
+  left: 72px;
+  transform: scale(0.7);
 }
 
 .slick-dots li.slick-active button:before {
@@ -69,7 +73,19 @@
   opacity: 0.4;
 }
 
-.phone-text {
-  margin-left: 22px;
+.phone-frame-text {
+  margin-left: 0px;
 }
 
+
+// Feature list
+
+.example-page-list {
+  padding: 32px;
+  max-width: 420px;
+}
+
+.example-page-list-item {
+    text-align: left;
+    padding: 8px 0;
+}

@@ -38,7 +38,10 @@ const CustomForm = ({ status, message, onValidated }) => {
         placeholder="Your email"
       />
       <br />
-      <button  onClick={submit}>
+      <button
+        className='btn-primary'
+        onClick={submit}
+      >
        Start Optimizing
       </button>
     </div>

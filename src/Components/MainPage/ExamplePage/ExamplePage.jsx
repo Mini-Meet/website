@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AnimatedTyping from './AnimatedTyping'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown} from '@fortawesome/free-solid-svg-icons'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -10,30 +10,30 @@ import MagicSliderDots from 'react-magic-slider-dots';
 
 import './ExamplePage.scss'
 
-const element = <FontAwesomeIcon icon={faChevronDown} />
+const element = <FontAwesomeIcon icon={faCaretDown} />
 
 
 class ExamplePage extends Component {
 render() {
     const questionsAndAnswers = [
       {
-        question: 'How are you today ?',
-        answer: 'Good, thanks'
+        question: 'What is the most important thing you could achieve today?',
+        answer: 'I need to focus on the one thing that will get me closer to achieving my goals.'
       },
       {
-        question: 'What have you done today ?',
-        answer: 'Well, today I have bla, bla,bla,blaaa!'
+        question: 'Why is this one thing so important?',
+        answer: 'I could focus on other things on my to-do list, but maybe they don`t matter'
       },
       {
-        question: 'What are you doing to improve your day?',
-        answer:'I am working on this project'
+        question: 'How will you make time for it?',
+        answer:'Blocking out the first 90 minutes of my morning.'
       }
      ]
     const settings = {
       dots: true,
       arrows: true,
       infinite: false,
-      speed: 500,
+      speed: 1000,
       vertical: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -43,9 +43,9 @@ render() {
     };
 
     return (
-          <div className='example-page-div'>
-            <div className='phone'>
-              <div className='phone-text'>
+          <div className='example-page-container'>
+            <div className='phone-frame'>
+              <div className='phone-frame-text'>
                <Slider {...settings}>
                 {questionsAndAnswers.map((qAndA) => {
                   return (
@@ -58,12 +58,12 @@ render() {
                </Slider>
                </div>
             </div>
-            <ol>
-              <li>Morning & evening questions to frame & reflect on your day</li>
+            <ol className='example-page-list'>
+              <li className='example-page-list-item'>Morning & evening questions to frame & reflect on your day</li>
 
-              <li>Customise your questions</li>
+              <li className='example-page-list-item'>Customise your questions</li>
 
-              <li> Review your day, week, month & even year</li>
+              <li className='example-page-list-item'> Review your day, week, month & even year</li>
             </ol>
           </div>
           )
