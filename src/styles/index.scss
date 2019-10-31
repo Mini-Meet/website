@@ -1,16 +1,130 @@
-@import 'variables.scss';
+@import 'variables';
 
-
-h1, p, li, span {
+h1, h2, h3, h4, p, li, input, button {
   color: $dark;
-  font-family: Space Mono;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 30px;
-  font-size: 11px;
-  letter-spacing: 2.76923px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 56px;
+  font-weight: bold;
+  margin: 0 16px;
+}
+
+h2 {
+  font-size: 46px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+p, li {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+p.small {
+  font-size: 14px;
+}
+
+input {
+
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  flex-direction: column;
+  border: $dark 1px;
+  background-color: $light-grey;
+  color: $dark;
+  padding: 12px 40px 12px 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+input:focus {
+    caret-color: $primary;
+    opacity: 1;
+    outline: $primary none 2px;
+  }
+
+
+button {
+  font-size: 14px;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 3px;
+  cursor: pointer;
+
+  padding: 8px 32px;
+  height: 42px;
+  background-color: $primary;
+  border: none;
+  color: $white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px transparentize($primary, .7);
+
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 16px transparentize($primary, .8);
+}
+
+button:focus {
+    outline: $primary none 2px;
+  }
+
+
+
+/// ------ Responsive ----- ///
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+  }
 }
