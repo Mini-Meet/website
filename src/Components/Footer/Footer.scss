@@ -6,11 +6,11 @@
 
 }
 
-.logo-white {
+.logoWhite {
   text-align: right;
 }
 
-.footer-link-list {
+.footerLinkList {
   list-style: none;
   text-align: left;
 
@@ -19,9 +19,9 @@
   }
 
   a {
-    text-decoration: none;
-    color: $smoke-white;
     cursor: pointer;
+    color: $smoke-white;
+    text-decoration: none;
       &:hover {
       color: $white;
     }

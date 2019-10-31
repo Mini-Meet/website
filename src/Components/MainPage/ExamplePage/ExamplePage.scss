@@ -1,10 +1,10 @@
 @import '../../../styles/variables.scss';
 
-.example-page-div {
+.examplePageDiv {
+  align-items: center;
   background-color: $light-gray;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 36px;
   ol {
     width: 265px;
@@ -12,23 +12,23 @@
 }
 
 .phone {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 224px;
-  height: 404px;
   background: $dark;
   border-radius: 25px;
   border: white 15px solid;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 404px;
+  justify-content: space-around;
+  width: 224px;
 
   p {
     color: $smoke-white;
   }
   span {
-    margin-right: 20px;
     align-self: flex-end;
     color: $white;
+    margin-right: 20px;
    }
 }
 .slick-slider {
@@ -46,16 +46,16 @@
 }
 
 .slick-next {
+    cursor: pointer;
     position: relative;
-    top: 23px;
     right: -160px;
     transform: rotate(85deg);
-    cursor: pointer;
+    top: 23px;
   }
 
 .slick-dots {
-  position: relative;
   bottom: 280px;
+  position: relative;
   left: 49px;
 }
 

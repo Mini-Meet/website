@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Colour from '../../images/ColourWhite.png'
 
 import './Footer.scss'
@@ -13,13 +14,13 @@ class Footer extends Component {
     let terms = this.props.page === 'TERMS & CONDITIONS' ? 'active' :'inactive'
     return (
       <div className='footer'>
-        <img src={Colour} className='logo-white' />
-          <ul className='footer-link-list'>
-            <li><a href='home' className={home}>HOME</a></li>
-            <li><a href='about' className={about}>ABOUT</a></li>
-            <li><a href='#' className={blog}>BLOG</a></li>
-            <li><a href='privacy' className={privacy}>PRIVACY POLICY</a></li>
-            <li><a href='legal' className={terms}>TERMS & CONDITIONS</a></li>
+        <img src={Colour} className='logoWhite' />
+          <ul className='footerLinkList'>
+            <li><Link to='/home' className={home}>HOME</Link></li>
+            <li><Link to='/about' className={about}>ABOUT</Link></li>
+            <li><Link to='/' className={blog}>BLOG</Link></li>
+            <li><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
+            <li><Link to='/legal' className={terms}>TERMS & CONDITIONS</Link></li>
           </ul>
       </div>
     );

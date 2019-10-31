@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Typing from 'react-typing-animation';
 
-class AnimatedTyping extends Component {
-
+export default  class AnimatedTyping extends Component {
 render() {
 
   return (
@@ -16,4 +15,3 @@ render() {
   );
   }
 }
-export default AnimatedTyping

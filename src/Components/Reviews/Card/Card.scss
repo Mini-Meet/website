@@ -1,14 +1,15 @@
-.card-details {
-  width: 480px;
-  height: 208px;
+.cardDetails {
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  height: 208px;
+  width: 480px;
+
 }
 
 
-.card-name-img {
-  width: 238px;
+.cardNameImg {
   display: flex;
   justify-content: space-around;
+  width: 238px;
 }
 
 

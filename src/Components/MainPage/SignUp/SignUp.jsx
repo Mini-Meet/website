@@ -47,11 +47,37 @@ const CustomForm = ({ status, message, onValidated }) => {
 
 class SignUp extends Component {
 render() {
+
+  const firstSignup = [
+   {
+    title:'Optimize your day. Optimize you.'
+   },
+   {
+    main: 'Habitualise defining, reflecting upon & iterating your goals with our guide to journaling'
+   }
+  ]
+
+  const secondSignup = [
+   { title: 'Ready to start actually sticking to your goals?'
+
+   },
+   { main: 'Sign up for our free ebook on the most effective tatics for optimising your life:'
+
+   }
+  ]
+
+  let property = this.props.isFirstSignUp ? firstSignup : secondSignup
     return (
       <div>
-        <h1>{this.props.firstH1}</h1>
-        <h1>{this.props.secondH1}</h1>
-        <span>{this.props.span}</span>
+        { property.map((prop) => {
+          return (
+            <div>
+              <h1>{prop.title}</h1>
+              <span>{prop.main}</span>
+            </div>
+          )
+          })
+         }
         <MailchimpSubscribe
            url={url}
            render={({ subscribe, status, message }) => (

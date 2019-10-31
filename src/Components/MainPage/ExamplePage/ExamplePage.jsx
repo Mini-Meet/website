@@ -13,7 +13,7 @@ import './ExamplePage.scss'
 const element = <FontAwesomeIcon icon={faChevronDown} />
 
 
-class ExamplePage extends Component {
+export default  class ExamplePage extends Component {
 render() {
     const questionsAndAnswers = [
       {
@@ -43,7 +43,7 @@ render() {
     };
 
     return (
-          <div className='example-page-div'>
+          <div className='examplePageDiv'>
             <div className='phone'>
               <div className='phone-text'>
                <Slider {...settings}>
@@ -69,4 +69,4 @@ render() {
           )
   }
  }
- export default ExamplePage;
+
