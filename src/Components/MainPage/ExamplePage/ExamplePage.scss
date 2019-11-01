@@ -1,17 +1,19 @@
 @import '../../../styles/variables.scss';
 
-.examplePageDiv {
-  align-items: center;
-  background-color: $light-gray;
+.example-page-container {
+  background-color: $light-grey;
   display: flex;
   flex-direction: column;
   padding: 36px;
-  ol {
-    width: 265px;
-  }
 }
 
-.phone {
+
+.phone-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 224px;
+  height: 404px;
   background: $dark;
   border-radius: 25px;
   border: white 15px solid;
@@ -21,7 +23,6 @@
   height: 404px;
   justify-content: space-around;
   width: 224px;
-
   p {
     color: $smoke-white;
   }
@@ -31,6 +32,12 @@
     margin-right: 20px;
    }
 }
+
+
+
+// Slick Slider
+
+
 .slick-slider {
   top: 66px;
 
@@ -41,6 +48,10 @@
   }
 
 .slick-prev:before {
+  display: none;
+}
+
+.slick-prev:before {
   content: none;
   display: none;
 }
@@ -48,15 +59,21 @@
 .slick-next {
     cursor: pointer;
     position: relative;
-    right: -160px;
-    transform: rotate(85deg);
-    top: 23px;
+    top: 86px;
+    right: -192px;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+
+  .slick-next:hover {
+    transform: rotate(90deg);
   }
 
 .slick-dots {
-  bottom: 280px;
   position: relative;
-  left: 49px;
+  bottom: 310px;
+  left: 72px;
+  transform: scale(0.7);
 }
 
 .slick-dots li.slick-active button:before {
@@ -69,7 +86,19 @@
   opacity: 0.4;
 }
 
-.phone-text {
-  margin-left: 22px;
+.phone-frame-text {
+  margin-left: 0px;
 }
 
+
+// Feature list
+
+.example-page-list {
+  padding: 32px;
+  max-width: 420px;
+}
+
+.example-page-list-item {
+    text-align: left;
+    padding: 8px 0;
+}

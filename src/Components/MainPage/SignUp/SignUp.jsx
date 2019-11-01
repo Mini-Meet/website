@@ -6,14 +6,12 @@ import'./SignUp.scss'
 const url = "https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04";
 
 const CustomForm = ({ status, message, onValidated }) => {
-  let email, name;
+  let email;
   const submit = () =>
     email &&
-    name &&
     email.value.indexOf("@") > -1 &&
     onValidated({
       EMAIL: email.value,
-      NAME: name.value
     });
 
   return (
@@ -38,14 +36,17 @@ const CustomForm = ({ status, message, onValidated }) => {
         placeholder="Your email"
       />
       <br />
-      <button  onClick={submit}>
-       Start Optmizing
+      <button
+        className='btn-primary'
+        onClick={submit}
+      >
+       Start Optimizing
       </button>
     </div>
   );
 };
 
-class SignUp extends Component {
+export default  class SignUp extends Component {
 render() {
 
   const firstSignup = [
@@ -78,6 +79,7 @@ render() {
           )
           })
          }
+        
         <MailchimpSubscribe
            url={url}
            render={({ subscribe, status, message }) => (
@@ -94,4 +96,4 @@ render() {
       )
   }
  }
- export default SignUp;
+

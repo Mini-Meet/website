@@ -7,14 +7,15 @@ import './Card.scss'
 export default  class Card extends Component {
   render() {
     return (
-      <div className='cardDetails'>
-        <div className='cardNameImg'>
-          <img src={this.props.photo} className='profilePic' />
-          <h3>{this.props.name}</h3>
+      <div className='card-details'>
+        <div className='card-header'>
+          <img src={this.props.photo} className='profile-pic' />
+          <div className='card-header-text'>
+            <h3 className='card-header-text-name'>{this.props.name}</h3>
+            <p className='card-header-text-description'>{this.props.title}</p>
+          </div>
          </div>
-        <span>{this.props.title}</span>
-        <br />
-        <span>{this.props.comment}</span>
+        <q>{this.props.comment}</q>
 
       </div>
     );
