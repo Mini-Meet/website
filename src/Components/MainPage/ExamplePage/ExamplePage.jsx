@@ -13,7 +13,7 @@ import './ExamplePage.scss'
 const element = <FontAwesomeIcon icon={faCaretDown} />
 
 
-class ExamplePage extends Component {
+export default  class ExamplePage extends Component {
 render() {
     const questionsAndAnswers = [
       {
@@ -69,4 +69,4 @@ render() {
           )
   }
  }
- export default ExamplePage;
+

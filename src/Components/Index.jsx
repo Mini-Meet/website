@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import MainPage from './MainPage/MainPage'
 import Navbar from './Navbar/Navbar.jsx'
 import Reviews from './Reviews/Reviews.jsx'
@@ -7,17 +7,19 @@ import SecondSignUp from './SecondSignUp/SecondSignUp.jsx'
 
 import '../styles/index.scss'
 
-function Index() {
-  return (
-    <div >
-       <Navbar />
-        <MainPage />
-        <Reviews />
-        <SecondSignUp
-         />
-        <Footer />
-    </div>
-  );
-}
 
-export default Index;
+export default  class Index extends Component {
+  render() {
+    return (
+      <div >
+         <Navbar />
+          <MainPage />
+          <Reviews />
+          <SignUp
+            isFirstSignUp={false}
+           />
+          <Footer page={'HOME'} />
+      </div>
+    );
+  }
+}

@@ -13,7 +13,7 @@ import SenecaImage from '../../images/Seneca.png';
 import './Reviews.scss'
 
 
-class Reviews extends Component {
+export default  class Reviews extends Component {
 render() {
     const reviewCards = [
       {
@@ -54,7 +54,7 @@ render() {
     };
 
     return (
-        <div className='review-cards'>
+        <div className='reviewCards'>
          <Slider {...settings}>
           {reviewCards.map((person) => {
             return (
@@ -73,4 +73,4 @@ render() {
           )
   }
  }
- export default Reviews;
+

@@ -46,16 +46,40 @@ const CustomForm = ({ status, message, onValidated }) => {
   );
 };
 
-class SignUp extends Component {
+export default  class SignUp extends Component {
 render() {
+
+  const firstSignup = [
+   {
+    title:'Optimize your day. Optimize you.'
+   },
+   {
+    main: 'Habitualise defining, reflecting upon & iterating your goals with our guide to journaling'
+   }
+  ]
+
+  const secondSignup = [
+   { title: 'Ready to start actually sticking to your goals?'
+
+   },
+   { main: 'Sign up for our free ebook on the most effective tatics for optimising your life:'
+
+   }
+  ]
+
+  let property = this.props.isFirstSignUp ? firstSignup : secondSignup
     return (
-      <div className='sign-up-section'>
-        <div className='header-block'>
-          <h1>{this.props.mainTitle1}</h1>
-          <h1>{this.props.mainTitle2}</h1>
-          <br />
-          <h4>{this.props.subtitle1}</h4>
-        </div>
+      <div>
+        { property.map((prop) => {
+          return (
+            <div>
+              <h1>{prop.title}</h1>
+              <span>{prop.main}</span>
+            </div>
+          )
+          })
+         }
+        
         <MailchimpSubscribe
            url={url}
            render={({ subscribe, status, message }) => (
@@ -72,4 +96,4 @@ render() {
       )
   }
  }
- export default SignUp;
+

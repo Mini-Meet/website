@@ -3,7 +3,7 @@ import Typing from 'react-typing-animation';
 
 import './AnimatedTyping.scss'
 
-class AnimatedTyping extends Component {
+export default  class AnimatedTyping extends Component {
 
 render() {
 
@@ -18,4 +18,3 @@ render() {
   );
   }
 }
-export default AnimatedTyping
