@@ -11,9 +11,7 @@ render() {
       <div>
         <img alt='Join now' src={img} className='signup-img' />
         <SignUp
-          //mainTitle1={'Optimize your day.'}
-          mainTitle2={'Get Started'}
-          subtitle1={'Start optimizing your life now:'}
+          isFirstSignUp={false}
         />
       </div>
       )

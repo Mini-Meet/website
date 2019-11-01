@@ -79,7 +79,7 @@ render() {
           )
           })
          }
-        
+
         <MailchimpSubscribe
            url={url}
            render={({ subscribe, status, message }) => (
