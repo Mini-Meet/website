@@ -7,7 +7,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import MagicSliderDots from 'react-magic-slider-dots';
 
-import ExamplePicture from '../../images/ExamplePicture.png';
+import TimImage from '../../images/TimFerriss.png';
+import SenecaImage from '../../images/Seneca.png';
 
 import './Reviews.scss'
 
@@ -16,26 +17,26 @@ class Reviews extends Component {
 render() {
     const reviewCards = [
       {
-        photo: ExamplePicture,
-        name: 'Tim Ferris',
-        title: 'Author, entrepreneur & philosopher',
-        comment:'"I ask myself these questions every morning to help me frame my day."'
+        photo: TimImage,
+        name: 'Tim Ferriss',
+        title: 'Author & entrepreneur',
+        comment:'I ask myself these questions every morning to help me frame my day.'
 
       },
 
       {
-        photo: ExamplePicture,
-        name: 'John Ferris',
-        title: 'Author, entrepreneur & philosopher',
-        comment:'"I ask myself these questions every morning to help me frame my day."'
+        photo: SenecaImage,
+        name: 'Seneca',
+        title: 'Philosopher',
+        comment:'I ask myself these questions every morning to help me frame my day.'
 
       },
 
       {
-        photo: ExamplePicture,
+        photo: TimImage,
         name: 'Larry Ferris',
         title: 'Author, entrepreneur & philosopher',
-        comment:'"I ask myself these questions every morning to help me frame my day."'
+        comment:'I ask myself these questions every morning to help me frame my day.'
 
       }
 
@@ -44,7 +45,7 @@ render() {
       dots: true,
       arrows: false,
       infinite: true,
-      speed: 500,
+      speed: 500, 
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,

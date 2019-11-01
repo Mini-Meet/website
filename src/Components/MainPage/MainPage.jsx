@@ -9,7 +9,7 @@ render() {
         <SignUp
           mainTitle1={'Optimize your day.'}
           mainTitle2={'Optimize you.'}
-          subtitle1={'Habitualise defining, reflecting upon & iterating your goals with our guide to journaling'}
+          subtitle1={'Define, reflect upon & iterate your goals with our guide to self-optimization'}
         />
         <ExamplePage />
       </div>

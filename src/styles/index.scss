@@ -1,6 +1,6 @@
 @import 'variables';
 
-h1, h2, h3, h4, p, li, input, button {
+h1, h2, h3, h4, p, li, input, button, q {
   color: $dark;
   font-family: 'Space Mono', monospace;
   font-weight: 700;
@@ -34,6 +34,17 @@ p, li {
 p.small {
   font-size: 14px;
 }
+
+q {
+  color: $grey;
+  font-size: 14px;
+  font-style: italic;
+  margin: 8px 16px;
+  padding: 16px 0;
+  border-top: 1px solid $light-grey;
+
+}
+
 
 input {
 
@@ -76,12 +87,12 @@ input:focus {
 
 }
 
-button:hover {
+.btn-primary:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 16px transparentize($primary, .8);
 }
 
-button:focus {
+.btn-primary:focus {
     outline: $primary none 2px;
   }
 
