@@ -38,8 +38,11 @@ const CustomForm = ({ status, message, onValidated }) => {
         placeholder="Your email"
       />
       <br />
-      <button  onClick={submit}>
-       Start Optmizing
+      <button
+        className='btn-primary'
+        onClick={submit}
+      >
+       Start Optimizing
       </button>
     </div>
   );
@@ -48,10 +51,13 @@ const CustomForm = ({ status, message, onValidated }) => {
 class SignUp extends Component {
 render() {
     return (
-      <div>
-        <h1>{this.props.firstH1}</h1>
-        <h1>{this.props.secondH1}</h1>
-        <span>{this.props.span}</span>
+      <div className='sign-up-section'>
+        <div className='header-block'>
+          <h1>{this.props.mainTitle1}</h1>
+          <h1>{this.props.mainTitle2}</h1>
+          <br />
+          <h4>{this.props.subtitle1}</h4>
+        </div>
         <MailchimpSubscribe
            url={url}
            render={({ subscribe, status, message }) => (

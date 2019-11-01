@@ -7,9 +7,9 @@ render() {
     return (
       <div>
         <SignUp
-          firstH1={'Optimize your day.'}
-          secondH1={'Optimize you.'}
-          span={'Habitualise defining, reflecting upon & iterating your goals with our guide to journaling'}
+          mainTitle1={'Optimize your day.'}
+          mainTitle2={'Optimize you.'}
+          subtitle1={'Define, reflect upon & iterate your goals with our guide to self-optimization'}
         />
         <ExamplePage />
       </div>
