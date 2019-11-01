@@ -19,7 +19,9 @@
 
   .sign-up-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    max-width: 420px;
+    margin: 0 auto;
     padding: 64px 0 80px;
   }
 }
