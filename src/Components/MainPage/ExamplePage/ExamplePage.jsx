@@ -18,15 +18,18 @@ render() {
     const questionsAndAnswers = [
       {
         question: 'What is the most important thing you could achieve today?',
-        answer: 'I need to focus on the one thing that will get me closer to achieving my goals.'
+        answer: 'I need to focus on the one thing that will get me closer to achieving my goals.',
+        delay: 1000
       },
       {
         question: 'Why is this one thing so important?',
-        answer: 'I could focus on other things on my to-do list, but maybe they don`t matter'
+        answer: 'I could focus on other things on my to-do list, but maybe they don`t matter',
+        delay: 7000
       },
       {
         question: 'How will you make time for it?',
-        answer:'Blocking out the first 90 minutes of my morning.'
+        answer:'Blocking out the first 90 minutes of my morning.',
+        delay: 10000
       }
      ]
     const settings = {
@@ -53,6 +56,7 @@ render() {
                           key={qAndA.question}
                           question={qAndA.question}
                           answer={ qAndA.answer}
+                          delay={qAndA.delay}
                         />)
                    })}
                </Slider>
