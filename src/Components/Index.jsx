@@ -15,9 +15,7 @@ export default  class Index extends Component {
          <Navbar />
           <MainPage />
           <Reviews />
-          <SignUp
-            isFirstSignUp={false}
-           />
+          <SecondSignUp />
           <Footer page={'HOME'} />
       </div>
     );
