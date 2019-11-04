@@ -9,6 +9,7 @@ import MagicSliderDots from 'react-magic-slider-dots';
 
 import TimImage from '../../images/TimFerriss.png';
 import SenecaImage from '../../images/Seneca.png';
+import MarcusImage from '../../images/Marcus.png';
 
 import './Reviews.scss'
 
@@ -19,8 +20,8 @@ render() {
       {
         photo: TimImage,
         name: 'Tim Ferriss',
-        title: 'Author & entrepreneur',
-        comment:'I ask myself these questions every morning to help me frame my day.'
+        title: 'Author/Entrepreneur',
+        comment:'Questions I regularly ask myself: What if I did the opposite for 48 hours? If I could only work 2 hours per week on my business, what would I do? What if I could only subtract to solve problems?'
 
       },
 
@@ -28,15 +29,15 @@ render() {
         photo: SenecaImage,
         name: 'Seneca',
         title: 'Philosopher',
-        comment:'I ask myself these questions every morning to help me frame my day.'
+        comment:'I will keep constant watch over myself and—most usefully—will put each day up for review. For this is what makes us evil—that none of us looks back upon our own lives.'
 
       },
 
       {
-        photo: TimImage,
-        name: 'Larry Ferris',
-        title: 'Author, entrepreneur & philosopher',
-        comment:'I ask myself these questions every morning to help me frame my day.'
+        photo: MarcusImage,
+        name: 'Marcus Aurelius',
+        title: 'Emperor of Rome',
+        comment:'If you can eliminate [what is not essential], you’ll have more time, and more tranquility. Ask yourself at every moment, "Is this necessary?"'
 
       }
 
@@ -45,7 +46,7 @@ render() {
       dots: true,
       arrows: false,
       infinite: true,
-      speed: 500, 
+      speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
@@ -73,4 +74,3 @@ render() {
           )
   }
  }
-
