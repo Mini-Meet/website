@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Mixpanel } from '../Mixpanel';
 import MainPage from './MainPage/MainPage'
 import Navbar from './Navbar/Navbar.jsx'
 import Reviews from './Reviews/Reviews.jsx'
@@ -9,6 +10,11 @@ import '../styles/index.scss'
 
 
 export default  class Index extends Component {
+
+  componentWillMount() {
+    Mixpanel.track('Home')
+  }
+
   render() {
     return (
       <div >
