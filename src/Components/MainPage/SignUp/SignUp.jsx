@@ -15,17 +15,17 @@ const CustomForm = ({ status, message, onValidated }) => {
     });
 
   return (
-    <div
+    <div className='sign-up-form'
     >
-      {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+      {status === "sending" && <p style={{ color: "black" }}>sending...</p>}
       {status === "error" && (
-        <div
+        <p
           style={{ color: "red" }}
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
       {status === "success" && (
-        <div
+        <p
           style={{ color: "green" }}
           dangerouslySetInnerHTML={{ __html: message }}
         />
@@ -51,30 +51,31 @@ render() {
 
   const firstSignup = [
    {
-    title:'Optimize your day. Optimize you.'
-   },
-   {
-    main: 'Habitualise defining, reflecting upon & iterating your goals with our guide to journaling'
+    title:'Optimize your day.',
+    titleTwo: 'Optimize you.',
+    subtitle: 'Define, reflect upon & iterate your goals with our guide to self-optimization'
    }
   ]
 
   const secondSignup = [
-   { title: 'Ready to start actually sticking to your goals?'
-
-   },
-   { main: 'Sign up for our free ebook on the most effective tatics for optimising your life:'
-
+   {
+     title: 'Ready to start sticking to your goals?',
+     subtitle: 'Sign up for our free ebook on the most effective tactics for optimizing your life:'
    }
   ]
 
   let property = this.props.isFirstSignUp ? firstSignup : secondSignup
     return (
-      <div>
+      <div className='sign-up-section'>
         { property.map((prop) => {
           return (
             <div>
-              <h1>{prop.title}</h1>
-              <span>{prop.main}</span>
+              <div className='header-block'>
+                <h1>{prop.title}</h1>
+                <h1>{prop.titleTwo}</h1>
+                <br />
+                <p>{prop.subtitle}</p>
+              </div>
             </div>
           )
           })
@@ -83,7 +84,7 @@ render() {
         <MailchimpSubscribe
            url={url}
            render={({ subscribe, status, message }) => (
-             <div className='sign-up-form'>
+             <div>
                <CustomForm
                   status={status}
                   message={message}
@@ -96,4 +97,3 @@ render() {
       )
   }
  }
-

@@ -3,16 +3,29 @@
 .footer {
   background-color: $dark;
   padding-bottom: 28px;
-
+  display: flex;
 }
 
-.logoWhite {
+.logoWhiteFrame {
   text-align: right;
+  width: 30%;
+
+  .logoWhite {
+    max-width: 140px;
+    padding: 24px 24px 8px 16px;
+    opacity: 0.34;
+  }
 }
 
 .footerLinkList {
   list-style: none;
   text-align: left;
+  width: 70%;
+  padding: 24px;
+
+  .footerItem {
+    padding: 4px 16px;
+  }
 
   .active {
     color: $white;
@@ -29,3 +42,17 @@
 }
 
 
+@media only screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerLinkList {
+    text-align: center;
+  }
+  .logoWhiteFrame {
+    .logoWhite {
+      padding: 32px 0;
+    }
+  }
+}

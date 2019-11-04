@@ -13,15 +13,20 @@ class Footer extends Component {
     let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     let terms = this.props.page === 'TERMS & CONDITIONS' ? 'active' :'inactive'
     return (
+
       <div className='footer'>
-        <img src={Colour} className='logoWhite' />
-          <ul className='footerLinkList'>
-            <li><Link to='/home' className={home}>HOME</Link></li>
-            <li><Link to='/about' className={about}>ABOUT</Link></li>
-            <li><Link to='/' className={blog}>BLOG</Link></li>
-            <li><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
-            <li><Link to='/legal' className={terms}>TERMS & CONDITIONS</Link></li>
-          </ul>
+        {/*
+        <ul className='footerLinkList'>
+          <li className='footerItem'><Link to='/home' className={home}>HOME</Link></li>
+          <li className='footerItem'><Link to='/about' className={about}>ABOUT</Link></li>
+          <li className='footerItem'><Link to='/' className={blog}>BLOG</Link></li>
+          <li className='footerItem'><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
+          <li className='footerItem'><Link to='/legal' className={terms}>TERMS & CONDITIONS</Link></li>
+        </ul>
+        */}
+        <div className='logoWhiteFrame'>
+          <img src={Colour} className='logoWhite' />
+        </div>
       </div>
     );
   }
