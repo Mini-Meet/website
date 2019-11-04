@@ -30,7 +30,9 @@
 
 
 @media only screen and (max-width: 600px) {
-  .slick-dots {
-    //bottom: 25px;
+  .reviewCards {
+    .slick-dots {
+      bottom: 100px;
+    }
   }
 }

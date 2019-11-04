@@ -1,5 +1,19 @@
 @import '../../styles/variables.scss';
 
-.signup-img {
-  width: 100%;
+
+.signupImg {
+  background-image: url('../../images/app-screens.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  height: 560px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .signupImg {
+    background-image: url('../../images/appScreensMobile.png');
+    background-attachment: fixed;
+    height: 320px;
+  }
 }

@@ -13,7 +13,9 @@ class Footer extends Component {
     let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     let terms = this.props.page === 'TERMS & CONDITIONS' ? 'active' :'inactive'
     return (
+
       <div className='footer'>
+        {/*
         <ul className='footerLinkList'>
           <li className='footerItem'><Link to='/home' className={home}>HOME</Link></li>
           <li className='footerItem'><Link to='/about' className={about}>ABOUT</Link></li>
@@ -21,6 +23,7 @@ class Footer extends Component {
           <li className='footerItem'><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
           <li className='footerItem'><Link to='/legal' className={terms}>TERMS & CONDITIONS</Link></li>
         </ul>
+        */}
         <div className='logoWhiteFrame'>
           <img src={Colour} className='logoWhite' />
         </div>
