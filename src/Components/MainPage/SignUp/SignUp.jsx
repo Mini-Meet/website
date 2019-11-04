@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+//import { Mixpanel } from '../../../Mixpanel';
 
 import'./SignUp.scss'
 
