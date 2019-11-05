@@ -34,14 +34,14 @@ const CustomForm = ({ status, message, onValidated }) => {
       <input
         ref={node => (email = node)}
         type="email"
-        placeholder="Your email"
+        placeholder="Enter your email"
       />
       <br />
       <button
         className='btn-primary'
         onClick={submit}
       >
-       Start Optimizing
+       Request Free Early Access
       </button>
     </div>
   );
@@ -54,7 +54,7 @@ render() {
    {
     title:'Optimize your day.',
     titleTwo: 'Optimize you.',
-    subtitle: 'Define, reflect upon & iterate your goals with our guide to self-optimization'
+    subtitle: 'Define, reflect upon & iterate your goals with our tools & tactics for self-optimization'
    }
   ]
 
@@ -74,7 +74,6 @@ render() {
               <div className='header-block'>
                 <h1>{prop.title}</h1>
                 <h1>{prop.titleTwo}</h1>
-                <br />
                 <p>{prop.subtitle}</p>
               </div>
             </div>
@@ -91,6 +90,9 @@ render() {
                   message={message}
                   onValidated={formData => subscribe(formData)}
                 />
+                <p className='small'>
+                  Access to the Public Beta is by invitation only. Request access today.
+                </p>
              </div>
            )}
          />

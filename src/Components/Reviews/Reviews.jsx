@@ -21,7 +21,7 @@ render() {
         photo: TimImage,
         name: 'Tim Ferriss',
         title: 'Author/Entrepreneur',
-        comment:'Questions I regularly ask myself: What if I did the opposite for 48 hours? If I could only work 2 hours per week on my business, what would I do? What if I could only subtract to solve problems?'
+        comment:'Questions I regularly ask myself: What if I did the opposite for 48 hours? What if this were easy? What if I could only subtract to solve problems?'
 
       },
 
