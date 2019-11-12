@@ -11,5 +11,5 @@
 }
 
 @mixin button-elevation {
-  box-shadow: 0 10px 16px transparentize($primary-color, .9);
+  box-shadow: 0 10px 16px transparentize($primary, .9);
 }

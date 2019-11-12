@@ -1,6 +1,63 @@
+
+// Colors
 $primary: #5527C9;
 $dark: #21112D;
 $grey: #888888;
 $white: #FFF;
 $light-grey:#F7F7F7;
 $smoke-white: rgba(255,255,255, 0.4);
+
+
+// Images
+// $background-image: url('../../../assets/img/backgroundImages/mountainsFade.jpg');
+// $background-tree: url('../../../assets/img/backgroundImages/trees.jpg');
+// $logo: url('../../../assets/img/logo_full.png');
+
+// ## Typo
+
+// Font style
+// $font-regular: 'HKGrotesk-Regular';
+// $font-light: 'HKGrotesk-Light';
+// $font-italic: 'HKGrotesk-Italic';
+// $font-bold: 'HKGrotesk-SemiBold';
+// $font-bold-italic: 'HKGrotesk-SemiBoldLegacyItalic';
+// $font-button: 'HKGrotesk-SemiBold';
+
+// Alignment
+$typo-text-align-directions: left, right, center, justify, initial, inherit;
+
+// Font Style
+$type-styles: italic, underline, uppercase, bold;
+
+
+//
+// ## Grid
+//
+
+
+// Breakpoints
+$screen-xs-min:              320px !default;
+$screen-sm-min:              768px !default;
+$screen-md-min:              1024px !default;
+$screen-lg-min:              1200px !default;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+// COLUMN SPACING
+$grid-columns: 		12; // total columns (no gutter)
+$col: 				100%/$grid-columns; // single column width (percentage)
+$column: 			$col;
+
+
+//
+// ## Misc
+//
+
+
+// Corner Radius
+$corner-radius: 10px;
+
+// Opacity Scale
+$opacity-scales: 1, 2, 3, 4;

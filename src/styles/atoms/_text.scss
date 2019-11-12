@@ -2,58 +2,85 @@
   padding-bottom: 1rem;
   padding-top: 2rem;
   text-align: left;
-  color: $dark-color;
+  color: $dark;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
 }
 
 %header-text {
   @extend %text-base;
-
-  font-family: $font-bold;
+  font-weight: 700;
+  text-align: center;
 }
 
 @mixin h1 {
   @extend %header-text;
+  font-size: 42px;
+  margin: 0 16px;
+  @media (min-width: $screen-sm-min) {
+    font-size: 56px;
+  }
+}
 
-  font-size: 104px;
+h1 {
+  @include h1;
 }
 
 @mixin h2 {
   @extend %header-text;
+  font-size: 32px;
+  @media (min-width: $screen-sm-min) {
+    font-size: 46px;
+  }
+}
 
-  font-size: 65px;
+h2 {
+  @include h2;
 }
 
 @mixin h3 {
   @extend %header-text;
+  font-size: 24px;
+  @media (min-width: $screen-sm-min) {
+    font-size: 36px;
+  }
+}
 
-  font-size: 52px;
+h3 {
+  @include h3;
 }
 
 @mixin h4 {
   @extend %header-text;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  @media (min-width: $screen-sm-min) {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+  }
+}
 
-  font-size: 36px;
+h4 {
+  @include h4;
 }
 
 @mixin h5 {
   @extend %header-text;
-
   font-size: 17px;
+}
+
+h5 {
+  @include h5;
 }
 
 @mixin text {
   @extend %text-base;
-  @include opacity(2);
+  // NOTE @include opacity(2);
 
-  font-family: $font-regular;
-  font-size: 17px;
-}
-
-@mixin input-text {
-  font-size: 20px;
-  font-family: $font-regular;
-  letter-spacing: .2px;
-  // color: $input-color-active;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 @mixin small {
@@ -61,31 +88,65 @@
   font-size: 11px;
 }
 
-@mixin link {
-  @extend %header-text;
-  font-size: 11px;
-  color: $primary-color !important;
+p {
+  @include text;
+
+  .small {
+    @include small;
+  }
 }
 
+@mixin input {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  flex-direction: column;
+  border: $dark 1px;
+  background-color: $light-grey;
+  color: $dark;
+  padding: 12px 40px 12px 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+input {
+  @include input;
+
+  :focus {
+      caret-color: $primary;
+      opacity: 1;
+      outline: $primary none 2px;
+    }
+}
+
+
 @mixin link {
   @extend %header-text;
-
   font-size: 11px;
-  color: $primary-color !important;
+  color: $primary;
+}
+
+a {
+  @include link;
 }
 
 @mixin error-text {
   @extend %header-text;
-
   font-size: 11px;
-  color: $error-color !important;
+  color: $error-color;
 }
 
+// p.error {
+//   @include error-text;
+// }
+
 @mixin cite {
-  color: $dark-color;
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Cardo', 'Cormorant Garamond', serif;
+  color: $grey;
+  font-size: 14px;
+  font-style: italic;
+  margin: 8px 16px;
+  padding: 16px 0;
+  border-top: 1px solid $light-grey;
 
   &::before {
     content: '"';
@@ -102,21 +163,32 @@
   }
 }
 
+q {
+  @include cite;
+}
+
 %caption {
   @extend %header-text;
-  @include opacity(3);
-
-  text-transform: uppercase;
+  // NOTE @include opacity(3);
   font-size: 11px;
   letter-spacing: .2rem;
+  text-transform: uppercase;
 }
 
 @mixin caption-center {
   @extend %caption;
-    text-align: center;
+  text-align: center;
 }
 
 @mixin caption-left {
   @extend %caption;
-    text-align: left;
+  text-align: left;
+}
+
+label {
+  @include caption-center;
+
+  .left {
+    @include caption-left;
+  }
 }

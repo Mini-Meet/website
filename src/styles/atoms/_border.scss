@@ -15,14 +15,14 @@
 @mixin border-button {
   @extend %border-base;
   @include circular-radius;
-  border-color: $primary-color;
+  border-color: $primary;
 }
 
 
 @mixin border-button-dark {
   @extend %border-base;
   @include circular-radius;
-  border-color: $dark-color;
+  border-color: $dark;
 }
 
 @mixin border-success {
@@ -34,7 +34,7 @@
 @mixin border-card {
   @extend %border-base;
   @include corner-radius;
-  border-color: $light-grey-color;
+  border-color: $light-grey;
 }
 
 @mixin border-white {

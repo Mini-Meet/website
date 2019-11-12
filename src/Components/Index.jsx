@@ -6,7 +6,7 @@ import Reviews from './Reviews/Reviews.jsx'
 import Footer from './Footer/Footer.jsx'
 import SecondSignUp from './SecondSignUp/SecondSignUp.jsx'
 
-import '../styles/index.scss'
+import '../styles/main.scss'
 
 
 export default  class Index extends Component {
