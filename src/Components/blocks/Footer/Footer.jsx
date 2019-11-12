@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 //import { Link } from 'react-router-dom'
-import Colour from '../../images/ColourWhite.png'
+import Colour from '../../../images/ColourWhite.png'
 
 import './Footer.scss'
 

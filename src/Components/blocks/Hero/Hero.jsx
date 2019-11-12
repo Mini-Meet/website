@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 //import { Mixpanel } from '../../../Mixpanel';
 
-import'./Hero.scss'
+import { Button } from '../../elements'
+
+import './Hero.scss'
 
 const url = "https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04";
 
@@ -37,12 +39,12 @@ const CustomForm = ({ status, message, onValidated }) => {
         placeholder="Enter your email"
       />
       <br />
-      <button
-        className='btn-primary'
+      <Button
+        primary
         onClick={submit}
       >
        Request Free Early Access
-      </button>
+      </Button>
     </div>
   );
 };

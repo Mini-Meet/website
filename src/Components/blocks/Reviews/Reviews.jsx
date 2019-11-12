@@ -6,9 +6,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import TimImage from '../../images/TimFerriss.png';
-import SenecaImage from '../../images/Seneca.png';
-import MarcusImage from '../../images/Marcus.png';
+import TimImage from '../../../assets/images/testimonials/TimFerriss.png';
+import SenecaImage from '../../../assets/images/testimonials/Seneca.png';
+import MarcusImage from '../../../assets/images/testimonials/Marcus.png';
 
 import './Reviews.scss'
 

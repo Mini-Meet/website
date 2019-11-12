@@ -1,0 +1,24 @@
+@import '../../../styles/main';
+
+.container {
+  @include flex;
+  min-height: 48px;
+}
+
+.primary {
+  @include primary-button;
+  min-height: 48px;
+}
+
+.secondary {
+  color: red;
+  @include secondary-button;
+}
+
+.tertiary {
+  @include tertiary-button;
+}
+
+.quarternary {
+  @include quarternary-button;
+}

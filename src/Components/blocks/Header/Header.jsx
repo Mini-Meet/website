@@ -1,5 +1,5 @@
 import React from 'react'
-import Colour from '../../images/Colour.png'
+import Colour from '../../../images/Colour.png'
 
 import './Header.scss'
 
