@@ -6,7 +6,7 @@ import './Navbar.scss'
 
 function  Navbar() {
   return (
-    <img src={Colour} className='logo' />
+    <img alt='logo' src={Colour} className='logo' />
   );
 }
 

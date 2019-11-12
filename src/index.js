@@ -6,11 +6,11 @@ import Privacy from './Components/Privacy/Privacy'
 import Legal from './Components/Legal/Legal'
 
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route, Redirect, Switch }
+import { BrowserRouter as Router, Route, Switch } // Redirect
 from 'react-router-dom';
-import { createStore} from 'redux';
+//import { createStore} from 'redux';
 import { createBrowserHistory } from "history";
-import { Provider } from 'react-redux';
+//import { Provider } from 'react-redux';
 
 const history = createBrowserHistory
 

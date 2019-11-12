@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import Colour from '../../images/ColourWhite.png'
 
 import './Footer.scss'
@@ -7,11 +7,11 @@ import './Footer.scss'
 
 class Footer extends Component {
   render() {
-    let home = this.props.page === 'HOME' ? 'active' :'inactive'
-    let about= this.props.page === 'ABOUT' ? 'active' :'inactive'
-    let blog = this.props.page === 'BLOG' ? 'active' :'inactive'
-    let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
-    let terms = this.props.page === 'TERMS & CONDITIONS' ? 'active' :'inactive'
+    // let home = this.props.page === 'HOME' ? 'active' :'inactive'
+    // let about= this.props.page === 'ABOUT' ? 'active' :'inactive'
+    // let blog = this.props.page === 'BLOG' ? 'active' :'inactive'
+    // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
+    // let terms = this.props.page === 'TERMS & CONDITIONS' ? 'active' :'inactive'
     return (
 
       <div className='footer'>
@@ -25,7 +25,7 @@ class Footer extends Component {
         </ul>
         */}
         <div className='logoWhiteFrame'>
-          <img src={Colour} className='logoWhite' />
+          <img alt='logo' src={Colour} className='logoWhite' />
         </div>
       </div>
     );

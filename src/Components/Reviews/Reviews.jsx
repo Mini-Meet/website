@@ -5,7 +5,6 @@ import Card from './Card/Card.jsx'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import MagicSliderDots from 'react-magic-slider-dots';
 
 import TimImage from '../../images/TimFerriss.png';
 import SenecaImage from '../../images/Seneca.png';

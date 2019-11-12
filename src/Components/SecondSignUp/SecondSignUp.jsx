@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SignUp from '../MainPage/SignUp/SignUp.jsx';
+import SignUp from '../SignUp/SignUp.jsx';
 
 import './SecondSignUp.scss'
 

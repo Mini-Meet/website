@@ -3,6 +3,7 @@
 .footer {
   @include background-dark;
   @include padding(all, 3);
+  //@include center-block(vertical);
   display: flex;
 }
 

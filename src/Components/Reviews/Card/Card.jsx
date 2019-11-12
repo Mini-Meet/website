@@ -9,7 +9,7 @@ export default  class Card extends Component {
     return (
       <div className='card-details'>
         <div className='card-header'>
-          <img src={this.props.photo} className='profile-pic' />
+          <img alt='profile pic' src={this.props.photo} className='profile-pic' />
           <div className='card-header-text'>
             <h3 className='card-header-text-name'>{this.props.name}</h3>
             <p className='card-header-text-description'>{this.props.title}</p>
@@ -21,5 +21,3 @@ export default  class Card extends Component {
     );
   }
 }
-
-

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import Footer from '../Footer/Footer.jsx'
-import SignUp from '../MainPage/SignUp/SignUp.jsx'
+//import SignUp from '../SignUp/SignUp.jsx'
 
 export default class Legal extends Component {
   render () {
@@ -23,5 +23,3 @@ export default class Legal extends Component {
     );
   }
 }
-
-
