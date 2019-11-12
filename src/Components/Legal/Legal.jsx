@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Footer from '../Footer/Footer.jsx'
+import Footer from '../blocks/Footer/Footer.jsx'
 //import Hero from '../Hero/Hero.jsx'
 
 export default class Legal extends Component {

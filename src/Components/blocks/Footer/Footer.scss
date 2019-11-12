@@ -3,57 +3,49 @@
 .footer {
   @include background-dark;
   @include padding(all, 3);
-  //@include center-block(vertical);
-  display: flex;
-}
+  @include col;
 
-.logoWhiteFrame {
-  text-align: right;
-  width: 30%;
-
-  .logoWhite {
-    max-width: 140px;
-    padding: 24px 24px 8px 16px;
-    opacity: 0.34;
-  }
-}
-
-.footerLinkList {
-  list-style: none;
-  text-align: left;
-  width: 70%;
-  padding: 24px;
-
-  .footerItem {
-    padding: 4px 16px;
+  @media (min-width: $screen-sm-min) {
+    @include row;
   }
 
-  .active {
-    color: $white;
-  }
+  &__logo {
+    @include center-block(horizontal);
 
-  a {
-    cursor: pointer;
-    color: $smoke-white;
-    text-decoration: none;
-      &:hover {
-      color: $white;
+    &_img {
+      @include opacity(3);
+      @include padding(top right, 2);
+      @include padding(bottom, 0);
+      @include padding(left, 3);
+      max-width: 140px;
     }
   }
-}
 
-
-@media only screen and (max-width: 600px) {
-  .footer {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footerLinkList {
-    text-align: center;
-  }
-  .logoWhiteFrame {
-    .logoWhite {
-      padding: 32px 0;
-    }
-  }
+  // &__list {
+  //    list-style: none;
+  //    text-align: left;
+  //    width: 70%;
+  //    padding: 24px;
+  //
+  //    @media (min-width: $screen-sm-min) {
+  //      text-align: center;
+  //    }
+  //
+  //    &_item {
+  //      padding: 4px 16px;
+  //    }
+  //
+  //    .active {
+  //      color: $white;
+  //    }
+  //
+  //    a {
+  //      cursor: pointer;
+  //      color: $smoke-white;
+  //      text-decoration: none;
+  //        &:hover {
+  //        color: $white;
+  //      }
+  //    }
+  //  }
 }

@@ -23,33 +23,13 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 On `master` will deploy a build to Netlify, meaning it will be live on our domain within 2-3 minutes
 
 
+---
 
-## Learn More
+# A/B Testing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Checklist
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [] index.html `<title>`, `<meta>` and `<noscript>` content
+- [] favicon
+- [] Mixpanel `Home` event
+- [] `logoColor` and `logoWhite` in assets/images folder

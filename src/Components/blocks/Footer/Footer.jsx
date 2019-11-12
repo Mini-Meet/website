@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 //import { Link } from 'react-router-dom'
-import Colour from '../../../images/ColourWhite.png'
+import Logo from '../../../assets/images/logoWhite.png'
 
 import './Footer.scss'
 
@@ -16,16 +16,16 @@ class Footer extends Component {
 
       <div className='footer'>
         {/*
-        <ul className='footerLinkList'>
-          <li className='footerItem'><Link to='/home' className={home}>HOME</Link></li>
-          <li className='footerItem'><Link to='/about' className={about}>ABOUT</Link></li>
-          <li className='footerItem'><Link to='/' className={blog}>BLOG</Link></li>
-          <li className='footerItem'><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
-          <li className='footerItem'><Link to='/legal' className={terms}>TERMS & CONDITIONS</Link></li>
+        <ul className='`footer__list`'>
+          <li className='footer__list_item'><Link to='/home' className={home}>HOME</Link></li>
+          <li className='footer__list_item'><Link to='/about' className={about}>ABOUT</Link></li>
+          <li className='footer__list_item'><Link to='/' className={blog}>BLOG</Link></li>
+          <li className='footer__list_item'><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
+          <li className='footer__list_item'><Link to='/legal' className={terms}>TERMS & CONDITIONS</Link></li>
         </ul>
         */}
-        <div className='logoWhiteFrame'>
-          <img alt='logo' src={Colour} className='logoWhite' />
+        <div className='footer__logo'>
+          <img alt='logo' src={Logo} className='footer__logo_img' />
         </div>
       </div>
     );

@@ -1,12 +1,12 @@
 import React from 'react'
-import Colour from '../../../images/Colour.png'
+import Logo from '../../../assets/images/logoColor.png'
 
 import './Header.scss'
 
 
 function  Header() {
   return (
-    <img alt='logo' src={Colour} className='logo' />
+    <img alt='logo' src={Logo} className='logo' />
   );
 }
 

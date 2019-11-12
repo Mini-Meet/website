@@ -30,7 +30,7 @@ $column: 			$col;
 }
 
 @mixin row {
-  @extend %flex;
+  display: flex;
   flex: 1;
   flex-direction: row;
 }
