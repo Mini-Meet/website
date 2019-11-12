@@ -1,0 +1,44 @@
+@import './transition';
+
+%background-base {
+  @include transition-in-out;
+
+  background-size: cover;
+}
+
+@mixin background-image {
+  @extend %background-base;
+
+  background-image: $background-image;
+  background-position: center bottom;
+}
+
+@mixin background-tree {
+  @extend %background-base;
+
+  background-image: $background-tree;
+  background-position: center bottom;
+}
+
+@mixin background-blank {
+  @extend %background-base;
+
+  background-color: $white;
+}
+
+@mixin background-light {
+  @extend %background-base;
+
+  background-color: $light-grey-color;
+}
+
+@mixin background-dark {
+  @extend %background-base;
+  background-color: $dark-color;
+}
+
+@mixin background-primary {
+  @extend %background-base;
+
+  background-color: $primary-color;
+}

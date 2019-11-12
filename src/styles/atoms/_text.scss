@@ -1,0 +1,122 @@
+%text-base {
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+  text-align: left;
+  color: $dark-color;
+}
+
+%header-text {
+  @extend %text-base;
+
+  font-family: $font-bold;
+}
+
+@mixin h1 {
+  @extend %header-text;
+
+  font-size: 104px;
+}
+
+@mixin h2 {
+  @extend %header-text;
+
+  font-size: 65px;
+}
+
+@mixin h3 {
+  @extend %header-text;
+
+  font-size: 52px;
+}
+
+@mixin h4 {
+  @extend %header-text;
+
+  font-size: 36px;
+}
+
+@mixin h5 {
+  @extend %header-text;
+
+  font-size: 17px;
+}
+
+@mixin text {
+  @extend %text-base;
+  @include opacity(2);
+
+  font-family: $font-regular;
+  font-size: 17px;
+}
+
+@mixin input-text {
+  font-size: 20px;
+  font-family: $font-regular;
+  letter-spacing: .2px;
+  // color: $input-color-active;
+}
+
+@mixin small {
+  @extend %header-text;
+  font-size: 11px;
+}
+
+@mixin link {
+  @extend %header-text;
+  font-size: 11px;
+  color: $primary-color !important;
+}
+
+@mixin link {
+  @extend %header-text;
+
+  font-size: 11px;
+  color: $primary-color !important;
+}
+
+@mixin error-text {
+  @extend %header-text;
+
+  font-size: 11px;
+  color: $error-color !important;
+}
+
+@mixin cite {
+  color: $dark-color;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Cardo', 'Cormorant Garamond', serif;
+
+  &::before {
+    content: '"';
+    display: flex;
+    margin-left: 8px;
+
+  }
+
+  &::after {
+    content: '"';
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8px;
+  }
+}
+
+%caption {
+  @extend %header-text;
+  @include opacity(3);
+
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: .2rem;
+}
+
+@mixin caption-center {
+  @extend %caption;
+    text-align: center;
+}
+
+@mixin caption-left {
+  @extend %caption;
+    text-align: left;
+}

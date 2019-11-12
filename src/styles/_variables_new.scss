@@ -1,0 +1,89 @@
+// ## Colors
+
+$smm-colors: (
+  primary: #6b38fb,
+  dark: rgba(53, 53, 53, 100),
+  dark-grey: rgba(53, 53, 53, 34),
+  light-grey: #f8f8f8,
+  white: #fff,
+  success: rgba(76, 206, 99, 100),
+  error: #e55b5b,
+  line: #f8f9fa,
+  border: rgba(194, 188, 197, 0.15)
+);
+
+// Images
+$background-image: url('../../../assets/img/backgroundImages/mountainsFade.jpg');
+$background-tree: url('../../../assets/img/backgroundImages/trees.jpg');
+$logo: url('../../../assets/img/logo_full.png');
+
+// ## Typo
+
+// Font style
+$font-regular: 'HKGrotesk-Regular';
+$font-light: 'HKGrotesk-Light';
+$font-italic: 'HKGrotesk-Italic';
+$font-bold: 'HKGrotesk-SemiBold';
+$font-bold-italic: 'HKGrotesk-SemiBoldLegacyItalic';
+$font-button: 'HKGrotesk-SemiBold';
+
+// Font Size
+$font-scales: -1, 0, 1, 2, 3, 4;
+$font-scale-factor: 1.618; // golden rule
+$font-size-base: 18px;
+
+// Letter Spacing
+$letter-spacing-scales: -2, -1, 0, 1, 2;
+$letter-spacing-scale-factor: 1.08;
+
+// Line Height
+$typo-line-height-scales: -1, 0, 1, 2, 3;
+$typo-line-height-scale-factor: 1.2;
+
+// Alignment
+$typo-text-align-directions: left, right, center, justify, initial, inherit;
+
+// Font Style
+$type-styles: italic, underline, uppercase, bold;
+
+// ## Distances
+
+// Width + Height
+$size-scales: -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+$size-scale-factor: 1.618;
+
+// Margin + Padding
+$space-scales: -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+$space-scale-factor: 1.618; // golden rule
+
+// ## Transition types and duration
+$transition-types: elevate;
+
+$transition-scales: 0, 1, 2, 3, 4;
+$transition-scale-factor: 1.618;
+$transition-duration-base: 300ms;
+
+// ## Misc
+
+// Corner Radius
+$corner-radius: 10px;
+
+// Opacity Scale
+$opacity-scales: 1, 2, 3, 4;
+
+// ## Grid
+
+// Number of columns
+$grid-columns: 12; // Set number of columns in the grid
+
+// Breakpoints
+$xs-max: 40rem; // Set xs breakpoint's max width
+$sm-max: 64rem; // Set sm breakpoint's max width
+$md-max: 90rem; // Set md breakpoint's max width
+$lg-max: 120rem; // Set lg breakpoint's max width
+
+// Space between columns
+$gutter: 1rem; // Set gutter size
+
+// Maximum overall content block width
+$content-well-max-width: 1440px; // Set the max-width of the content well

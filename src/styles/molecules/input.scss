@@ -1,0 +1,46 @@
+%input {
+  @include input-text;
+  @include border-input;
+  caret-color: $primary-color;
+
+  caret-color: $primary-color;
+  background-color: $light-grey-color;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  padding: 12px 48px 12px 16px;
+
+  &:focus {
+    outline: $white none 2px;
+  }
+}
+
+@mixin input {
+  @extend %input;
+}
+
+
+// Variations
+
+@mixin input-label {
+  @include caption;
+
+  padding-bottom: 8px;
+  padding-left: 16px;
+  text-align: left;
+}
+
+@mixin input-journal {
+  @extend %input;
+
+  flex: 1;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+  padding: 0 32px;
+  margin: auto;
+  min-width: 504px;
+  min-height: 400px;
+}

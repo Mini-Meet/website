@@ -1,0 +1,13 @@
+%header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  max-height: 64px;
+  margin: 16px 0 0;
+}
+
+@mixin header {
+  @extend %header;
+}
