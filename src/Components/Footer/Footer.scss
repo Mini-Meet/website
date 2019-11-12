@@ -2,7 +2,7 @@
 
 .footer {
   @include background-dark;
-  padding-bottom: 28px;
+  @include padding(all, 3);
   display: flex;
 }
 

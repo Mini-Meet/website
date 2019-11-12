@@ -11,7 +11,7 @@ import '../styles/main.scss'
 
 export default  class Index extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     Mixpanel.track('Home')
   }
 
