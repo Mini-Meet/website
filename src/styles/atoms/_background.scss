@@ -5,7 +5,13 @@
   background-size: cover;
 }
 
-@mixin background-blank {
+@mixin background-image {
+  @extend %background-base;
+  background-image: $background-image;
+  background-position: center bottom;
+}
+
+@mixin background-white {
   @extend %background-base;
   background-color: $white;
 }

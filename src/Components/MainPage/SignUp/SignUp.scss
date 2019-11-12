@@ -1,14 +1,11 @@
 @import '../../../styles/main';
 
 .sign-up-section {
+  @include background-image;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding: 64px 0 32px;
-  background-image: url('../../../images/HomeBg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: left top;
 
   .header-block {
     display: flex;

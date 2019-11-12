@@ -1,7 +1,7 @@
-@import '../../styles/variables.scss';
+@import '../../styles/main';
 
 .footer {
-  background-color: $dark;
+  @include background-dark;
   padding-bottom: 28px;
   display: flex;
 }
