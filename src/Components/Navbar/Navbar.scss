@@ -1,6 +1,18 @@
+@import '../../styles/variables.scss';
+
+.nav {
+  width: 100%;
+  background-color: $white;
+}
+
 .logo {
   display: block;
   text-align: left;
   padding: 16px;
-  max-width: 140px;
+  height: 40px;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
 }

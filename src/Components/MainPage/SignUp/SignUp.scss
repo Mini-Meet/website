@@ -5,8 +5,9 @@
   flex-direction: column;
   margin: 0 auto;
   padding: 64px 0 32px;
-  background-image: url('../../../images/HomeBg.jpg');
-  background-repeat: no-repeat;
+  background-color: $dark;
+  background-image: url('../../../images/HomeBgDark.png');
+  background-repeat: repeat;
   background-attachment: fixed;
   background-position: left top;
 
@@ -26,7 +27,7 @@
   }
 
   .small {
-    color: $primary;
+    color: $light-grey;
     padding-bottom: 40px;
   }
 }

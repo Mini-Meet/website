@@ -65,12 +65,11 @@ render() {
             <ol className='example-page-list'>
               <li className='example-page-list-item'>Morning & evening questions to frame & reflect on your day</li>
 
-              <li className='example-page-list-item'>Customise your questions</li>
+              <li className='example-page-list-item'>Store securely through the blockchain</li>
 
-              <li className='example-page-list-item'> Review your day, week, month & even year</li>
+              <li className='example-page-list-item'>Customise & review your questions every week</li>
             </ol>
           </div>
           )
   }
  }
-

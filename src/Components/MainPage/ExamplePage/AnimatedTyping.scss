@@ -7,13 +7,14 @@
 
 .typing-header {
   align-self: flex-end;
-  color: $white;
+  color: $dark;
   font-size: 11px;
   text-align: left;
 }
 
 .typing-p {
-  color: $smoke-white;
+  color: $dark;
+  opacity: 0.54;
   font-size: 11px;
   text-align: left;
 }

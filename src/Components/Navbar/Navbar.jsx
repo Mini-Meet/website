@@ -1,12 +1,14 @@
 import React from 'react'
-import Colour from '../../images/Colour.png'
+import Colour from '../../images/logo_dark.svg'
 
 import './Navbar.scss'
 
 
 function  Navbar() {
   return (
-    <img src={Colour} className='logo' />
+    <div className='nav'>
+      <img src={Colour} className='logo' />
+    </div>
   );
 }
 

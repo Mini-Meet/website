@@ -12,7 +12,7 @@ import '../styles/index.scss'
 export default  class Index extends Component {
 
   componentWillMount() {
-    Mixpanel.track('Home')
+    Mixpanel.track('Home: Decentral Journal')
   }
 
   render() {

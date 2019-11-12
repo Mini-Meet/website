@@ -1,7 +1,7 @@
 @import 'variables';
 
 h1, h2, h3, h4, p, li, input, button, q {
-  color: $dark;
+  color: $white;
   font-family: 'Space Mono', monospace;
   font-weight: 700;
 }
@@ -52,9 +52,9 @@ input {
   font-size: 14px;
   font-weight: 400;
   flex-direction: column;
-  border: $dark 1px;
-  background-color: $light-grey;
-  color: $dark;
+  border: $white 2px solid;
+  background-color: $dark;
+  color: $white;
   padding: 12px 40px 12px 12px;
   box-sizing: border-box;
   cursor: pointer;
@@ -83,7 +83,7 @@ input:focus {
   border: none;
   color: $white;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 8px transparentize($primary, .7);
+  box-shadow: 0 4px 8px transparentize($primary, .6);
 
   @media (max-width: 600px) {
     font-size: 11px;
@@ -94,7 +94,7 @@ input:focus {
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 16px transparentize($primary, .8);
+  box-shadow: 0 6px 16px transparentize($primary, .7);
 }
 
 .btn-primary:focus {
@@ -143,4 +143,16 @@ input:focus {
     font-weight: 400;
     margin: 0;
   }
+}
+
+
+::placeholder {
+  color: var($light-grey);
+}
+
+::selection {
+  background: #1bffeb50; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #1bffeb50; /* Gecko Browsers */
 }

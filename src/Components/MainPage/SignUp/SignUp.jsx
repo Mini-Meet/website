@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-//import { Mixpanel } from '../../../Mixpanel';
+import { Mixpanel } from '../../../Mixpanel';
 
 import'./SignUp.scss'
 
@@ -48,20 +48,24 @@ const CustomForm = ({ status, message, onValidated }) => {
 };
 
 export default  class SignUp extends Component {
+
+// componentWillMount() {
+// }
+
 render() {
 
   const firstSignup = [
    {
-    title:'Optimize your day.',
-    titleTwo: 'Optimize you.',
-    subtitle: 'Define, reflect upon & iterate your goals with our tools & tactics for self-optimization'
+    title:'The Secure Journal',
+    //titleTwo: 'Optimize you.',
+    subtitle: 'CIA-grade security for your private thoughts'
    }
   ]
 
   const secondSignup = [
    {
-     title: 'Ready to start sticking to your goals?',
-     subtitle: 'Sign up for our free ebook on the most effective tactics for optimizing your life:'
+     title: 'Ready to get started?',
+     subtitle: 'Sign up for our free ebook on journaling:'
    }
   ]
 
