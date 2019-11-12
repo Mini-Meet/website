@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
 import { Mixpanel } from '../Mixpanel';
-import MainPage from './MainPage/MainPage'
-import Navbar from './Navbar/Navbar.jsx'
+import PageLayout from './layouts/PageLayout';
+import ProductShowcase from './ProductShowcase/ProductShowcase'
+import Header from './Header/Header.jsx'
 import Reviews from './Reviews/Reviews.jsx'
 import Footer from './Footer/Footer.jsx'
-import SecondSignUp from './SecondSignUp/SecondSignUp.jsx'
-
-import '../styles/main.scss'
+import Hero from './Hero/Hero.jsx'
 
 
 export default  class Index extends Component {
 
   componentDidMount() {
-    Mixpanel.track('Home')
+    Mixpanel.track('Stoic: Home')
   }
 
   render() {
     return (
-      <div >
-         <Navbar />
-          <MainPage />
-          <Reviews />
-          <SecondSignUp />
-          <Footer page={'HOME'} />
-      </div>
+      <PageLayout >
+        <Header />
+        <Hero isFirstHero={true} />
+        <ProductShowcase />
+        <Reviews />
+        <Hero isFirstHero={false} />
+        <Footer page={'HOME'} />
+      </PageLayout>
     );
   }
 }

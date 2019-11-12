@@ -8,12 +8,12 @@ import 'slick-carousel/slick/slick-theme.css';
 import MagicSliderDots from 'react-magic-slider-dots';
 
 
-import './ExamplePage.scss'
+import './ProductShowcase.scss'
 
 //const element = <FontAwesomeIcon icon={faCaretDown} />
 
 
-export default  class ExamplePage extends Component {
+export default  class ProductShowcase extends Component {
 render() {
     const questionsAndAnswers = [
       {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 //import { Mixpanel } from '../../../Mixpanel';
 
-import'./SignUp.scss'
+import'./Hero.scss'
 
 const url = "https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04";
 
@@ -47,10 +47,10 @@ const CustomForm = ({ status, message, onValidated }) => {
   );
 };
 
-export default  class SignUp extends Component {
+export default  class Hero extends Component {
 render() {
 
-  const firstSignup = [
+  const firstHero = [
    {
     title:'Optimize your day.',
     titleTwo: 'Optimize you.',
@@ -58,14 +58,14 @@ render() {
    }
   ]
 
-  const secondSignup = [
+  const secondHero = [
    {
      title: 'Ready to start sticking to your goals?',
      subtitle: 'Sign up for our free ebook on the most effective tactics for optimizing your life:'
    }
   ]
 
-  let property = this.props.isFirstSignUp ? firstSignup : secondSignup
+  let property = this.props.isFirstHero ? firstHero : secondHero
     return (
       <div className='sign-up-section'>
         { property.map((prop) => {

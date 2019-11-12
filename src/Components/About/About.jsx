@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import Footer from '../Footer/Footer.jsx'
-//import SignUp from '../SignUp/SignUp.jsx'
+//import Hero from '../Hero/Hero.jsx'
 
 export default class About extends Component {
   render () {
