@@ -6,6 +6,7 @@ import {
   Hero,
   ProductShowcase,
   Reviews,
+  Image,
   Footer,
 } from './blocks'
 
@@ -23,6 +24,7 @@ export default  class Index extends Component {
         <Hero isFirstHero={true} />
         <ProductShowcase />
         <Reviews />
+        <Image />
         <Hero isFirstHero={false} />
         <Footer page={'HOME'} />
       </PageLayout>
