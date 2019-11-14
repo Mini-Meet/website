@@ -8,12 +8,12 @@ import 'slick-carousel/slick/slick-theme.css';
 import MagicSliderDots from 'react-magic-slider-dots';
 
 
-import './ProductShowcase.scss'
+import './AppPrototype.scss'
 
 //const element = <FontAwesomeIcon icon={faCaretDown} />
 
 
-export default  class ProductShowcase extends Component {
+export default  class AppPrototype extends Component {
 render() {
     const questionsAndAnswers = [
       {
@@ -46,9 +46,9 @@ render() {
     };
 
     return (
-          <div className='example-page-container'>
-            <div className='phone-frame'>
-              <div className='phone-frame-text'>
+          <div className='product'>
+            <div className='phone'>
+              <div className='phone__text'>
                <Slider {...settings}>
                 {questionsAndAnswers.map((qAndA) => {
                   return (
@@ -62,12 +62,12 @@ render() {
                </Slider>
                </div>
             </div>
-            <ol className='example-page-list'>
-              <li className='example-page-list-item'>Morning & evening questions to frame & reflect on your day</li>
+            <ol className='product__list'>
+              <li className='product__list_item'>Morning & evening questions to frame & reflect on your day</li>
 
-              <li className='example-page-list-item'>Customise your questions</li>
+              <li className='product__list_item'>Customise your questions</li>
 
-              <li className='example-page-list-item'> Review your day, week, month & even year</li>
+              <li className='product__list_item'> Review your day, week, month & even year</li>
             </ol>
           </div>
           )

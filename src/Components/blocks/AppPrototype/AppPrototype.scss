@@ -1,42 +1,62 @@
 @import '../../../styles/main';
 
-.example-page-container {
+.product {
   @include background-light;
-  display: flex;
-  flex-direction: column;
+  @include col;
+  @include padding(top bottom, 4);
+  @include padding(left right, 2);
   align-items: center;
-  padding: 40px 16px;
+
+  &__list {
+    padding: 24px 24px 24px 40px;
+    max-width: 420px;
+
+    &_item {
+        text-align: left;
+        padding: 8px 0;
+    }
+  }
 }
 
 
-.phone-frame {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 224px;
-  height: 404px;
-  background: $dark;
+
+// Product Showcase Element
+// Product Showcase Element
+// Product Showcase Element
+
+
+
+.phone {
+  @include col;
+  @include background-dark;
+  border: $white 15px solid;
   border-radius: 25px;
-  border: white 15px solid;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  height: 404px;
   justify-content: space-around;
   width: 224px;
+  min-height: 404px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+
+  &__text {
+     @include margin(left right, -1);
+  }
+
   p {
+    @include margin(top, 1);
     color: $smoke-white;
   }
+
   span {
     align-self: flex-end;
     color: $white;
-    margin-right: 20px;
    }
 }
 
 
 
 // Slick Slider
+// Slick Slider
+// Slick Slider
+
 
 
 .slick-slider {
@@ -85,21 +105,4 @@
  .slick-dots li button:before {
   color: $white;
   opacity: 0.4;
-}
-
-.phone-frame-text {
-  margin-left: 0px;
-}
-
-
-// Feature list
-
-.example-page-list {
-  padding: 24px 24px 24px 40px;
-  max-width: 420px;
-}
-
-.example-page-list-item {
-    text-align: left;
-    padding: 8px 0;
 }

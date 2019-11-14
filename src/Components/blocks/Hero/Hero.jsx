@@ -18,7 +18,7 @@ const CustomForm = ({ status, message, onValidated }) => {
     });
 
   return (
-    <div className='sign-up-form'
+    <div className='hero__form'
     >
       {status === "sending" && <p style={{ color: "black" }}>sending...</p>}
       {status === "error" && (
@@ -69,11 +69,11 @@ render() {
 
   let property = this.props.isFirstHero ? firstHero : secondHero
     return (
-      <div className='sign-up-section'>
+      <div className='hero'>
         { property.map((prop) => {
           return (
             <div>
-              <div className='header-block'>
+              <div className='hero__header'>
                 <h1>{prop.title}</h1>
                 <h1>{prop.titleTwo}</h1>
                 <p>{prop.subtitle}</p>
@@ -92,7 +92,7 @@ render() {
                   message={message}
                   onValidated={formData => subscribe(formData)}
                 />
-                <p className='small'>
+                <p className='hero__small'>
                   Access to the Public Beta is by invitation only. Request access today.
                 </p>
              </div>

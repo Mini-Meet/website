@@ -1,6 +1,6 @@
 %text-base {
-  padding-bottom: 1rem;
-  padding-top: 2rem;
+  @include padding(all, reset);
+  @include margin(all, reset);
   text-align: left;
   color: $dark;
   font-family: 'Space Mono', monospace;
@@ -15,10 +15,9 @@
 
 @mixin h1 {
   @extend %header-text;
-  font-size: 42px;
-  margin: 0 16px;
+  font-size: 38px;
   @media (min-width: $screen-sm-min) {
-    font-size: 56px;
+    font-size: 46px;
   }
 }
 
@@ -88,7 +87,7 @@ h5 {
   font-size: 11px;
 }
 
-p {
+p, li {
   @include text;
 
   .small {
@@ -97,26 +96,30 @@ p {
 }
 
 @mixin input {
-  display: flex;
+  @extend %text-base;
+  @include col;
+  @include padding(top left bottom, 1);
+  @include padding(right, 2);
+  @include cursor-pointer;
+  width: 100%;
   font-size: 14px;
-  font-weight: 400;
-  flex-direction: column;
-  border: $dark 1px;
+  border: 1px solid $light-grey;
   background-color: $light-grey;
-  color: $dark;
-  padding: 12px 40px 12px 12px;
   box-sizing: border-box;
-  cursor: pointer;
+  @media (min-width: $screen-sm-min) {
+  }
+
+
+  &:focus {
+      caret-color: $primary;
+      border: 1px solid $border-grey;
+      opacity: 1;
+      outline: $primary none 2px;
+    }
 }
 
 input {
   @include input;
-
-  :focus {
-      caret-color: $primary;
-      opacity: 1;
-      outline: $primary none 2px;
-    }
 }
 
 
@@ -141,25 +144,29 @@ a {
 // }
 
 @mixin cite {
+  @include row;
+  @extend %text-base;
+  @include padding(top bottom, 2);
+  @include margin(top bottom, 0);
+  @include margin(left right, 2);
+  text-align: center;
   color: $grey;
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
-  margin: 8px 16px;
-  padding: 16px 0;
-  border-top: 1px solid $light-grey;
+  border-top: 1px solid $border-grey;
 
-  &::before {
-    content: '"';
-    display: flex;
-    margin-left: 8px;
-
-  }
-
-  &::after {
-    content: '"';
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 8px;
+  &::before,&::after  {
+    display: none;
+  //   @include flex;
+  //   @include margin(right, 0);
+  //   font-size: 22px;
+  //   max-height: 8px;
+  // }
+  //
+  // &::after {
+  //   @include margin(right, reset);
+  //   justify-content: flex-end;
+  //   align-self: flex-end;
   }
 }
 

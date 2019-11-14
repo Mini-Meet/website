@@ -1,15 +1,17 @@
 %button {
-  @include circular-radius;
+  @extend %text-base;
+  @include padding(left right, 2);
+  @include padding(top bottom, 0);
+  @include corner-radius; // @include circular-radius;
   @include cursor-pointer;
   @include transition-in-out;
 
   background-color: $primary;
   display: inline-block;
   border: 0;
+  margin: 8px auto;
   color: $white;
   box-shadow: 0 4px 8px transparentize($primary, .7);
-  margin: 8px auto;
-  padding: 8px 16px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -26,7 +28,7 @@
     @include button-elevation;
     @include transition-in-out;
 
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
 
   &:focus {

@@ -1,38 +1,57 @@
 @import '../../../styles/main';
 
-.sign-up-section {
+.hero {
   @include background-image;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 64px 0 32px;
+  @include col;
+  @include padding(top, 4);
+  @include padding(left right, reset);
+  @include padding(bottom, 4);
 
-  .header-block {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+  &__header {
+    @include col;
     max-width: 720px;
+
+    @media (min-width: $screen-sm-min) {
+      @include center-block(horizontal);
+    }
+
+
+    h1 {
+      @include padding(all, 0);
+      @include padding(top, reset);
+    }
+
+    p {
+      @include padding(top bottom, 2);
+      text-align: center;
+    }
   }
 
-  .sign-up-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 420px;
-    margin: 0 auto;
-    padding: 64px 0 8px;
-  }
+  &__form {
+      @include col;
+      @include padding(top, 4);
+      @include padding(left right, reset);
+      @include padding(bottom, 1);
+      max-width: 420px;
+      margin: 0 auto;
 
-  .small {
+      @media (min-width: $screen-sm-min) {
+        @include center-block(horizontal);
+      }
+    }
+
+  &__small {
+    @include small;
+    @include padding(bottom, 3);
     color: $primary;
-    padding-bottom: 40px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .sign-up-section {
+  .hero {
     padding: 40px 16px 20px;
   }
-  .sign-up-form {
+  .hero__form {
     padding: 20px 0 32px;
   }
 }

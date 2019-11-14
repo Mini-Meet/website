@@ -1,16 +1,37 @@
 @import '../../../styles/main';
 
 .showcase {
-  background-image: url('../../../assets/images/showcase/appScreensMobile.png');
-  background-attachment: fixed;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  height: 320px;
+  @include background-white;
+  @include padding(top bottom, 4);
+  align-items: center;
 
-  @media (min-width: $screen-sm-min) {
-    background-image: url('../../../assets/images/showcase/app-screens.png');
-    background-attachment: inherit;
-    height: 560px;
+  &__img {
+    background-attachment: fixed;
+    background-image: url('../../../assets/images/showcase/appScreensMobile.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 320px;
+
+    // NOTE : Add for $screen-sm-min
+
+    @media (min-width: $screen-sm-min) {
+      background-attachment: inherit;
+      background-image: url('../../../assets/images/showcase/app-screens.png');
+      height: 560px;
+    }
+  }
+
+  &__list {
+    @include padding(top bottom right, 3);
+    @include padding(left, 4);
+    margin: 0 auto;
+    max-width: 420px;
+
+    &_item {
+      @include padding(top bottom, 1);
+      @include padding(left right, reset);
+      text-align: left;
+    }
   }
 }

@@ -4,8 +4,9 @@ import PageLayout from './layouts/PageLayout';
 import {
   Header,
   Hero,
-  ProductShowcase,
-  Reviews,
+  Featured,
+  AppPrototype,
+  Testimonials,
   Image,
   Footer,
 } from './blocks'
@@ -22,8 +23,9 @@ export default  class Index extends Component {
       <PageLayout >
         <Header />
         <Hero isFirstHero={true} />
-        <ProductShowcase />
-        <Reviews />
+        <Featured />
+        <AppPrototype />
+        <Testimonials />
         <Image />
         <Hero isFirstHero={false} />
         <Footer page={'HOME'} />

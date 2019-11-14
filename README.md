@@ -31,5 +31,10 @@ On `master` will deploy a build to Netlify, meaning it will be live on our domai
 
 - [] index.html `<title>`, `<meta>` and `<noscript>` content
 - [] favicon
-- [] Mixpanel `Home` event
+- [] Mixpanel `Home` event: Find & replace experiment name e.g. 'Stoic'
 - [] `logoColor` and `logoWhite` in assets/images folder
+- [] Hero content and background image
+- [] Image images and description text
+- [] Edit/remove AppPrototype section
+- [] Testimonials content and images
+- [] Edit all colour, text, corner-radius & elevation variables

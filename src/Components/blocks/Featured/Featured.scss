@@ -1,0 +1,34 @@
+@import '../../../styles/main';
+
+.featured {
+  @include background-dark;
+  @include padding(top bottom, 4);
+  @include padding(left right, reset);
+  @include col;
+
+  @media (min-width: $screen-sm-min) {
+    @include padding(left right, 3);
+    @include padding(top bottom, 5);
+  }
+
+  &__header {
+    @include padding(bottom, 3);
+    color: $white;
+  }
+
+  &__logos {
+    @include row;
+    @include padding(left right, 0);
+    @include opacity(4);
+    justify-content: space-around;
+    overflow-x: scroll;
+
+    @media (min-width: $screen-sm-min) {
+      @include padding(left right, 3);
+    }
+
+    &_img {
+      max-height: 48px;
+    }
+  }
+}
