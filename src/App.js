@@ -1,10 +1,10 @@
 import React from 'react';
-import Index from './Components/Index.jsx'
+import BasePage from './Components/BasePage.jsx'
 
 
 function App() {
   return (
-        <Index />
+        <BasePage />
   );
 }
 

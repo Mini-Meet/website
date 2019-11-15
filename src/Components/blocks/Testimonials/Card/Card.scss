@@ -1,45 +1,46 @@
-.card-details {
-  max-width: 480px;
-  padding: 24px 24px 32px 24px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-  height: 208px;
-  width: 480px;
+@import '../../../../styles/main';
 
+.card-details {
+  @include padding(top right left, 2);
+  @include padding(bottom, 3);
+  @include col;
+  box-shadow: 0 20px 40px $phone-elevation;
+  height: 208px;
+  max-width: 480px;
+  width: 480px;
 }
 
 .profile-pic {
-  width: 80px;
+  @include circular-radius;
   height: 80px;
-  border-radius: 100px;
+  width: 80px;
 }
 
 
 .card-header {
-  display: flex;
-  padding-bottom: 16px;
+  @include flex;
+  @include padding(bottom, 2);
   width: 100%;
 }
 
 .card-header-text {
-  display: flex;
-  flex-direction: column;
+  @include col;
   align-self: center;
   width: 100%;
 }
 
 
 .card-header-text-name {
-  padding-left: 16px;
-  text-align: left;
+  @include padding(left, 2);
   margin: 2px 4px;
+  text-align: left;
 }
 
 .card-header-text-description {
-  padding-left: 16px;
-  text-align: left;
+  @include padding(left, 2);
   margin: 2px 4px;
+  text-align: left;
+
   @media (max-width: 600px) {
     font-size: 14px;
   }
@@ -48,8 +49,10 @@
 
 @media only screen and (max-width: 600px) {
   .card-details {
+    @include padding(top, 1);
+    @include padding(left right, 0);
+    @include padding(bottom, 2);
     box-shadow: none;
-    padding: 16px 8px 24px;
     max-width: 320px;
   }
 }

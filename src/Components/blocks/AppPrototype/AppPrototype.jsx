@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import AnimatedTyping from './AnimatedTyping'
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { faCaretDown} from '@fortawesome/free-solid-svg-icons'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -9,8 +7,6 @@ import MagicSliderDots from 'react-magic-slider-dots';
 
 
 import './AppPrototype.scss'
-
-//const element = <FontAwesomeIcon icon={faCaretDown} />
 
 
 export default  class AppPrototype extends Component {

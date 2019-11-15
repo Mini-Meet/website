@@ -17,11 +17,11 @@ class Footer extends Component {
       <div className='footer'>
         {/*
         <ul className='`footer__list`'>
-          <li className='footer__list_item'><Link to='views/home' className={home}>HOME</Link></li>
-          <li className='footer__list_item'><Link to='views/about' className={about}>ABOUT</Link></li>
+          <li className='footer__list_item'><Link to='/home' className={home}>HOME</Link></li>
+          <li className='footer__list_item'><Link to='/about' className={about}>ABOUT</Link></li>
           <li className='footer__list_item'><Link to='/' className={blog}>BLOG</Link></li>
-          <li className='footer__list_item'><Link to='views/privacy' className={privacy}>PRIVACY POLICY</Link></li>
-          <li className='footer__list_item'><Link to='views/legal' className={terms}>TERMS & CONDITIONS</Link></li>
+          <li className='footer__list_item'><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
+          <li className='footer__list_item'><Link to='/legal' className={terms}>TERMS & CONDITIONS</Link></li>
         </ul>
         */}
         <div className='footer__logo'>

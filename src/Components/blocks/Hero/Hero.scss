@@ -28,16 +28,16 @@
   }
 
   &__form {
-      @include col;
-      @include padding(top, 4);
-      @include padding(left right, reset);
-      @include padding(bottom, 1);
-      max-width: 420px;
-      margin: 0 auto;
+    @include col;
+    @include padding(top, 4);
+    @include padding(left right, reset);
+    @include padding(bottom, 1);
+    margin: 0 auto;
+    max-width: 420px;
 
-      @media (min-width: $screen-sm-min) {
-        @include center-block(horizontal);
-      }
+    @media (min-width: $screen-sm-min) {
+      @include center-block(horizontal);
+    }
     }
 
   &__small {
@@ -51,7 +51,8 @@
   .hero {
     padding: 40px 16px 20px;
   }
-  .hero__form {
+
+  &__form {
     padding: 20px 0 32px;
   }
 }

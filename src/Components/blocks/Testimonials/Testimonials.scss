@@ -20,23 +20,23 @@
   .slick-list {
     height: 340px;
   }
+}
 
-  .slick-dots {
-    @include margin(bottom, 4);
-    bottom: 30px;
-    left: 0;
+.slick-dots {
+  @include margin(bottom, 4);
+  bottom: 30px;
+  left: 0;
 
-    @media (min-width: $screen-sm-min) {
-      bottom: 40px;
-    }
+  @media (min-width: $screen-sm-min) {
+    bottom: 40px;
   }
 
-  .slick-dots li.slick-active button:before  {
+  li.slick-active button::before {
     @include opacity(1);
     color: $primary;
   }
 
-  .slick-dots li button:before {
+  li button::before {
     @include opacity(3);
     color: $dark;
   }

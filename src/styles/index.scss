@@ -1,5 +1,14 @@
 @import 'variables';
 
+html,
+body {
+  display: flex;
+  background-color: white;
+  margin: 0;
+}
+
+// Typography
+
 h1, h2, h3, h4, p, li, input, button, q {
   color: $dark;
   font-family: 'Space Mono', monospace;

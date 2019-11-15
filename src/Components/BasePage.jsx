@@ -12,7 +12,7 @@ import {
 } from './blocks'
 
 
-export default  class Index extends Component {
+export default  class BasePage extends Component {
 
   componentDidMount() {
     Mixpanel.track('Stoic: Home')

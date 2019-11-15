@@ -3,20 +3,6 @@
 $space-scales: -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 $space-scale-factor: 1.618; // golden rule
 
-
-
-// $_breakpoint-mapping: (
-//   xs-only: $breakpoint-xs-only,
-//   xs: all,
-//   sm-only: $breakpoint-sm-only,
-//   sm: $breakpoint-sm-up,
-//   md-only: $breakpoint-md-only,
-//   md: $breakpoint-md-up,
-//   lg-only: $breakpoint-lg-only,
-//   lg: $breakpoint-lg-up,
-//   xl-only: $breakpoint-xl-up
-// );
-
 @mixin _inset($type, $dirs, $step) {
 
   $dirs: if($dirs == all, top right bottom left, $dirs);
@@ -32,15 +18,12 @@ $space-scale-factor: 1.618; // golden rule
     @warn 'supplied second argument `#{$step}` is not supported for `step`';
   }
 
-
   // calculate rem value
   $value: if($step == reset, 0, scale($step, $space-scale-factor));
 
     @each $dir in $dirs {
       #{$type}-#{$dir}: $value;
     }
-
-
 }
 
 @mixin padding($dir, $step) {
