@@ -1,11 +1,11 @@
 %header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  margin: 16px 0 0;
+  max-height: 64px;
   position: absolute;
   top: 0;
-  max-height: 64px;
-  margin: 16px 0 0;
+  width: 100%;
 }
 
 @mixin header {

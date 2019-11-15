@@ -1,10 +1,10 @@
 %text-base {
   @include padding(all, reset);
   @include margin(all, reset);
-  text-align: left;
   color: $dark;
   font-family: 'Space Mono', monospace;
   font-weight: 400;
+  text-align: left;
 }
 
 %header-text {
@@ -16,6 +16,7 @@
 @mixin h1 {
   @extend %header-text;
   font-size: 38px;
+
   @media (min-width: $screen-sm-min) {
     font-size: 46px;
   }
@@ -28,6 +29,7 @@ h1 {
 @mixin h2 {
   @extend %header-text;
   font-size: 32px;
+
   @media (min-width: $screen-sm-min) {
     font-size: 46px;
   }
@@ -40,6 +42,7 @@ h2 {
 @mixin h3 {
   @extend %header-text;
   font-size: 24px;
+
   @media (min-width: $screen-sm-min) {
     font-size: 36px;
   }
@@ -54,6 +57,7 @@ h3 {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
+
   @media (min-width: $screen-sm-min) {
     font-size: 24px;
     font-weight: 400;
@@ -87,7 +91,8 @@ h5 {
   font-size: 11px;
 }
 
-p, li {
+p,
+li {
   @include text;
 
   .small {
@@ -106,15 +111,16 @@ p, li {
   border: 1px solid $light-grey;
   background-color: $light-grey;
   box-sizing: border-box;
+
   @media (min-width: $screen-sm-min) {
   }
 
 
   &:focus {
-      caret-color: $primary;
-      border: 1px solid $border-grey;
-      opacity: 1;
-      outline: $primary none 2px;
+    border: 1px solid $border-grey;
+    caret-color: $primary;
+    opacity: 1;
+    outline: $primary none 2px;
     }
 }
 
@@ -155,7 +161,8 @@ a {
   font-style: italic;
   border-top: 1px solid $border-grey;
 
-  &::before,&::after  {
+  &::before,
+  &::after {
     display: none;
   //   @include flex;
   //   @include margin(right, 0);

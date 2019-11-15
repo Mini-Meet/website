@@ -1,10 +1,9 @@
 %input {
   @include input-text;
   @include border-input;
-  caret-color: $primary;
 
-  caret-color: $primary;
   background-color: $light-grey;
+  caret-color: $primary;
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;

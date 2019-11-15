@@ -21,9 +21,9 @@ $space-scale-factor: 1.618; // golden rule
   // calculate rem value
   $value: if($step == reset, 0, scale($step, $space-scale-factor));
 
-    @each $dir in $dirs {
-      #{$type}-#{$dir}: $value;
-    }
+  @each $dir in $dirs {
+    #{$type}-#{$dir}: $value;
+  }
 }
 
 @mixin padding($dir, $step) {

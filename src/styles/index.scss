@@ -2,14 +2,22 @@
 
 html,
 body {
+  background-color: $white;
   display: flex;
-  background-color: white;
   margin: 0;
 }
 
 // Typography
 
-h1, h2, h3, h4, p, li, input, button, q {
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+input,
+button,
+q {
   color: $dark;
   font-family: 'Space Mono', monospace;
   font-weight: 700;
@@ -35,64 +43,63 @@ h4 {
   margin: 0;
 }
 
-p, li {
+p,
+li {
   font-size: 18px;
   font-weight: 400;
+
+  .small {
+    font-size: 11px;
+  }
 }
 
-p.small {
-  font-size: 11px;
-}
+
 
 q {
+  border-top: 1px solid $light-grey;
   color: $grey;
   font-size: 14px;
   font-style: italic;
   margin: 8px 16px;
   padding: 16px 0;
-  border-top: 1px solid $light-grey;
-
 }
 
 
 input {
-
+  background-color: $light-grey;
+  border: $dark 1px;
+  box-sizing: border-box;
+  color: $dark;
+  cursor: pointer;
   display: flex;
+  flex-direction: column;
   font-size: 14px;
   font-weight: 400;
-  flex-direction: column;
-  border: $dark 1px;
-  background-color: $light-grey;
-  color: $dark;
   padding: 12px 40px 12px 12px;
-  box-sizing: border-box;
-  cursor: pointer;
   //width: 100%;
 
-}
-
-input:focus {
+  &:focus {
     caret-color: $primary;
     opacity: 1;
     outline: $primary none 2px;
   }
+}
 
 
 .btn-primary {
-  font-size: 14px;
-  text-transform: uppercase;
   align-items: center;
-  text-align: center;
-  letter-spacing: 3px;
-  cursor: pointer;
-
-  padding: 8px 32px;
-  height: 42px;
   background-color: $primary;
-  border: none;
-  color: $white;
-  transition: all 0.3s ease-in-out;
+  border: 0;
   box-shadow: 0 4px 8px transparentize($primary, .7);
+  color: $white;
+  cursor: pointer;
+  font-size: 14px;
+  height: 42px;
+  letter-spacing: 3px;
+  padding: 8px 32px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
 
   @media (max-width: 600px) {
     font-size: 11px;
@@ -102,13 +109,13 @@ input:focus {
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
   box-shadow: 0 10px 16px transparentize($primary, .8);
+  transform: translateY(-1px);
 }
 
 .btn-primary:focus {
-    outline: $primary none 2px;
-  }
+  outline: $primary none 2px;
+}
 
 
 

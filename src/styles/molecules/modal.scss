@@ -18,10 +18,10 @@
   @include modal-elevation;
   @include transition-in-out;
 
+  background-color: $white;
   display: flex;
   flex-direction: column;
   width: 420px;
-  background-color: $white;
 }
 
 @mixin confirmation-modal {
@@ -40,8 +40,8 @@
   }
 
   .buttonContainer {
+    border-top: 1px solid var(--line-color);
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid var(--line-color);
   }
 }

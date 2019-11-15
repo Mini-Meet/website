@@ -5,15 +5,15 @@
 // fadeInUp + delay for each child
 
 @mixin transition-in-out {
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 @mixin transition-in {
-  transition: all 0.3s ease-in;
+  transition: all .3s ease-in;
 }
 
 @mixin transition-out {
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
 }
 
 //
@@ -24,6 +24,7 @@
   0% {
     height: 80%;
   }
+
   100% {
     height: 100%;
   }
@@ -75,13 +76,13 @@
 // View Transitions
 
 %animate-slow {
-  animation-duration: 0.6s;
+  animation-duration: .6s;
   transition-timing-function: ease-out;
   // animation-fill-mode: both;
 }
 
 %animate-fast {
-  animation-duration: 0.3s;
+  animation-duration: .3s;
 }
 
 @mixin scale-up {
@@ -90,28 +91,28 @@
   animation-name: scaleUp;
 }
 
-/** An element that fades in */
+// An element that fades in
 @mixin fade-in {
   @extend %animate-fast;
 
   animation-name: fadeIn;
 }
 
-/** An element that fades in */
+// An element that fades in
 @mixin fade-out {
   @extend %animate-slow;
 
   animation-name: fadeOut;
 }
 
-/** An element that fades in and slides up */
+// An element that fades in and slides up
 @mixin fade-in-up {
   @extend %animate-fast;
 
   animation-name: fadeInUp;
 }
 
-/** An element that fades in and slides from the right */
+// An element that fades in and slides from the right
 @mixin fade-in-right {
   @extend %animate-fast;
 
@@ -123,9 +124,9 @@
 }
 
 @mixin delay {
-  animation-delay: 0.3s;
+  animation-delay: .3s;
 }
 
 @mixin delay-child {
-  animation-delay: 0.05s;
+  animation-delay: .05s;
 }
