@@ -23,7 +23,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 On `master` will deploy a build to Netlify, meaning it will be live on our domain within 2-3 minutes
 
 
-### `npm start`
+### `npm start:production`
 
 Runs the app in the "PRODUCTION" mode.<br />
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
