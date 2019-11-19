@@ -1,0 +1,19 @@
+@import '../../../styles/main';
+
+
+.typing-text {
+  padding: 24px 16px;
+}
+
+.typing-header {
+  align-self: flex-end;
+  color: $white;
+  font-size: 11px;
+  text-align: left;
+}
+
+.typing-p {
+  color: $smoke-white;
+  font-size: 11px;
+  text-align: left;
+}

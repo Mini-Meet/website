@@ -1,0 +1,68 @@
+%button {
+  @extend %text-base;
+  @include padding(left right, 2);
+  @include padding(top bottom, 0);
+  @include corner-radius; // @include circular-radius;
+  @include cursor-pointer;
+  @include transition-in-out;
+
+  background-color: $primary;
+  border: 0;
+  box-shadow: 0 4px 8px transparentize($primary, .7);
+  color: $white;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 8px auto;
+  outline: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) {
+    @include padding(left right, 3);
+    @include padding(top bottom, 0);
+
+    font-size: 14px;
+  }
+
+  &:hover {
+    @include button-elevation;
+    @include transition-in-out;
+
+    transform: translateY(-1px);
+  }
+
+  &:focus {
+    outline: $primary none 2px;
+  }
+
+  &:disabled {
+    background-color: $grey;
+    border: 0;
+    box-shadow: none !important;
+    color: $white;
+    cursor: not-allowed;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: initial !important;
+
+  }
+}
+
+
+
+@mixin primary-button {
+  @extend %button;
+}
+
+@mixin secondary-button {
+  @extend %button;
+}
+
+@mixin tertiary-button {
+  @extend %button;
+}
+
+@mixin quarternary-button {
+}

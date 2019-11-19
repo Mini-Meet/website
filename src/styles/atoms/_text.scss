@@ -1,0 +1,208 @@
+%text-base {
+  @include padding(all, reset);
+  @include margin(all, reset);
+  color: $dark;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  text-align: left;
+}
+
+%header-text {
+  @extend %text-base;
+  font-weight: 700;
+  text-align: center;
+}
+
+@mixin h1 {
+  @extend %header-text;
+  font-size: 38px;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 46px;
+  }
+}
+
+h1 {
+  @include h1;
+}
+
+@mixin h2 {
+  @extend %header-text;
+  font-size: 32px;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 46px;
+  }
+}
+
+h2 {
+  @include h2;
+}
+
+@mixin h3 {
+  @extend %header-text;
+  font-size: 24px;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 36px;
+  }
+}
+
+h3 {
+  @include h3;
+}
+
+@mixin h4 {
+  @extend %header-text;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+h4 {
+  @include h4;
+}
+
+@mixin h5 {
+  @extend %header-text;
+  font-size: 17px;
+}
+
+h5 {
+  @include h5;
+}
+
+@mixin text {
+  @extend %text-base;
+  // NOTE @include opacity(2);
+
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@mixin small {
+  @extend %header-text;
+  font-size: 11px;
+}
+
+p,
+li {
+  @include text;
+
+  .small {
+    @include small;
+  }
+}
+
+@mixin input {
+  @extend %text-base;
+  @include col;
+  @include padding(top left bottom, 1);
+  @include padding(right, 2);
+  @include cursor-pointer;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid $light-grey;
+  background-color: $light-grey;
+  box-sizing: border-box;
+
+  @media (min-width: $screen-sm-min) {
+  }
+
+
+  &:focus {
+    border: 1px solid $border-grey;
+    caret-color: $primary;
+    opacity: 1;
+    outline: $primary none 2px;
+    }
+}
+
+input {
+  @include input;
+}
+
+
+@mixin link {
+  @extend %header-text;
+  font-size: 11px;
+  color: $primary;
+}
+
+a {
+  @include link;
+}
+
+@mixin error-text {
+  @extend %header-text;
+  font-size: 11px;
+  color: $error-color;
+}
+
+// p.error {
+//   @include error-text;
+// }
+
+@mixin cite {
+  @include row;
+  @extend %text-base;
+  @include padding(top bottom, 2);
+  @include margin(top bottom, 0);
+  @include margin(left right, 2);
+  text-align: center;
+  color: $grey;
+  font-size: 12px;
+  font-style: italic;
+  border-top: 1px solid $border-grey;
+
+  &::before,
+  &::after {
+    display: none;
+  //   @include flex;
+  //   @include margin(right, 0);
+  //   font-size: 22px;
+  //   max-height: 8px;
+  // }
+  //
+  // &::after {
+  //   @include margin(right, reset);
+  //   justify-content: flex-end;
+  //   align-self: flex-end;
+  }
+}
+
+q {
+  @include cite;
+}
+
+%caption {
+  @extend %header-text;
+  // NOTE @include opacity(3);
+  font-size: 11px;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+
+@mixin caption-center {
+  @extend %caption;
+  text-align: center;
+}
+
+@mixin caption-left {
+  @extend %caption;
+  text-align: left;
+}
+
+label {
+  @include caption-center;
+
+  .left {
+    @include caption-left;
+  }
+}

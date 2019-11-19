@@ -32,32 +32,16 @@ The page will NOT reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 
-## Learn More
+# Using Our White Label Product
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Checklist
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [ ] index.html `<title>`, `<meta>` and `<noscript>` content
+- [ ] favicon
+- [ ] Mixpanel `Home` event: Find & replace experiment name e.g. 'Stoic'
+- [ ] `logoColor` and `logoWhite` in assets/images folder
+- [ ] Hero content and background image
+- [ ] Image images and description text
+- [ ] Edit/remove AppPrototype section
+- [ ] Testimonials content and images
+- [ ] Edit all colour, text, corner-radius & elevation variables

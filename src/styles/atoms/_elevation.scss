@@ -1,0 +1,15 @@
+@mixin card-elevation {
+  box-shadow: 0 10px 16px rgba(0, 0, 0, .05);
+}
+
+@mixin modal-elevation {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
+}
+
+@mixin modal-elevation-hover {
+  box-shadow: 0 30px 50px rgba(0, 0, 0, .15);
+}
+
+@mixin button-elevation {
+  box-shadow: 0 8px 16px transparentize($primary, .8);
+}

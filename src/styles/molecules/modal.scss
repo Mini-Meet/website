@@ -1,0 +1,47 @@
+@mixin modal-container {
+  @include row;
+  @include transition-in-out;
+
+  background-color: $modal-background;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+%modal-base {
+  @include corner-radius;
+  @include modal-elevation;
+  @include transition-in-out;
+
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+}
+
+@mixin confirmation-modal {
+  @extend %modal-base;
+
+  .title {
+    @include h4;
+
+    padding: 32px 0 0 24px;
+  }
+
+  .text {
+    @include text;
+
+    padding: 16px 24px 24px;
+  }
+
+  .buttonContainer {
+    border-top: 1px solid var(--line-color);
+    display: flex;
+    justify-content: space-around;
+  }
+}

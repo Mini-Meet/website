@@ -1,0 +1,53 @@
+@import '../../../styles/main';
+
+.footer {
+  @include background-dark;
+  @include padding(all, 3);
+  @include col;
+
+  @media (min-width: $screen-sm-min) {
+    @include row;
+  }
+
+  &__logo {
+    @include center-block(horizontal);
+
+    &_img {
+      @include opacity(3);
+      @include padding(top right, 2);
+      @include padding(bottom, 0);
+      @include padding(left, 3);
+      max-width: 140px;
+    }
+  }
+
+  // NOTE: To be used for future pages
+
+  // &__list {
+  //    list-style: none;
+  //    text-align: left;
+  //    width: 70%;
+  //    padding: 24px;
+  //
+  //    @media (min-width: $screen-sm-min) {
+  //      text-align: center;
+  //    }
+  //
+  //    &_item {
+  //      padding: 4px 16px;
+  //    }
+  //
+  //    .active {
+  //      color: $white;
+  //    }
+  //
+  //    a {
+  //      cursor: pointer;
+  //      color: $smoke-white;
+  //      text-decoration: none;
+  //        &:hover {
+  //        color: $white;
+  //      }
+  //    }
+  //  }
+}

@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import About from './Components/About/About'
-import Privacy from './Components/Privacy/Privacy'
-import Legal from './Components/Legal/Legal'
+import About from './Components/views/About/About'
+import Privacy from './Components/views/Privacy/Privacy'
+import Legal from './Components/views/Legal/Legal'
 
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route, Redirect, Switch }
+import { BrowserRouter as Router, Route, Switch } // Redirect
 from 'react-router-dom';
-import { createStore} from 'redux';
 import { createBrowserHistory } from "history";
-import { Provider } from 'react-redux';
 
 const history = createBrowserHistory
 

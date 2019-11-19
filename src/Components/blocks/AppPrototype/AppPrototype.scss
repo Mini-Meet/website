@@ -1,0 +1,102 @@
+@import '../../../styles/main';
+
+.product {
+  @include background-light;
+  @include col;
+  @include padding(top bottom, 4);
+  @include padding(left right, 2);
+  align-items: center;
+
+  &__list {
+    max-width: 420px;
+    padding: 24px 24px 24px 40px;
+
+    &_item {
+      padding: 8px 0;
+      text-align: left;
+    }
+  }
+}
+
+
+
+// Product Showcase Element
+// Product Showcase Element
+// Product Showcase Element
+
+
+
+.phone {
+  @include col;
+  @include background-dark;
+  border: $white 15px solid;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px $phone-elevation;
+  justify-content: space-around;
+  min-height: 404px;
+  width: 224px;
+
+  &__text {
+    @include margin(left right, -1);
+  }
+
+  p {
+    @include margin(top, 1);
+    color: $smoke-white;
+  }
+
+  span {
+    align-self: flex-end;
+    color: $white;
+   }
+}
+
+
+
+// Slick Slider
+// Slick Slider
+// Slick Slider
+
+
+
+.slick-slider {
+  top: 66px;
+}
+
+.slick-vertical .slick-slide {
+  height: 143px;
+  transform: rotate(-.5deg);
+}
+
+.slick-prev::before {
+  content: none;
+  display: none;
+}
+
+.slick-next {
+  cursor: pointer;
+  position: relative;
+  right: -192px;
+  top: 86px;
+  transform: rotate(90deg);
+}
+
+.slick-next:hover {
+  transform: rotate(90deg);
+}
+
+.slick-dots {
+  bottom: 310px;
+  left: 72px;
+  position: relative;
+
+  li.slick-active button::before {
+    color: $white;
+    opacity: 1;
+  }
+
+  li button:before {
+    color: $white;
+    opacity: .4;
+  }
+}
