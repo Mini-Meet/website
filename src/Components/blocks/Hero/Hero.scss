@@ -38,7 +38,7 @@
     @media (min-width: $screen-sm-min) {
       @include center-block(horizontal);
     }
-    }
+  }
 
   &__small {
     @include small;

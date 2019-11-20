@@ -49,54 +49,50 @@
     align-self: flex-end;
     color: $white;
    }
-}
 
-
-
-// Slick Slider
-// Slick Slider
-// Slick Slider
-
-
-
-.slick-slider {
-  top: 66px;
-}
-
-.slick-vertical .slick-slide {
-  height: 143px;
-  transform: rotate(-.5deg);
-}
-
-.slick-prev::before {
-  content: none;
-  display: none;
-}
-
-.slick-next {
-  cursor: pointer;
-  position: relative;
-  right: -192px;
-  top: 86px;
-  transform: rotate(90deg);
-}
-
-.slick-next:hover {
-  transform: rotate(90deg);
-}
-
-.slick-dots {
-  bottom: 310px;
-  left: 72px;
-  position: relative;
-
-  li.slick-active button::before {
-    color: $white;
-    opacity: 1;
+  .slick-slider {
+    top: 66px;
   }
 
-  li button:before {
-    color: $white;
-    opacity: .4;
+  .slick-vertical .slick-slide {
+    height: 143px;
+    transform: rotate(-.5deg);
+  }
+
+  .slick-prev::before {
+    content: none;
+    display: none;
+  }
+
+  .slick-next {
+    cursor: pointer;
+    position: relative;
+    right: -192px;
+    top: 86px;
+    transform: rotate(90deg);
+  }
+
+  .slick-next:hover {
+    transform: rotate(90deg);
+  }
+
+  .slick-dots {
+    bottom: 310px;
+    left: 72px;
+    position: relative;
+
+    li.slick-active button::before {
+      color: $white;
+      opacity: 1;
+    }
+
+    li button::before {
+      color: $white;
+      opacity: .4;
+    }
+
+    button {
+      height: 30px;
+    }
   }
 }
