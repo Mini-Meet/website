@@ -9,18 +9,16 @@ import {
   Testimonials,
   Image,
   Footer,
-} from './blocks'
+} from './blocks';
 
-
-export default  class BasePage extends Component {
-
+export default class BasePage extends Component {
   componentDidMount() {
-    Mixpanel.track('Stoic: Home')
+    Mixpanel.track('Stoic: Home');
   }
 
   render() {
     return (
-      <PageLayout >
+      <PageLayout>
         <Header />
         <Hero isFirstHero={true} />
         <Featured />
