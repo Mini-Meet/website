@@ -23,9 +23,9 @@
   @extend %card;
 
   justify-content: space-between;
-  min-width: 240px;
   max-width: 240px;
   min-height: 180px;
+  min-width: 240px;
 }
 
 @mixin card-widget {
@@ -34,10 +34,10 @@
   @include border-white;
   @include transition-out;
   @include cursor-default;
+  margin-left: 32px;
+  min-height: 220px;
 
   min-width: 260px;
-  min-height: 220px;
-  margin-left: 32px;
 
   &:hover {
     @include modal-elevation;
@@ -92,10 +92,10 @@
   @include border-white;
   @include transition-out;
   @include cursor-pointer;
-
-  min-width: 260px;
   height: 222px;
   margin-left: 32px;
+
+  min-width: 260px;
 
   &:hover {
     @include modal-elevation;

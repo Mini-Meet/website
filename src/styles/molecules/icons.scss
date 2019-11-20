@@ -6,10 +6,10 @@
   @extend %icon;
   @include cursor-pointer;
   @include transition-in-out;
+  display: inline-block;
+  margin: 8px 16px;
 
   padding: 8px;
-  margin: 8px 16px;
-  display: inline-block;
 
   &:hover {
     @include opacity(1.3);

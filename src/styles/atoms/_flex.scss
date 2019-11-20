@@ -39,8 +39,8 @@ $column: $col;
 }
 
 @mixin position-center {
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 @mixin position-right {
@@ -52,8 +52,8 @@ $column: $col;
 
 @mixin position-bottom {
   bottom: 0;
-  position: absolute;
   margin-bottom: 16px;
+  position: absolute;
 }
 
 @mixin wrap {
@@ -62,8 +62,8 @@ $column: $col;
 }
 
 @mixin no-wrap {
-  white-space: nowrap;
   overflow: visible;
+  white-space: nowrap;
 }
 
 //  Fixed Positions
