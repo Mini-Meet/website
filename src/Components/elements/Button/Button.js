@@ -16,17 +16,14 @@ const Button = ({
   const buttonTypeClass = secondary
     ? 'secondary'
     : tertiary
-      ? 'tertiary'
-      : quarternary
-        ? 'quarternary'
-        : 'primary'
+    ? 'tertiary'
+    : quarternary
+    ? 'quarternary'
+    : 'primary';
 
   return (
-    <div onClick={onClick} className='container'>
-      <button
-        className={buttonTypeClass}
-        disabled={disabled}
-      >
+    <div onClick={onClick} className="container">
+      <button className={buttonTypeClass} disabled={disabled}>
         {children}
       </button>
     </div>
@@ -38,7 +35,7 @@ Button.propTypes = {
   children: propTypes.string,
   secondary: propTypes.bool,
   tertiary: propTypes.bool,
-  quarternary: propTypes.bool
+  quarternary: propTypes.bool,
 };
 
 export default Button;

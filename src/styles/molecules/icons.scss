@@ -16,11 +16,9 @@
   }
 }
 
-
 @mixin icon-static {
   @extend %icon;
 }
-
 
 // When referencing:
 // <i className={`${styles.test} material-icons`}>lock</i>

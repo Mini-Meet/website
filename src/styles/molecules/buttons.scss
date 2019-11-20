@@ -8,7 +8,7 @@
 
   background-color: $primary;
   border: 0;
-  box-shadow: 0 4px 8px transparentize($primary, .7);
+  box-shadow: 0 4px 8px transparentize($primary, 0.7);
   color: $white;
   display: inline-block;
   font-size: 11px;
@@ -46,11 +46,8 @@
     opacity: 1 !important;
     transform: none !important;
     transition: initial !important;
-
   }
 }
-
-
 
 @mixin primary-button {
   @extend %button;

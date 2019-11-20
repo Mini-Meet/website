@@ -15,13 +15,11 @@
   border-color: $grey;
 }
 
-
 @mixin border-button {
   @extend %border-base;
   @include circular-radius;
   border-color: $primary;
 }
-
 
 @mixin border-button-dark {
   @extend %border-base;
@@ -46,7 +44,6 @@
   @include corner-radius;
   border-color: $white;
 }
-
 
 @mixin border-bottom {
   border-bottom: 2px solid #f1f1f1;

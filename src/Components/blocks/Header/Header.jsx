@@ -1,13 +1,10 @@
-import React from 'react'
-import Logo from '../../../assets/images/logoColor.png'
+import React from 'react';
+import Logo from '../../../assets/images/logoColor.png';
 
-import './Header.scss'
+import './Header.scss';
 
-
-function  Header() {
-  return (
-    <img alt='logo' src={Logo} className='logo' />
-  );
+function Header() {
+  return <img alt="logo" src={Logo} className="logo" />;
 }
 
 export default Header;
