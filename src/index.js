@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import About from './Components/views/About/About';
-import Privacy from './Components/views/Privacy/Privacy';
-import Legal from './Components/views/Legal/Legal';
-
-import * as serviceWorker from './serviceWorker';
+import { createBrowserHistory } from 'history';
 import {
   BrowserRouter as Router,
   Route,
   Switch, // Redirect
 } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import * as serviceWorker from './serviceWorker';
+
+// Components declaration
+import App from './App';
+import About from './Components/views/About/About';
+import Privacy from './Components/views/Privacy/Privacy';
+import Legal from './Components/views/Legal/Legal';
 
 const history = createBrowserHistory;
 
