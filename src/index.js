@@ -9,22 +9,27 @@ import {
 import * as serviceWorker from './serviceWorker';
 
 // Components declaration
-import App from './App';
-import About from './Components/views/About/About';
-import Privacy from './Components/views/Privacy/Privacy';
-import Legal from './Components/views/Legal/Legal';
+import About from './components/views/About/About';
+import Privacy from './components/views/Privacy/Privacy';
+import Legal from './components/views/Legal/Legal';
+import Home from './components/views/Home/Home';
+
+// Main App layout
+import PageLayout from './components/layouts/PageLayout';
 
 const history = createBrowserHistory;
 
 ReactDOM.render(
   <Router history={history}>
-    <Switch>
-      <Route path="/" exact component={App} />
-      <Route path="/home" exact component={App} />
-      <Route path="/about" exact component={About} />
-      <Route path="/privacy" exact component={Privacy} />
-      <Route path="/legal" exact component={Legal} />
-    </Switch>
+    <PageLayout>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/home" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/privacy" exact component={Privacy} />
+        <Route path="/legal" exact component={Legal} />
+      </Switch>
+    </PageLayout>
   </Router>,
 
   document.getElementById('root')
