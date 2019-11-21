@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 import { Welcome } from "@storybook/react/demo";
-import Button from '../src/Components/elements/Button/Button.js'
+import Button from '../src/components/elements/Button/Button.js'
 
 storiesOf("Blocks", module).add("BLOCK TEST", () => (
   <p>Here will be some block</p>
