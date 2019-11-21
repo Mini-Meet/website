@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
-import styles from './PageLayout.scss';
 import type { Node } from 'react';
+import styles from './PageLayout.scss';
 
 type Props = {
   children: Node,
