@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Footer from '../../blocks/Footer/Footer.jsx';
-//import Hero from '../Hero/Hero.jsx'
 
 export default class About extends Component {
   render() {
@@ -16,7 +15,7 @@ export default class About extends Component {
           Body text block Body text block Body text block Body text block
         </span>
 
-        <Footer page={'ABOUT'} />
+        <Footer page="ABOUT" />
       </div>
     );
   }

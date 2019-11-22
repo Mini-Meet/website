@@ -9,13 +9,13 @@ import {
 import * as serviceWorker from './serviceWorker';
 
 // Components declaration
-import About from './components/views/About/About';
-import Privacy from './components/views/Privacy/Privacy';
-import Legal from './components/views/Legal/Legal';
-import Home from './components/views/Home/Home';
+import About from './Components/views/About/About';
+import Privacy from './Components/views/Privacy/Privacy';
+import Legal from './Components/views/Legal/Legal';
+import Home from './Components/views/Home/Home';
 
 // Main App layout
-import PageLayout from './components/layouts/PageLayout';
+import PageLayout from './Components/layouts/PageLayout';
 
 const history = createBrowserHistory;
 
