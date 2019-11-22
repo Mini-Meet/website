@@ -12,7 +12,7 @@
 
 @mixin border-input-focus {
   @extend %border-base;
-  border-color: $grey;
+  border-color: $secondary;
 }
 
 @mixin border-button {

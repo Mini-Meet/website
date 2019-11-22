@@ -1,0 +1,38 @@
+@import '../../../styles/main';
+
+.product {
+  @include background-light;
+  @include col;
+  @include padding(top bottom, 4);
+  @include padding(left right, 5);
+  align-items: center;
+}
+
+.block {
+  @include row;
+  width: 100%;
+
+  &__img {
+    @include col;
+    @include padding(top, 2);
+    align-items: center;
+    max-width: 50%;
+
+    &__bg {
+      width: 60%;
+    }
+  }
+
+  &__text {
+    @include col;
+    @include padding(left, 3);
+    justify-content: center;
+    width: 50%;
+  }
+
+  h3,
+  p {
+    max-width: 360px;
+    text-align: left;
+  }
+}

@@ -3,8 +3,7 @@ import { Mixpanel } from '../../../Mixpanel';
 import {
   Header,
   Hero,
-  Featured,
-  AppPrototype,
+  ProductShowcase,
   Testimonials,
   Image,
   Footer,
@@ -20,8 +19,7 @@ export default class Home extends Component {
       <div className="homePageWrapper">
         <Header />
         <Hero isFirstHero />
-        <Featured />
-        <AppPrototype />
+        <ProductShowcase />
         <Testimonials />
         <Image />
         <Hero isFirstHero={false} />

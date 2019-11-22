@@ -50,10 +50,9 @@ export default class Hero extends Component {
   render() {
     const firstHero = [
       {
-        title: 'Optimize your day.',
-        titleTwo: 'Optimize you.',
-        subtitle:
-          'Define, reflect upon & iterate your goals with our tools & tactics for self-optimization',
+        title: 'Better Remote',
+        titleTwo: 'Team Culture',
+        subtitle: 'More effective. More Connected. More human.',
       },
     ];
 

@@ -3,16 +3,22 @@
 .hero {
   @include background-image;
   @include col;
-  @include padding(top, 4);
+  @include padding(top, 5);
   @include padding(left right, reset);
-  @include padding(bottom, 4);
+  @include padding(bottom, 5);
 
   &__header {
     @include col;
+    color: $white;
     max-width: 720px;
 
     @media (min-width: $screen-sm-min) {
       @include center-block(horizontal);
+    }
+
+    h1,
+    p {
+      color: $white;
     }
 
     h1 {
@@ -42,7 +48,7 @@
   &__small {
     @include small;
     @include padding(bottom, 3);
-    color: $primary;
+    color: $secondary;
   }
 }
 
