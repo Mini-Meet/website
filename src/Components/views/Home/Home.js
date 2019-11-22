@@ -11,7 +11,7 @@ import {
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('Stoic: Home');
+    Mixpanel.track('Secure Journal: Home');
   }
 
   render() {
