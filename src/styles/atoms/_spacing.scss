@@ -4,7 +4,6 @@ $space-scales: -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 $space-scale-factor: 1.618; // golden rule
 
 @mixin _inset($type, $dirs, $step) {
-
   $dirs: if($dirs == all, top right bottom left, $dirs);
 
   // validation

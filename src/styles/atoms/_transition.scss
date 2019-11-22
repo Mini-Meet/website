@@ -5,15 +5,15 @@
 // fadeInUp + delay for each child
 
 @mixin transition-in-out {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @mixin transition-in {
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 @mixin transition-out {
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 //
@@ -76,13 +76,13 @@
 // View Transitions
 
 %animate-slow {
-  animation-duration: .6s;
+  animation-duration: 0.6s;
   transition-timing-function: ease-out;
   // animation-fill-mode: both;
 }
 
 %animate-fast {
-  animation-duration: .3s;
+  animation-duration: 0.3s;
 }
 
 @mixin scale-up {
@@ -124,9 +124,9 @@
 }
 
 @mixin delay {
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 
 @mixin delay-child {
-  animation-delay: .05s;
+  animation-delay: 0.05s;
 }

@@ -18,13 +18,9 @@
   }
 }
 
-
-
 // Product Showcase Element
 // Product Showcase Element
 // Product Showcase Element
-
-
 
 .phone {
   @include col;
@@ -48,7 +44,7 @@
   span {
     align-self: flex-end;
     color: $white;
-   }
+  }
 
   .slick-slider {
     top: 66px;
@@ -56,7 +52,7 @@
 
   .slick-vertical .slick-slide {
     height: 143px;
-    transform: rotate(-.5deg);
+    transform: rotate(-0.5deg);
   }
 
   .slick-prev::before {
@@ -88,7 +84,7 @@
 
     li button::before {
       color: $white;
-      opacity: .4;
+      opacity: 0.4;
     }
 
     button {

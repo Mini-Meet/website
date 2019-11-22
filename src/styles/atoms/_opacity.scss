@@ -5,5 +5,7 @@
 }
 
 @each $i in $opacity-scales {
-  .o#{$i} { @include opacity($i); }
+  .o#{$i} {
+    @include opacity($i);
+  }
 }

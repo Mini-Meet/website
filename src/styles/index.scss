@@ -53,8 +53,6 @@ li {
   }
 }
 
-
-
 q {
   border-top: 1px solid $light-grey;
   color: $grey;
@@ -63,7 +61,6 @@ q {
   margin: 8px 16px;
   padding: 16px 0;
 }
-
 
 /// ------ Responsive ----- ///
 
@@ -108,9 +105,9 @@ q {
 }
 
 ::selection {
-  background: transparentize($primary, .7);
+  background: transparentize($primary, 0.7);
 }
 
 ::-moz-selection {
-  background: transparentize($primary, .7);
+  background: transparentize($primary, 0.7);
 }

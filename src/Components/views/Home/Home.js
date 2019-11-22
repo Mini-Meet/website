@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Mixpanel } from '../Mixpanel';
-import PageLayout from './layouts/PageLayout';
+import { Mixpanel } from '../../../Mixpanel';
 import {
   Header,
   Hero,
@@ -9,27 +8,25 @@ import {
   Testimonials,
   Image,
   Footer,
-} from './blocks'
+} from '../../blocks';
 
-
-export default  class BasePage extends Component {
-
+export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('Stoic: Home')
+    Mixpanel.track('Stoic: Home');
   }
 
   render() {
     return (
-      <PageLayout >
+      <div className="homePageWrapper">
         <Header />
-        <Hero isFirstHero={true} />
+        <Hero isFirstHero />
         <Featured />
         <AppPrototype />
         <Testimonials />
         <Image />
         <Hero isFirstHero={false} />
-        <Footer page={'HOME'} />
-      </PageLayout>
+        <Footer page="HOME" />
+      </div>
     );
   }
 }

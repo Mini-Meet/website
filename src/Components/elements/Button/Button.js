@@ -1,44 +1,37 @@
-import React from 'react';
-import propTypes from 'prop-types';
-
+// @flow
+import React, { Component } from 'react';
 import './Button.scss';
 
 // render with <Button secondary/tertiary /> for different style classes
 // btnContainer used in instances where necessary e.g. ConfirmationModal
-const Button = ({
-  onClick,
-  children,
-  secondary = false,
-  tertiary = false,
-  quarternary = false,
-  disabled = false,
-}) => {
-  const buttonTypeClass = secondary
-    ? 'secondary'
-    : tertiary
-      ? 'tertiary'
-      : quarternary
-        ? 'quarternary'
-        : 'primary'
 
-  return (
-    <div onClick={onClick} className='container'>
-      <button
-        className={buttonTypeClass}
-        disabled={disabled}
-      >
-        {children}
-      </button>
-    </div>
-  );
+type Props = {
+  onClick: Function,
+  children: string,
+  secondary?: boolean,
+  tertiary?: boolean,
+  quarternary?: boolean,
+  disabled?: boolean,
 };
 
-Button.propTypes = {
-  onClick: propTypes.func,
-  children: propTypes.string,
-  secondary: propTypes.bool,
-  tertiary: propTypes.bool,
-  quarternary: propTypes.bool
-};
+export default class Button extends Component<Props> {
+  render() {
+    const {
+      onClick,
+      children,
+      secondary,
+      tertiary,
+      quarternary,
+      disabled,
+    } = this.props;
+    const buttonType = secondary || tertiary || quarternary || 'primary';
 
-export default Button;
+    return (
+      <div onClick={onClick} className="container" role="presentation">
+        <button className={buttonType} disabled={disabled}>
+          {children}
+        </button>
+      </div>
+    );
+  }
+}

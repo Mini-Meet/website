@@ -1,7 +1,5 @@
 @import '../../../styles/main';
 
-
-
 .testimonials {
   @include col;
   @include padding(top, 3);
@@ -15,7 +13,6 @@
   &__card {
     width: 56%;
   }
-
 
   .slick-list {
     height: 340px;
@@ -40,7 +37,6 @@
     color: $dark;
   }
 }
-
 
 @media only screen and (max-width: 600px) {
   .cards {

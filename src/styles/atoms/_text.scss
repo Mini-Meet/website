@@ -100,11 +100,10 @@ li {
   }
 }
 
-
 @mixin link {
   @extend %header-text;
-  font-size: 11px;
   color: $primary;
+  font-size: 11px;
 }
 
 a {
@@ -113,8 +112,8 @@ a {
 
 @mixin error-text {
   @extend %header-text;
-  font-size: 11px;
   color: $error-color;
+  font-size: 11px;
 }
 
 // p.error {
@@ -127,25 +126,25 @@ a {
   @include padding(top bottom, 2);
   @include margin(top bottom, 0);
   @include margin(left right, 2);
-  text-align: center;
+  border-top: 1px solid $border-grey;
   color: $grey;
   font-size: 12px;
   font-style: italic;
-  border-top: 1px solid $border-grey;
+  text-align: center;
 
   &::before,
   &::after {
     display: none;
-  //   @include flex;
-  //   @include margin(right, 0);
-  //   font-size: 22px;
-  //   max-height: 8px;
-  // }
-  //
-  // &::after {
-  //   @include margin(right, reset);
-  //   justify-content: flex-end;
-  //   align-self: flex-end;
+    //   @include flex;
+    //   @include margin(right, 0);
+    //   font-size: 22px;
+    //   max-height: 8px;
+    // }
+    //
+    // &::after {
+    //   @include margin(right, reset);
+    //   justify-content: flex-end;
+    //   align-self: flex-end;
   }
 }
 
@@ -157,7 +156,7 @@ q {
   @extend %header-text;
   // NOTE @include opacity(3);
   font-size: 11px;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 

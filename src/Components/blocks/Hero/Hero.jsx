@@ -1,35 +1,35 @@
-import React, { Component } from "react";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
+import React, { Component } from 'react';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 //import { Mixpanel } from '../../../Mixpanel';
 
-import { Button } from '../../elements'
+import { Button } from '../../elements';
 
-import './Hero.scss'
+import './Hero.scss';
 
-const url = "https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04";
+const url =
+  'https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04';
 
 const CustomForm = ({ status, message, onValidated }) => {
   let email;
   const submit = () =>
     email &&
-    email.value.indexOf("@") > -1 &&
+    email.value.indexOf('@') > -1 &&
     onValidated({
       EMAIL: email.value,
     });
 
   return (
-    <div className='hero__form'
-    >
-      {status === "sending" && <p style={{ color: "black" }}>sending...</p>}
-      {status === "error" && (
+    <div className="hero__form">
+      {status === 'sending' && <p style={{ color: 'black' }}>sending...</p>}
+      {status === 'error' && (
         <p
-          style={{ color: "red" }}
+          style={{ color: 'red' }}
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
-      {status === "success" && (
+      {status === 'success' && (
         <p
-          style={{ color: "green" }}
+          style={{ color: 'green' }}
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
@@ -39,66 +39,64 @@ const CustomForm = ({ status, message, onValidated }) => {
         placeholder="Enter your email"
       />
       <br />
-      <Button
-        primary
-        onClick={submit}
-      >
-       Request Free Early Access
+      <Button primary onClick={submit}>
+        Request Free Early Access
       </Button>
     </div>
   );
 };
 
-export default  class Hero extends Component {
-render() {
+export default class Hero extends Component {
+  render() {
+    const firstHero = [
+      {
+        title: 'Optimize your day.',
+        titleTwo: 'Optimize you.',
+        subtitle:
+          'Define, reflect upon & iterate your goals with our tools & tactics for self-optimization',
+      },
+    ];
 
-  const firstHero = [
-   {
-    title:'Optimize your day.',
-    titleTwo: 'Optimize you.',
-    subtitle: 'Define, reflect upon & iterate your goals with our tools & tactics for self-optimization'
-   }
-  ]
+    const secondHero = [
+      {
+        title: 'Ready to start sticking to your goals?',
+        subtitle:
+          'Sign up for our free ebook on the most effective tactics for optimizing your life:',
+      },
+    ];
 
-  const secondHero = [
-   {
-     title: 'Ready to start sticking to your goals?',
-     subtitle: 'Sign up for our free ebook on the most effective tactics for optimizing your life:'
-   }
-  ]
-
-  let property = this.props.isFirstHero ? firstHero : secondHero
+    let property = this.props.isFirstHero ? firstHero : secondHero;
     return (
-      <div className='hero'>
-        { property.map((prop) => {
+      <div className="hero">
+        {property.map(prop => {
           return (
             <div>
-              <div className='hero__header'>
+              <div className="hero__header">
                 <h1>{prop.title}</h1>
                 <h1>{prop.titleTwo}</h1>
                 <p>{prop.subtitle}</p>
               </div>
             </div>
-          )
-          })
-         }
+          );
+        })}
 
         <MailchimpSubscribe
-           url={url}
-           render={({ subscribe, status, message }) => (
-             <div>
-               <CustomForm
-                  status={status}
-                  message={message}
-                  onValidated={formData => subscribe(formData)}
-                />
-                <p className='hero__small'>
-                  Access to the Public Beta is by invitation only. Request access today.
-                </p>
-             </div>
-           )}
-         />
+          url={url}
+          render={({ subscribe, status, message }) => (
+            <div>
+              <CustomForm
+                status={status}
+                message={message}
+                onValidated={formData => subscribe(formData)}
+              />
+              <p className="hero__small">
+                Access to the Public Beta is by invitation only. Request access
+                today.
+              </p>
+            </div>
+          )}
+        />
       </div>
-      )
+    );
   }
- }
+}

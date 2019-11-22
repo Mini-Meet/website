@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 //import { Link } from 'react-router-dom'
-import Logo from '../../../assets/images/logoWhite.png'
+import Logo from '../../../assets/images/logoWhite.png';
 
-import './Footer.scss'
-
+import './Footer.scss';
 
 class Footer extends Component {
   render() {
@@ -13,8 +12,7 @@ class Footer extends Component {
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     // let terms = this.props.page === 'TERMS & CONDITIONS' ? 'active' :'inactive'
     return (
-
-      <div className='footer'>
+      <div className="footer">
         {/*
         <ul className='`footer__list`'>
           <li className='footer__list_item'><Link to='/home' className={home}>HOME</Link></li>
@@ -24,8 +22,8 @@ class Footer extends Component {
           <li className='footer__list_item'><Link to='/legal' className={terms}>TERMS & CONDITIONS</Link></li>
         </ul>
         */}
-        <div className='footer__logo'>
-          <img alt='logo' src={Logo} className='footer__logo_img' />
+        <div className="footer__logo">
+          <img alt="logo" src={Logo} className="footer__logo_img" />
         </div>
       </div>
     );
