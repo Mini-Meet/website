@@ -3,9 +3,9 @@
 .hero {
   @include background-image;
   @include col;
-  @include padding(top, 4);
+  @include padding(top, 5);
   @include padding(left right, reset);
-  @include padding(bottom, 4);
+  @include padding(bottom, 5);
 
   &__header {
     @include col;
@@ -18,10 +18,12 @@
     h1 {
       @include padding(all, 0);
       @include padding(top, reset);
+      color: $white;
     }
 
     p {
       @include padding(top bottom, 2);
+      color: $white;
       text-align: center;
     }
   }

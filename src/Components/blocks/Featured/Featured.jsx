@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Logo from '../../../assets/images/logoWhite.png';
+import Logo from '../../../assets/images/logo_white.svg';
 
 import './Featured.scss';
 

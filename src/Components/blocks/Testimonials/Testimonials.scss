@@ -4,10 +4,11 @@
   @include col;
   @include padding(top, 3);
   @include padding(bottom, 5);
+  @include background-dark;
   text-align: -webkit-center;
 
   @media (min-width: $screen-sm-min) {
-    @include padding(top bottom, 4);
+    @include padding(top bottom, 5);
   }
 
   &__card {
@@ -34,7 +35,7 @@
 
   li button::before {
     @include opacity(3);
-    color: $dark;
+    color: $grey;
   }
 }
 

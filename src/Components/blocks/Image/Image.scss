@@ -2,7 +2,7 @@
 
 .showcase {
   @include background-white;
-  @include padding(bottom, 4);
+  @include padding(bottom, reset);
   align-items: center;
 
   &__img {

@@ -50,10 +50,9 @@ export default class Hero extends Component {
   render() {
     const firstHero = [
       {
-        title: 'Optimize your day.',
-        titleTwo: 'Optimize you.',
+        title: 'The Secure Journal.',
         subtitle:
-          'Define, reflect upon & iterate your goals with our tools & tactics for self-optimization',
+          'CIA-grade security for your private thoughts: Define & reflect upon your personal goals, or write down your worries & fears, knowing nobody will ever be able to access them.',
       },
     ];
 
@@ -61,7 +60,7 @@ export default class Hero extends Component {
       {
         title: 'Ready to start sticking to your goals?',
         subtitle:
-          'Sign up for our free ebook on the most effective tactics for optimizing your life:',
+          'Sign up for our free ebook on the most effective tactics for optimizing your life when you request access to our Beta programme:',
       },
     ];
 

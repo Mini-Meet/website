@@ -4,6 +4,7 @@
   @include padding(top right left, 2);
   @include padding(bottom, 3);
   @include col;
+  @include background-white;
   box-shadow: 0 20px 40px $phone-elevation;
   height: 208px;
   max-width: 480px;

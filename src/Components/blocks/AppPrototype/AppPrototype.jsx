@@ -64,11 +64,13 @@ export default class AppPrototype extends Component {
             Morning & evening questions to frame & reflect on your day
           </li>
 
-          <li className="product__list_item">Customise your questions</li>
+          <li className="product__list_item">
+            Stored securely through the blockchain
+          </li>
 
           <li className="product__list_item">
             {' '}
-            Review your day, week, month & even year
+            Customise & review your questions every week
           </li>
         </ol>
       </div>
