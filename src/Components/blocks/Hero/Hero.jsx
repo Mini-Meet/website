@@ -1,35 +1,38 @@
 import React, { Component } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-//import { Mixpanel } from '../../../Mixpanel';
-
+import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
-
 import './Hero.scss';
 
 const url =
   'https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04';
 
-const CustomForm = ({ status, message, onValidated }) => {
+const CustomForm = ({ status, message, onSubscribe }) => {
   let email;
-  const submit = () =>
+  const submit = () => {
+    Mixpanel.track('HR/A: send()');
+
     email &&
-    email.value.indexOf('@') > -1 &&
-    onValidated({
-      EMAIL: email.value,
-    });
+      email.value.indexOf('@') > -1 &&
+      onSubscribe({
+        EMAIL: email.value,
+      });
+  };
 
   return (
     <div className="hero__form">
-      {status === 'sending' && <p style={{ color: 'black' }}>sending...</p>}
+      {status === 'sending' && (
+        <p className="hero__form__sending">sending...</p>
+      )}
       {status === 'error' && (
         <p
-          style={{ color: 'red' }}
+          className="hero__form__error"
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
       {status === 'success' && (
         <p
-          style={{ color: 'green' }}
+          className="hero__form__success"
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
@@ -63,7 +66,8 @@ export default class Hero extends Component {
       },
     ];
 
-    let property = this.props.isFirstHero ? firstHero : secondHero;
+    const property = this.props.isFirstHero ? firstHero : secondHero;
+
     return (
       <div className="hero">
         {property.map(prop => {
@@ -85,7 +89,7 @@ export default class Hero extends Component {
               <CustomForm
                 status={status}
                 message={message}
-                onValidated={formData => subscribe(formData)}
+                onSubscribe={formData => subscribe(formData)}
               />
               <p className="hero__small">
                 Access to the Public Beta is by invitation only. Request access

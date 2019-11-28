@@ -4,7 +4,7 @@ import { Header, Hero, ProductShowcase, Footer } from '../../blocks';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('Remote HR: Home');
+    Mixpanel.track('HR/A: Home');
   }
 
   render() {

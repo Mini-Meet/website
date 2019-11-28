@@ -47,6 +47,25 @@
     @media (min-width: $screen-sm-min) {
       @include center-block(horizontal);
     }
+
+    &__sending,
+    &__error,
+    &__success {
+      @include padding(bottom, 1);
+      text-align: center;
+    }
+
+    &__sending {
+      color: $white;
+    }
+
+    &__error {
+      color: $error;
+    }
+
+    &__success {
+      color: $success;
+    }
   }
 
   &__small {
