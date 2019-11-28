@@ -32,6 +32,14 @@ The page will NOT reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 
+## Check for errors
+
+`Yarn prettier:format`
+`Yarn lint`
+`Yarn flow:test`
+
+
+
 # Using Our White Label Product
 
 ### Checklist
