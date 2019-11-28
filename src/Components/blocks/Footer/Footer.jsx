@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import { Link } from 'react-router-dom'
-import Logo from '../../../assets/images/logoWhite.png';
+import Logo from '../../../assets/images/logoWhite.svg';
 
 import './Footer.scss';
 

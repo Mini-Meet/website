@@ -13,7 +13,7 @@ export default class Card extends Component {
             className="profile-pic"
           />
           <div className="card-header-text">
-            <h3 className="card-header-text-name">{this.props.name}</h3>
+            <h4 className="card-header-text-name">{this.props.name}</h4>
             <p className="card-header-text-description">{this.props.title}</p>
           </div>
         </div>

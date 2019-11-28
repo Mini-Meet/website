@@ -5,13 +5,12 @@ import {
   Hero,
   ProductShowcase,
   Testimonials,
-  Image,
   Footer,
 } from '../../blocks';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('Stoic: Home');
+    Mixpanel.track('Remote HR: Home');
   }
 
   render() {
@@ -21,7 +20,6 @@ export default class Home extends Component {
         <Hero isFirstHero />
         <ProductShowcase />
         <Testimonials />
-        <Image />
         <Hero isFirstHero={false} />
         <Footer page="HOME" />
       </div>

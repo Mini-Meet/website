@@ -5,7 +5,11 @@
   @include col;
   @include padding(top, 5);
   @include padding(left right, reset);
-  @include padding(bottom, 5);
+  @include padding(bottom, 3);
+
+  @media (min-width: $screen-sm-min) {
+    @include padding(bottom, 5);
+  }
 
   &__header {
     @include col;
@@ -49,15 +53,5 @@
     @include small;
     @include padding(bottom, 3);
     color: $secondary;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .hero {
-    padding: 40px 16px 20px;
-  }
-
-  &__form {
-    padding: 20px 0 32px;
   }
 }

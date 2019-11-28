@@ -8,7 +8,8 @@
 @mixin background-image {
   @extend %background-base;
   background-image: $background-image;
-  background-position: center bottom;
+  background-position: center left;
+  background-attachment: fixed;
 }
 
 @mixin background-white {

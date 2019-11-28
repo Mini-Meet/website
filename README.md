@@ -37,9 +37,9 @@ You will also see any lint errors in the console.
 ### Checklist
 
 - [ ] index.html `<title>`, `<meta>` and `<noscript>` content
+- [ ] `logoColor` and `logoWhite` in assets/images folder
 - [ ] favicon
 - [ ] Mixpanel `Home` event: Find & replace experiment name e.g. 'Stoic'
-- [ ] `logoColor` and `logoWhite` in assets/images folder
 - [ ] Hero content and background image
 - [ ] Image images and description text
 - [ ] Edit/remove AppPrototype section

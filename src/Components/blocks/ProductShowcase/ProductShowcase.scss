@@ -3,36 +3,82 @@
 .product {
   @include background-light;
   @include col;
-  @include padding(top bottom, 4);
-  @include padding(left right, 5);
+  @include padding(top bottom, 2);
   align-items: center;
+
+  @media (min-width: $screen-md-min) {
+    @include padding(top bottom, 4);
+    @include padding(left right, 5);
+  }
 }
 
 .block {
-  @include row;
-  width: 100%;
+  @include col;
+  @include padding(top bottom, 3);
+
+  @media (min-width: $screen-sm-min) {
+    margin: 0 auto;
+    max-width: 50%;
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include row;
+    max-width: 80%;
+  }
+
+  &__reverse {
+    flex-direction: column-reverse;
+
+    @media (min-width: $screen-md-min) {
+      @include row;
+    }
+  }
 
   &__img {
     @include col;
     @include padding(top, 2);
     align-items: center;
-    max-width: 50%;
+    max-width: 100%;
+    order: reverse;
+
+    @media (min-width: $screen-md-min) {
+      @include row;
+    }
 
     &__bg {
-      width: 60%;
+      width: 100%;
     }
   }
 
   &__text {
     @include col;
-    @include padding(left, 3);
+    @include padding(top, 2);
     justify-content: center;
-    width: 50%;
+
+    @media (min-width: $screen-sm-min) {
+      @include padding(top, 1);
+    }
+
+    @media (min-width: $screen-md-min) {
+      @include padding(left, 5);
+      width: 50%;
+    }
+
+    &_left {
+      @media (min-width: $screen-md-min) {
+        @include padding(left, reset);
+        @include padding(right, 3);
+      }
+    }
   }
 
   h3,
   p {
     max-width: 360px;
-    text-align: left;
+    text-align: center;
+
+    @media (min-width: $screen-md-min) {
+      text-align: left;
+    }
   }
 }

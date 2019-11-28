@@ -58,9 +58,8 @@ export default class Hero extends Component {
 
     const secondHero = [
       {
-        title: 'Ready to start sticking to your goals?',
-        subtitle:
-          'Sign up for our free ebook on the most effective tactics for optimizing your life:',
+        title: 'Ready to level up your team culture?',
+        subtitle: 'Start building a strong, connected remote culture today:',
       },
     ];
 
@@ -69,7 +68,7 @@ export default class Hero extends Component {
       <div className="hero">
         {property.map(prop => {
           return (
-            <div>
+            <div key={this.props.key}>
               <div className="hero__header">
                 <h1>{prop.title}</h1>
                 <h1>{prop.titleTwo}</h1>

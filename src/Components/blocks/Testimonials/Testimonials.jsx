@@ -3,9 +3,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import TimImage from '../../../assets/images/testimonials/TimFerriss.png';
-import SenecaImage from '../../../assets/images/testimonials/Seneca.png';
-import MarcusImage from '../../../assets/images/testimonials/Marcus.png';
+import customer1 from '../../../assets/images/testimonials/customer1.png';
+import customer2 from '../../../assets/images/testimonials/customer2.png';
+import customer3 from '../../../assets/images/testimonials/customer3.png';
 
 import Card from './Card/Card.jsx';
 
@@ -16,27 +16,26 @@ export default class Testimonials extends Component {
     // NOTE: Testimonial Card Content
     const cards = [
       {
-        photo: TimImage,
-        name: 'Tim Ferriss',
-        title: 'Author/Entrepreneur',
+        photo: customer1,
+        name: 'John Smith',
+        title: 'CEO, Remote.com',
         comment:
-          '"Questions I regularly ask myself: What if I did the opposite for 48 hours? What if this were easy? What if I could only subtract to solve problems?"',
+          'Key to building a strong remote team culture & keeping people productive, aligned &, most importantly, happy!',
       },
 
       {
-        photo: SenecaImage,
-        name: 'Seneca',
-        title: 'Philosopher',
+        photo: customer2,
+        name: 'Jane Smith',
+        title: 'Remote Team Lead, Buffer',
         comment:
-          '"I will keep constant watch over myself and—most usefully—will put each day up for review. For this is what makes us evil—that none of us looks back upon our own lives."',
+          'A great tool for building the soft side of team culture - the hard to pindown - such as building a human relationship with your remote colleagues',
       },
 
       {
-        photo: MarcusImage,
-        name: 'Marcus Aurelius',
-        title: 'Emperor of Rome',
-        comment:
-          '"If you can eliminate [what is not essential], you’ll have more time, and more tranquility. Ask yourself at every moment, "Is this necessary?""',
+        photo: customer3,
+        name: 'Adam Smith',
+        title: 'Head of HR, A Company',
+        comment: 'Nice tool!',
       },
     ];
 
