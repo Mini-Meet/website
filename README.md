@@ -47,7 +47,8 @@ You will also see any lint errors in the console.
 - [ ] index.html `<title>`, `<meta>` and `<noscript>` content
 - [ ] `logoColor` and `logoWhite` in assets/images folder
 - [ ] favicon
-- [ ] Mixpanel `Home` event: Find & replace experiment name e.g. 'Stoic'
+- [ ] Mixpanel `Home` & `Subscribed!` event: Find & replace experiment name e.g. 'Stoic'
+- [ ] Mailchimp URL (in Hero.jsx)
 - [ ] Hero content and background image
 - [ ] Image images and description text
 - [ ] Edit/remove AppPrototype section

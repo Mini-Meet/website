@@ -5,12 +5,12 @@ import { Button } from '../../elements';
 import './Hero.scss';
 
 const url =
-  'https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04';
+  'https://zetatours.us4.list-manage.com/subscribe/post?u=031f66ad668b9ad966df4a5b0&amp;id=667578ad6f';
 
 const CustomForm = ({ status, message, onSubscribe }) => {
   let email;
   const submit = () => {
-    Mixpanel.track('HR/A: send()');
+    Mixpanel.track('HR/A: Subscribed!');
 
     email &&
       email.value.indexOf('@') > -1 &&
