@@ -65,7 +65,7 @@ export default class Hero extends Component {
       },
     ];
 
-    let property = this.props.isFirstHero ? firstHero : secondHero;
+    const property = this.props.isFirstHero ? firstHero : secondHero;
     return (
       <div className="hero">
         {property.map(prop => {
