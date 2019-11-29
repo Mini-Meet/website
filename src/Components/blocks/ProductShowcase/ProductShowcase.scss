@@ -52,7 +52,7 @@
 
   &__text {
     @include col;
-    @include padding(top, 2);
+    @include padding(top bottom, 2);
     justify-content: center;
 
     @media (min-width: $screen-sm-min) {

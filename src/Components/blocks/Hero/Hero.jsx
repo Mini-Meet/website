@@ -53,9 +53,10 @@ export default class Hero extends Component {
   render() {
     const firstHero = [
       {
-        title: 'Better Remote',
-        titleTwo: 'Team Culture',
-        subtitle: 'More effective. More Connected. More human.',
+        title: 'Build a Badass',
+        titleTwo: 'Remote Culture',
+        subtitle:
+          'Build happier, more productive, better connected remote teams with our tools & tactics for building world-class culture',
       },
     ];
 
