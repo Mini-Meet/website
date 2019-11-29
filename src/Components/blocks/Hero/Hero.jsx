@@ -10,7 +10,7 @@ const url =
 const CustomForm = ({ status, message, onSubscribe }) => {
   let email;
   const submit = () => {
-    Mixpanel.track('HR/A: Subscribed!');
+    Mixpanel.track('HR/B: Subscribed!');
 
     email &&
       email.value.indexOf('@') > -1 &&
@@ -53,8 +53,8 @@ export default class Hero extends Component {
   render() {
     const firstHero = [
       {
-        title: 'Build a Badass',
-        titleTwo: 'Remote Culture',
+        title: 'Connect Your Remote',
+        titleTwo: 'Team Culture',
         subtitle:
           'Build happier, more productive, better connected remote teams with our tools & tactics for building world-class culture',
       },
@@ -62,8 +62,9 @@ export default class Hero extends Component {
 
     const secondHero = [
       {
-        title: 'Ready to level up your team culture?',
-        subtitle: 'Start building a strong, connected remote culture today:',
+        title: 'Ready to level up your remote team culture?',
+        subtitle:
+          'Start building a happier, more productive, better connected remote team today:',
       },
     ];
 
