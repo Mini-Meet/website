@@ -19,7 +19,7 @@ const CustomForm = () => {
   return (
     <a className="hero__form" href="https://calendly.com/vaida-re/remote-work">
       <Button primary onClick={submit}>
-        Request Free Early Access
+        Book a Free Training Session
       </Button>
     </a>
   );
