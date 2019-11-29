@@ -43,6 +43,7 @@
     @include padding(bottom, 1);
     margin: 0 auto;
     max-width: 420px;
+    text-decoration: none;
 
     @media (min-width: $screen-sm-min) {
       @include center-block(horizontal);
@@ -72,5 +73,7 @@
     @include small;
     @include padding(bottom, 3);
     color: $secondary;
+    margin: 0 auto;
+    max-width: 520px;
   }
 }

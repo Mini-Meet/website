@@ -7,45 +7,21 @@ import './Hero.scss';
 const url =
   'https://zetatours.us4.list-manage.com/subscribe/post?u=031f66ad668b9ad966df4a5b0&amp;id=667578ad6f';
 
-const CustomForm = ({ status, message, onSubscribe }) => {
-  let email;
+const CustomForm = () => {
   const submit = () => {
-    Mixpanel.track('HR/D: Subscribed!');
+    Mixpanel.track('HR/D/Consult: Subscribed!');
 
-    email &&
-      email.value.indexOf('@') > -1 &&
-      onSubscribe({
-        EMAIL: email.value,
-      });
+    //   shell.openExternal(
+    //   'mailto:jonathan@scribeapp.co?Subject=Scribe%20App%20Menu%20Help',
+    // )
   };
 
   return (
-    <div className="hero__form">
-      {status === 'sending' && (
-        <p className="hero__form__sending">sending...</p>
-      )}
-      {status === 'error' && (
-        <p
-          className="hero__form__error"
-          dangerouslySetInnerHTML={{ __html: message }}
-        />
-      )}
-      {status === 'success' && (
-        <p
-          className="hero__form__success"
-          dangerouslySetInnerHTML={{ __html: message }}
-        />
-      )}
-      <input
-        ref={node => (email = node)}
-        type="email"
-        placeholder="Enter your email"
-      />
-      <br />
+    <a className="hero__form" href="https://calendly.com/vaida-re/remote-work">
       <Button primary onClick={submit}>
         Request Free Early Access
       </Button>
-    </div>
+    </a>
   );
 };
 
@@ -94,8 +70,9 @@ export default class Hero extends Component {
                 onSubscribe={formData => subscribe(formData)}
               />
               <p className="hero__small">
-                Access to the Public Beta is by invitation only. Request access
-                today.
+                Connect with one of our remote experts for free (no strings
+                attached) to see how they can help improve your remote team
+                culture
               </p>
             </div>
           )}
