@@ -61,6 +61,7 @@ storiesOf("Elements", module)
       placeholder="type..."
       label="Label"
       type="text"
+      icon="star"
     />
   ));
 
