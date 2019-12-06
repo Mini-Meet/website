@@ -3,6 +3,7 @@
   @include margin(all, reset);
   color: $dark;
   font-family: 'Karla', sans-serif;
+  font-size: 14px;
   font-weight: 400;
   text-align: left;
 }
@@ -92,6 +93,7 @@ h5 {
   @extend %header-text;
   font-size: 11px;
   font-weight: 400;
+  letter-spacing: 0;
 }
 
 p,
@@ -148,7 +150,7 @@ q {
 
 %caption {
   @extend %header-text;
-  // NOTE @include opacity(3);
+  color: $caption-grey;
   font-size: 11px;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
