@@ -34,5 +34,8 @@ input {
 // Variations
 
 @mixin input-label {
-  @include caption-left;
+  p {
+    @include caption-left;
+    padding-left: 24px;
+  }
 }

@@ -1,24 +1,35 @@
-%icon {
-  color: $grey;
+i {
+  @include padding(all, 0);
+  color: $dark;
 }
 
-@mixin icon-button {
-  @extend %icon;
-  @include cursor-pointer;
-  @include transition-in-out;
-  display: inline-block;
-  margin: 8px 16px;
+// Sizes
 
-  padding: 8px;
-
-  &:hover {
-    @include opacity(1.3);
-  }
+@mixin md-16 {
+  font-size: 16px;
 }
 
-@mixin icon-static {
-  @extend %icon;
+@mixin md-24 {
+  font-size: 24px;
 }
 
-// When referencing:
-// <i className={`${styles.test} material-icons`}>lock</i>
+@mixin md-36 {
+  font-size: 36px;
+}
+
+// Colour
+
+@mixin md-disabled {
+  @include padding(all, reset);
+  @include margin(all, reset);
+  color: $inactive-grey;
+  cursor: not-allowed;
+}
+
+// Button
+@mixin md-button {
+  @include padding(all, 1);
+  @include margin(left right, 1);
+
+  color: $primary;
+}

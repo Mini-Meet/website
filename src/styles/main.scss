@@ -2,8 +2,8 @@
 
 // Requires variables
 
-// @import '@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/main';
-// @import 'meyer-reset-sass/reset';
+// import material icons
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
 
 // Atoms
 
@@ -29,7 +29,7 @@
 @import 'molecules/buttons';
 // @import 'molecules/cards';
 // @import 'molecules/headers';
-// @import 'molecules/icons';
+@import 'molecules/icons';
 @import 'molecules/input';
 // @import 'molecules/modal';
 // @import 'molecules/tags';

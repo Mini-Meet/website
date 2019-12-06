@@ -5,7 +5,6 @@ import './Input.scss';
 type Props = {
   disabled?: boolean,
   htmlFor: string,
-  icon: string,
   label: string,
   onChange: func,
   placeholder: string,
@@ -17,7 +16,6 @@ export default class Input extends Component<Props> {
     const {
       disabled,
       htmlFor,
-      icon,
       label,
       onChange,
       placeholder,
@@ -28,9 +26,8 @@ export default class Input extends Component<Props> {
     return (
       <div className="container">
         <label htmlFor={htmlFor} className="input__label" {...otherProps}>
-          {label}
+          <p>{label}</p>
           <div className="input__row">
-            <i className="input__icon">{icon}</i>
             <input
               disabled={disabled}
               placeholder={placeholder}

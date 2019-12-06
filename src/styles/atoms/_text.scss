@@ -150,8 +150,8 @@ q {
 
 %caption {
   @extend %header-text;
-  color: $caption-grey;
-  font-size: 11px;
+  color: $inactive-grey;
+  font-size: 10px;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
