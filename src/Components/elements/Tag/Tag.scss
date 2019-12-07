@@ -1,0 +1,61 @@
+@import '../../../styles/main';
+
+.tag {
+  @include border-button;
+  @include cursor-pointer;
+  @include flex;
+  @include margin(all, -1);
+  @include padding(left right, 2);
+  @include padding(top botom, -1);
+
+  max-height: 24px;
+
+  &__label {
+    @include padding(top, -3);
+    @include small;
+  }
+
+  &__icon {
+    @include md-button;
+    @include margin(all, reset);
+    @include padding(left right, 0);
+  }
+}
+
+.default {
+  &:hover {
+    background-color: $primary;
+
+    > .tag__label {
+      color: $white;
+    }
+
+    > .tag__icon {
+      color: $white;
+    }
+  }
+}
+
+.selected {
+  background-color: $primary;
+
+  > .tag__label {
+    color: $white;
+  }
+
+  > .tag__icon {
+    display: none;
+  }
+}
+
+.addNew {
+  input {
+    @include margin(all, reset);
+    @include padding(left right, -2);
+    @include padding(top bottom, reset);
+
+    align-self: center;
+    background-color: inherit;
+    border: 0;
+  }
+}

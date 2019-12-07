@@ -28,6 +28,7 @@ i {
 
 // Button
 @mixin md-button {
+  @include cursor-pointer;
   @include padding(all, 1);
   @include margin(left right, 1);
 
