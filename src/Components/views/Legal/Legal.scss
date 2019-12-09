@@ -1,0 +1,18 @@
+@import '../../../styles/main';
+
+.legal {
+  margin: 0 auto;
+  max-width: 620px;
+
+  h1 {
+    @include padding(top bottom, 4);
+  }
+
+  h3 {
+    @include padding(top, 3);
+    @include padding(bottom, 2);
+  }
+
+  span {
+  }
+}
