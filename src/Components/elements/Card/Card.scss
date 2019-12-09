@@ -2,32 +2,32 @@
 
 .card {
   @include margin(all, 0);
+}
 
-  &__default {
-    @include card-base;
-    min-height: 80px;
-  }
+.cardDefault {
+  @include card-base;
+  min-height: 80px;
+}
 
-  &__active {
-    @include card-elevation;
-    @include border-white;
-    @include transition-out;
-    min-height: 80px;
-  }
+.cardActive {
+  @include card-elevation;
+  @include border-white;
+  @include transition-out;
+  min-height: 80px;
+}
 
-  &__modal {
-    @include card-modal;
-    min-height: 140px;
-  }
+.cardModal {
+  @include card-modal;
+  min-height: 140px;
+}
 
-  &__disabled {
-    @include card-base;
-    cursor: not-allowed;
-    min-height: 80px;
+.cardDisabled {
+  @include card-base;
+  cursor: not-allowed;
+  min-height: 80px;
 
-    &:hover {
-      @include border-card;
-      box-shadow: initial;
-    }
+  &:hover {
+    @include border-card;
+    box-shadow: initial;
   }
 }

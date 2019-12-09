@@ -15,12 +15,11 @@ export default class Card extends Component<Props> {
     const {
       onClick,
       children,
-      card__active,
-      card__modal,
-      card__disabled,
+      cardActive,
+      cardModal,
+      cardDisabled,
     } = this.props;
-    const cardType =
-      card__active || card__modal || card__disabled || 'card__default';
+    const cardType = cardActive || cardModal || cardDisabled || 'card__default';
 
     return (
       <div onClick={onClick} className="card" role="presentation">
