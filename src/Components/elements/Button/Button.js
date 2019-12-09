@@ -27,7 +27,7 @@ export default class Button extends Component<Props> {
     const buttonType = secondary || tertiary || quarternary || 'primary';
 
     return (
-      <div onClick={onClick} className="container" role="presentation">
+      <div onClick={onClick} className="btnContainer" role="presentation">
         <button className={buttonType} disabled={disabled}>
           {children}
         </button>

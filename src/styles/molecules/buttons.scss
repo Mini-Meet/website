@@ -38,7 +38,7 @@
   }
 
   &:disabled {
-    background-color: $grey;
+    background-color: $border-grey;
     border: 0;
     box-shadow: none !important;
     color: $white;
@@ -55,11 +55,36 @@
 
 @mixin secondary-button {
   @extend %button;
+  background-color: $white;
+  border: 2px solid $primary;
+  box-shadow: 0 4px 8px transparentize($primary, 0.8);
+  color: $primary;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
 }
 
 @mixin tertiary-button {
   @extend %button;
+  background-color: inherit;
+  border: 0;
+  box-shadow: none;
+  color: $primary;
 }
 
 @mixin quarternary-button {
+  @include small;
+  @include padding(left right, 0);
+  background-color: inherit;
+  border: 0;
+  box-shadow: none;
+  color: $primary;
+  cursor: pointer;
+  outline: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -18,6 +18,11 @@ Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 
+### `npm run storybook`
+
+Run storybook to build & test UI components on `http://localhost:6006/?path=/story/blocks--block-test`
+
+
 ### `yarn build`
 
 On `master` will deploy a build to Netlify, meaning it will be live on our domain within 2-3 minutes
