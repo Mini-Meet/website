@@ -6,7 +6,7 @@
   &__logo {
     @include padding(all, 2);
     @include opacity(2);
-    max-width: 120px; // default logo width: 140px;
+    max-width: 48px; // default logo width: 140px;
     position: absolute;
 
     &:hover {

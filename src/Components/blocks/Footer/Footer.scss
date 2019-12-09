@@ -2,52 +2,58 @@
 
 .footer {
   @include background-dark;
-  @include padding(all, 3);
+  @include padding(left right, 3);
+  @include padding(top bottom, 2);
   @include col;
 
   @media (min-width: $screen-sm-min) {
     @include row;
+    justify-content: space-between;
   }
 
   &__logo {
-    @include center-block(horizontal);
-
     &_img {
-      @include opacity(3);
-      @include padding(top right, 2);
+      @include padding(left, 2);
+      @include padding(top, 3);
       @include padding(bottom, 0);
-      @include padding(left, 3);
-      max-width: 140px;
+      max-width: 48px;
+
+      @media (min-width: $screen-sm-min) {
+        @include padding(top right, 2);
+        @include padding(left, 3);
+      }
     }
   }
 
-  // NOTE: To be used for future pages
+  &__list {
+    @include padding(top bottom, 2);
+    list-style: none;
+    text-align: left;
+    width: 70%;
 
-  // &__list {
-  //    list-style: none;
-  //    text-align: left;
-  //    width: 70%;
-  //    padding: 24px;
-  //
-  //    @media (min-width: $screen-sm-min) {
-  //      text-align: center;
-  //    }
-  //
-  //    &_item {
-  //      padding: 4px 16px;
-  //    }
-  //
-  //    .active {
-  //      color: $white;
-  //    }
-  //
-  //    a {
-  //      cursor: pointer;
-  //      color: $smoke-white;
-  //      text-decoration: none;
-  //        &:hover {
-  //        color: $white;
-  //      }
-  //    }
-  //  }
+    @media (min-width: $screen-sm-min) {
+      text-align: center;
+    }
+
+    &_item {
+      @include padding(left, 2);
+      @include padding(top bottom, 2);
+      @include link;
+      text-align: left;
+    }
+
+    .active {
+      color: $white;
+    }
+  }
+
+  a {
+    @include opacity(2);
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      @include opacity(1);
+    }
+  }
 }
