@@ -5,9 +5,9 @@ import './Card.scss';
 type Props = {
   onClick: Function,
   children: string,
-  card__active?: boolean,
-  card__modal?: boolean,
-  card__disabled?: boolean,
+  cardActive?: boolean,
+  cardModal?: boolean,
+  cardDisabled?: boolean,
 };
 
 export default class Card extends Component<Props> {

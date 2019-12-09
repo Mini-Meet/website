@@ -13,17 +13,17 @@ storiesOf("Elements/Cards", module)
   ))
   .add("Card: Active", () => (
     <Card
-      card__active="card__active"
+      cardActive="cardActive"
     />
   ))
   .add("Card: Modal", () => (
     <Card
-      card__modal="card__modal"
+      cardModal="cardModal"
     />
   ))
   .add("Card: Disabled", () => (
     <Card
-      card__disabled="card__disabled"
+      cardDisabled="cardDisabled"
     />
   ))
   ;

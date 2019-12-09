@@ -11,9 +11,9 @@ type Props = {
   icon: string,
   input?: boolean,
   label: string,
-  addNew?: boolean,
-  selected?: boolean,
-  disabled?: boolean,
+  addNew?: string,
+  selected?: string,
+  disabled?: string,
 };
 
 export default class Tag extends Component<Props> {

@@ -6,7 +6,7 @@ type Props = {
   disabled?: boolean,
   htmlFor: string,
   label: string,
-  onChange: func,
+  onChange: Function,
   placeholder: string,
   value: string,
 };
@@ -20,12 +20,11 @@ export default class Input extends Component<Props> {
       onChange,
       placeholder,
       value,
-      ...otherProps
     } = this.props;
 
     return (
       <div className="container">
-        <label htmlFor={htmlFor} className="input__label" {...otherProps}>
+        <label htmlFor={htmlFor} className="input__label">
           <p>{label}</p>
           <div className="input__row">
             <input

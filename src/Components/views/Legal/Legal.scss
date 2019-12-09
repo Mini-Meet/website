@@ -1,8 +1,8 @@
 @import '../../../styles/main';
 
 .legal {
-  max-width: 620px;
   margin: 0 auto;
+  max-width: 620px;
 
   h1 {
     @include padding(top bottom, 4);
