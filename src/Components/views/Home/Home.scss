@@ -1,0 +1,22 @@
+@import '../../../styles/main';
+
+.react-cookie-banner {
+  text-align: left;
+}
+
+.cookie-message {
+  @include small;
+  @include flex;
+  @include padding(left, 2);
+  color: $white;
+}
+
+.cookie-link {
+  color: #b4b4b4;
+  text-decoration: none;
+  letter-spacing: normal;
+
+  &:hover {
+    color: $white;
+  }
+}

@@ -6,6 +6,7 @@ import './Tag.scss';
 // btnContainer used in instances where necessary e.g. ConfirmationModal
 
 type Props = {
+  onClickIcon: Function,
   onClick: Function,
   icon: string,
   input?: boolean,
@@ -18,6 +19,7 @@ type Props = {
 export default class Tag extends Component<Props> {
   render() {
     const {
+      onClickIcon,
       onClick,
       icon,
       input,
@@ -30,10 +32,10 @@ export default class Tag extends Component<Props> {
     const tagType = addNew || selected || disabled || 'default';
 
     return (
-      <div className={`${tagType} tag`} role="presentation">
+      <div className={`${tagType} tag`} onClick={onClick} role="presentation">
         {!input && <p className="tag__label">{label}</p>}
         {input && <input placeholder="add new..." />}
-        <i className="tag__icon inactive16" onClick={onClick}>
+        <i className="tag__icon inactive16" onClickIcon={onClickIcon}>
           {icon}
         </i>
       </div>

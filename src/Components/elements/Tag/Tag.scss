@@ -19,6 +19,7 @@
     @include md-button;
     @include margin(all, reset);
     @include padding(left right, 0);
+    z-index: 1;
   }
 }
 

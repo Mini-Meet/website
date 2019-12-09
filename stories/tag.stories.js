@@ -14,13 +14,15 @@ storiesOf("Elements/Tag", module)
     <Tag
       icon="close"
       label="Label"
-      onClick={action('clicked')}
+      onClick={action('clicked tag')}
+      onClickIcon={action('clicked icon')}
     />
   ))
   .add("Tag: Selected", () => (
     <Tag
       label="Label"
       selected="selected"
+      onClick={action('clicked tag')}
     />
   ))
   .add("Tag: Add", () => (
@@ -29,7 +31,7 @@ storiesOf("Elements/Tag", module)
       icon="add"
       input
       label="Label"
-      onClick={action('clicked')}
+      onClickIcon={action('clicked icon')}
     />
   ))
   ;
