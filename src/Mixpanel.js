@@ -1,6 +1,6 @@
 import mixpanel from 'mixpanel-browser';
 
-mixpanel.init('741a30e4e4ffc18f1e224dadcde34cc7');
+mixpanel.init('87c62ae60a6aad4c516c50d0fe7ceae6');
 
 const currentEnvironment = process.env.NODE_ENV === 'production';
 
