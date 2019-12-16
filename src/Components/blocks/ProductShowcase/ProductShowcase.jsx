@@ -4,6 +4,7 @@ import imgMentorship from '../../../assets/images/prototype/productImg_mentorshi
 import imgRetreat from '../../../assets/images/prototype/productImg2.png';
 import imgOnboarding from '../../../assets/images/prototype/productImg_onboarding.png';
 import imgGuide from '../../../assets/images/prototype/productImg4.png';
+import img1 from '../../../assets/images/prototype/productImg1.png';
 
 import './ProductShowcase.scss';
 
@@ -78,6 +79,20 @@ export default class ProductShowcase extends Component {
               professionally, with our guided mentorship programme, inspired by
               remote leaders Buffer
             </p>
+          </div>
+        </div>
+
+        <div className="block block__reverse">
+          <div className="block__text block__text_left">
+            <h3>Run Effective 1x1s To Connect Your Team</h3>
+            <p>
+              Automatically set 1x1s through Slack or Google Calendar using our
+              1x1 templates to make sure you’re team are connecting,
+              collaborating & sharing info effectively
+            </p>
+          </div>
+          <div className="block__img">
+            <img alt="1x1s" src={img1} className="block__img__bg" />
           </div>
         </div>
       </div>
