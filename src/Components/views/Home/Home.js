@@ -8,7 +8,7 @@ import './Home.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('HR3: Guide Home');
+    Mixpanel.track('HR/B: Automations Home');
   }
 
   render() {

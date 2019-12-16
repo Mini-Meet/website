@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
+import imgMentorship from '../../../assets/images/prototype/productImg_mentorship.png';
+import imgMeasure from '../../../assets/images/prototype/productImg_measure.png';
+import imgRetro from '../../../assets/images/prototype/productImg_retro.png';
 import img1 from '../../../assets/images/prototype/productImg1.png';
-import img2 from '../../../assets/images/prototype/productImg2.png';
-import img3 from '../../../assets/images/prototype/productImg3.png';
-import img4 from '../../../assets/images/prototype/productImg4.png';
 
 import './ProductShowcase.scss';
 
@@ -13,57 +13,58 @@ export default class ProductShowcase extends Component {
       <div className="product">
         <div className="block block__reverse">
           <div className="block__text block__text_left">
-            <h3>Curate Your Remote Guide</h3>
+            <h3>Increase Cross-Team Collaboration</h3>
             <p>
-              Help new hires navigate your company & the world of remote work to
-              help them get off to a flying start
+              Automatically set & monitor 1x1s through Slack or Google Calendar
+              using our meeting templates to make sure your team are connecting,
+              collaborating & sharing info across the business
             </p>
           </div>
           <div className="block__img">
-            <img alt="Remote Guide" src={img4} className="block__img__bg" />
+            <img alt="Remote Guide" src={img1} className="block__img__bg" />
           </div>
         </div>
 
         <div className="block">
           <div className="block__img">
-            <img
-              alt="Mentorship Program"
-              src={img3}
-              className="block__img__bg"
-            />
+            <img alt="Retro" src={imgRetro} className="block__img__bg" />
           </div>
           <div className="block__text">
-            <h3>Mentorship Programme</h3>
+            <h3>Focus on Continuous Improvement</h3>
             <p>
-              Help your employees & teammates grow, both personally &
-              professionally, with our guided mentorship programme
+              Gain high-value insights & take action on problems within your
+              company using our framework for effective remote retrospectives
             </p>
           </div>
         </div>
 
         <div className="block block__reverse">
           <div className="block__text block__text_left">
-            <h3>Team Retreats</h3>
+            <h3>Measure your company culture</h3>
             <p>
-              Organise your team retreats - and learn how to run them
-              effectively - with our team-driven planning tool
+              Automate surveys, retros, team check-ins & take the temperature of
+              your team culture on a regular basis to ensure everyone is happy &
+              productive!
             </p>
           </div>
           <div className="block__img">
-            <img alt="Team Retreats" src={img2} className="block__img__bg" />
+            <img alt="Measure" src={imgMeasure} className="block__img__bg" />
           </div>
         </div>
 
         <div className="block">
           <div className="block__img">
-            <img alt="Automate 1x1s" src={img1} className="block__img__bg" />
+            <img
+              alt="Mentorship"
+              src={imgMentorship}
+              className="block__img__bg"
+            />
           </div>
           <div className="block__text">
-            <h3>Automated 1x1s</h3>
+            <h3>Drive Professional Growth</h3>
             <p>
-              Automatically set 1x1s through Slack or Google Calendar using our
-              structured templates to help employees build a true connection
-              with each other
+              Help your employees & teammates become remote experts with our
+              guided mentorship programme, inspired by remote leaders Buffer
             </p>
           </div>
         </div>
