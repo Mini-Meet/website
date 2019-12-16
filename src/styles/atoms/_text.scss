@@ -10,9 +10,11 @@
 
 %header-text {
   @extend %text-base;
+  @include padding(bottom, 0);
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
+  line-height: 120%;
   text-align: center;
 }
 
