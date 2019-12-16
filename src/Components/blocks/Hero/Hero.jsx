@@ -10,7 +10,7 @@ const url =
 const CustomForm = ({ status, message, onSubscribe }) => {
   let email;
   const submit = () => {
-    Mixpanel.track('HR2/Badass: Subscribed!');
+    Mixpanel.track('HR3: Guide Subscribed!');
 
     email &&
       email.value.indexOf('@') > -1 &&
