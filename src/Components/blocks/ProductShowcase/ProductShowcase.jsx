@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
 import imgMentorship from '../../../assets/images/prototype/productImg_mentorship.png';
-import imgRetreat from '../../../assets/images/prototype/productImg2.png';
-import imgOnboarding from '../../../assets/images/prototype/productImg_onboarding.png';
 import imgGuide from '../../../assets/images/prototype/productImg4.png';
-import img1 from '../../../assets/images/prototype/productImg1.png';
+import imgRetro from '../../../assets/images/prototype/productImg_retro.png';
 
 import './ProductShowcase.scss';
 
@@ -14,53 +12,15 @@ export default class ProductShowcase extends Component {
       <div className="product">
         <div className="block block__reverse">
           <div className="block__text block__text_left">
-            <h3>Free Remote Handbook</h3>
+            <h3>Transform The Way You Work</h3>
             <p>
-              Create better collaboration, more human connection & clear
-              expectations for your remote team by customising our remote
-              handbook template
+              Collaborate more effectively across time zones & different working
+              hours with our remote handbook template, customisable to share
+              with your team
             </p>
           </div>
           <div className="block__img">
             <img alt="Remote Guide" src={imgGuide} className="block__img__bg" />
-          </div>
-        </div>
-
-        <div className="block">
-          <div className="block__img">
-            <img
-              alt="Onboarding"
-              src={imgOnboarding}
-              className="block__img__bg"
-            />
-          </div>
-          <div className="block__text">
-            <h3>Increase productivity & retention</h3>
-            <p>
-              New hires are 70% more productive & are 82% more likely to be
-              retained if you onboard them effectively. Use our remote
-              onboarding tool to guide them through their first few weeks in
-              your team
-            </p>
-          </div>
-        </div>
-
-        <div className="block block__reverse">
-          <div className="block__text block__text_left">
-            <h3>Run High-Impact Team Retreats</h3>
-            <p>
-              Organise your team retreats - and learn how to run them
-              effectively - with our planning tool, allowing the whole team to
-              collaborate on where to hold it and, more importantly, what they
-              want to discuss
-            </p>
-          </div>
-          <div className="block__img">
-            <img
-              alt="Team Retreats"
-              src={imgRetreat}
-              className="block__img__bg"
-            />
           </div>
         </div>
 
@@ -73,26 +33,26 @@ export default class ProductShowcase extends Component {
             />
           </div>
           <div className="block__text">
-            <h3>Drive Professional Growth</h3>
+            <h3>Design Meaningful Interactions</h3>
             <p>
-              Help your employees & teammates grow, both personally &
-              professionally, with our guided mentorship programme, inspired by
-              remote leaders Buffer
+              Better connect team members with our mentorship programme,
+              automated 1x1s & other tools & tactics to stimulate collaboration
+              & connection across your teams
             </p>
           </div>
         </div>
 
         <div className="block block__reverse">
           <div className="block__text block__text_left">
-            <h3>Run Effective 1x1s To Connect Your Team</h3>
+            <h3>Build a Growth Mindset</h3>
             <p>
-              Automatically set 1x1s through Slack or Google Calendar using our
-              1x1 templates to make sure you’re team are connecting,
-              collaborating & sharing info effectively
+              Gain high-value insights & take action using our remote tools for
+              continuous improvement, such as our tool for running remote
+              retrospectives
             </p>
           </div>
           <div className="block__img">
-            <img alt="1x1s" src={img1} className="block__img__bg" />
+            <img alt="Retro" src={imgRetro} className="block__img__bg" />
           </div>
         </div>
       </div>
