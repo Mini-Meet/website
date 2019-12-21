@@ -9,13 +9,14 @@ import {
 import * as serviceWorker from './serviceWorker';
 
 // Components declaration
-import About from './Components/views/About/About';
-import Privacy from './Components/views/Privacy/Privacy';
-import Legal from './Components/views/Legal/Legal';
-import Home from './Components/views/Home/Home';
+import About from './components/views/About/About';
+import Privacy from './components/views/Privacy/Privacy';
+import Legal from './components/views/Legal/Legal';
+import Home from './components/views/Home/Home';
+import ReferralSuccess from './components/views/ReferralSuccess/ReferralSuccess';
 
 // Main App layout
-import PageLayout from './Components/layouts/PageLayout';
+import PageLayout from './components/layouts/PageLayout';
 
 const history = createBrowserHistory;
 
@@ -28,6 +29,7 @@ ReactDOM.render(
         <Route path="/about" exact component={About} />
         <Route path="/privacy" exact component={Privacy} />
         <Route path="/legal" exact component={Legal} />
+        <Route path="/referral-success" exact component={ReferralSuccess} />
       </Switch>
     </PageLayout>
   </Router>,
