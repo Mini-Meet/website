@@ -12,8 +12,8 @@
 
   &__main {
     @include col;
-    max-width: 800px;
     margin: 0 auto;
+    max-width: 800px;
 
     @media (min-width: $screen-sm-min) {
       @include row;
