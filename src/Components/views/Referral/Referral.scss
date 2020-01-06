@@ -1,0 +1,61 @@
+@import '../../../styles/main';
+
+.referral {
+  margin: 0 auto;
+  max-width: 640px;
+  text-align: center;
+
+  &__queue {
+    @include padding(bottom, 3);
+    @include margin(bottom, 3);
+    @include border-bottom;
+
+    @media (min-width: $screen-md-min) {
+    }
+
+    h5 {
+      @include margin(top, 5);
+    }
+
+    p {
+      @include margin(top, -1);
+      @include small;
+      color: $grey;
+      text-align: center;
+    }
+  }
+
+  &__share {
+    @include margin(top, 4);
+    @media (min-width: $screen-md-min) {
+      @include margin(top, 5);
+    }
+
+    h3 {
+      color: $primary;
+    }
+
+    p {
+      @include margin(top, 0);
+      @include padding(left right, 0);
+      text-align: center;
+    }
+  }
+
+  &__referrals {
+    @include border-top;
+    @include padding(top, 3);
+    @include padding(bottom, 5);
+
+    h5 {
+      @include margin(top, 2);
+    }
+
+    p {
+      @include margin(top, -1);
+      @include small;
+      color: $grey;
+      text-align: center;
+    }
+  }
+}

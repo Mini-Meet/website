@@ -13,7 +13,7 @@ import About from './components/views/About/About';
 import Privacy from './components/views/Privacy/Privacy';
 import Legal from './components/views/Legal/Legal';
 import Home from './components/views/Home/Home';
-import ReferralSuccess from './components/views/ReferralSuccess/ReferralSuccess';
+import Referral from './components/views/Referral/Referral';
 
 // Main App layout
 import PageLayout from './components/layouts/PageLayout';
@@ -29,7 +29,7 @@ ReactDOM.render(
         <Route path="/about" exact component={About} />
         <Route path="/privacy" exact component={Privacy} />
         <Route path="/legal" exact component={Legal} />
-        <Route path="/referral-success" exact component={ReferralSuccess} />
+        <Route path="/referral-success" exact component={Referral} />
       </Switch>
     </PageLayout>
   </Router>,

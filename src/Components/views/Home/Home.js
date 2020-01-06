@@ -3,13 +3,7 @@ import CookieBanner from 'react-cookie-banner';
 import { Link } from 'react-router-dom';
 
 import { Mixpanel } from '../../../Mixpanel';
-import {
-  Header,
-  Hero,
-  ProductShowcase,
-  Footer,
-  ReferralBlock,
-} from '../../blocks';
+import { Header, Hero, ProductShowcase, Footer } from '../../blocks';
 import './Home.scss';
 
 export default class Home extends Component {
@@ -33,11 +27,10 @@ export default class Home extends Component {
             </div>
           }
         />
-        <Header />
+        <Header light />
         <Hero isFirstHero />
         <ProductShowcase />
         <Hero isFirstHero={false} />
-        <ReferralBlock />
         <Footer page="HOME" />
       </div>
     );

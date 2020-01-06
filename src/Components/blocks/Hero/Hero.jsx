@@ -1,53 +1,7 @@
 import React, { Component } from 'react';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import { Mixpanel } from '../../../Mixpanel';
-import { Button } from '../../elements';
+
+import { SignUp } from '..';
 import './Hero.scss';
-
-const url =
-  'https://zetatours.us4.list-manage.com/subscribe/post?u=031f66ad668b9ad966df4a5b0&amp;id=667578ad6f';
-
-const CustomForm = ({ status, message, onSubscribe }) => {
-  let email;
-  const submit = () => {
-    Mixpanel.track('HR/A: Guide Subscribed!');
-
-    email &&
-      email.value.indexOf('@') > -1 &&
-      onSubscribe({
-        EMAIL: email.value,
-      });
-  };
-
-  return (
-    <div className="hero__form">
-      {status === 'sending' && (
-        <p className="hero__form__sending">sending...</p>
-      )}
-      {status === 'error' && (
-        <p
-          className="hero__form__error"
-          dangerouslySetInnerHTML={{ __html: message }}
-        />
-      )}
-      {status === 'success' && (
-        <p
-          className="hero__form__success"
-          dangerouslySetInnerHTML={{ __html: message }}
-        />
-      )}
-      <input
-        ref={node => (email = node)}
-        type="email"
-        placeholder="Enter your email"
-      />
-      <br />
-      <Button primary onClick={submit}>
-        Request Free Early Access
-      </Button>
-    </div>
-  );
-};
 
 export default class Hero extends Component {
   render() {
@@ -83,22 +37,7 @@ export default class Hero extends Component {
           );
         })}
 
-        <MailchimpSubscribe
-          url={url}
-          render={({ subscribe, status, message }) => (
-            <div>
-              <CustomForm
-                status={status}
-                message={message}
-                onSubscribe={formData => subscribe(formData)}
-              />
-              <p className="hero__small">
-                Access to the Public Beta is by invitation only. Request access
-                today.
-              </p>
-            </div>
-          )}
-        />
+        <SignUp />
       </div>
     );
   }

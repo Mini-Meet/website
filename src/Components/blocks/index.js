@@ -7,4 +7,5 @@ export { default as Hero } from './Hero/Hero';
 export { default as Image } from './Image/Image';
 export { default as ProductShowcase } from './ProductShowcase/ProductShowcase';
 export { default as ReferralBlock } from './ReferralBlock/ReferralBlock';
+export { default as SignUp } from './SignUp/SignUp';
 export { default as Testimonials } from './Testimonials/Testimonials';

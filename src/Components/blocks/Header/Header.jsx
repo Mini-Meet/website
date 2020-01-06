@@ -1,14 +1,27 @@
-import React from 'react';
-import Logo from '../../../assets/images/logoWhite.svg';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import LogoLight from '../../../assets/images/logoWhite.svg';
+import LogoDark from '../../../assets/images/logoDark.svg';
 
 import './Header.scss';
 
-function Header() {
-  return (
-    <div className="header">
-      <img alt="logo" src={Logo} className="header__logo" />
-    </div>
-  );
-}
+export default class Header extends Component {
+  render() {
+    const { light, dark } = this.props;
 
-export default Header;
+    return (
+      <div className="header">
+        {light && (
+          <Link to="/home">
+            <img alt="logo" src={LogoLight} className="header__logo" />
+          </Link>
+        )}
+        {dark && (
+          <Link to="/home">
+            <img alt="logo" src={LogoDark} className="header__logo" />
+          </Link>
+        )}
+      </div>
+    );
+  }
+}

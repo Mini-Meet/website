@@ -3,14 +3,13 @@ import axios from 'axios';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
 
-import './ReferralBlock.scss';
+import './SignUp.scss';
 
-export default class ReferralBlock extends Component {
+export default class SignUp extends Component {
   constructor() {
     super();
     this.state = {
       userEmail: null,
-      referralEmail: null,
       error: null,
       isSubmitting: false,
     };
@@ -19,49 +18,38 @@ export default class ReferralBlock extends Component {
   render() {
     const { error, isSubmitting } = this.state;
     return (
-      <div className="refer">
+      <div className="signup">
         {!isSubmitting && (
-          <div className="refer__main">
-            {
-              // <input
-              //   key="userEmail"
-              //   type="email"
-              //   placeholder="Enter your email"
-              //   onChange={e => this.setState({ userEmail: e.target.value })}
-              // />
-            }
-
+          <div className="signup__main">
             <input
-              key="referralEmail"
+              key="userEmail"
               type="email"
-              placeholder="Enter referral email"
-              onChange={e => this.setState({ referralEmail: e.target.value })}
+              placeholder="Enter your email"
+              onChange={e => this.setState({ userEmail: e.target.value })}
             />
-            <Button primary onClick={this.onSendReferralLink}>
-              Send Invite
+
+            <Button primary onClick={this.onSignUp}>
+              Request Free Early Access
             </Button>
           </div>
         )}
 
-        <div className="refer__state">
+        <div className="signup__state">
           {isSubmitting && (
-            <p className="refer__state__submitting">Submitting...</p>
+            <p className="signup__state__submitting">Submitting...</p>
           )}
-          {error && <p className="refer__state__error">{error}</p>}
+          {error && <p className="signup__state__error">{error}</p>}
         </div>
+
+        <p className="signup__footnote">
+          Access to the Public Beta is by invitation only. Request access today.
+        </p>
       </div>
     );
   }
 
-  onSendReferralLink = () => {
-    const { referralEmail } = this.state;
-    // if (!userEmail || !referralEmail) {
-    //   this.setState({
-    //     error: 'Please enter both emails',
-    //     isSubmitting: false,
-    //   });
-    //   return;
-    // }
+  onSignUp = () => {
+    const { userEmail } = this.state;
 
     this.setState({
       error: null,
@@ -70,8 +58,7 @@ export default class ReferralBlock extends Component {
 
     axios
       .post('https://tt-media.hr/public/api/set-refferal', {
-        // referrerEmail: userEmail,
-        referralEmail,
+        referrerEmail: userEmail,
       })
       .then(response => {
         if (response.data.hasError) {

@@ -2,11 +2,12 @@
 
 .footer {
   @include background-dark;
-  @include padding(left right, 3);
+  @include padding(left right, 1);
   @include padding(top bottom, 2);
   @include col;
 
   @media (min-width: $screen-sm-min) {
+    @include padding(left right, 3);
     @include row;
     justify-content: space-between;
   }
@@ -16,11 +17,12 @@
       @include padding(left, 2);
       @include padding(top, 3);
       @include padding(bottom, 0);
-      max-width: 48px;
+      max-width: 32px;
 
       @media (min-width: $screen-sm-min) {
         @include padding(top right, 2);
         @include padding(left, 3);
+        max-width: 48px;
       }
     }
   }

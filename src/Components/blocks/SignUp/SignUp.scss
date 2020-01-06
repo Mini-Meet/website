@@ -1,18 +1,19 @@
 @import '../../../styles/main';
 
-.refer {
+.signup {
   @include col;
-  @include padding(top, 3);
+  @include padding(top, 4);
   @include padding(left right, reset);
-  @include padding(bottom, 4);
+  @include padding(bottom, 5);
 
   @media (min-width: $screen-sm-min) {
-    @include padding(top, 4);
     @include padding(bottom, 5);
   }
 
   &__main {
     @include col;
+    max-width: 800px;
+    margin: 0 auto;
 
     @media (min-width: $screen-sm-min) {
       @include row;
@@ -20,11 +21,12 @@
     }
 
     input {
-      border-color: $border-grey;
       max-height: 40px;
+      min-width: 242px;
 
       @media (min-width: $screen-sm-min) {
         @include margin(right, 0);
+        min-width: 420px;
       }
     }
 
@@ -32,13 +34,15 @@
       width: 288px;
 
       @media (min-width: $screen-sm-min) {
-        width: 220px;
+        width: 340px;
       }
     }
   }
 
   &__state {
     &__error {
+      @include margin(top, 1);
+      @include margin(bottom, 3);
       color: $error;
       text-align: center;
     }
@@ -46,8 +50,17 @@
     &__submitting {
       @include margin(top, 1);
       @include margin(bottom, 3);
-      color: $secondary;
+      color: $white;
       text-align: center;
     }
+  }
+
+  &__footnote {
+    @include small;
+    @include padding(top, 1);
+    @include padding(bottom, 3);
+    @include padding(left right, 2);
+    color: $secondary;
+    font-style: italic;
   }
 }

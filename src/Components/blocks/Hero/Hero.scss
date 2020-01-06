@@ -3,9 +3,9 @@
 .hero {
   @include background-image;
   @include col;
-  @include padding(top, 5);
+  @include padding(top, 6);
   @include padding(left right, reset);
-  @include padding(bottom, 3);
+  @include padding(bottom, 5);
 
   @media (min-width: $screen-sm-min) {
     @include padding(bottom, 5);
@@ -34,43 +34,5 @@
       @include padding(top bottom, 2);
       text-align: center;
     }
-  }
-
-  &__form {
-    @include col;
-    @include padding(top, 4);
-    @include padding(left right, reset);
-    @include padding(bottom, 1);
-    margin: 0 auto;
-    max-width: 420px;
-
-    @media (min-width: $screen-sm-min) {
-      @include center-block(horizontal);
-    }
-
-    &__sending,
-    &__error,
-    &__success {
-      @include padding(bottom, 1);
-      text-align: center;
-    }
-
-    &__sending {
-      color: $white;
-    }
-
-    &__error {
-      color: $error;
-    }
-
-    &__success {
-      color: $success;
-    }
-  }
-
-  &__small {
-    @include small;
-    @include padding(bottom, 3);
-    color: $secondary;
   }
 }
