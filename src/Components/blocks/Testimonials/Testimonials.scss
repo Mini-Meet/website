@@ -1,6 +1,7 @@
 @import '../../../styles/main';
 
 .testimonials {
+  @include background-light;
   @include col;
   @include padding(top, 3);
   @include padding(bottom, 5);
@@ -8,6 +9,12 @@
 
   @media (min-width: $screen-sm-min) {
     @include padding(top bottom, 4);
+  }
+
+  &__header {
+    @include margin(bottom, 4);
+    @include margin(top, 2);
+    @include padding(left right, 1);
   }
 
   &__card {

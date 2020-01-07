@@ -3,8 +3,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import customer1 from '../../../assets/images/testimonials/customer1.png';
-import customer2 from '../../../assets/images/testimonials/customer2.png';
+import customer1 from '../../../assets/images/testimonials/mark.jpeg';
+import customer2 from '../../../assets/images/testimonials/rebeca.jpeg';
 import customer3 from '../../../assets/images/testimonials/customer3.png';
 
 import Card from './Card/Card.jsx';
@@ -17,18 +17,18 @@ export default class Testimonials extends Component {
     const cards = [
       {
         photo: customer1,
-        name: 'John Smith',
-        title: 'CEO, Remote.com',
+        name: 'Mark Sarifidis',
+        title: 'CEO, Growth Media',
         comment:
-          'Key to building a strong remote team culture & keeping people productive, aligned &, most importantly, happy!',
+          'Working with Remote Connect has helped my team become more connected, more organised &, most importantly, deliver better results.',
       },
 
       {
         photo: customer2,
-        name: 'Jane Smith',
-        title: 'Remote Team Lead, Buffer',
+        name: 'Rebeca Casa',
+        title: 'Full-Stack Dev, HeyCater',
         comment:
-          'A great tool for building the soft side of team culture - the hard to pindown - such as building a human relationship with your remote colleagues',
+          'A fantastic tool for anyone looking to improve how they work remotely or manage remote teams!',
       },
 
       {
@@ -53,6 +53,7 @@ export default class Testimonials extends Component {
 
     return (
       <div className="testimonials">
+        <h2 className="testimonials__header">Happy Customers</h2>
         <Slider {...settings}>
           {cards.map(person => {
             return (

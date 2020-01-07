@@ -1,7 +1,7 @@
 @import '../../../styles/main';
 
 .product {
-  @include background-light;
+  @include background-light-fade;
   @include col;
   @include padding(top bottom, 2);
   align-items: center;
@@ -9,6 +9,11 @@
   @media (min-width: $screen-md-min) {
     @include padding(top bottom, 4);
     @include padding(left right, 5);
+  }
+
+  &__header {
+    @include margin(bottom, 3);
+    @include margin(top, 1);
   }
 }
 

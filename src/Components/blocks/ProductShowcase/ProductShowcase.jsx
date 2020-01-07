@@ -12,6 +12,8 @@ export default class ProductShowcase extends Component {
   render() {
     return (
       <div className="product">
+        <h2 className="product__header">Our Product</h2>
+
         <div className="block block__reverse">
           <div className="block__text block__text_left">
             <h3>Free Remote Handbook</h3>

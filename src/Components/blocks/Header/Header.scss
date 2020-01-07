@@ -1,8 +1,6 @@
 @import '../../../styles/main';
 
 .header {
-  @include row;
-
   &__logo {
     @include padding(all, 2);
     @include opacity(1);
