@@ -42,6 +42,10 @@
       color: $error;
       text-align: center;
     }
+    &__success {
+      color: $secondary;
+      text-align: center;
+    }
 
     &__submitting {
       @include margin(top, 1);

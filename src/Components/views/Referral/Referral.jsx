@@ -1,28 +1,48 @@
 import React, { Component } from 'react';
-
+import axios from 'axios';
+import { get, filter } from 'lodash';
 import { Header, ReferralBlock, Footer } from '../../blocks';
 
 import './Referral.scss';
 
 export default class Referral extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      statistics: [],
+      referralLink: get(props, ['match', 'params', 'referralLink']),
+    };
+  }
+  componentWillMount() {
+    this.getStatistics(this.state.referralLink);
+  }
+
   render() {
+    const { statistics, referralLink } = this.state;
+    const rank = get(statistics, [0, 'rid'], 0);
+    const email = get(statistics, [0, 'email'], '');
+    const acceptedReferrals = filter(
+      statistics,
+      statistic => statistic.is_accepted
+    );
     return (
       <div>
         <Header dark />
         <div className="referral">
           <div className="referral__queue">
-            <h5>You are #44 on the waiting list</h5>
-            <p>This reservation is held for test@gmail.com</p>
+            <h5>{`You are #${rank} on the waiting list`}</h5>
+            <p>{`This reservation is held for ${email}`}</p>
           </div>
           <div className="referral__share">
             <h3>Want to cut the line and get instant access?</h3>
             <p>
               Invite 5 of your friends below for 1 year of FREE instant access:
             </p>
-            <ReferralBlock />
+            <ReferralBlock referralLink={referralLink} />
           </div>
           <div className="referral__referrals">
-            <h5>So far you have 1 referrals</h5>
+            <h5>{`So far you have ${acceptedReferrals.length} referrals`}</h5>
             <p className="small">Refer 5 friends to get FREE Instant Access</p>
           </div>
         </div>
@@ -30,4 +50,26 @@ export default class Referral extends Component {
       </div>
     );
   }
+
+  getStatistics = referralLink => {
+    axios
+      .get(`https://tt-media.hr/public/api/referrals/${referralLink}`, {})
+      .then(response => {
+        if (response.data.hasError) {
+          this.setState({
+            error: response.data.errMessage,
+            isSubmitting: false,
+          });
+          return;
+        }
+        this.setState({
+          statistics: response.data.statistics,
+        });
+      })
+      .catch(error => {
+        this.setState({
+          error: 'An error ocurred!',
+        });
+      });
+  };
 }

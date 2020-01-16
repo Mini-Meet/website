@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { get } from 'lodash';
 import axios from 'axios';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
@@ -13,11 +14,30 @@ export default class ReferralBlock extends Component {
       referralEmail: null,
       error: null,
       isSubmitting: false,
+      statistics: {},
+      statisticsError: false,
+      success: false,
     };
   }
 
+  componentWillMount() {
+    this.getStatistics(this.props.referralLink);
+  }
+
   render() {
-    const { error, isSubmitting } = this.state;
+    const { error, isSubmitting, success, statisticsError } = this.state;
+    if (statisticsError) {
+      return (
+        <div className="refer">
+          <div
+            className="refer__main"
+            style={{ textAlign: 'center', display: 'block' }}
+          >
+            <h3>{statisticsError}</h3>
+          </div>
+        </div>
+      );
+    }
     return (
       <div className="refer">
         {!isSubmitting && (
@@ -48,29 +68,27 @@ export default class ReferralBlock extends Component {
             <p className="refer__state__submitting">Submitting...</p>
           )}
           {error && <p className="refer__state__error">{error}</p>}
+          {success && (
+            <p className="refer__state__success">
+              Referral link successfully sent
+            </p>
+          )}
         </div>
       </div>
     );
   }
 
   onSendReferralLink = () => {
-    const { referralEmail } = this.state;
-    // if (!userEmail || !referralEmail) {
-    //   this.setState({
-    //     error: 'Please enter both emails',
-    //     isSubmitting: false,
-    //   });
-    //   return;
-    // }
-
+    const { referralEmail, statistics } = this.state;
     this.setState({
       error: null,
       isSubmitting: true,
+      success: false,
     });
 
     axios
-      .post('https://tt-media.hr/public/api/set-refferal', {
-        // referrerEmail: userEmail,
+      .post('https://tt-media.hr/public/api/referrals/send-link', {
+        referrerEmail: get(statistics, [0, 'referrer_email']),
         referralEmail,
       })
       .then(response => {
@@ -78,16 +96,46 @@ export default class ReferralBlock extends Component {
           this.setState({
             error: response.data.errMessage,
             isSubmitting: false,
+            success: false,
           });
           return;
         }
-        // Success response - redirect and set tracker
         Mixpanel.track('HR/A: Referral link sent!');
-        window.location.href = '/referral-success';
+        this.getStatistics(this.props.referralLink);
+        this.setState({
+          isSubmitting: false,
+          success: true,
+        });
       })
-      .catch(function(error) {
+      .catch(error => {
         this.setState({
           error: 'An error ocurred!',
+          isSubmitting: false,
+          success: false,
+        });
+      });
+  };
+
+  getStatistics = referralLink => {
+    axios
+      .get(`https://tt-media.hr/public/api/referrals/${referralLink}`, {})
+      .then(response => {
+        if (response.data.hasError) {
+          this.setState({
+            statisticsError: response.data.errMessage,
+            isSubmitting: false,
+          });
+          return;
+        }
+        this.setState({
+          statisticsError: false,
+          statistics: response.data.statistics,
+          isSubmitting: false,
+        });
+      })
+      .catch(error => {
+        this.setState({
+          statisticsError: 'An error ocurred!',
           isSubmitting: false,
         });
       });

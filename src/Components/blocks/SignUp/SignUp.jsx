@@ -57,8 +57,8 @@ export default class SignUp extends Component {
     });
 
     axios
-      .post('https://tt-media.hr/public/api/set-refferal', {
-        referrerEmail: userEmail,
+      .post('https://tt-media.hr/public/api/add-user', {
+        userEmail,
       })
       .then(response => {
         if (response.data.hasError) {
@@ -70,9 +70,9 @@ export default class SignUp extends Component {
         }
         // Success response - redirect and set tracker
         Mixpanel.track('HR/A: Referral link sent!');
-        window.location.href = '/referral-success';
+        window.location.href = `/statistics/${response.data.user.referral_link}`;
       })
-      .catch(function(error) {
+      .catch(error => {
         this.setState({
           error: 'An error ocurred!',
           isSubmitting: false,
