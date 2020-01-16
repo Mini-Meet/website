@@ -6,7 +6,7 @@
   @include flex;
   @include margin(all, -1);
   @include padding(left right, 2);
-  @include padding(top botom, -1);
+  @include padding(top bottom, -1);
 
   max-height: 24px;
 
