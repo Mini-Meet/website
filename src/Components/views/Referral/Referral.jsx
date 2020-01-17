@@ -20,8 +20,9 @@ export default class Referral extends Component {
 
   render() {
     const { statistics, referralLink } = this.state;
+    console.debug('STAT: ', statistics);
     const rank = get(statistics, [0, 'rid'], 0);
-    const email = get(statistics, [0, 'email'], '');
+    const email = get(statistics, [0, 'referrer_email'], '');
     const acceptedReferrals = filter(
       statistics,
       statistic => statistic.is_accepted
