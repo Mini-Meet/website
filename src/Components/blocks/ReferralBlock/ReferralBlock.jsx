@@ -10,7 +10,6 @@ export default class ReferralBlock extends Component {
   constructor() {
     super();
     this.state = {
-      userEmail: null,
       referralEmail: null,
       error: null,
       isSubmitting: false,
@@ -42,23 +41,14 @@ export default class ReferralBlock extends Component {
       <div className="refer">
         {!isSubmitting && (
           <div className="refer__main">
-            {
-              // <input
-              //   key="userEmail"
-              //   type="email"
-              //   placeholder="Enter your email"
-              //   onChange={e => this.setState({ userEmail: e.target.value })}
-              // />
-            }
-
             <input
               key="referralEmail"
               type="email"
-              placeholder="Enter referral email"
+              placeholder="Enter multiple emails"
               onChange={e => this.setState({ referralEmail: e.target.value })}
             />
             <Button primary onClick={this.onSendReferralLink}>
-              Send Invite
+              Send Invites
             </Button>
           </div>
         )}
@@ -100,7 +90,7 @@ export default class ReferralBlock extends Component {
           });
           return;
         }
-        Mixpanel.track('HR/A: Referral link sent!');
+        Mixpanel.track('Guide/A: Referral sent');
         this.getStatistics(this.props.referralLink);
         this.setState({
           isSubmitting: false,

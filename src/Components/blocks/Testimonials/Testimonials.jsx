@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import customer1 from '../../../assets/images/testimonials/mark.jpeg';
 import customer2 from '../../../assets/images/testimonials/rebeca.jpeg';
-import customer3 from '../../../assets/images/testimonials/customer3.png';
+import customer3 from '../../../assets/images/testimonials/craig.png';
 
 import Card from './Card/Card.jsx';
 
@@ -16,26 +16,25 @@ export default class Testimonials extends Component {
     // NOTE: Testimonial Card Content
     const cards = [
       {
-        photo: customer1,
-        name: 'Mark Sarifidis',
-        title: 'CEO, Growth Media',
+        photo: customer3,
+        name: 'Craig Lawson',
+        title: 'Product Manager, Sift',
         comment:
-          'Working with Remote Connect has helped my team become more connected, more organised &, most importantly, deliver better results.',
+          'Working remotely requires me to adapt my approach to managing & connecting my team. Remoto empowers me to keep the team happy, motivated, productive & moving towards a common goal',
       },
-
       {
         photo: customer2,
         name: 'Rebeca Casa',
         title: 'Full-Stack Dev, HeyCater',
         comment:
-          'A fantastic tool for anyone looking to improve how they work remotely or manage remote teams!',
+          'A really valuable tool for anyone looking to improve how they work remotely or manage remote teams!',
       },
-
       {
-        photo: customer3,
-        name: 'Adam Smith',
-        title: 'Head of HR, A Company',
-        comment: 'Nice tool!',
+        photo: customer1,
+        name: 'Mark Sarifidis',
+        title: 'Head of Product, Growth Media',
+        comment:
+          'Working with Remoto has helped my team become more connected, more organised &, most importantly, deliver better results.',
       },
     ];
 

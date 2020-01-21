@@ -86,4 +86,15 @@
       text-align: left;
     }
   }
+
+  &__cta {
+    @include padding(top bottom, 2);
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      @include opacity(1.3);
+    }
+  }
 }

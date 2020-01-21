@@ -29,7 +29,7 @@ export default class AcceptReferral extends Component {
           return;
         }
         // Success response - redirect and set tracker
-        Mixpanel.track(`HR/A: Referral link accepted: ${referralLink}`);
+        Mixpanel.track(`Guide/A: Referral accepted: ${referralLink}`);
         window.location.href = '/home';
       })
       .catch(() => {

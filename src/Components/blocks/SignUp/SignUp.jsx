@@ -69,7 +69,7 @@ export default class SignUp extends Component {
           return;
         }
         // Success response - redirect and set tracker
-        Mixpanel.track('HR/A: Referral link sent!');
+        Mixpanel.track('Guide/A: Signup');
         window.location.href = `/statistics/${response.data.user.referral_link}`;
       })
       .catch(error => {

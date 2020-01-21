@@ -38,13 +38,18 @@ export default class Referral extends Component {
           <div className="referral__share">
             <h3>Want to cut the line and get instant access?</h3>
             <p>
-              Invite 5 of your friends below for 1 year of FREE instant access:
+              Invite 5 of your friends below for 1 year of <b>FREE</b> instant
+              access:
             </p>
             <ReferralBlock referralLink={referralLink} />
           </div>
           <div className="referral__referrals">
             <h5>{`So far you have ${acceptedReferrals.length} referrals`}</h5>
-            <p className="small">Refer 5 friends to get FREE Instant Access</p>
+            <p className="small">
+              Refer 5 friends to get FREE Instant Access. Track which friends
+              have successfully signed up, as well as where you are on the
+              waiting list, by visiting this URL
+            </p>
           </div>
         </div>
         <Footer />

@@ -22,6 +22,9 @@ export default class ProductShowcase extends Component {
               expectations for your remote team by customising our remote
               handbook template
             </p>
+            <a className="block__cta" href="#signup">
+              Get Started
+            </a>
           </div>
           <div className="block__img">
             <img alt="Remote Guide" src={imgGuide} className="block__img__bg" />
@@ -44,6 +47,9 @@ export default class ProductShowcase extends Component {
               onboarding tool to guide them through their first few weeks in
               your team
             </p>
+            <a className="block__cta" href="#signup">
+              Get Started
+            </a>
           </div>
         </div>
 
@@ -56,6 +62,9 @@ export default class ProductShowcase extends Component {
               collaborate on where to hold it and, more importantly, what they
               want to discuss
             </p>
+            <a className="block__cta" href="#signup">
+              Get Started
+            </a>
           </div>
           <div className="block__img">
             <img
@@ -81,6 +90,9 @@ export default class ProductShowcase extends Component {
               professionally, with our guided mentorship programme, inspired by
               remote leaders Buffer
             </p>
+            <a className="block__cta" href="#signup">
+              Get Started
+            </a>
           </div>
         </div>
 
@@ -92,6 +104,9 @@ export default class ProductShowcase extends Component {
               1x1 templates to make sure you’re team are connecting,
               collaborating & sharing info effectively
             </p>
+            <a className="block__cta" href="#signup">
+              Get Started
+            </a>
           </div>
           <div className="block__img">
             <img alt="1x1s" src={img1} className="block__img__bg" />
