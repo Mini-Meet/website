@@ -29,7 +29,13 @@ export default class Icon extends Component<Props> {
 
     return (
       <div onClick={onClick} className="icon-container" role="presentation">
-        <i className={`material-icons ${iconType} ${classOverride}`}>{icon}</i>
+        <i
+          className={`material-icons ${String(iconType)} ${String(
+            classOverride
+          )}`}
+        >
+          {icon}
+        </i>
       </div>
     );
   }
