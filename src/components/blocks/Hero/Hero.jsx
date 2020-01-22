@@ -7,10 +7,10 @@ export default class Hero extends Component {
   render() {
     const firstHero = [
       {
-        title: 'Transform Your',
-        titleTwo: 'Remote Team',
+        title: 'Build a world-class',
+        titleTwo: 'remote team',
         subtitle:
-          'Build a more connected, more productive remote team with just 5 minutes each week',
+          'Effortlessly create a more productive, more connected remote team using the tools & tactics of the world’s best',
       },
     ];
 
