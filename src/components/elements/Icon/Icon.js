@@ -11,17 +11,25 @@ type Props = {
   inactive16?: boolean,
   inactive24?: boolean,
   disabled?: boolean,
+  classOverride: string,
 };
 
 export default class Icon extends Component<Props> {
   render() {
-    const { onClick, icon, inactive16, inactive24, disabled } = this.props;
+    const {
+      onClick,
+      icon,
+      inactive16,
+      inactive24,
+      disabled,
+      classOverride,
+    } = this.props;
 
     const iconType = inactive16 || inactive24 || disabled || 'button';
 
     return (
       <div onClick={onClick} className="icon-container" role="presentation">
-        <i className={iconType}>{icon}</i>
+        <i className={`material-icons ${iconType} ${classOverride}`}>{icon}</i>
       </div>
     );
   }

@@ -10,6 +10,10 @@
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
 }
 
+@mixin button-flat {
+  box-shadow: 0 4px 8px transparentize($secondary, 0.6);
+}
+
 @mixin button-elevation {
-  box-shadow: 0 8px 16px transparentize($primary, 0.8);
+  box-shadow: 0 6px 12px transparentize($secondary, 0.6);
 }

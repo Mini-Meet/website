@@ -1,14 +1,14 @@
 %button {
   @extend %text-base;
-  @include padding(left right, 2);
-  @include padding(top bottom, 0);
+  @include button-flat;
   @include corner-radius; // @include circular-radius;
   @include cursor-pointer;
+  @include padding(left right, 2);
+  @include padding(top bottom, 0);
   @include transition-in-out;
 
   background-color: $secondary;
   border: 0;
-  box-shadow: 0 4px 8px transparentize($secondary, 0.7);
   color: $white;
   display: inline-block;
   font-size: 11px;

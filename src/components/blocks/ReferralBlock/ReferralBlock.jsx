@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { get, map, isArray, without } from 'lodash';
 import axios from 'axios';
 import { Mixpanel } from '../../../Mixpanel';
-import { Button } from '../../elements';
+import { Button, Icon } from '../../elements';
 
 import './ReferralBlock.scss';
 
@@ -46,7 +46,8 @@ export default class ReferralBlock extends Component {
       );
     }
 
-    let emailInputs = [];
+    const emailInputs = [];
+
     for (let i = 0; i < numberOfEmails; i++) {
       emailInputs.push(
         <div className="refer__main">
@@ -58,12 +59,11 @@ export default class ReferralBlock extends Component {
             onChange={e => this.onChangeEmail(e.target.value, i)}
           />
           {i !== 0 && (
-            <span
-              className="refer__remove__field"
+            <Icon
+              icon="close"
+              classOverride="refer__removeField"
               onClick={this.onRemoveEmailField.bind(this, i)}
-            >
-              X
-            </span>
+            />
           )}
         </div>
       );
@@ -72,11 +72,15 @@ export default class ReferralBlock extends Component {
       <div key="block" className="refer">
         {!isSubmitting && [
           map(emailInputs, el => el),
-          <div key="actions" className="refer__add__more__block">
+          <div key="actions" className="refer__addMore__block">
             {numberOfEmails < 5 && (
-              <span className="refer__add__more" onClick={this.onAddMoreEmails}>
+              <Button
+                quarternary="quarternary"
+                className="refer__addMore"
+                onClick={this.onAddMoreEmails}
+              >
                 + Add more
-              </span>
+              </Button>
             )}
             <Button primary onClick={this.onSendReferralLink}>
               Send Invites

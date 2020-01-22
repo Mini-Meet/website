@@ -67,9 +67,11 @@
     margin-left: 6px;
     text-align: left;
   }
-  &__remove__field {
-    cursor: pointer;
+
+  &__removeField {
+    @include opacity(2);
     position: absolute;
-    right: 30px;
+    right: 0;
+    top: 3px;
   }
 }
