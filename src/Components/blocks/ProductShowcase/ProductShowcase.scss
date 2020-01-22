@@ -1,7 +1,7 @@
 @import '../../../styles/main';
 
 .product {
-  @include background-light-fade;
+  @include background-white;
   @include col;
   @include padding(top bottom, 2);
   align-items: center;
@@ -12,8 +12,14 @@
   }
 
   &__header {
-    @include margin(bottom, 3);
-    @include margin(top, 1);
+    @include margin(bottom, 0);
+    @include margin(top, 4);
+    max-width: 620px;
+
+    @media (min-width: $screen-md-min) {
+      @include margin(bottom, 3);
+      @include margin(top, 1);
+    }
   }
 }
 
@@ -79,6 +85,7 @@
 
   h3,
   p {
+    margin: 0 auto;
     max-width: 360px;
     text-align: center;
 
@@ -88,10 +95,15 @@
   }
 
   &__cta {
-    @include padding(top bottom, 2);
-    text-align: left;
+    @include padding(top, 3);
+    @include caption-center;
+    color: $primary;
     text-decoration: none;
-    text-transform: uppercase;
+
+    @media (min-width: $screen-md-min) {
+      @include padding(top bottom, 2);
+      text-align: left;
+    }
 
     &:hover {
       @include opacity(1.3);

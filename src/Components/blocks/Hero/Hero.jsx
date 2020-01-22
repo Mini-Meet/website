@@ -8,9 +8,9 @@ export default class Hero extends Component {
     const firstHero = [
       {
         title: 'Transform Your',
-        titleTwo: 'Remote Culture',
+        titleTwo: 'Remote Team',
         subtitle:
-          'Build a more connected, more productive & happier remote team with our tools & tactics for building world-class culture',
+          'Build a more connected, more productive remote team with just 5 minutes each week',
       },
     ];
 

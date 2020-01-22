@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import imgMentorship from '../../../assets/images/prototype/productImg_mentorship.png';
-import imgRetreat from '../../../assets/images/prototype/productImg2.png';
-import imgOnboarding from '../../../assets/images/prototype/productImg_onboarding.png';
-import imgGuide from '../../../assets/images/prototype/productImg4.png';
-import img1 from '../../../assets/images/prototype/productImg1.png';
+import imgGuide from '../../../assets/images/prototype/product_guide.png';
+import imgOnboarding from '../../../assets/images/prototype/product_onboarding.png';
+import imgRetro from '../../../assets/images/prototype/product_retro.png';
+import imgStandup from '../../../assets/images/prototype/product_standup.png';
+import img1x1 from '../../../assets/images/prototype/product_1on1.png';
 
 import './ProductShowcase.scss';
 
@@ -12,18 +12,17 @@ export default class ProductShowcase extends Component {
   render() {
     return (
       <div className="product">
-        <h2 className="product__header">Our Product</h2>
+        <h2 className="product__header">Your Remote Management Toolkit</h2>
 
         <div className="block block__reverse">
           <div className="block__text block__text_left">
             <h3>Free Remote Handbook</h3>
             <p>
-              Create better collaboration, more human connection & clear
-              expectations for your remote team by customising our remote
-              handbook template
+              Customise our remote handbook templates to improve team
+              organisation, communication & motivation
             </p>
             <a className="block__cta" href="#signup">
-              Get Started
+              Get Started {'>'}
             </a>
           </div>
           <div className="block__img">
@@ -40,7 +39,7 @@ export default class ProductShowcase extends Component {
             />
           </div>
           <div className="block__text">
-            <h3>Increase productivity & retention</h3>
+            <h3>Increase new hire productivity & retention</h3>
             <p>
               New hires are 70% more productive & are 82% more likely to be
               retained if you onboard them effectively. Use our remote
@@ -48,28 +47,26 @@ export default class ProductShowcase extends Component {
               your team
             </p>
             <a className="block__cta" href="#signup">
-              Get Started
+              Get Started {'>'}
             </a>
           </div>
         </div>
 
         <div className="block block__reverse">
           <div className="block__text block__text_left">
-            <h3>Run High-Impact Team Retreats</h3>
+            <h3>Build a Growth Mindset</h3>
             <p>
-              Organise your team retreats - and learn how to run them
-              effectively - with our planning tool, allowing the whole team to
-              collaborate on where to hold it and, more importantly, what they
-              want to discuss
+              Gain high-value insights & take action on problems within your
+              company using our framework for effective remote retrospectives
             </p>
             <a className="block__cta" href="#signup">
-              Get Started
+              Get Started {'>'}
             </a>
           </div>
           <div className="block__img">
             <img
               alt="Team Retreats"
-              src={imgRetreat}
+              src={imgRetro}
               className="block__img__bg"
             />
           </div>
@@ -77,39 +74,33 @@ export default class ProductShowcase extends Component {
 
         <div className="block">
           <div className="block__img">
-            <img
-              alt="Mentorship"
-              src={imgMentorship}
-              className="block__img__bg"
-            />
+            <img alt="Mentorship" src={imgStandup} className="block__img__bg" />
           </div>
           <div className="block__text">
-            <h3>Drive Professional Growth</h3>
+            <h3>Stay in Sync Whilst Remote</h3>
             <p>
-              Help your employees & teammates grow, both personally &
-              professionally, with our guided mentorship programme, inspired by
-              remote leaders Buffer
+              Trigger daily & weekly standups focused on reflection &
+              improvement to constantly align & improve your team’s performance
             </p>
             <a className="block__cta" href="#signup">
-              Get Started
+              Get Started {'>'}
             </a>
           </div>
         </div>
 
         <div className="block block__reverse">
           <div className="block__text block__text_left">
-            <h3>Run Effective 1x1s To Connect Your Team</h3>
+            <h3>Connect With Your Team</h3>
             <p>
-              Automatically set 1x1s through Slack or Google Calendar using our
-              1x1 templates to make sure you’re team are connecting,
-              collaborating & sharing info effectively
+              Learn how to run high-impact 1-on-1s with each team member to keep
+              them motivated, aligned & moving towards their professional goals
             </p>
             <a className="block__cta" href="#signup">
-              Get Started
+              Get Started {'>'}
             </a>
           </div>
           <div className="block__img">
-            <img alt="1x1s" src={img1} className="block__img__bg" />
+            <img alt="1x1s" src={img1x1} className="block__img__bg" />
           </div>
         </div>
       </div>

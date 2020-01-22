@@ -36,8 +36,8 @@ export default class Home extends Component {
         <Header light />
         <div id="signup" />
         <Hero isFirstHero />
-        <Testimonials />
         <ProductShowcase />
+        <Testimonials />
         <Hero isFirstHero={false} />
         <Footer page="HOME" />
       </div>

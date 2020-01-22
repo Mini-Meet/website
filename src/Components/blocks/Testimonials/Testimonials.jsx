@@ -20,14 +20,14 @@ export default class Testimonials extends Component {
         name: 'Craig Lawson',
         title: 'Product Manager, Sift',
         comment:
-          'Working remotely requires me to adapt my approach to managing & connecting my team. Remoto empowers me to keep the team happy, motivated, productive & moving towards a common goal',
+          'Remote work can be challenging, but Remoto has really helped us to stay connected, to focus on a common goal & to really feel like a team.',
       },
       {
         photo: customer2,
         name: 'Rebeca Casa',
-        title: 'Full-Stack Dev, HeyCater',
+        title: 'Lead Dev, HeyCater',
         comment:
-          'A really valuable tool for anyone looking to improve how they work remotely or manage remote teams!',
+          'A really valuable tool for anyone looking to improve how they work remotely or manage remote teams without a massive time commitment!',
       },
       {
         photo: customer1,
