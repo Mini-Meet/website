@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { get } from 'lodash';
+import { get, map, isArray, without } from 'lodash';
 import axios from 'axios';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
@@ -10,12 +10,13 @@ export default class ReferralBlock extends Component {
   constructor() {
     super();
     this.state = {
-      referralEmail: null,
+      referralEmails: [],
       error: null,
       isSubmitting: false,
       statistics: {},
       statisticsError: false,
       success: false,
+      numberOfEmails: 1,
     };
   }
 
@@ -24,7 +25,14 @@ export default class ReferralBlock extends Component {
   }
 
   render() {
-    const { error, isSubmitting, success, statisticsError } = this.state;
+    const {
+      error,
+      isSubmitting,
+      success,
+      statisticsError,
+      numberOfEmails,
+      referralEmails,
+    } = this.state;
     if (statisticsError) {
       return (
         <div className="refer">
@@ -37,30 +45,62 @@ export default class ReferralBlock extends Component {
         </div>
       );
     }
+
+    let emailInputs = [];
+    for (let i = 0; i < numberOfEmails; i++) {
+      emailInputs.push(
+        <div className="refer__main">
+          <input
+            key={`referralEmail-${i}`}
+            type="email"
+            placeholder="Enter email"
+            value={referralEmails[i] || ''}
+            onChange={e => this.onChangeEmail(e.target.value, i)}
+          />
+          {i !== 0 && (
+            <span
+              className="refer__remove__field"
+              onClick={this.onRemoveEmailField.bind(this, i)}
+            >
+              X
+            </span>
+          )}
+        </div>
+      );
+    }
     return (
-      <div className="refer">
-        {!isSubmitting && (
-          <div className="refer__main">
-            <input
-              key="referralEmail"
-              type="email"
-              placeholder="Enter multiple emails"
-              onChange={e => this.setState({ referralEmail: e.target.value })}
-            />
+      <div key="block" className="refer">
+        {!isSubmitting && [
+          map(emailInputs, el => el),
+          <div key="actions" className="refer__add__more__block">
+            {numberOfEmails < 5 && (
+              <span className="refer__add__more" onClick={this.onAddMoreEmails}>
+                + Add more
+              </span>
+            )}
             <Button primary onClick={this.onSendReferralLink}>
               Send Invites
             </Button>
-          </div>
-        )}
+          </div>,
+        ]}
 
         <div className="refer__state">
           {isSubmitting && (
             <p className="refer__state__submitting">Submitting...</p>
           )}
-          {error && <p className="refer__state__error">{error}</p>}
+          {error && !isArray(error) && (
+            <p className="refer__state__error">{error}</p>
+          )}
+          {error &&
+            isArray(error) &&
+            map(error, (er, key) => (
+              <p key={key} className="refer__state__error">
+                {er}
+              </p>
+            ))}
           {success && (
             <p className="refer__state__success">
-              Referral link successfully sent
+              Referral links successfully sent
             </p>
           )}
         </div>
@@ -69,7 +109,11 @@ export default class ReferralBlock extends Component {
   }
 
   onSendReferralLink = () => {
-    const { referralEmail, statistics } = this.state;
+    const { statistics, referralEmails } = this.state;
+    if (referralEmails.length === 0) {
+      this.setState({ error: 'Enter at least one email!' });
+      return;
+    }
     this.setState({
       error: null,
       isSubmitting: true,
@@ -79,7 +123,7 @@ export default class ReferralBlock extends Component {
     axios
       .post('https://tt-media.hr/public/api/referrals/send-link', {
         referrerEmail: get(statistics, [0, 'referrer_email']),
-        referralEmail,
+        referralEmails,
       })
       .then(response => {
         if (response.data.hasError) {
@@ -93,6 +137,7 @@ export default class ReferralBlock extends Component {
         Mixpanel.track('Guide/A: Referral sent');
         this.getStatistics(this.props.referralLink);
         this.setState({
+          error: response.data.data.failureMessages,
           isSubmitting: false,
           success: true,
         });
@@ -129,5 +174,27 @@ export default class ReferralBlock extends Component {
           isSubmitting: false,
         });
       });
+  };
+
+  onAddMoreEmails = () => {
+    this.setState({
+      numberOfEmails: this.state.numberOfEmails + 1,
+    });
+  };
+
+  onRemoveEmailField = index => {
+    const toRemove = this.state.referralEmails[index];
+    this.setState({
+      referralEmails: without(this.state.referralEmails, toRemove),
+      numberOfEmails: this.state.numberOfEmails - 1,
+    });
+  };
+
+  onChangeEmail = (value, index) => {
+    let emails = this.state.referralEmails;
+    emails[index] = value;
+    this.setState({
+      referralEmails: emails,
+    });
   };
 }

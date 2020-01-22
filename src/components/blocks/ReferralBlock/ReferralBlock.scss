@@ -13,7 +13,7 @@
 
   &__main {
     @include col;
-
+    position: relative;
     @media (min-width: $screen-sm-min) {
       @include row;
       align-items: center;
@@ -53,5 +53,23 @@
       color: $secondary;
       text-align: center;
     }
+  }
+
+  &__add__more__block {
+    display: flex;
+  }
+
+  &__add__more {
+    color: $secondary;
+    cursor: pointer;
+    flex: 1;
+    font-size: 14px;
+    margin-left: 6px;
+    text-align: left;
+  }
+  &__remove__field {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
   }
 }
