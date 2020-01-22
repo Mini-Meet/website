@@ -102,6 +102,8 @@
 
     @media (min-width: $screen-md-min) {
       @include padding(top bottom, 2);
+      margin: 0 auto;
+      width: 360px;
       text-align: left;
     }
 
