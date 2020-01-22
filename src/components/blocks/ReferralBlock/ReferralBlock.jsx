@@ -138,7 +138,7 @@ export default class ReferralBlock extends Component {
           });
           return;
         }
-        Mixpanel.track('Guide/A: Referral sent');
+        Mixpanel.track('Guide/B: Referral sent');
         this.getStatistics(this.props.referralLink);
         this.setState({
           error: response.data.data.failureMessages,
