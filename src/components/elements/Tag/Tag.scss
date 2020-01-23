@@ -5,13 +5,17 @@
   @include cursor-pointer;
   @include flex;
   @include margin(all, -1);
-  @include padding(left right, 2);
+  @include padding(left, 2);
+  @include padding(right, 0);
   @include padding(top bottom, -1);
 
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   max-height: 24px;
 
   &__label {
-    @include padding(top, -3);
+    @include padding(top bottom, 0);
     @include small;
   }
 
@@ -55,7 +59,6 @@
     @include padding(left right, -2);
     @include padding(top bottom, reset);
 
-    align-self: center;
     background-color: inherit;
     border: 0;
   }

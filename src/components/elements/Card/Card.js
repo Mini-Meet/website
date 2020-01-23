@@ -19,7 +19,7 @@ export default class Card extends Component<Props> {
       cardModal,
       cardDisabled,
     } = this.props;
-    const cardType = cardActive || cardModal || cardDisabled || 'card__default';
+    const cardType = cardActive || cardModal || cardDisabled || 'cardDefault';
 
     return (
       <div onClick={onClick} className="card" role="presentation">

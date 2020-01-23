@@ -12,6 +12,7 @@ type Props = {
   tertiary?: boolean,
   quarternary?: boolean,
   disabled?: boolean,
+  classOverride: string,
 };
 
 export default class Button extends Component<Props> {
@@ -23,12 +24,16 @@ export default class Button extends Component<Props> {
       tertiary,
       quarternary,
       disabled,
+      classOverride,
     } = this.props;
     const buttonType = secondary || tertiary || quarternary || 'primary';
 
     return (
       <div onClick={onClick} className="btnContainer" role="presentation">
-        <button className={buttonType} disabled={disabled}>
+        <button
+          className={`${String(buttonType)} ${String(classOverride)}`}
+          disabled={disabled}
+        >
           {children}
         </button>
       </div>

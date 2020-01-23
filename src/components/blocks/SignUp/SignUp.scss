@@ -32,11 +32,6 @@
 
     button {
       font-size: 12px;
-      width: 288px;
-
-      @media (min-width: $screen-sm-min) {
-        width: 340px;
-      }
     }
   }
 

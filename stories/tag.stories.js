@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 // import { linkTo } from "@storybook/addon-links";
 // import { Welcome } from "@storybook/react/demo";
-import { Tag } from '../src/Components/elements'
+import { Tag } from '../src/components/elements'
 
 storiesOf("Elements/Tag", module)
   // Commonly used:

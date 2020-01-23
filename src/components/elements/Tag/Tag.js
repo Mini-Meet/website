@@ -35,7 +35,10 @@ export default class Tag extends Component<Props> {
       <div className={`${tagType} tag`} onClick={onClick} role="presentation">
         {!input && <p className="tag__label">{label}</p>}
         {input && <input placeholder="add new..." />}
-        <i className="tag__icon inactive16" onClickIcon={onClickIcon}>
+        <i
+          className="material-icons tag__icon inactive16"
+          onClickIcon={onClickIcon}
+        >
           {icon}
         </i>
       </div>

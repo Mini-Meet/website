@@ -4,11 +4,17 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 // import { linkTo } from "@storybook/addon-links";
 // import { Welcome } from "@storybook/react/demo";
-import { Button } from '../src/Components/elements'
+import { Button } from '../src/components/elements'
 
 storiesOf("Elements/Buttons", module)
   .add("Button: Primary", () => (
     <Button onClick={action('clicked')}>
+      Label
+    </Button>
+  ))
+  .add("Button: With Icon", () => (
+    <Button onClick={action('clicked')}>
+      <i className="material-icons">add</i>
       Label
     </Button>
   ))

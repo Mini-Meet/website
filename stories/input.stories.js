@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 // import { action } from "@storybook/addon-actions";
 // import { linkTo } from "@storybook/addon-links";
 // import { Welcome } from "@storybook/react/demo";
-import { Input } from '../src/Components/elements'
+import { Input } from '../src/components/elements'
 
 storiesOf("Elements/Input", module)
 .add("Input: Default", () => (

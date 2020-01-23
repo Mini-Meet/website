@@ -10,6 +10,7 @@
 }
 
 .cardActive {
+  @include card-base;
   @include card-elevation;
   @include border-white;
   @include transition-out;
