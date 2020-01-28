@@ -14,7 +14,7 @@ import './Home.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('Guide/A: Home');
+    Mixpanel.track('PM: Home');
   }
 
   render() {
@@ -38,7 +38,7 @@ export default class Home extends Component {
         <Hero isFirstHero />
         <ProductShowcase />
         <Testimonials />
-        <Hero isFirstHero={false} />
+        <Hero isFirstHero={false} displayBtn />
         <Footer page="HOME" />
       </div>
     );

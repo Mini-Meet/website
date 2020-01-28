@@ -20,21 +20,21 @@ export default class Testimonials extends Component {
         name: 'Craig Lawson',
         title: 'Product Manager, Sift',
         comment:
-          'Remote work can be challenging, but Remoto has really helped us to stay connected, to focus on a common goal & to really feel like a team.',
+          'Product Mastery has really helped me dramatically improve how I communicate, motivate & organise my team. All the content & tools are practical & easy-to-apply.',
       },
       {
         photo: customer2,
         name: 'Rebeca Casa',
-        title: 'Lead Dev, HeyCater',
+        title: 'Junior Product Manager, HeyCater',
         comment:
-          'A really valuable tool for anyone looking to improve how they work remotely or manage remote teams without a massive time commitment!',
+          'You can tell the team behind Product Mastery really knows their stuff, focusing on what work & learning how to adapt when in the day-to-day of a busy startup.',
       },
       {
         photo: customer1,
         name: 'Mark Sarifidis',
-        title: 'Head of Product, Growth Media',
+        title: 'Product Lead, Growth Media',
         comment:
-          'Working with Remoto has helped my team become more connected, more organised &, most importantly, deliver better results.',
+          'Within minutes of working with Product Mastery, I felt like I had a clear grasp on the vision, direction & organisation of my team that had been missing from the start.',
       },
     ];
 
