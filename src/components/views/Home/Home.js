@@ -28,7 +28,7 @@ export default class Home extends Component {
           link={
             <div>
               <Link to="/legal" className="cookie-link">
-                T&Cs
+                Read Terms
               </Link>
             </div>
           }
