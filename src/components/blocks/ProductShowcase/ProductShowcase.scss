@@ -3,7 +3,7 @@
 .product {
   @include background-white;
   @include col;
-  @include margin(top, 3);
+  @include margin(top, 6);
   @include padding(top, 8);
   @include padding(bottom, 2);
   align-items: center;

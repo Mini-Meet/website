@@ -21,14 +21,14 @@ export default class Home extends Component {
     return (
       <div className="homePageWrapper">
         <CookieBanner
-          message="This website uses cookies to analyze our traffic and to personalize ads. Learn more: "
+          message="This website uses cookies. Learn more: "
           onAccept={() => {}}
           cookie="user-has-accepted-cookies"
           dismissOnScroll={false}
           link={
             <div>
               <Link to="/legal" className="cookie-link">
-                Terms & Conditions
+                T&Cs
               </Link>
             </div>
           }
