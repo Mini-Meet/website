@@ -22,7 +22,7 @@ export default class ProductShowcase extends Component {
               Use our ready-to-go templates to build a product playbook to
               quickly get your team on the same page
             </p>
-            <a className="block__cta" href="https://calendly.com/henry-latham">
+            <a className="block__cta" href="https://calendly.com/henry_latham">
               Book a Free Call {'>'}
             </a>
           </div>
@@ -41,7 +41,7 @@ export default class ProductShowcase extends Component {
               Apply tools & tactics from the world’s best to communicate your
               vision & get your team to execute towards that vision consistently
             </p>
-            <a className="block__cta" href="https://calendly.com/henry-latham">
+            <a className="block__cta" href="https://calendly.com/henry_latham">
               Book a Free Call {'>'}
             </a>
           </div>
@@ -55,7 +55,7 @@ export default class ProductShowcase extends Component {
               company using our framework for effective remote retrospectives,
               1-on-1s and standups
             </p>
-            <a className="block__cta" href="https://calendly.com/henry-latham">
+            <a className="block__cta" href="https://calendly.com/henry_latham">
               Book a Free Call {'>'}
             </a>
           </div>
@@ -78,7 +78,7 @@ export default class ProductShowcase extends Component {
               Learn & apply different approaches to product management to suit
               your specific team setup
             </p>
-            <a className="block__cta" href="https://calendly.com/henry-latham">
+            <a className="block__cta" href="https://calendly.com/henry_latham">
               Book a Free Call {'>'}
             </a>
           </div>

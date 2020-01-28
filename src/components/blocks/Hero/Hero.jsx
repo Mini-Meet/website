@@ -10,7 +10,7 @@ const CustomForm = () => {
   };
 
   return (
-    <a className="hero__cta" href="https://calendly.com/henry-latham">
+    <a className="hero__cta" href="https://calendly.com/henry_latham">
       <Button primary onClick={submit}>
         Book Free Consultancy Call
       </Button>
