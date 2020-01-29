@@ -32,14 +32,14 @@ export default class Referral extends Component {
         <Header dark />
         <div className="referral">
           <div className="referral__queue">
-            <h5>{`You are #${rank + 1742} on the waiting list`}</h5>
+            <h5>{`You are #${rank + 374} on the community waiting list`}</h5>
             <p>{`This reservation is held for ${email}`}</p>
           </div>
           <div className="referral__share">
             <h3>Want to cut the line and get instant access?</h3>
             <p>
               Invite 5 of your friends below for 1 year of <b>FREE</b> instant
-              access:
+              access to the community & our PM tool:
             </p>
             <ReferralBlock referralLink={referralLink} />
           </div>

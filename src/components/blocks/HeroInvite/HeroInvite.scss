@@ -1,0 +1,44 @@
+@import '../../../styles/main';
+
+.invite {
+  @include background-image;
+  @include col;
+  @include padding(top, 6);
+  @include padding(left right, reset);
+  @include padding(bottom, 5);
+
+  @media (min-width: $screen-sm-min) {
+    @include padding(bottom, 5);
+  }
+
+  &__header {
+    @include col;
+    color: $white;
+    max-width: 720px;
+
+    @media (min-width: $screen-sm-min) {
+      @include center-block(horizontal);
+    }
+
+    h1,
+    p {
+      color: $white;
+    }
+
+    h1 {
+      @include padding(all, 0);
+      @include padding(top, reset);
+    }
+
+    p {
+      @include padding(bottom, 2);
+      @include padding(top, 1);
+      @include padding(left right, 0);
+      text-align: center;
+
+      @media (min-width: $screen-sm-min) {
+        @include padding(bottom, 3);
+      }
+    }
+  }
+}
