@@ -6,7 +6,7 @@ import { Button } from '../../elements';
 
 const CustomForm = () => {
   const submit = () => {
-    Mixpanel.track('PM: Book Call (Footer)');
+    Mixpanel.track('PM Call: Book Call (Footer)');
   };
 
   return (
