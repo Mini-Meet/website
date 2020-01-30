@@ -14,7 +14,7 @@ import './Home.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('PM: Home');
+    Mixpanel.track('PM Signup: Home');
   }
 
   render() {
