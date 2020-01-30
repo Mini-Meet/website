@@ -4,7 +4,7 @@ import imgGuide from '../../../assets/images/prototype/product_guide.png';
 import imgOnboarding from '../../../assets/images/prototype/product_onboarding.png';
 import imgStandup from '../../../assets/images/prototype/product_standup.png';
 import imgRetro from '../../../assets/images/prototype/product_retro.png';
-import imgTools from '../../../assets/images/prototype/product_tools.png';
+// import imgTools from '../../../assets/images/prototype/product_tools.png';
 
 import './ProductShowcase.scss';
 
@@ -24,8 +24,8 @@ export default class ProductShowcase extends Component {
               effortlessly improve team organisation & communication and deliver
               better results
             </p>
-            <a className="block__cta" href="https://calendly.com/henry_latham">
-              Book a Free Call {'>'}
+            <a className="block__cta" href="#signup">
+              Request Access {'>'}
             </a>
           </div>
           <div className="block__img">
@@ -35,7 +35,7 @@ export default class ProductShowcase extends Component {
 
         <div className="block">
           <div className="block__img">
-            <img alt="Onboarding" src={imgTools} className="block__img__bg" />
+            <img alt="Onboarding" src={imgStandup} className="block__img__bg" />
           </div>
           <div className="block__text">
             <h3>Learn How Remote Teams Work</h3>
@@ -44,8 +44,8 @@ export default class ProductShowcase extends Component {
               so you can unlock the ability to work remote in future, whilst
               improving as a Product Manager along the way
             </p>
-            <a className="block__cta" href="https://calendly.com/henry_latham">
-              Book a Free Call {'>'}
+            <a className="block__cta" href="#signup">
+              Request Access {'>'}
             </a>
           </div>
         </div>
@@ -58,8 +58,8 @@ export default class ProductShowcase extends Component {
               team using our framework for effective retrospectives, 1-on-1s &
               standups
             </p>
-            <a className="block__cta" href="https://calendly.com/henry_latham">
-              Book a Free Call {'>'}
+            <a className="block__cta" href="#signup">
+              Request Access {'>'}
             </a>
           </div>
           <div className="block__img">
@@ -87,8 +87,8 @@ export default class ProductShowcase extends Component {
               product onboarding tool to guide them through their first few
               weeks
             </p>
-            <a className="block__cta" href="https://calendly.com/henry_latham">
-              Book a Free Call {'>'}
+            <a className="block__cta" href="#signup">
+              Request Access {'>'}
             </a>
           </div>
         </div>

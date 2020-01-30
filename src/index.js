@@ -13,7 +13,7 @@ import About from './components/views/About/About';
 import Privacy from './components/views/Privacy/Privacy';
 import Legal from './components/views/Legal/Legal';
 import Home from './components/views/Home/Home';
-import Invite from './components/views/Invite/Invite';
+// import Invite from './components/views/Invite/Invite';
 import Referral from './components/views/Referral/Referral';
 import AcceptReferral from './components/views/Referral/AcceptReferral';
 
@@ -31,7 +31,6 @@ ReactDOM.render(
         <Route path="/about" exact component={About} />
         <Route path="/privacy" exact component={Privacy} />
         <Route path="/legal" exact component={Legal} />
-        <Route path="/invite" exact component={Invite} />
         <Route path="/statistics/:referralLink" exact component={Referral} />
         <Route
           path="/referrals/accept/:referralLink"

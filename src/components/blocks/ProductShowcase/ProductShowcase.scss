@@ -3,15 +3,13 @@
 .product {
   @include background-white;
   @include col;
-  @include margin(top, 6);
-  @include padding(top, 8);
+  @include padding(top, 3);
   @include padding(bottom, 2);
   align-items: center;
 
   @media (min-width: $screen-md-min) {
-    @include margin(top, 6);
     @include padding(bottom, 4);
-    @include padding(top, 8);
+    @include padding(top, 5);
     @include padding(left right, 5);
   }
 

@@ -6,7 +6,7 @@ import { Mixpanel } from '../../../Mixpanel';
 import {
   Footer,
   Header,
-  Hero,
+  HeroInvite,
   ProductShowcase,
   Testimonials,
 } from '../../blocks';
@@ -35,10 +35,10 @@ export default class Home extends Component {
         />
         <Header light />
         <div id="signup" />
-        <Hero isFirstHero />
+        <HeroInvite isFirstHero />
         <ProductShowcase />
         <Testimonials />
-        <Hero isFirstHero={false} displayBtn />
+        <HeroInvite isFirstHero={false} displayBtn />
         <Footer page="HOME" />
       </div>
     );

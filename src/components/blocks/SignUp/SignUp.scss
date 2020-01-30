@@ -13,7 +13,7 @@
   &__main {
     @include col;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 820px;
 
     @media (min-width: $screen-sm-min) {
       @include row;
@@ -31,7 +31,7 @@
     }
 
     button {
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 
