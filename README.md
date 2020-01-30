@@ -38,7 +38,7 @@ On `master` will deploy a build to Netlify, meaning it will be live on our domai
 Runs the app in the "PRODUCTION" mode.<br />
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
-The page will NOT reload if you make edits.<br />
+The page will NOT reload if you make edits<br />
 You will also see any lint errors in the console.
 
 
