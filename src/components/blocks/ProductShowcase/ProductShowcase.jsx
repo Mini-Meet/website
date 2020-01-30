@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import imgGuide from '../../../assets/images/prototype/product_guide.png';
+import imgOnboarding from '../../../assets/images/prototype/product_onboarding.png';
 import imgStandup from '../../../assets/images/prototype/product_standup.png';
 import imgRetro from '../../../assets/images/prototype/product_retro.png';
 import imgTools from '../../../assets/images/prototype/product_tools.png';
@@ -19,8 +20,9 @@ export default class ProductShowcase extends Component {
           <div className="block__text block__text_left">
             <h3>Organise your team in minutes</h3>
             <p>
-              Use our ready-to-go templates to build a product playbook to
-              quickly get your team on the same page
+              Build a product playbook from our product management templates to
+              effortlessly improve team organisation & communication and deliver
+              better results
             </p>
             <a className="block__cta" href="https://calendly.com/henry_latham">
               Book a Free Call {'>'}
@@ -33,13 +35,14 @@ export default class ProductShowcase extends Component {
 
         <div className="block">
           <div className="block__img">
-            <img alt="Onboarding" src={imgStandup} className="block__img__bg" />
+            <img alt="Onboarding" src={imgTools} className="block__img__bg" />
           </div>
           <div className="block__text">
-            <h3>Feel More Like A Team</h3>
+            <h3>Learn How Remote Teams Work</h3>
             <p>
-              Apply tools & tactics from the world’s best to communicate your
-              vision & get your team to execute towards that vision consistently
+              Apply the tools & tactics from the world{`'`}s best remote teams
+              so you can unlock the ability to work remote in future, whilst
+              improving as a Product Manager along the way
             </p>
             <a className="block__cta" href="https://calendly.com/henry_latham">
               Book a Free Call {'>'}
@@ -52,8 +55,8 @@ export default class ProductShowcase extends Component {
             <h3>Build a Growth Mindset</h3>
             <p>
               Gain high-value insights & take action on problems within your
-              company using our framework for effective remote retrospectives,
-              1-on-1s and standups
+              team using our framework for effective retrospectives, 1-on-1s &
+              standups
             </p>
             <a className="block__cta" href="https://calendly.com/henry_latham">
               Book a Free Call {'>'}
@@ -70,13 +73,19 @@ export default class ProductShowcase extends Component {
 
         <div className="block">
           <div className="block__img">
-            <img alt="Onboarding" src={imgTools} className="block__img__bg" />
+            <img
+              alt="Onboarding"
+              src={imgOnboarding}
+              className="block__img__bg"
+            />
           </div>
           <div className="block__text">
-            <h3>Adapted To Your Unique Context</h3>
+            <h3>Help new hires to excel</h3>
             <p>
-              Learn & apply different approaches to product management to suit
-              your specific team setup
+              New hires are 70% more productive & are 82% more likely to be
+              retained if you onboard them effectively into your team. Use our
+              product onboarding tool to guide them through their first few
+              weeks
             </p>
             <a className="block__cta" href="https://calendly.com/henry_latham">
               Book a Free Call {'>'}

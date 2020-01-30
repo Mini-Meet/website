@@ -20,21 +20,21 @@ export default class Testimonials extends Component {
         name: 'Craig Lawson',
         title: 'Product Manager, Sift',
         comment:
-          'Product Mastery has really helped me dramatically improve how I communicate, motivate & organise my team. All the content & tools are practical & easy-to-apply.',
+          'The tools & content provided by Product Mastery have helped me dramatically improve how I communicate, motivate & organise my team',
       },
       {
         photo: customer2,
         name: 'Rebeca Casa',
         title: 'Junior Product Manager, HeyCater',
         comment:
-          'You can tell the team behind Product Mastery really knows their stuff, focusing on what work & learning how to adapt when in the day-to-day of a busy startup.',
+          'You can tell the team behind Product Mastery really knows their stuff, focusing on what work & learning how to adapt when in the day-to-day of a busy startup',
       },
       {
         photo: customer1,
         name: 'Mark Sarifidis',
         title: 'Product Lead, Growth Media',
         comment:
-          'Within minutes of working with Product Mastery, I felt like I had a clear grasp on the vision, direction & organisation of my team that had been missing from the start.',
+          'We use Jira or Trello for managing projects. The Product Mastery toolkit covers everything else: Vision, strategy, our meetings, rituals & even how we communicate',
       },
     ];
 
