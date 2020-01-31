@@ -94,3 +94,12 @@
     color: $secondary;
   }
 }
+
+iframe {
+  @include margin(bottom, 5);
+  border-bottom: 3200px solid $white;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

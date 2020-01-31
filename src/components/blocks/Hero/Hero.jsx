@@ -91,10 +91,13 @@ export default class Hero extends Component {
                 />
               )}
               {status === 'success' && (
-                <p
-                  className="hero__form__success"
-                  dangerouslySetInnerHTML={{ __html: message }}
-                />
+                <iframe
+                  id="typeform-full"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  src="https://optimizeme.typeform.com/to/fAD2UV"
+                ></iframe>
               )}
               {!status && (
                 <p className="hero__small">
