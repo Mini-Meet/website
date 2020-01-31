@@ -92,11 +92,12 @@ export default class Hero extends Component {
               )}
               {status === 'success' && (
                 <iframe
+                  title="Survey"
                   id="typeform-full"
                   width="100%"
                   height="100%"
-                  frameborder="0"
-                  src="https://optimizeme.typeform.com/to/fAD2UV"
+                  frameBorder="0"
+                  src="https://productmastery.typeform.com/to/fAD2UV"
                 ></iframe>
               )}
               {!status && (
