@@ -8,7 +8,7 @@ import './Hero.scss';
 const url =
   'https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04';
 
-const CustomForm = ({ status, message, onSubscribe }) => {
+const CustomForm = ({ onSubscribe }) => {
   let email;
   const submit = () => {
     Mixpanel.track('PM Signup: Subscribed!');
@@ -22,21 +22,6 @@ const CustomForm = ({ status, message, onSubscribe }) => {
 
   return (
     <div className="hero__form">
-      {status === 'sending' && (
-        <p className="hero__form__sending">sending...</p>
-      )}
-      {status === 'error' && (
-        <p
-          className="hero__form__error"
-          dangerouslySetInnerHTML={{ __html: message }}
-        />
-      )}
-      {status === 'success' && (
-        <p
-          className="hero__form__success"
-          dangerouslySetInnerHTML={{ __html: message }}
-        />
-      )}
       <input
         ref={node => (email = node)}
         type="email"
@@ -89,15 +74,34 @@ export default class Hero extends Component {
           url={url}
           render={({ subscribe, status, message }) => (
             <div>
-              <CustomForm
-                status={status}
-                message={message}
-                onSubscribe={formData => subscribe(formData)}
-              />
-              <p className="hero__small">
-                Access to the Public Beta is by invitation only. Request access
-                today.
-              </p>
+              {(!status || status === 'error') && (
+                <CustomForm
+                  status={status}
+                  message={message}
+                  onSubscribe={formData => subscribe(formData)}
+                />
+              )}
+              {status === 'sending' && (
+                <p className="hero__form__sending">sending...</p>
+              )}
+              {status === 'error' && (
+                <p
+                  className="hero__form__error"
+                  dangerouslySetInnerHTML={{ __html: message }}
+                />
+              )}
+              {status === 'success' && (
+                <p
+                  className="hero__form__success"
+                  dangerouslySetInnerHTML={{ __html: message }}
+                />
+              )}
+              {!status && (
+                <p className="hero__small">
+                  Access to the Public Beta is by invitation only. Request
+                  access today.
+                </p>
+              )}
             </div>
           )}
         />

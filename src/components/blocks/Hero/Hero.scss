@@ -68,7 +68,9 @@
     &__sending,
     &__error,
     &__success {
-      @include padding(bottom, 1);
+      @include padding(top bottom, 1);
+      margin: 0 auto;
+      max-width: 400px;
       text-align: center;
     }
 
