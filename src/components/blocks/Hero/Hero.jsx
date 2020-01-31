@@ -1,20 +1,52 @@
 import React, { Component } from 'react';
-import './Hero.scss';
-
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
 
-const CustomForm = () => {
+import './Hero.scss';
+
+const url =
+  'https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04';
+
+const CustomForm = ({ status, message, onSubscribe }) => {
+  let email;
   const submit = () => {
-    Mixpanel.track('PM Signup: Book Call (Footer)');
+    Mixpanel.track('PM Signup: Subscribed!');
+
+    email &&
+      email.value.indexOf('@') > -1 &&
+      onSubscribe({
+        EMAIL: email.value,
+      });
   };
 
   return (
-    <a className="hero__cta" href="https://calendly.com/henry_latham">
+    <div className="hero__form">
+      {status === 'sending' && (
+        <p className="hero__form__sending">sending...</p>
+      )}
+      {status === 'error' && (
+        <p
+          className="hero__form__error"
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      {status === 'success' && (
+        <p
+          className="hero__form__success"
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      <input
+        ref={node => (email = node)}
+        type="email"
+        placeholder="Enter your email"
+      />
+      <br />
       <Button primary onClick={submit}>
-        Book Free Consultancy Call
+        Request Free Early Access
       </Button>
-    </a>
+    </div>
   );
 };
 
@@ -38,7 +70,6 @@ export default class Hero extends Component {
     ];
 
     const property = this.props.isFirstHero ? firstHero : secondHero;
-    const { displayBtn } = this.props;
 
     return (
       <div className="hero">
@@ -49,19 +80,27 @@ export default class Hero extends Component {
                 <h1>{prop.title}</h1>
                 <h1>{prop.titleTwo}</h1>
                 <p>{prop.subtitle}</p>
-                {displayBtn && <CustomForm />}
               </div>
             </div>
           );
         })}
-        <iframe
-          title="Video"
-          src="https://www.videoask.com/fto26rekz"
-          allow="camera; microphone; autoplay; encrypted-media;"
-          width="100%"
-          height="600px"
-          className="hero__video"
-        ></iframe>
+
+        <MailchimpSubscribe
+          url={url}
+          render={({ subscribe, status, message }) => (
+            <div>
+              <CustomForm
+                status={status}
+                message={message}
+                onSubscribe={formData => subscribe(formData)}
+              />
+              <p className="hero__small">
+                Access to the Public Beta is by invitation only. Request access
+                today.
+              </p>
+            </div>
+          )}
+        />
       </div>
     );
   }

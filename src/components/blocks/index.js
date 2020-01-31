@@ -8,5 +8,5 @@ export { default as HeroInvite } from './HeroInvite/HeroInvite';
 export { default as Image } from './Image/Image';
 export { default as ProductShowcase } from './ProductShowcase/ProductShowcase';
 export { default as ReferralBlock } from './ReferralBlock/ReferralBlock';
-export { default as SignUp } from './SignUp/SignUp';
+export { default as Refer } from './Refer/Refer';
 export { default as Testimonials } from './Testimonials/Testimonials';

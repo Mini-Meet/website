@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { SignUp } from '..';
+import { Refer } from '..';
 import './HeroInvite.scss';
 
 export default class Hero extends Component {
@@ -38,7 +38,7 @@ export default class Hero extends Component {
           );
         })}
 
-        <SignUp />
+        <Refer />
       </div>
     );
   }

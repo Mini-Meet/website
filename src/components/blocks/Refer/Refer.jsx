@@ -3,9 +3,9 @@ import axios from 'axios';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
 
-import './SignUp.scss';
+import './Refer.scss';
 
-export default class SignUp extends Component {
+export default class Refer extends Component {
   constructor() {
     super();
     this.state = {
@@ -18,9 +18,9 @@ export default class SignUp extends Component {
   render() {
     const { error, isSubmitting } = this.state;
     return (
-      <div className="signup">
+      <div className="refer">
         {!isSubmitting && (
-          <div className="signup__main">
+          <div className="refer__main">
             <input
               key="userEmail"
               type="email"
@@ -28,27 +28,27 @@ export default class SignUp extends Component {
               onChange={e => this.setState({ userEmail: e.target.value })}
             />
 
-            <Button primary onClick={this.onSignUp}>
+            <Button primary onClick={this.onRefer}>
               Request Free Early Access
             </Button>
           </div>
         )}
 
-        <div className="signup__state">
+        <div className="refer__state">
           {isSubmitting && (
-            <p className="signup__state__submitting">Submitting...</p>
+            <p className="refer__state__submitting">Submitting...</p>
           )}
-          {error && <p className="signup__state__error">{error}</p>}
+          {error && <p className="refer__state__error">{error}</p>}
         </div>
 
-        <p className="signup__footnote">
+        <p className="refer__footnote">
           Access to the Public Beta is by invitation only. Request access today.
         </p>
       </div>
     );
   }
 
-  onSignUp = () => {
+  onRefer = () => {
     const { userEmail } = this.state;
 
     this.setState({
