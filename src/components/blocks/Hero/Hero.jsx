@@ -103,7 +103,7 @@ export default class Hero extends Component {
               {!status && (
                 <p className="hero__small">
                   Access to the Public Beta is by invitation only. Request
-                  access today.
+                  access today
                 </p>
               )}
             </div>
