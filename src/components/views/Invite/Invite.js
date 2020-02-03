@@ -6,7 +6,7 @@ import './Invite.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('PM Signup: Invite');
+    Mixpanel.track('PM.b Signup: Invite');
   }
 
   render() {

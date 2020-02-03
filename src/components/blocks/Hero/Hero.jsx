@@ -11,7 +11,7 @@ const url =
 const CustomForm = ({ onSubscribe }) => {
   let email;
   const submit = () => {
-    Mixpanel.track('PM Signup: Subscribed!');
+    Mixpanel.track('PM.b Signup: Subscribed!');
 
     email &&
       email.value.indexOf('@') > -1 &&
@@ -50,7 +50,7 @@ export default class Hero extends Component {
       {
         title: 'Ready to transform your product career?',
         subtitle:
-          'Start seeing an impact in just 5 minutes today & gradually build the right skill set to rapidly become a world-class Product Manager:',
+          'Start seeing an impact within just a few minutes & start building the right skill set to rapidly become a world-class Product Manager:',
       },
     ];
 
