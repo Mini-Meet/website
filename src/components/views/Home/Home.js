@@ -7,6 +7,7 @@ import {
   Footer,
   Header,
   Hero,
+  Featured,
   ProductShowcase,
   Testimonials,
 } from '../../blocks';
@@ -14,7 +15,7 @@ import './Home.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('PM.b Signup: Home');
+    Mixpanel.track('PM.c Signup: Home');
   }
 
   render() {
@@ -36,6 +37,7 @@ export default class Home extends Component {
         <Header light />
         <div id="signup" />
         <Hero isFirstHero />
+        <Featured />
         <ProductShowcase />
         <Testimonials />
         <Hero isFirstHero={false} />

@@ -63,10 +63,10 @@ class Footer extends Component {
   }
 
   goToAbout = () => {
-    Mixpanel.track('PM.b Signup: About');
+    Mixpanel.track('PM.c Signup: About');
   };
   goToBlog = () => {
-    Mixpanel.track('PM.b Signup: Blog');
+    Mixpanel.track('PM.c Signup: Blog');
   };
 }
 
