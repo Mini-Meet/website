@@ -13,6 +13,7 @@ type Props = {
   mixpanelEvent: string,
   mailchimpForm: boolean,
   typeform: boolean,
+  onSubscribe: Function,
 };
 
 const CustomForm = ({ onSubscribe }) => {
@@ -49,7 +50,6 @@ export default class Hero extends Component<Props> {
       titleTwo,
       subtitle,
       mailchimpForm,
-      mixpanelEvent,
       typeform,
       url,
     } = this.props;
@@ -64,7 +64,7 @@ export default class Hero extends Component<Props> {
 
         {typeform && (
           <div className="hero__typeform">
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" rel="noopener noreferrer">
               <Button onClick={this.goToTypeform}>
                 Become a Product Mentor
               </Button>
