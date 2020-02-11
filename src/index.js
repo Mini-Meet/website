@@ -9,10 +9,11 @@ import {
 import * as serviceWorker from './serviceWorker';
 
 // Components declaration
+import Home from './components/views/Home/Home';
 import About from './components/views/About/About';
 import Privacy from './components/views/Privacy/Privacy';
 import Legal from './components/views/Legal/Legal';
-import Home from './components/views/Home/Home';
+import Mentors from './components/views/Mentors/Mentors';
 import Referee from './components/views/Referee/Referee';
 import Referral from './components/views/Referral/Referral';
 import AcceptReferral from './components/views/Referral/AcceptReferral';
@@ -32,6 +33,7 @@ ReactDOM.render(
         <Route path="/privacy" exact component={Privacy} />
         <Route path="/referee" exact component={Referee} />
         <Route path="/legal" exact component={Legal} />
+        <Route path="/mentors" exact component={Mentors} />
         <Route path="/statistics/:referralLink" exact component={Referral} />
         <Route
           path="/referrals/accept/:referralLink"

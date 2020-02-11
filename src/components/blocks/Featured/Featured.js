@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 
 import google from '../../../assets/images/partners/partner_google.svg';
@@ -8,11 +9,17 @@ import twitter from '../../../assets/images/partners/partner_twitter.svg';
 
 import './Featured.scss';
 
-class Featured extends Component {
+type Props = {
+  header: string,
+};
+
+export default class Featured extends Component<Props> {
   render() {
+    const { header } = this.props;
+
     return (
       <div className="featured">
-        <p className="featured__header">Our Product Masters work at</p>
+        <p className="featured__header">{header}</p>
         <div className="featured__logos">
           <img alt="logo" src={google} className="featured__logos_img" />
           <img alt="logo" src={insta} className="featured__logos_img" />
@@ -24,5 +31,3 @@ class Featured extends Component {
     );
   }
 }
-
-export default Featured;

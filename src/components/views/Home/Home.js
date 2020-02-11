@@ -22,25 +22,46 @@ export default class Home extends Component {
     return (
       <div className="homePageWrapper">
         <CookieBanner
-          message="This website uses cookies. Learn more: "
+          message="This website uses cookies: "
           onAccept={() => {}}
           cookie="user-has-accepted-cookies"
           dismissOnScroll={false}
           link={
             <div>
               <Link to="/legal" className="cookie-link">
-                Read Terms
+                Read Our Terms & Conditions
               </Link>
             </div>
           }
         />
         <Header light />
         <div id="signup" />
-        <Hero isFirstHero />
-        <Featured />
-        <ProductShowcase />
+        <Hero
+          title="Master Product"
+          titleTwo="Management"
+          subtitle="Junior/mid-level PM? Learn how to double your salary & unlock remote work without spending $5k & months on a course with our toolkit for world-class product management"
+          mixpanelEvent="Subscribed"
+          mailchimpForm
+          url="https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04"
+        />
+        <Featured header="Where our Product Masters Work" />
+        <ProductShowcase
+          header="Your Secret Weapon For Better Product Work"
+          blockOneHeader="Become a Better PM"
+          blockTwoHeader="Organise Your Team Within Minutes"
+          blockThreeHeader="Find Your Product Mentor"
+          blockFourHeader="Learn Remote Best Practice"
+          url="#signup"
+          cta="Request Access >"
+        />
         <Testimonials />
-        <Hero isFirstHero={false} />
+        <Hero
+          title="Ready to transform your product career?"
+          subtitle="Start seeing an impact within just a few minutes & start building the right skill set to rapidly become a world-class Product Manager:"
+          mixpanelEvent="Subscribed"
+          mailchimpForm
+          url="https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04"
+        />
         <Footer page="HOME" />
       </div>
     );

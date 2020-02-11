@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 
 import imgGuide from '../../../assets/images/prototype/product_guide.png';
@@ -11,24 +12,42 @@ import imgMentors from '../../../assets/images/prototype/product_mentors.png';
 
 import './ProductShowcase.scss';
 
-export default class ProductShowcase extends Component {
+type Props = {
+  header: string,
+  blockOneHeader: string,
+  blockTwoHeader: string,
+  blockThreeHeader: string,
+  blockFourHeader: string,
+  url: string,
+  cta: string,
+};
+
+export default class ProductShowcase extends Component<Props> {
   render() {
+    const {
+      header,
+      blockOneHeader,
+      blockTwoHeader,
+      blockThreeHeader,
+      blockFourHeader,
+      url,
+      cta,
+    } = this.props;
+
     return (
       <div className="product">
-        <h2 className="product__header">
-          Your Secret Weapon For Better Product Work
-        </h2>
+        <h2 className="product__header">{header}</h2>
 
         <div className="block block__reverse">
           <div className="block__text block__text_left">
-            <h3>Become a Better PM</h3>
+            <h3>{blockOneHeader}</h3>
             <p>
               Learn how the world’s best Product Managers run their product
               teams, covering anything from leadership to prouct strategy, &
               apply these practices with our digital toolkit
             </p>
-            <a className="block__cta" href="#signup">
-              Request Access {'>'}
+            <a className="block__cta" href={url}>
+              {cta}
             </a>
           </div>
           <div className="block__img">
@@ -45,27 +64,27 @@ export default class ProductShowcase extends Component {
             <img alt="Onboarding" src={imgGuide} className="block__img__bg" />
           </div>
           <div className="block__text">
-            <h3>Organise Your Team Within Minutes</h3>
+            <h3>{blockTwoHeader}</h3>
             <p>
               Effortlessly get your existing team & new hires better organised &
               better connected. Use our ready-to-go templates to build a product
               playbook
             </p>
-            <a className="block__cta" href="#signup">
-              Request Access {'>'}
+            <a className="block__cta" href={url}>
+              {cta}
             </a>
           </div>
         </div>
 
         <div className="block block__reverse">
           <div className="block__text block__text_left">
-            <h3>Find Your Product Mentor</h3>
+            <h3>{blockThreeHeader}</h3>
             <p>
               Join our community of experienced Product Managers to help set
               personal goals & to advise you throughout your career
             </p>
-            <a className="block__cta" href="#signup">
-              Request Access {'>'}
+            <a className="block__cta" href={url}>
+              {cta}
             </a>
           </div>
           <div className="block__img">
@@ -82,14 +101,14 @@ export default class ProductShowcase extends Component {
             <img alt="Onboarding" src={imgRemote} className="block__img__bg" />
           </div>
           <div className="block__text">
-            <h3>Learn Remote Best Practice</h3>
+            <h3>{blockFourHeader}</h3>
             <p>
               Learn how world-class remote teams operate & unlock the ability to
               build your own remote team, or to nail your next remote job
               interview
             </p>
-            <a className="block__cta" href="#signup">
-              Request Access {'>'}
+            <a className="block__cta" href={url}>
+              {cta}
             </a>
           </div>
         </div>

@@ -42,6 +42,17 @@
     }
   }
 
+  // typeform
+
+  &__typeform {
+    @include margin(top bottom, 3);
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  // Mailchimp Form
   &__form {
     @include col;
     margin: 0 auto;
