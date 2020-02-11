@@ -8,7 +8,7 @@
   @include padding(bottom, 4);
 
   @media (min-width: $screen-sm-min) {
-    @include padding(bottom, 6);
+    @include padding(bottom, 5);
   }
 
   &__header {
@@ -36,7 +36,8 @@
       text-align: center;
 
       @media (min-width: $screen-sm-min) {
-        @include padding(bottom, 3);
+        @include padding(top, 0);
+        @include padding(bottom, 4);
       }
     }
   }

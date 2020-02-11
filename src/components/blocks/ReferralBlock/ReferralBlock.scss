@@ -24,7 +24,7 @@
       max-height: 40px;
 
       @media (min-width: $screen-sm-min) {
-        @include margin(right, 0);
+        @include margin(right, reset);
       }
     }
 

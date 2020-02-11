@@ -1,6 +1,6 @@
 @import '../../../styles/main';
 
-.refer {
+.refereeInput {
   @include col;
   @include padding(top, 4);
   @include padding(left right, reset);
@@ -32,6 +32,10 @@
 
     button {
       font-size: 11px;
+
+      @media (min-width: $screen-sm-min) {
+        min-width: 320px;
+      }
     }
   }
 

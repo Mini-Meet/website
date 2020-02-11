@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 
 import { Mixpanel } from '../../../Mixpanel';
-import { Header, HeroInvite } from '../../blocks';
-import './Invite.scss';
+import { Header, HeroReferee } from '../../blocks';
+
+import './Referee.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('PM.c Signup: Invite');
+    Mixpanel.track('PM.c Signup: Referee');
   }
 
   render() {
     return (
-      <div className="homePageWrapper">
+      <div className="refereeContainer">
         <Header light />
-        <HeroInvite isFirstHero />
+        <HeroReferee isFirstHero />
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { Refer } from '..';
-import './HeroInvite.scss';
+import { RefereeInput } from '..';
+import './HeroReferee.scss';
 
 export default class Hero extends Component {
   render() {
@@ -25,11 +25,11 @@ export default class Hero extends Component {
     const property = this.props.isFirstHero ? firstHero : secondHero;
 
     return (
-      <div className="invite">
+      <div className="referee">
         {property.map(prop => {
           return (
             <div key={this.props.key}>
-              <div className="invite__header">
+              <div className="referee__header">
                 <h1>{prop.title}</h1>
                 <h1>{prop.titleTwo}</h1>
                 <p>{prop.subtitle}</p>
@@ -38,7 +38,7 @@ export default class Hero extends Component {
           );
         })}
 
-        <Refer />
+        <RefereeInput />
       </div>
     );
   }

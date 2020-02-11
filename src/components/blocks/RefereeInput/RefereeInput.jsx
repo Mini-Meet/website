@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
 
-import './Refer.scss';
+import './RefereeInput.scss';
 
 export default class Refer extends Component {
   constructor() {
@@ -18,9 +18,9 @@ export default class Refer extends Component {
   render() {
     const { error, isSubmitting } = this.state;
     return (
-      <div className="refer">
+      <div className="refereeInput">
         {!isSubmitting && (
-          <div className="refer__main">
+          <div className="refereeInput__main">
             <input
               key="userEmail"
               type="email"
@@ -34,14 +34,14 @@ export default class Refer extends Component {
           </div>
         )}
 
-        <div className="refer__state">
+        <div className="refereeInput__state">
           {isSubmitting && (
-            <p className="refer__state__submitting">Submitting...</p>
+            <p className="refereeInput__state__submitting">Submitting...</p>
           )}
-          {error && <p className="refer__state__error">{error}</p>}
+          {error && <p className="refereeInput__state__error">{error}</p>}
         </div>
 
-        <p className="refer__footnote">
+        <p className="refereeInput__footnote">
           Access to the Public Beta is by invitation only. Request access today.
         </p>
       </div>
