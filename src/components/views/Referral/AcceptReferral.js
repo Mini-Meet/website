@@ -28,6 +28,8 @@ export default class AcceptReferral extends Component {
           this.setState({ error: response.data.errMessage });
           return;
         }
+        // Generic Mixpanel event to track funnel
+        Mixpanel.track('PM.c Signup: Referral accepted');
         // Success response - redirect and set tracker
         Mixpanel.track(`PM.c Signup: Referral accepted: ${referralLink}`);
         window.location.href = '/home';
