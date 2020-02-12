@@ -77,17 +77,13 @@
       font-size: 11px;
     }
 
-    &__sending,
+    &__loading,
     &__error,
     &__success {
       @include padding(top bottom, 1);
       margin: 0 auto;
       max-width: 400px;
       text-align: center;
-    }
-
-    &__sending {
-      color: $white;
     }
 
     &__error {

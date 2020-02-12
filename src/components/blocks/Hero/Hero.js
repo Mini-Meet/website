@@ -1,6 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import Loader from 'react-loader-spinner';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
 import './Hero.scss';
@@ -85,7 +87,15 @@ export default class Hero extends Component<Props> {
                   />
                 )}
                 {status === 'sending' && (
-                  <p className="hero__form__sending">sending...</p>
+                  <div className="hero__form__loading">
+                    <Loader
+                      type="Triangle" // or "Grid"
+                      color="#fff"
+                      height={60}
+                      width={60}
+                      timeout={3000} //3 secs
+                    />
+                  </div>
                 )}
                 {status === 'error' && (
                   <p
@@ -94,14 +104,25 @@ export default class Hero extends Component<Props> {
                   />
                 )}
                 {status === 'success' && (
-                  <iframe
-                    title="Survey"
-                    id="typeform-full"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    src="https://productmastery.typeform.com/to/fAD2UV"
-                  ></iframe>
+                  <div>
+                    <div className="hero__form__loading">
+                      <Loader
+                        type="Triangle" // or "Grid"
+                        color="#fff"
+                        height={60}
+                        width={60}
+                        timeout={3000} //3 secs
+                      />
+                    </div>
+                    <iframe
+                      title="Survey"
+                      id="typeform-full"
+                      width="100%"
+                      height="200%"
+                      frameBorder="0"
+                      src="https://productmastery.typeform.com/to/fAD2UV"
+                    ></iframe>
+                  </div>
                 )}
                 {!status && (
                   <p className="hero__small">
