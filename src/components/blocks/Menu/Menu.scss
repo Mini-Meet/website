@@ -10,11 +10,11 @@
 %menu {
   @include background-very-light;
   @include transition-in-out;
+  bottom: 0;
+  box-shadow: inset -4px 0 10px #e0e0e024;
   overflow-y: scroll;
   position: fixed;
   top: 0;
-  bottom: 0;
-  box-shadow: inset -4px 0 10px #e0e0e024;
   z-index: 1;
 }
 
@@ -50,11 +50,11 @@
 .menuClosed {
   &__btn {
     @extend %btn;
-    left: 0;
-    border-radius: 0 10px 10px 0;
-    border-top: 1px solid $light-grey;
     border-bottom: 1px solid $light-grey;
+    border-radius: 0 10px 10px 0;
     border-right: 1px solid $light-grey;
+    border-top: 1px solid $light-grey;
+    left: 0;
 
     &_icon {
       @extend %icon;
@@ -89,8 +89,8 @@
 .menuOpen {
   &__btn {
     @extend %btn;
-    border-radius: 100px;
     border: 1px solid $light-grey;
+    border-radius: 100px;
     left: 234px;
     top: 12px;
     z-index: 2;
