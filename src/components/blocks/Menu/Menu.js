@@ -58,12 +58,12 @@ export default class Menu extends Component<Props> {
 
     return (
       <div className="container">
-        <div
+        <button
           className={`${menuStyles}__btn`}
           onClick={this.onRevealMenu.bind(this)}
         >
           <i className={`${menuStyles}__btn_icon material-icons`}>{icon}</i>
-        </div>
+        </button>
 
         <div className={`${menuStyles}__menu`}>
           <div className={`${menuStyles}__menu_label`}>Menu</div>

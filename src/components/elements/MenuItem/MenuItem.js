@@ -34,13 +34,13 @@ export default class MenuItem extends Component<Props> {
         <div
           className={`item__row ${String(itemStatus)} ${String(classOverride)}`}
         >
-          <div
+          <button
             onClick={onClick}
             className={`item__title ${String(itemStatus)}__title`}
             itemActive={itemActive}
           >
             {title}
-          </div>
+          </button>
           <Icon
             icon={icon}
             onClick={onIconClick}
