@@ -93,7 +93,7 @@ export default class Hero extends Component<Props> {
                       color="#fff"
                       height={60}
                       width={60}
-                      timeout={3000} //3 secs
+                      timeout={3000}
                     />
                   </div>
                 )}
@@ -107,11 +107,11 @@ export default class Hero extends Component<Props> {
                   <div>
                     <div className="hero__form__loading">
                       <Loader
-                        type="Triangle" // or "Grid"
+                        type="Triangle"
                         color="#fff"
                         height={60}
                         width={60}
-                        timeout={3000} //3 secs
+                        timeout={3000}
                       />
                     </div>
                     <iframe
