@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import Loader from 'react-loader-spinner';
+
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
 
@@ -36,7 +39,15 @@ export default class Refer extends Component {
 
         <div className="refereeInput__state">
           {isSubmitting && (
-            <p className="refereeInput__state__submitting">Submitting...</p>
+            <div className="refereeInput__state__submitting">
+              <Loader
+                type="Triangle" // or "Grid"
+                color="#fff"
+                height={60}
+                width={60}
+                timeout={3000}
+              />
+            </div>
           )}
           {error && <p className="refereeInput__state__error">{error}</p>}
         </div>
