@@ -1,0 +1,77 @@
+@import '../../../styles/main';
+
+.refer {
+  @include col;
+  @include padding(top, 3);
+  @include padding(left right, reset);
+  @include padding(bottom, 4);
+
+  @media (min-width: $screen-sm-min) {
+    @include padding(top, 4);
+    @include padding(bottom, 5);
+  }
+
+  &__main {
+    @include col;
+    position: relative;
+    @media (min-width: $screen-sm-min) {
+      @include row;
+      align-items: center;
+    }
+
+    input {
+      border-color: $border-grey;
+      max-height: 40px;
+
+      @media (min-width: $screen-sm-min) {
+        @include margin(right, reset);
+      }
+    }
+
+    button {
+      width: 288px;
+
+      @media (min-width: $screen-sm-min) {
+        width: 220px;
+      }
+    }
+  }
+
+  &__state {
+    &__error {
+      color: $error;
+      text-align: center;
+    }
+    &__success {
+      color: $secondary;
+      text-align: center;
+    }
+
+    &__submitting {
+      @include margin(top, 1);
+      @include margin(bottom, 3);
+      color: $secondary;
+      text-align: center;
+    }
+  }
+
+  &__add__more__block {
+    display: flex;
+  }
+
+  &__add__more {
+    color: $secondary;
+    cursor: pointer;
+    flex: 1;
+    font-size: 14px;
+    margin-left: 6px;
+    text-align: left;
+  }
+
+  &__removeField {
+    @include opacity(2);
+    position: absolute;
+    right: 0;
+    top: 3px;
+  }
+}

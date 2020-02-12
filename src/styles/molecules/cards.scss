@@ -2,11 +2,11 @@
   @include corner-radius;
   @include cursor-pointer;
   @include border-card;
+  @include padding(all, 2);
   @include transition-in;
   @include col;
   align-items: flex-start;
   background-color: $white;
-  margin: 16px;
 
   &:hover {
     @include card-elevation;
@@ -19,33 +19,19 @@
   @extend %card;
 }
 
-@mixin card-entry {
+// Card: Content Row
+@mixin card-collection {
   @extend %card;
-
   justify-content: space-between;
   max-width: 240px;
   min-height: 180px;
   min-width: 240px;
 }
 
-@mixin card-widget {
+@mixin card-modal {
   @extend %card;
-  @include card-elevation;
-  @include border-white;
-  @include transition-out;
-  @include cursor-default;
-  margin-left: 32px;
-  min-height: 220px;
-
-  min-width: 260px;
-
-  &:hover {
-    @include modal-elevation;
-  }
-}
-
-@mixin card-prompt {
-  @extend %card;
+  @include margin(all, 2);
+  @include padding(all, 3);
   @include modal-elevation;
   border: 0;
 
@@ -53,55 +39,4 @@
     @include modal-elevation-hover;
     border: 0;
   }
-
-  .img {
-    align-self: center;
-    border-radius: 10px 10px 0 0;
-    max-height: 140px;
-  }
-
-  .icon {
-    @include icon-button;
-    margin: 0;
-    position: absolute;
-    right: 4px;
-    top: 4px;
-  }
-
-  .title {
-    @include h5;
-
-    padding: 32px 0 0 24px;
-  }
-
-  .text {
-    @include text;
-
-    padding: 16px 24px 24px;
-  }
-
-  .buttonContainer {
-    align-self: flex-end;
-    border-top: 1px solid var(--line-color);
-  }
-}
-
-@mixin card-subscription {
-  @extend %card;
-  @include card-elevation;
-  @include border-white;
-  @include transition-out;
-  @include cursor-pointer;
-  height: 222px;
-  margin-left: 32px;
-
-  min-width: 260px;
-
-  &:hover {
-    @include modal-elevation;
-  }
-}
-
-@mixin card-popular {
-  border-color: $primary;
 }

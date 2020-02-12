@@ -1,0 +1,61 @@
+@import '../../../styles/main';
+
+.footer {
+  @include background-dark;
+  @include padding(left right, 1);
+  @include padding(top bottom, 2);
+  @include col;
+
+  @media (min-width: $screen-sm-min) {
+    @include padding(left right, 3);
+    @include row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    &_img {
+      @include padding(left, 2);
+      @include padding(top, 3);
+      @include padding(bottom, 0);
+      max-width: 32px;
+
+      @media (min-width: $screen-sm-min) {
+        @include padding(top right, 2);
+        @include padding(left, 3);
+        max-width: 48px;
+      }
+    }
+  }
+
+  &__list {
+    @include padding(top bottom, 2);
+    list-style: none;
+    text-align: left;
+    width: 70%;
+
+    @media (min-width: $screen-sm-min) {
+      text-align: center;
+    }
+
+    &_item {
+      @include padding(left, 2);
+      @include padding(top bottom, 2);
+      @include link;
+      text-align: left;
+    }
+
+    .active {
+      color: $white;
+    }
+  }
+
+  a {
+    @include opacity(2);
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      @include opacity(1);
+    }
+  }
+}

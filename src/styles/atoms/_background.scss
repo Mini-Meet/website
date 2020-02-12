@@ -7,8 +7,9 @@
 
 @mixin background-image {
   @extend %background-base;
+  background-attachment: fixed;
   background-image: $background-image;
-  background-position: center bottom;
+  background-position: center left;
 }
 
 @mixin background-white {
@@ -19,6 +20,11 @@
 @mixin background-light {
   @extend %background-base;
   background-color: $light-grey;
+}
+
+@mixin background-light-fade {
+  @extend %background-base;
+  background: linear-gradient(180deg, $white 0%, $light-grey 100%);
 }
 
 @mixin background-dark {
