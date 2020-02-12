@@ -32,7 +32,7 @@ export default class AcceptReferral extends Component {
         Mixpanel.track('PM.c Signup: Referral accepted');
         // Success response - redirect and set tracker
         Mixpanel.track(`PM.c Signup: Referral accepted: ${referralLink}`);
-        window.location.href = '/home';
+        window.location.href = 'www.productmastery.co';
       })
       .catch(() => {
         this.setState({ error: 'Link is not valid' });
