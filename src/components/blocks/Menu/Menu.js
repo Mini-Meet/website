@@ -62,7 +62,9 @@ export default class Menu extends Component<Props> {
           className={`${menuStyles}__btn`}
           onClick={this.onRevealMenu.bind(this)}
         >
-          <i className={`${menuStyles}__btn_icon material-icons`}>{menuToggleIcon}</i>
+          <i className={`${menuStyles}__btn_icon material-icons`}>
+            {menuToggleIcon}
+          </i>
         </button>
 
         <div className={`${menuStyles}__menu`}>
@@ -97,7 +99,7 @@ export default class Menu extends Component<Props> {
     Mixpanel.track(`Menu = ${hideMenu}`);
   };
 
-  handleMenuItemClick = (menuItem) => {
+  handleMenuItemClick = menuItem => {
     this.setState({
       activeItem: menuItem.id,
     });
