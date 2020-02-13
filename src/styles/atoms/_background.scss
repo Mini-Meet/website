@@ -17,6 +17,11 @@
   background-color: $white;
 }
 
+@mixin background-very-light {
+  @extend %background-base;
+  background-color: $very-light-grey;
+}
+
 @mixin background-light {
   @extend %background-base;
   background-color: $light-grey;

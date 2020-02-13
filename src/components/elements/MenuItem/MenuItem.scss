@@ -1,0 +1,94 @@
+@import '../../../styles/main';
+
+// Shared SCSS properties for active / inactive
+.item {
+  @include h5;
+  @include margin(left right, reset);
+  @include margin(top bottom, 0);
+  @include row;
+  @include transition-in-out;
+  max-width: 288px;
+
+  // Shared SCSS properties
+  &__row {
+    @include padding(top bottom, 1);
+    @include padding(left, 1);
+    @include padding(right, 1);
+    @include row;
+
+    align-items: center;
+    justify-content: space-between;
+    max-height: 24px;
+    min-width: 248px;
+    text-align: left;
+
+    &:hover {
+      @include background-light;
+    }
+  }
+
+  // Shared SCSS properties
+  &__title {
+    @include cursor-pointer;
+    @include padding(top bottom, 1);
+    @include padding(left, 0);
+    @include transition-in-out;
+    min-width: 220px;
+    text-align: left;
+  }
+
+  // Shared SCSS properties
+  &__icon {
+    @include cursor-pointer;
+    @include padding(all, reset);
+    @include transition-in-out;
+  }
+}
+
+.icon-container {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  // max-height: 20px;
+}
+
+// Inactive class
+
+.itemInactive {
+  &__title {
+    color: $inactive-grey;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  &__icon {
+    color: $inactive-grey;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+}
+
+// Active class
+
+.itemActive {
+  &__title {
+    color: $dark;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  &__icon {
+    color: $inactive-grey;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+}

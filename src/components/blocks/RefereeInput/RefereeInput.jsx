@@ -31,9 +31,7 @@ export default class Refer extends Component {
               onChange={e => this.setState({ userEmail: e.target.value })}
             />
 
-            <Button primary onClick={this.onRefer}>
-              Request Free Early Access
-            </Button>
+            <Button onClick={this.onRefer}>Skip Waiting List</Button>
           </div>
         )}
 

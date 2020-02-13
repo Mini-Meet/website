@@ -17,25 +17,30 @@ type Props = {
   mailchimpForm: boolean,
   typeform: boolean,
   refereeForm: boolean,
+};
+
+type FormTypes = {
   onSubscribe: Function,
 };
 
-const CustomForm = ({ onSubscribe }) => {
+const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
     Mixpanel.track('PM.c Signup: Subscribed!');
 
-    email &&
-      email.value.indexOf('@') > -1 &&
+    if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
         EMAIL: email.value,
       });
+    }
   };
 
   return (
     <div className="hero__form">
       <input
-        ref={node => (email = node)}
+        ref={node => {
+          email = node;
+        }}
         type="email"
         placeholder="Enter your email"
       />
@@ -105,6 +110,7 @@ export default class Hero extends Component<Props> {
                 {status === 'error' && (
                   <p
                     className="hero__form__error"
+                    // eslint-disable-next-line
                     dangerouslySetInnerHTML={{ __html: message }}
                   />
                 )}

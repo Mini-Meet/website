@@ -2,19 +2,13 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-// import { linkTo } from "@storybook/addon-links";
-// import { Welcome } from "@storybook/react/demo";
-import { MenuItem } from '../src/components/elements'
+import { Menu} from '../src/components/blocks'
 
-storiesOf("Elements/Menu", module)
-  // Commonly used:
-  // add, close, cloud, done, delete_outline,
-  // event, more_vert,
-  .add("Menu: Inactive", () => (
-    <MenuItem
-      title="Menu item"
-      icon="plus"
-      onClick={action('clicked')}
+storiesOf("Blocks/Menu", module)
+  .add("Menu: Full", () => (
+    <Menu
+      handleClick={action('item clicked')}
+      onIconClick={action('item icon clicked')}
     />
   ))
-  ;
+;
