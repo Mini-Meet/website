@@ -36,7 +36,9 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
   return (
     <div className="hero__form">
       <input
-        ref={node => {email = node}}
+        ref={node => {
+          email = node;
+        }}
         type="email"
         placeholder="Enter your email"
       />

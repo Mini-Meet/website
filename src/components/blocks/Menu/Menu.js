@@ -6,12 +6,22 @@ import { MenuItem } from '../../elements';
 import './Menu.scss';
 
 type Props = {
-  // handleMenuItemClick: Function,
   onIconClick: Function,
 };
 
-export default class Menu extends Component<Props> {
-  constructor(props) {
+type State = {
+  hideMenu: boolean,
+  activeItem: ?string,
+};
+
+type MenuItemProps = {
+  id: string,
+  title: string,
+  icon: string,
+};
+
+export default class Menu extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -96,10 +106,10 @@ export default class Menu extends Component<Props> {
       hideMenu: !hideMenu,
     });
 
-    Mixpanel.track(`Menu = ${hideMenu}`);
+    Mixpanel.track(`Menu = ${hideMenu ? 'true' : 'false'}`);
   };
 
-  handleMenuItemClick = menuItem => {
+  handleMenuItemClick = (menuItem: MenuItemProps) => {
     this.setState({
       activeItem: menuItem.id,
     });
