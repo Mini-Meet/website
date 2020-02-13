@@ -23,9 +23,8 @@ export default class MenuItem extends Component<Props> {
       onIconClick,
       disabled,
       classOverride,
+      itemActive,
     } = this.props;
-
-    const { itemActive } = this.props;
 
     const itemStatus = itemActive || disabled || 'itemInactive';
 
@@ -37,7 +36,6 @@ export default class MenuItem extends Component<Props> {
           <button
             onClick={onClick}
             className={`item__title ${String(itemStatus)}__title`}
-            itemActive={itemActive}
           >
             {title}
           </button>

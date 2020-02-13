@@ -16,7 +16,7 @@ export default class Menu extends Component<Props> {
 
     this.state = {
       hideMenu: false,
-      itemActive: false,
+      activeItem: null,
     };
     this.handleMenuItemClick = this.handleMenuItemClick.bind(this);
   }
@@ -31,7 +31,7 @@ export default class Menu extends Component<Props> {
 
   render() {
     const { onIconClick } = this.props;
-    const { hideMenu, itemActive } = this.state;
+    const { hideMenu, activeItem } = this.state;
 
     // Menu Items
     const menuItems = [
@@ -53,7 +53,7 @@ export default class Menu extends Component<Props> {
     ];
 
     // Reveal/hide menu
-    const icon = hideMenu ? 'keyboard_arrow_left' : 'close';
+    const menuToggleIcon = hideMenu ? 'keyboard_arrow_left' : 'close';
     const menuStyles = hideMenu ? 'menuClosed' : 'menuOpen';
 
     return (
@@ -62,20 +62,21 @@ export default class Menu extends Component<Props> {
           className={`${menuStyles}__btn`}
           onClick={this.onRevealMenu.bind(this)}
         >
-          <i className={`${menuStyles}__btn_icon material-icons`}>{icon}</i>
+          <i className={`${menuStyles}__btn_icon material-icons`}>{menuToggleIcon}</i>
         </button>
 
         <div className={`${menuStyles}__menu`}>
           <div className={`${menuStyles}__menu_label`}>Menu</div>
           <div className={`${menuStyles}__menu_list`}>
             {menuItems.map(menuItem => {
+              const isActive = activeItem === menuItem.id;
               return (
                 <MenuItem
                   key={menuItem.id}
                   title={menuItem.title}
-                  icon={menuItem.icon}
-                  onClick={this.handleMenuItemClick}
-                  itemActive={itemActive}
+                  icon={isActive ? 'add' : 'keyboard_arrow_right'}
+                  onClick={this.handleMenuItemClick.bind(this, menuItem)}
+                  itemActive={isActive}
                   onIconClick={onIconClick}
                 />
               );
@@ -96,10 +97,9 @@ export default class Menu extends Component<Props> {
     Mixpanel.track(`Menu = ${hideMenu}`);
   };
 
-  handleMenuItemClick = () => {
-    const { itemActive } = this.state;
+  handleMenuItemClick = (menuItem) => {
     this.setState({
-      itemActive: !itemActive,
+      activeItem: menuItem.id,
     });
   };
 }
