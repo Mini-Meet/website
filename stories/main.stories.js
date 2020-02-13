@@ -1,18 +1,9 @@
-import React from "react";
-
 import { storiesOf } from "@storybook/react";
 
-storiesOf("Blocks", module).add("BLOCK TEST", () => (
-  <p>Here will be some block</p>
-));
-
-/**
-  * Button stories
-  */
-storiesOf("Elements", module)
+storiesOf("Blocks", module)
 
 ;
 
-/**
-  * Some NEW stories
-  */
+storiesOf("Elements", module)
+
+;
