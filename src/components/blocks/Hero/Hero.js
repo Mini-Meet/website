@@ -5,6 +5,7 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Loader from 'react-loader-spinner';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
+import { RefereeInput } from '..';
 import './Hero.scss';
 
 type Props = {
@@ -15,6 +16,7 @@ type Props = {
   mixpanelEvent: string,
   mailchimpForm: boolean,
   typeform: boolean,
+  refereeForm: boolean,
   onSubscribe: Function,
 };
 
@@ -53,6 +55,7 @@ export default class Hero extends Component<Props> {
       subtitle,
       mailchimpForm,
       typeform,
+      refereeForm,
       url,
     } = this.props;
 
@@ -63,6 +66,8 @@ export default class Hero extends Component<Props> {
           <h1>{titleTwo}</h1>
           <p>{subtitle}</p>
         </div>
+
+        {refereeForm && <RefereeInput />}
 
         {typeform && (
           <div className="hero__typeform">
