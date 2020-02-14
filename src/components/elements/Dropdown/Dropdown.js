@@ -13,7 +13,7 @@ type Props = {
 };
 
 export default class Dropdown extends Component<Props> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       listOpen: false,
@@ -65,7 +65,7 @@ export default class Dropdown extends Component<Props> {
     const { listOpen, headerTitle } = this.state;
     return (
       <div className="dropdown">
-        <div className="dropdown__header" onClick={() => this.toggleList()}>
+        <button className="dropdown__header" onClick={() => this.toggleList()}>
           <button className="dropdown__header_title">{headerTitle}</button>
           {listOpen ? (
             <Icon
@@ -80,21 +80,33 @@ export default class Dropdown extends Component<Props> {
               classOverride="dropdown__header_icondown"
             />
           )}
-        </div>
+        </button>
         {listOpen && (
           <Card cardActive="cardActive">
-            <ul onClick={e => e.stopPropagation()}>
-              {list.map(item => (
-                <li
-                  key={item.id}
-                  onClick={() => this.selectItem(item.title, item.id, item.key)}
-                >
-                  {item.title}{' '}
-                  {item.selected && (
-                    <Icon icon="done" inactive16="inactive16" />
-                  )}
-                </li>
-              ))}
+            <ul>
+              <button onClick={e => e.stopPropagation()} className="cardShow">
+                {list.map(item => (
+                  <button
+                    className="cardItem"
+                    key={item.id}
+                    onClick={() =>
+                      this.selectItem(item.title, item.id, item.key)
+                    }
+                    onKeyDown={() =>
+                      this.selectItem(item.title, item.id, item.key)
+                    }
+                  >
+                    {item.title}{' '}
+                    {item.selected && (
+                      <Icon
+                        icon="done"
+                        inactive16="inactive16"
+                        classOverride="icon"
+                      />
+                    )}
+                  </button>
+                ))}
+              </button>
             </ul>
           </Card>
         )}

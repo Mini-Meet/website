@@ -12,7 +12,7 @@
 
 @mixin border-input-focus {
   @extend %border-base;
-  border-color: $secondary;
+  border-color: transparentize($dark, 0.98);
 }
 
 @mixin border-button {
@@ -46,9 +46,13 @@
 }
 
 @mixin border-bottom {
-  border-bottom: 2px solid #f1f1f1;
+  border-bottom: 2px solid $light-grey;
 }
 
 @mixin border-top {
-  border-top: 2px solid #f1f1f1;
+  border-top: 2px solid $light-grey;
+}
+
+@mixin border-bottom-list {
+  border-bottom: 1px solid $light-grey;
 }

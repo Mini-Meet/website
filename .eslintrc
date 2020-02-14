@@ -46,7 +46,6 @@
     "prefer-template": "warn",
     "react/button-has-type": 0,
     "react/destructuring-assignment": 0,
-    "react/jsx-no-bind": "warn",
     "react/jsx-wrap-multilines": 0,
     "react/jsx-filename-extension": 0,
     "react/no-access-state-in-setstate": "warn",
@@ -55,7 +54,8 @@
     "react/prefer-stateless-function": 0,
     "react/prop-types": "warn",
     "react/require-default-props": 0,
-    "react/sort-comp": 0
+    "react/sort-comp": 0,
+    "react/jsx-no-bind": 0
   },
   "plugins": [
     "flowtype",

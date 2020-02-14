@@ -76,6 +76,7 @@ h4 {
 
 @mixin h5 {
   @extend %header-text;
+  font-family: 'Karla', sans-serif;
   font-size: 17px;
 }
 

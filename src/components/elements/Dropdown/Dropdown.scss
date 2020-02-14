@@ -9,66 +9,82 @@
 
   &__header {
     @extend %input;
-    @include row;
     @include padding(right, 1);
+    @include row;
+    @include transition-in-out;
 
     align-items: center;
     justify-content: space-between;
-    max-height: 24px;
-    min-width: 248px;
+    max-height: 48px;
+    min-width: 288px;
 
-    &:hover {
-      @include opacity(1.5);
+    &:hover > &_title {
+      @include transition-in-out;
+      color: $dark;
     }
 
     &_title {
-      // color: $grey;
+      color: $grey;
     }
 
     &_iconup,
     &_icondown {
       @include padding(all, reset);
     }
-
-    &_iconup {
-    }
   }
 
-  ul {
-    @include text;
-    @include padding(left, reset);
-    list-style-type: none;
-    width: 100%;
-
-    li {
-      @include border-bottom;
-      @include padding(left right, 1);
-      @include padding(top bottom, 2);
-      @include row;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    li:nth-last-child(1) {
-      border: 0;
-    }
-  }
-
+  // Dropdown: Results Container
   .card {
-    top: 54px;
+    @include margin(all, reset);
+    @include margin(top, 0);
     position: absolute;
-    z-index: 1;
+    top: 50px;
+    z-index: 2;
   }
 
+  // Dropdown: Reveal Results Card
   .cardActive {
     @include border-card;
     @include padding(top bottom, 0);
     @include padding(left right, reset);
     @include margin(left right, reset);
-    width: 270px;
+    width: 284px;
 
     &:hover {
       @include border-card;
+    }
+  }
+
+  // Dropdown: Results list
+  ul {
+    @include text;
+    @include padding(left, reset);
+    list-style-type: none;
+    width: 100%;
+  }
+
+  // Dropdown: List Item to cover full width
+  .cardShow {
+    width: 100%;
+  }
+
+  // Dropdown: List Item
+  .cardItem {
+    @include border-bottom;
+    @include padding(left right, 1);
+    @include padding(top bottom, 2);
+    @include row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &:nth-last-child(1) {
+      border: 0;
+    }
+
+    &:hover {
+      @include background-light;
+      color: $dark;
     }
   }
 
@@ -78,9 +94,8 @@
     justify-content: center;
     max-height: 20px;
   }
-}
 
-li:hover {
-  @include background-light;
-  color: $dark;
+  .icon {
+    color: $secondary;
+  }
 }

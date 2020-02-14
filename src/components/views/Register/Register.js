@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import { Footer, Header } from '../../blocks';
 
@@ -5,7 +6,7 @@ import { Input, Dropdown } from '../../elements';
 
 import './Register.scss';
 
-export default class App extends Component {
+export default class Register extends Component {
   constructor() {
     super();
     this.state = {
@@ -59,25 +60,6 @@ export default class App extends Component {
     };
   }
 
-  toggleSelected = (id, key) => {
-    // TODO
-    const temp = JSON.parse(JSON.stringify(this.state[key]));
-    temp[id].selected = !temp[id].selected;
-    this.setState({
-      [key]: temp,
-    });
-  };
-
-  resetThenSet = (id, key) => {
-    const temp = JSON.parse(JSON.stringify(this.state[key]));
-    // TODO
-    temp.forEach(item => (item.selected = false));
-    temp[id].selected = true;
-    this.setState({
-      [key]: temp,
-    });
-  };
-
   render() {
     return (
       <div className="App">
@@ -101,9 +83,27 @@ export default class App extends Component {
             resetThenSet={this.resetThenSet}
           />
         </div>
-
         <Footer />
       </div>
     );
   }
+
+  toggleSelected = (id, key) => {
+    // TODO
+    const temp = JSON.parse(JSON.stringify(this.state[key]));
+    temp[id].selected = !temp[id].selected;
+    this.setState({
+      [key]: temp,
+    });
+  };
+
+  resetThenSet = (id, key) => {
+    const temp = JSON.parse(JSON.stringify(this.state[key]));
+    // TODO
+    temp.forEach(item => (item.selected = false));
+    temp[id].selected = true;
+    this.setState({
+      [key]: temp,
+    });
+  };
 }
