@@ -26,7 +26,7 @@ import imgMentors from '../../../assets/images/prototype/product_mentors.png';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('B Signup: Home');
+    Mixpanel.track('C Signup: Home');
   }
 
   render() {

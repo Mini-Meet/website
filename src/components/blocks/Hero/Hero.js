@@ -24,7 +24,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    Mixpanel.track('B Signup: Subscribed!');
+    Mixpanel.track('C Signup: Subscribed!');
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({

@@ -68,12 +68,14 @@
       min-width: 242px;
 
       @media (min-width: $screen-sm-min) {
-        @include margin(right, 0);
+        margin-right: -24px;
+        border-radius: 100px 0 0 100px;
         min-width: 420px;
       }
     }
 
     button {
+      @include margin(left, reset);
       font-size: 11px;
     }
 
