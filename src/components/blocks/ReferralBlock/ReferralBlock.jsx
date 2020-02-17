@@ -138,7 +138,7 @@ export default class ReferralBlock extends Component {
           });
           return;
         }
-        Mixpanel.track('PM.c Signup: Referral sent');
+        Mixpanel.track('B Signup: Referral sent');
         this.getStatistics(this.props.referralLink);
         this.setState({
           error: response.data.data.failureMessages,

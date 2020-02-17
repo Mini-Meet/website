@@ -13,9 +13,20 @@ import {
 } from '../../blocks';
 import './Home.scss';
 
+// Product Showcase Images
+import imgStrategy from '../../../assets/images/prototype/product_strategy.png';
+import imgGuide from '../../../assets/images/prototype/product_guide.png';
+import imgRemote from '../../../assets/images/prototype/product_remote.png';
+import imgMentors from '../../../assets/images/prototype/product_mentors.png';
+// import imgOnboarding from '../../../assets/images/prototype/product_onboarding.png';
+// import imgStandup from '../../../assets/images/prototype/product_standup.png';
+// import imgSprints from '../../../assets/images/prototype/product_sprints.png';
+// import imgRetro from '../../../assets/images/prototype/product_retro.png';
+// import imgTools from '../../../assets/images/prototype/product_tools.png';
+
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('PM.c Signup: Home');
+    Mixpanel.track('B Signup: Home');
   }
 
   render() {
@@ -39,18 +50,26 @@ export default class Home extends Component {
         <Hero
           title="Master Product"
           titleTwo="Management"
-          subtitle="Junior/mid-level PM? Learn how to double your salary & unlock remote work without spending $5k & months on a course with our toolkit for world-class product management"
+          subtitle="Junior/Mid-Level PM? Learn how to build great, innovative products that solve real problems with just a few minutes per day, without spending $5k & months on an ineffective course"
           mixpanelEvent="Subscribed"
           mailchimpForm
           url="https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04"
         />
         <Featured header="Where our Product Masters Work" />
         <ProductShowcase
-          header="Your Secret Weapon For Better Product Work"
-          blockOneHeader="Become a Better PM"
-          blockTwoHeader="Organise Your Team Within Minutes"
-          blockThreeHeader="Find Your Product Mentor"
-          blockFourHeader="Learn Remote Best Practice"
+          header="Your Secret Weapon For Building Great Products"
+          blockOneHeader="Learn Best Practice"
+          blockOneBody="Learn how the world’s best Product Managers run their product teams, from vision & strategy to prioritisation & navigating stakeholder management"
+          blockOneImage={imgStrategy}
+          blockTwoHeader="Apply With Your Team"
+          blockTwoBody="Use our customisable product templates to set your strategy, a high-level roadmap & to organise your team within minutes"
+          blockTwoImage={imgGuide}
+          blockThreeHeader="Iterate Towards Mastery"
+          blockThreeBody="Join our network of PMs & Product Mentors to share ideas, get feedback on your approach & for experienced mentorship throughout your product career"
+          blockThreeImage={imgMentors}
+          blockFourHeader="Bonus: Unlock Remote  Work"
+          blockFourBody="Apply remote best practices, taken from the world’s best remote companies, to start moving your team towards being fully remote"
+          blockFourImage={imgRemote}
           url="#signup"
           cta="Request Access >"
         />

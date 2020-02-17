@@ -24,7 +24,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    Mixpanel.track('PM.c Signup: Subscribed!');
+    Mixpanel.track('B Signup: Subscribed!');
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -145,6 +145,6 @@ export default class Hero extends Component<Props> {
   }
 
   goToTypeform = () => {
-    Mixpanel.track(`PM.c Signup: ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`B Signup: ${this.props.mixpanelEvent}`);
   };
 }
