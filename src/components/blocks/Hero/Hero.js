@@ -152,6 +152,10 @@ export default class Hero extends Component<Props> {
     );
   }
 
+  goToPricing = () => {
+    Mixpanel.track('D Signup: Click Pricing');
+  };
+
   goToTypeform = () => {
     Mixpanel.track(`D Signup: ${this.props.mixpanelEvent}`);
   };
