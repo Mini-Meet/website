@@ -145,6 +145,6 @@ export default class Hero extends Component<Props> {
   }
 
   goToTypeform = () => {
-    Mixpanel.track(`B Signup: ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`C Signup: ${this.props.mixpanelEvent}`);
   };
 }
