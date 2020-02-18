@@ -1,0 +1,39 @@
+@import '../../../styles/main';
+
+.onboardingCard {
+  @include margin(all, 0);
+  max-width: 240px;
+
+  &__img {
+    @include background-light;
+    @include flex;
+    min-height: 120px;
+    width: 100%;
+
+    &_img {
+      width: 100%;
+    }
+  }
+
+  h4 {
+    @include padding(top, 2);
+    @include padding(bottom, 3);
+    @include padding(left right, 1);
+    margin: 0 auto;
+  }
+}
+
+// Card Overrides
+
+.card {
+  @include margin(all, reset);
+}
+
+.cardDefault {
+  @include padding(all, reset);
+
+  &:hover {
+    border-color: $light-grey;
+    transform: scaleX(1.04) scaleY(1.02);
+  }
+}
