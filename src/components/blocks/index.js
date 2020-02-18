@@ -7,6 +7,7 @@ export { default as Hero } from './Hero/Hero';
 export { default as HeroReferee } from './HeroReferee/HeroReferee';
 export { default as Image } from './Image/Image';
 export { default as Menu } from './Menu/Menu.js';
+export { default as OnboardingCards } from './OnboardingCards/OnboardingCards.js';
 export { default as ProductShowcase } from './ProductShowcase/ProductShowcase';
 export { default as ReferralBlock } from './ReferralBlock/ReferralBlock';
 export { default as RefereeInput } from './RefereeInput/RefereeInput';

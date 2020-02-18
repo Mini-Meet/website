@@ -18,6 +18,7 @@ type MenuItemProps = {
   id: string,
   title: string,
   icon: string,
+  menuItems: object,
 };
 
 export default class Menu extends Component<Props, State> {
@@ -40,27 +41,8 @@ export default class Menu extends Component<Props, State> {
   }
 
   render() {
-    const { onIconClick } = this.props;
+    const { onIconClick, menuItems } = this.props;
     const { hideMenu, activeItem } = this.state;
-
-    // Menu Items
-    const menuItems = [
-      {
-        id: '1',
-        title: 'Vision',
-        icon: 'keyboard_arrow_right',
-      },
-      {
-        id: '2',
-        title: 'Strategy',
-        icon: 'keyboard_arrow_right',
-      },
-      {
-        id: '3',
-        title: 'Roadmap',
-        icon: 'add',
-      },
-    ];
 
     // Reveal/hide menu
     const menuToggleIcon = hideMenu ? 'keyboard_arrow_left' : 'close';
@@ -88,6 +70,7 @@ export default class Menu extends Component<Props, State> {
                   title={menuItem.title}
                   icon={isActive ? 'add' : 'keyboard_arrow_right'}
                   onClick={this.handleMenuItemClick.bind(this, menuItem)}
+                  // onClick={this.handleMenuItemClick.bind(this, menuItem.id)}
                   itemActive={isActive}
                   onIconClick={onIconClick}
                 />
@@ -109,6 +92,7 @@ export default class Menu extends Component<Props, State> {
     Mixpanel.track(`Menu = ${hideMenu ? 'true' : 'false'}`);
   };
 
+  // handleMenuItemClick = (id: string) => {
   handleMenuItemClick = (menuItem: MenuItemProps) => {
     this.setState({
       activeItem: menuItem.id,
