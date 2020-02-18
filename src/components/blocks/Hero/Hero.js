@@ -24,7 +24,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    Mixpanel.track('B Signup: Subscribed!');
+    Mixpanel.track('D Signup: Subscribed!');
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -132,8 +132,16 @@ export default class Hero extends Component<Props> {
                 )}
                 {!status && (
                   <p className="hero__small">
-                    Access to the Public Beta is by invitation only. Request
-                    access today
+                    Access to the is by invitation only & will remain{' '}
+                    <a
+                      href="https://productmastery.substack.com/p/pricing"
+                      onClick={this.goToPricing}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      FREE during our Public Beta
+                    </a>
+                    . Request access today
                   </p>
                 )}
               </div>
@@ -145,6 +153,6 @@ export default class Hero extends Component<Props> {
   }
 
   goToTypeform = () => {
-    Mixpanel.track(`B Signup: ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`D Signup: ${this.props.mixpanelEvent}`);
   };
 }

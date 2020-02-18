@@ -5,6 +5,7 @@ import './ProductShowcase.scss';
 
 type Props = {
   header: string,
+  subheader: string,
   blockOneHeader: string,
   blockOneBody: string,
   blockOneImage: string,
@@ -25,6 +26,7 @@ export default class ProductShowcase extends Component<Props> {
   render() {
     const {
       header,
+      subheader,
       blockOneHeader,
       blockOneBody,
       blockOneImage,
@@ -44,6 +46,7 @@ export default class ProductShowcase extends Component<Props> {
     return (
       <div className="product">
         <h2 className="product__header">{header}</h2>
+        <p className="product__subheader">{subheader}</p>
 
         <div className="block block__reverse">
           <div className="block__text block__text_left">

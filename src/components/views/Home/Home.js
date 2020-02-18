@@ -26,7 +26,7 @@ import imgMentors from '../../../assets/images/prototype/product_mentors.png';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('B Signup: Home');
+    Mixpanel.track('D Signup: Home');
   }
 
   render() {
@@ -50,7 +50,7 @@ export default class Home extends Component {
         <Hero
           title="Master Product"
           titleTwo="Management"
-          subtitle="Junior/Mid-Level PM? Learn how to build great, innovative products that solve real problems with just a few minutes per day, without spending $5k & months on an ineffective course"
+          subtitle="Junior/Mid-Level PM? Learn how to build great products that solve real problems without spending $5k & months on an ineffective course"
           mixpanelEvent="Subscribed"
           mailchimpForm
           url="https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04"
@@ -58,6 +58,7 @@ export default class Home extends Component {
         <Featured header="Where our Product Masters Work" />
         <ProductShowcase
           header="Your Secret Weapon For Building Great Products"
+          subheader="A Product Management toolkit for learning & applying product best practice"
           blockOneHeader="Learn Best Practice"
           blockOneBody="Learn how the world’s best Product Managers run their product teams, from vision & strategy to prioritisation & navigating stakeholder management"
           blockOneImage={imgStrategy}

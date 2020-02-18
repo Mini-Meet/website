@@ -31,13 +31,14 @@
     }
 
     p {
-      @include padding(top bottom, 2);
+      @include padding(top, 1);
+      @include padding(bottom, 4);
       @include padding(left right, 0);
       text-align: center;
 
       @media (min-width: $screen-sm-min) {
         @include padding(top, 0);
-        @include padding(bottom, 4);
+        @include padding(bottom, 5);
       }
     }
   }
@@ -95,11 +96,19 @@
     }
   }
 
-  &__small {
+  &__small,
+  a {
     @include small;
+    @include margin(bottom, 2);
     @include padding(top, 1);
-    @include padding(bottom, 3);
+    @include padding(bottom, 1);
     color: $secondary;
+    margin: 0 auto;
+    max-width: 420px;
+  }
+
+  a:hover {
+    color: transparentize($secondary, 0.2);
   }
 }
 
