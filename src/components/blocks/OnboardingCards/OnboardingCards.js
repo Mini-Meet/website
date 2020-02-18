@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-// import { Mixpanel } from '../../../Mixpanel';
+import { Mixpanel } from '../../../Mixpanel';
 import { OnboardingCard } from '../../elements';
 
 import './OnboardingCards.scss';
@@ -16,11 +16,12 @@ export default class OnboardingCards extends Component<Props> {
 
     return (
       <div className="onboardingCards">
-        <h2>What's your biggest challenge?</h2>
+        <h2>What{`'`}s your biggest challenge?</h2>
         <div className="onboardingCards__cards">
           {onboardingCards.map(onboardingCard => {
             return (
               <OnboardingCard
+                key="onboarding card"
                 onClick={onClick}
                 // onClick={this.handleCardClick.bind(this, onboardingCard)}
                 img={onboardingCard.img}
@@ -34,7 +35,7 @@ export default class OnboardingCards extends Component<Props> {
     );
   }
 
-  // handleCardClick = (onboardingCard: OnboardingCardsProps) => {
-  //   Mixpanel.track(`Onboarding: ${onboardingCard.title}`);
-  // };
+  handleCardClick = (onboardingCard: OnboardingCardsProps) => {
+    Mixpanel.track(`Onboarding: ${onboardingCard.title}`);
+  };
 }

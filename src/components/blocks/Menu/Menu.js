@@ -7,6 +7,7 @@ import './Menu.scss';
 
 type Props = {
   onIconClick: Function,
+  menuItems: object,
 };
 
 type State = {
