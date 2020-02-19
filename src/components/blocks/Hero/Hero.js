@@ -2,12 +2,8 @@
 import React, { Component } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Mixpanel } from '../../../Mixpanel';
-<<<<<<< HEAD
 import { Button, Loading } from '../../elements';
-=======
-import { Button } from '../../elements';
 import { RefereeInput } from '..';
->>>>>>> master
 import './Hero.scss';
 
 type Props = {
