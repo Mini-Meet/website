@@ -2,7 +2,12 @@
 import React, { Component } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Mixpanel } from '../../../Mixpanel';
+<<<<<<< HEAD
 import { Button, Loading } from '../../elements';
+=======
+import { Button } from '../../elements';
+import { RefereeInput } from '..';
+>>>>>>> master
 import './Hero.scss';
 
 type Props = {
@@ -13,6 +18,7 @@ type Props = {
   mixpanelEvent: string,
   mailchimpForm: boolean,
   typeform: boolean,
+  refereeForm: boolean,
 };
 
 type FormTypes = {
@@ -56,6 +62,7 @@ export default class Hero extends Component<Props> {
       subtitle,
       mailchimpForm,
       typeform,
+      refereeForm,
       url,
     } = this.props;
 
@@ -66,6 +73,8 @@ export default class Hero extends Component<Props> {
           <h1>{titleTwo}</h1>
           <p>{subtitle}</p>
         </div>
+
+        {refereeForm && <RefereeInput />}
 
         {typeform && (
           <div className="hero__typeform">

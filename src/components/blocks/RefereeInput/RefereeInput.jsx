@@ -29,9 +29,7 @@ export default class Refer extends Component {
               onChange={e => this.setState({ userEmail: e.target.value })}
             />
 
-            <Button primary onClick={this.onRefer}>
-              Request Free Early Access
-            </Button>
+            <Button onClick={this.onRefer}>Skip Waiting List</Button>
           </div>
         )}
 
@@ -72,7 +70,7 @@ export default class Refer extends Component {
           return;
         }
         // Success response - redirect and set tracker
-        Mixpanel.track('PM.c Signup: Signup');
+        Mixpanel.track('PM.c Referee: My Email Added');
         window.location.href = `/statistics/${response.data.user.referral_link}`;
       })
       .catch(error => {

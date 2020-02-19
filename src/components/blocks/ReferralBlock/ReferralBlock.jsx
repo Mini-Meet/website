@@ -90,6 +90,7 @@ export default class ReferralBlock extends Component {
 
         <div className="refer__state">
           {isSubmitting && <Loading dark />}
+
           {error && !isArray(error) && (
             <p className="refer__state__error">{error}</p>
           )}
