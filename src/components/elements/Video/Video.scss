@@ -1,0 +1,47 @@
+@import '../../../styles/main';
+
+.video {
+  @include margin(top bottom, 4);
+  @include margin(left right, 2);
+  max-width: 560px;
+
+  &__header {
+    @include row;
+    align-items: center;
+    justify-content: space-between;
+
+    &_caption {
+      @include margin(left, 0);
+      @include caption-left;
+    }
+
+    // Icon overrides
+    .icon-container .button {
+      @include margin(right, reset);
+      color: $grey;
+    }
+  }
+}
+
+// Video Player
+
+:global {
+  .video-react {
+    @include modal-elevation;
+    border-radius: 3px;
+    display: block;
+    margin: 100px auto;
+    max-width: 520px;
+    outline: none !important;
+    padding-top: 30% !important;
+    width: 50% !important;
+  }
+  .video-react-video {
+    outline: none !important;
+  }
+  .video-react-big-play-button {
+    background-color: $primary !important;
+    border: 0 !important;
+    outline: none !important;
+  }
+}
