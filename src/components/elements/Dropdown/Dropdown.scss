@@ -1,0 +1,101 @@
+@import '../../../styles/main';
+
+.dropdown {
+  @include col;
+  @include margin(top left right, reset);
+  @include margin(bottom, reset);
+  max-width: 288px;
+  position: relative;
+
+  &__header {
+    @extend %input;
+    @include padding(right, 1);
+    @include row;
+    @include transition-in-out;
+
+    align-items: center;
+    justify-content: space-between;
+    max-height: 48px;
+    min-width: 288px;
+
+    &:hover > &_title {
+      @include transition-in-out;
+      color: $dark;
+    }
+
+    &_title {
+      color: $grey;
+    }
+
+    &_iconup,
+    &_icondown {
+      @include padding(all, reset);
+    }
+  }
+
+  // Dropdown: Results Container
+  .card {
+    @include margin(all, reset);
+    @include margin(top, 0);
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+  }
+
+  // Dropdown: Reveal Results Card
+  .cardActive {
+    @include border-card;
+    @include padding(top bottom, 0);
+    @include padding(left right, reset);
+    @include margin(left right, reset);
+    width: 284px;
+
+    &:hover {
+      @include border-card;
+    }
+  }
+
+  // Dropdown: Results list
+  ul {
+    @include text;
+    @include padding(left, reset);
+    list-style-type: none;
+    width: 100%;
+  }
+
+  // Dropdown: List Item to cover full width
+  .cardShow {
+    width: 100%;
+  }
+
+  // Dropdown: List Item
+  .cardItem {
+    @include border-bottom;
+    @include padding(left right, 1);
+    @include padding(top bottom, 2);
+    @include row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &:nth-last-child(1) {
+      border: 0;
+    }
+
+    &:hover {
+      @include background-light;
+      color: $dark;
+    }
+  }
+
+  .icon-container {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 20px;
+  }
+
+  .icon {
+    color: $secondary;
+  }
+}

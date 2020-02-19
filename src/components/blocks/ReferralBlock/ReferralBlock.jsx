@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { get, map, isArray, without } from 'lodash';
 import axios from 'axios';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import Loader from 'react-loader-spinner';
 import { Mixpanel } from '../../../Mixpanel';
-import { Button, Icon } from '../../elements';
+import { Button, Icon, Loading } from '../../elements';
 
 import './ReferralBlock.scss';
 
@@ -91,15 +89,8 @@ export default class ReferralBlock extends Component {
         ]}
 
         <div className="refer__state">
-          {isSubmitting && (
-            <Loader
-              type="Triangle" // or "Grid"
-              color="#73e4f0"
-              height={60}
-              width={60}
-              timeout={3000}
-            />
-          )}
+          {isSubmitting && <Loading dark />}
+
           {error && !isArray(error) && (
             <p className="refer__state__error">{error}</p>
           )}

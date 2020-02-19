@@ -1,0 +1,19 @@
+@import '../../../styles/main';
+
+.register {
+  @include col;
+  @include padding(top bottom, 6);
+
+  align-items: center;
+  margin: 0 auto;
+  max-width: 420px;
+
+  h3 {
+    @include padding(top bottom, 1);
+  }
+
+  &__subheader {
+    @include small;
+    @include padding(bottom, 3);
+  }
+}
