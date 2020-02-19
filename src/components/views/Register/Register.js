@@ -74,12 +74,12 @@ export default class Register extends Component {
           <Input placeholder="Full Name" type="text" />
           <Dropdown
             title="Select role"
-            list={this.state.role}
+            dropdownList={this.state.role}
             resetThenSet={this.resetThenSet}
           />
           <Dropdown
             title="Do you work remote?"
-            list={this.state.remote}
+            dropdownList={this.state.remote}
             resetThenSet={this.resetThenSet}
           />
         </div>

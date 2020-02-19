@@ -9,7 +9,7 @@ import { Card, Icon } from '..';
 type Props = {
   title: string,
   resetThenSet: Function,
-  list: Object,
+  dropdownList: Object,
 };
 
 export default class Dropdown extends Component<Props> {
@@ -60,7 +60,7 @@ export default class Dropdown extends Component<Props> {
   }
 
   render() {
-    const { list } = this.props;
+    const { dropdownList } = this.props;
 
     const { listOpen, headerTitle } = this.state;
     return (
@@ -85,7 +85,7 @@ export default class Dropdown extends Component<Props> {
           <Card cardActive="cardActive">
             <ul>
               <button onClick={e => e.stopPropagation()} className="cardShow">
-                {list.map(item => (
+                {dropdownList.map(item => (
                   <button
                     className="cardItem"
                     key={item.id}
