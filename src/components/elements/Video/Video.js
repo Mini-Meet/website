@@ -27,7 +27,8 @@ export default class Video extends Component<Props, State> {
   }
 
   componentDidMount() {
-    this.refs.player.subscribeToStateChange(this.handleVideoState.bind(this));
+    // this.refs.player.subscribeToStateChange(this.handleVideoState.bind(this));
+    this.handleVideoState = this.handleVideoState.bind(this);
   }
 
   render() {
@@ -47,12 +48,17 @@ export default class Video extends Component<Props, State> {
                 classOverride="video__header_icon"
               />
             </div>
-            <Player
-              ref="player"
-              playsInline
-              // poster="/assets/poster.png"
-              src={videoId}
-            />
+            {
+              // <Player
+              //   ref="player"
+              //   playsInline
+              //   // poster="/assets/poster.png"
+              //   src={videoId}
+              // />
+            }
+            <Player>
+              <source src={videoId} />
+            </Player>
           </div>
         )}
       </div>
