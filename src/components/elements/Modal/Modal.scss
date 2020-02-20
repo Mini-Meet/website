@@ -1,0 +1,10 @@
+@import '../../../styles/main';
+
+// backgroundContainer
+.modalBg {
+  @include modal-container;
+}
+
+.modal {
+  @include confirmation-modal;
+}
