@@ -5,28 +5,17 @@ import { Modal, Icon } from '../../elements';
 
 import './ModalConfirm.scss';
 
+type Props = {
+  confirmModalButtons: object,
+  buttonAction: Function,
+};
+
 export default class ModalConfirm extends Component<Props> {
   constructor(props) {
     super(props);
 
-    // const deleteButton = {
-    //   label: 'Delete',
-    // onPress: store selection
-    // }
-
-    const cancelButton = {
-      label: 'Cancel',
-      // onPress: store selection
-    };
-
-    const confirmButton = {
-      label: 'Confirm',
-      // onPress: store selection
-    };
-
     this.state = {
       showModal: false,
-      confirmModalButtons: [cancelButton, confirmButton],
     };
   }
 
@@ -35,26 +24,35 @@ export default class ModalConfirm extends Component<Props> {
   }
 
   render() {
-    const { showModal, confirmModalButtons } = this.state;
+    const { showModal } = this.state;
+    const { confirmModalButtons } = this.props;
 
     return (
       <div className="modalConfirm">
-        <Icon icon="delete" onClick={this.onHideModal.bind(this)} />
+        <Icon icon="delete" onClick={this.onShowModal.bind(this)} />
 
         {showModal && (
           <Modal
             title="Here is an important modal title"
             text="Here is an important modal description. Here is an important modal description."
             buttons={confirmModalButtons}
-            hideModal={this.onHideModal.bind(this)}
+            hideModal={this.onModalButtonClick.bind(this)}
           />
         )}
       </div>
     );
   }
 
-  onHideModal = () => {
+  onShowModal = () => {
     const { showModal } = this.state;
+
+    this.setState({ showModal: !showModal });
+  };
+
+  onModalButtonClick = () => {
+    const { showModal } = this.state;
+
+    this.props.buttonAction();
 
     this.setState({ showModal: !showModal });
   };

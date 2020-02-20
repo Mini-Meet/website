@@ -88,6 +88,7 @@ h5 {
   @extend %text-base;
   // NOTE @include opacity(2);
 
+  color: $grey;
   font-size: 18px;
   font-weight: 400;
 }

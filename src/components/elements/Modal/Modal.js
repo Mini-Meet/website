@@ -26,7 +26,7 @@ export default class Modal extends Component<Props> {
                 <Button
                   key={buttonId}
                   tertiary="tertiary"
-                  onClick={this.onButtonClick.bind(this, button)}
+                  onClick={this.onClick.bind(this, button)}
                 >
                   {button.label}
                 </Button>
@@ -38,7 +38,7 @@ export default class Modal extends Component<Props> {
     );
   }
 
-  onButtonClick = button => {
+  onClick = button => {
     button.onPress && button.onPress();
     this.props.hideModal();
   };
