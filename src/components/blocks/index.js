@@ -10,4 +10,5 @@ export { default as Menu } from './Menu/Menu.js';
 export { default as ProductShowcase } from './ProductShowcase/ProductShowcase';
 export { default as ReferralBlock } from './ReferralBlock/ReferralBlock';
 export { default as RefereeInput } from './RefereeInput/RefereeInput';
+export { default as Stepper } from './Stepper/Stepper';
 export { default as Testimonials } from './Testimonials/Testimonials';

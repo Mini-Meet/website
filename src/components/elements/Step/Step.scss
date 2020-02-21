@@ -1,0 +1,56 @@
+@import '../../../styles/main';
+
+// Shared SCSS properties for active / inactive
+.step {
+  @include h5;
+  @include padding(all, 0);
+
+  // Shared SCSS properties
+  &__row {
+    @include padding(all, 0);
+
+    &:hover {
+      @include background-light;
+    }
+  }
+}
+
+// Inactive class
+
+.itemInactive {
+  &__title {
+    color: $inactive-grey;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  &__icon {
+    color: $inactive-grey;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+}
+
+// Active class
+
+.itemActive {
+  &__title {
+    color: $dark;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  &__icon {
+    color: $inactive-grey;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+}

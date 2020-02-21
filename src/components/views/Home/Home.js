@@ -8,7 +8,7 @@ import {
   Header,
   Hero,
   Featured,
-  ProductShowcase,
+  Stepper,
   Testimonials,
 } from '../../blocks';
 import './Home.scss';
@@ -56,7 +56,7 @@ export default class Home extends Component {
           url="https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04"
         />
         <Featured header="Where our Product Masters Work" />
-        <ProductShowcase
+        <Stepper
           header="Your Secret Weapon For Building Great Products"
           subheader="A Product Management toolkit for learning & applying product best practice"
           blockOneHeader="Learn Best Practice"
