@@ -10,7 +10,6 @@ storiesOf("Elements/Toggle", module)
     <Toggle
       title="Toggle title"
       icon="arrow_right" // inactive: arrow_drop_down
-      toggleActive
     />
   ))
   ;

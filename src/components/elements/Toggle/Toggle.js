@@ -1,10 +1,12 @@
 // @flow
 import React, { Component } from 'react';
+import { includes } from 'lodash';
 import './Toggle.scss';
 
 import { Icon } from '..';
 
 type Props = {
+  id: string,
   title: string,
   icon: string,
   onClick: Function,
@@ -14,12 +16,12 @@ type Props = {
 
 export default class Toggle extends Component<Props> {
   render() {
-    const { title, icon, onClick, showContent, children } = this.props;
+    const { id, title, icon, onClick, showContent, children } = this.props;
 
-    const toggleStyles = showContent ? 'active' : 'inactive';
+    const toggleStyles = includes(showContent, id) ? 'active' : 'inactive';
 
     return (
-      <div className="toggle">
+      <div className="toggle" key={id}>
         <button onClick={onClick} className={`toggle__${String(toggleStyles)}`}>
           <Icon
             icon={icon}
@@ -28,7 +30,9 @@ export default class Toggle extends Component<Props> {
           />
           {title}
         </button>
-        {showContent && <div className="toggle__content">{children}</div>}
+        {includes(showContent, id) && (
+          <div className="toggle__content">{children}</div>
+        )}
       </div>
     );
   }

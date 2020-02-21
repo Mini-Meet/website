@@ -1,5 +1,7 @@
 // @flow
 import React, { Component } from 'react';
+import { concat, without, includes } from 'lodash';
+
 import { Mixpanel } from '../../../Mixpanel';
 import { Toggle } from '../../elements';
 
@@ -11,7 +13,7 @@ type Props = {
 };
 
 type State = {
-  showContent: boolean,
+  showContent: Array<string>,
 };
 
 type ToggleProps = {
@@ -27,7 +29,7 @@ export default class SectionSummary extends Component<Props, State> {
     super(props);
 
     this.state = {
-      showContent: false,
+      showContent: [],
     };
   }
 
@@ -47,7 +49,7 @@ export default class SectionSummary extends Component<Props, State> {
         {toggleItems.map(toggle => {
           return (
             <Toggle
-              key={toggle.id}
+              id={toggle.id}
               title={toggle.title}
               icon={menuToggleIcon}
               onClick={this.onRevealContent.bind(this, toggle)}
@@ -66,12 +68,15 @@ export default class SectionSummary extends Component<Props, State> {
     const { showContent } = this.state;
     const { sectionName } = this.props;
 
-    console.log(`${!toggle.showContent}`);
+    // console.log(`${!toggle.showContent}`);
 
     this.setState({
-      showContent: !toggle.id.showContent,
+      showContent: includes(this.state.showContent, toggle.id)
+        ? without(this.state.showContent, toggle.id)
+        : concat(this.state.showContent, toggle.id),
     });
 
+    // TODO
     Mixpanel.track(
       `${sectionName} / Toggle / ${showContent ? 'true' : 'false'}`
     );

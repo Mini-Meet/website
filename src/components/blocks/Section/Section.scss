@@ -1,0 +1,17 @@
+@import '../../../styles/main';
+
+.section {
+  @include fade-in;
+  @include col;
+
+  &__header {
+    @include padding(top, 3);
+    @include padding(bottom, 2);
+    @include padding(left right, 1);
+
+    h1,
+    p {
+      text-align: left;
+    }
+  }
+}

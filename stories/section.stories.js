@@ -2,7 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 // import { action } from "@storybook/addon-actions";
-import { SectionSummary } from '../src/components/blocks'
+import { Section } from '../src/components/blocks'
 
 const contentWhat = (
   <div>
@@ -31,7 +31,7 @@ const contentHow = (
 const toggleItems = [
   {
     id: '1',
-    title: 'Title',
+    title: 'Hello',
     content: contentWhat,
   },
   {
@@ -48,8 +48,10 @@ const toggleItems = [
 
 
 storiesOf("Blocks/Section", module)
-  .add("Section: Summary", () => (
-    <SectionSummary
+  .add("Section: View", () => (
+    <Section
+      sectionHeader="Example Header"
+      sectionSubheader="This is a description of this page and why it is relevant"
       toggleItems={toggleItems}
     />
   ))
