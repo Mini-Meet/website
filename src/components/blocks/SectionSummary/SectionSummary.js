@@ -17,6 +17,7 @@ type State = {
 };
 
 type ToggleProps = {
+  key: string,
   title: string,
   icon: string,
   onClick: Function,
@@ -38,7 +39,7 @@ export default class SectionSummary extends Component<Props, State> {
   }
 
   render() {
-    const { toggleItems } = this.props;
+    const { toggleItems, key } = this.props;
     const { showContent } = this.state;
 
     // Reveal/hide content
