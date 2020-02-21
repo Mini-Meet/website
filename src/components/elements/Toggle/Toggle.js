@@ -5,10 +5,8 @@ import './Toggle.scss';
 import { Icon } from '..';
 
 type Props = {
-  id: string,
   title: string,
-  icon: string,
-  onClick: Function,
+  onShowToggle: Function,
   children: object,
 };
 
@@ -17,19 +15,18 @@ type State = {
 };
 
 export default class Toggle extends Component<Props, State> {
-  constructor(props: Props, state: State) {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
       showContent: false,
     };
 
-    console.log(this.state.showContent);
     this.onShow = this.onShow.bind(this);
   }
 
   render() {
-    const { id, title, icon, onClick, children } = this.props;
+    const { title, children } = this.props;
     const { showContent } = this.state;
 
     // Reveal/hide content changes

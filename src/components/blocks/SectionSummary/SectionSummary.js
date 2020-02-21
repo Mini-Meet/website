@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react';
-import { concat, without, includes } from 'lodash';
 
 import { Mixpanel } from '../../../Mixpanel';
 import { Toggle } from '../../elements';
@@ -20,16 +19,11 @@ type ToggleProps = {
   toggleItems: object,
 };
 
-export default class SectionSummary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    //
-  }
-
-  componentWillMount() {
-    // check stored toggle preferences
-  }
-
+export default class SectionSummary extends Component<
+  Props,
+  State,
+  ToggleProps
+> {
   render() {
     const { toggleItems, key } = this.props;
 
