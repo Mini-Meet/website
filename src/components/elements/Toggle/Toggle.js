@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react';
-import { includes } from 'lodash';
 import './Toggle.scss';
 
 import { Icon } from '..';
@@ -10,30 +9,58 @@ type Props = {
   title: string,
   icon: string,
   onClick: Function,
-  showContent?: boolean,
   children: object,
 };
 
-export default class Toggle extends Component<Props> {
-  render() {
-    const { id, title, icon, onClick, showContent, children } = this.props;
+type State = {
+  showContent: boolean,
+};
 
-    const toggleStyles = includes(showContent, id) ? 'active' : 'inactive';
+export default class Toggle extends Component<Props, State> {
+  constructor(props: Props, state: State) {
+    super(props);
+
+    this.state = {
+      showContent: false,
+    };
+
+    console.log(this.state.showContent);
+    this.onShow = this.onShow.bind(this);
+  }
+
+  render() {
+    const { id, title, icon, onClick, children } = this.props;
+    const { showContent } = this.state;
+
+    // Reveal/hide content changes
+    const menuToggleIcon = showContent ? 'arrow_right' : 'arrow_drop_down';
+    const toggleStyles = showContent ? 'active' : 'inactive';
 
     return (
-      <div className="toggle" key={id}>
-        <button onClick={onClick} className={`toggle__${String(toggleStyles)}`}>
+      <div className="toggle">
+        <button
+          onClick={this.onShow}
+          className={`toggle__${String(toggleStyles)}`}
+        >
           <Icon
-            icon={icon}
+            icon={menuToggleIcon}
             inactive24="inactive24"
             classOverride={`toggle__icon toggle__icon_${String(toggleStyles)}`}
           />
           {title}
         </button>
-        {includes(showContent, id) && (
-          <div className="toggle__content">{children}</div>
-        )}
+        {showContent && <div className="toggle__content">{children}</div>}
       </div>
     );
   }
+
+  onShow = () => {
+    const { showContent } = this.state;
+
+    this.setState({
+      showContent: !showContent,
+    });
+
+    this.props.onShowToggle();
+  };
 }

@@ -5,9 +5,9 @@ import { SectionSummary } from '..';
 import './Section.scss';
 
 type Props = {
-  toggleItems: object,
   sectionHeader: string,
   sectionSubheader: string,
+  toggleItems: object,
 };
 
 type State = {
@@ -28,7 +28,7 @@ export default class Section extends Component<Props, State> {
   }
 
   render() {
-    const { toggleItems, sectionHeader, sectionSubheader } = this.props;
+    const { sectionHeader, sectionSubheader, toggleItems } = this.props;
 
     return (
       <div className="section">
@@ -36,7 +36,10 @@ export default class Section extends Component<Props, State> {
           <h1>{sectionHeader}</h1>
           <p>{sectionSubheader}</p>
         </div>
-        <SectionSummary toggleItems={toggleItems} />
+        <SectionSummary
+          toggleItems={toggleItems}
+          sectionHeader={sectionHeader}
+        />
       </div>
     );
   }

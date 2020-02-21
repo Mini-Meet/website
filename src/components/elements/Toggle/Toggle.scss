@@ -55,5 +55,10 @@
     @include padding(top, 1);
     @include padding(bottom, 3);
     @include transition-in-out;
+
+    h1,
+    p {
+      text-align: left;
+    }
   }
 }

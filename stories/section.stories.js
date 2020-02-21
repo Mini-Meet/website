@@ -31,17 +31,17 @@ const contentHow = (
 const toggleItems = [
   {
     id: '1',
-    title: 'Hello',
+    title: 'Product Strategy',
     content: contentWhat,
   },
   {
     id: '2',
-    title: 'Title',
+    title: 'Roadmap',
     content: contentWhy,
   },
   {
     id: '3',
-    title: 'Title',
+    title: 'Prioritisation',
     content: contentHow,
   },
 ];
