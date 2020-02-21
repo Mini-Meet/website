@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react';
-import { Mixpanel } from '../../../Mixpanel';
 import { SectionSummary } from '..';
 
 import './Section.scss';
@@ -30,8 +29,6 @@ export default class Section extends Component<Props, State> {
 
   render() {
     const { toggleItems, sectionHeader, sectionSubheader } = this.props;
-
-    const {} = this.state;
 
     return (
       <div className="section">

@@ -49,6 +49,7 @@ export default class SectionSummary extends Component<Props, State> {
         {toggleItems.map(toggle => {
           return (
             <Toggle
+              key={key}
               id={toggle.id}
               title={toggle.title}
               icon={menuToggleIcon}
