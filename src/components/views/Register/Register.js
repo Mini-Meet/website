@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react';
-import { Footer, Header } from '../../blocks';
 
 import { Input, Dropdown } from '../../elements';
 
@@ -10,7 +9,6 @@ export default class Register extends Component {
   constructor() {
     super();
     this.state = {
-      // TODO: Export to separate file
       role: [
         {
           id: 0,
@@ -63,8 +61,6 @@ export default class Register extends Component {
   render() {
     return (
       <div className="App">
-        <Header dark />
-
         <div className="register">
           <h3>Sign Up</h3>
           <p className="register__subheader">
@@ -83,13 +79,11 @@ export default class Register extends Component {
             resetThenSet={this.resetThenSet}
           />
         </div>
-        <Footer />
       </div>
     );
   }
 
   toggleSelected = (id, key) => {
-    // TODO
     const temp = JSON.parse(JSON.stringify(this.state[key]));
     temp[id].selected = !temp[id].selected;
     this.setState({
@@ -99,7 +93,6 @@ export default class Register extends Component {
 
   resetThenSet = (id, key) => {
     const temp = JSON.parse(JSON.stringify(this.state[key]));
-    // TODO
     temp.forEach(item => (item.selected = false));
     temp[id].selected = true;
     this.setState({

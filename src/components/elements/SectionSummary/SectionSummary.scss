@@ -1,0 +1,128 @@
+@import '../../../styles/main';
+
+.container {
+  @include fade-in;
+  @include col;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+// Shared menu SCSS
+%menu {
+  @include background-very-light;
+  @include transition-in-out;
+  bottom: 0;
+  box-shadow: inset -4px 0 10px #e0e0e024;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+%btn {
+  @include background-white;
+  @include cursor-pointer;
+  @include icon-elevation-flat;
+  @include transition-in-out;
+  position: fixed;
+  top: 8px;
+  z-index: 1;
+}
+
+// Shared icon SCSS
+%icon {
+  @include padding(all, 0);
+  @include transition-in-out;
+  color: $grey;
+  font-size: 16px;
+}
+
+%label {
+  @include border-bottom-list;
+  @include caption-left;
+  @include padding(top, 2);
+  @include padding(bottom, 3);
+  @include margin(left right, 2);
+  @include flex;
+}
+
+// Menu Closed
+
+.menuClosed {
+  &__btn {
+    @extend %btn;
+    border-bottom: 1px solid $light-grey;
+    border-radius: 0 10px 10px 0;
+    border-right: 1px solid $light-grey;
+    border-top: 1px solid $light-grey;
+    left: 0;
+
+    &_icon {
+      @extend %icon;
+    }
+
+    &:hover {
+      @include card-elevation;
+      @include transition-in-out;
+      transform: translateY(-1px);
+    }
+
+    &:hover > &__icon {
+      color: $primary;
+    }
+  }
+
+  &__menu {
+    @extend %menu;
+    left: -272px;
+    width: 200px;
+
+    &_label {
+      @extend %label;
+    }
+
+    &_list {
+      @include padding(top bottom, 2);
+    }
+  }
+}
+
+.menuOpen {
+  &__btn {
+    @extend %btn;
+    border: 1px solid $light-grey;
+    border-radius: 100px;
+    left: 234px;
+    top: 12px;
+    z-index: 2;
+
+    &_icon {
+      @extend %icon;
+      @include padding(all, -1);
+      font-size: 16px !important;
+    }
+
+    &:hover {
+      @include card-elevation;
+      @include transition-in-out;
+
+      transform: translateY(-1px);
+    }
+
+    &:hover > &__icon {
+      color: $primary;
+    }
+  }
+
+  &__menu {
+    @extend %menu;
+    left: 0px;
+
+    &_label {
+      @extend %label;
+    }
+
+    &_list {
+      @include padding(top bottom, 2);
+    }
+  }
+}

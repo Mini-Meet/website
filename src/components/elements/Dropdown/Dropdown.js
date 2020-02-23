@@ -1,29 +1,33 @@
 // @flow
 import React, { Component } from 'react';
 import './Dropdown.scss';
-import { Card, Icon } from '..';
 
-// TODO
-// Props validation & Click handlers
+import { Card, Icon, DropdownItem } from '..';
 
 type Props = {
-  title: string,
+  headerTitle: string,
   resetThenSet: Function,
   dropdownList: Object,
 };
 
-export default class Dropdown extends Component<Props> {
+type State = {
+  listOpen: boolean,
+  itemSelected: boolean,
+};
+
+export default class Dropdown extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
       listOpen: false,
-      headerTitle: this.props.title,
+      itemSelected: false,
     };
     this.close = this.close.bind(this);
   }
 
   componentDidUpdate() {
     const { listOpen } = this.state;
+
     setTimeout(() => {
       if (listOpen) {
         window.addEventListener('click', this.close);
@@ -37,32 +41,10 @@ export default class Dropdown extends Component<Props> {
     window.removeEventListener('click', this.close);
   }
 
-  close() {
-    this.setState({
-      listOpen: false,
-    });
-  }
-
-  selectItem(title, id, stateKey) {
-    this.setState(
-      {
-        headerTitle: title,
-        listOpen: false,
-      },
-      this.props.resetThenSet(id, stateKey)
-    );
-  }
-
-  toggleList() {
-    this.setState(prevState => ({
-      listOpen: !prevState.listOpen,
-    }));
-  }
-
   render() {
-    const { dropdownList } = this.props;
+    const { dropdownList, headerTitle } = this.props;
+    const { listOpen, itemSelected } = this.state;
 
-    const { listOpen, headerTitle } = this.state;
     return (
       <div className="dropdown">
         <button className="dropdown__header" onClick={() => this.toggleList()}>
@@ -86,25 +68,14 @@ export default class Dropdown extends Component<Props> {
             <ul>
               <button onClick={e => e.stopPropagation()} className="cardShow">
                 {dropdownList.map(item => (
-                  <button
-                    className="cardItem"
+                  <DropdownItem
+                    id={item.id}
                     key={item.id}
-                    onClick={() =>
-                      this.selectItem(item.title, item.id, item.key)
-                    }
-                    onKeyDown={() =>
-                      this.selectItem(item.title, item.id, item.key)
-                    }
-                  >
-                    {item.title}{' '}
-                    {item.selected && (
-                      <Icon
-                        icon="done"
-                        inactive16="inactive16"
-                        classOverride="icon"
-                      />
-                    )}
-                  </button>
+                    title={item.title}
+                    onClick={() => this.selectItem(item)}
+                    onKeyDown={() => this.selectItem(item)}
+                    selected={itemSelected}
+                  />
                 ))}
               </button>
             </ul>
@@ -112,5 +83,26 @@ export default class Dropdown extends Component<Props> {
         )}
       </div>
     );
+  }
+  close() {
+    this.setState({
+      listOpen: false,
+    });
+  }
+
+  selectItem(item) {
+    this.setState({
+      headerTitle: item.title,
+      listOpen: false,
+      itemSelected: true,
+    });
+
+    this.props.resetThenSet(item);
+  }
+
+  toggleList() {
+    this.setState(prevState => ({
+      listOpen: !prevState.listOpen,
+    }));
   }
 }
