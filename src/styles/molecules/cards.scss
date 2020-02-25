@@ -8,6 +8,11 @@
   align-items: flex-start;
   background-color: $white;
 
+  // Add fixed shadow for tablet/mobile
+  @media (max-width: $screen-sm-min) {
+    @include card-elevation;
+  }
+
   &:hover {
     @include card-elevation;
     @include border-white;

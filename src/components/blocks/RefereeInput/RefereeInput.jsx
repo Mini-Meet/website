@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import Loader from 'react-loader-spinner';
 
 import { Mixpanel } from '../../../Mixpanel';
-import { Button } from '../../elements';
+import { Button, Loading } from '../../elements';
 
 import './RefereeInput.scss';
 
@@ -31,22 +29,14 @@ export default class Refer extends Component {
               onChange={e => this.setState({ userEmail: e.target.value })}
             />
 
-            <Button primary onClick={this.onRefer}>
-              Request Free Early Access
-            </Button>
+            <Button onClick={this.onRefer}>Skip Waiting List</Button>
           </div>
         )}
 
         <div className="refereeInput__state">
           {isSubmitting && (
             <div className="refereeInput__state__submitting">
-              <Loader
-                type="Triangle" // or "Grid"
-                color="#fff"
-                height={60}
-                width={60}
-                timeout={3000}
-              />
+              <Loading dark />
             </div>
           )}
           {error && <p className="refereeInput__state__error">{error}</p>}
@@ -80,7 +70,7 @@ export default class Refer extends Component {
           return;
         }
         // Success response - redirect and set tracker
-        Mixpanel.track('PM.c Signup: Signup');
+        Mixpanel.track('PM.c Referee: My Email Added');
         window.location.href = `/statistics/${response.data.user.referral_link}`;
       })
       .catch(error => {

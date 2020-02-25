@@ -48,7 +48,7 @@
     "react/destructuring-assignment": 0,
     "react/jsx-wrap-multilines": 0,
     "react/jsx-filename-extension": 0,
-    "react/no-access-state-in-setstate": "warn",
+    "react/no-access-state-in-setstate": 0,
     "react/no-array-index-key": "warn",
     "react/no-unused-prop-types": "warn",
     "react/prefer-stateless-function": 0,
