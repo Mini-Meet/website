@@ -6,33 +6,28 @@ import { Toggle } from '../../elements';
 
 import './SectionSummary.scss';
 
+type ToggleProps = {
+  id: number,
+  key: string,
+  title: string,
+  content: string,
+};
+
 type Props = {
-  toggleItems: object,
+  toggleItems: Array<ToggleProps>,
   sectionHeader: string,
 };
 
-type ToggleProps = {
-  key: string,
-  title: string,
-  icon: string,
-  onShowToggle: Function,
-  toggleItems: object,
-};
-
-export default class SectionSummary extends Component<
-  Props,
-  State,
-  ToggleProps
-> {
+export default class SectionSummary extends Component<Props> {
   render() {
-    const { toggleItems, key } = this.props;
+    const { toggleItems } = this.props;
 
     return (
       <div>
         {toggleItems.map(toggle => {
           return (
             <Toggle
-              key={key}
+              key={toggle.key}
               id={toggle.id}
               title={toggle.title}
               onShowToggle={this.onShowToggle.bind(this, toggle)}

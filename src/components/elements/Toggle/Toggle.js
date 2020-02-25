@@ -7,7 +7,7 @@ import { Icon } from '..';
 type Props = {
   title: string,
   onShowToggle: Function,
-  children: object,
+  children: Object, // TODO - add real props
 };
 
 type State = {

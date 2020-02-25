@@ -7,26 +7,10 @@ import './Section.scss';
 type Props = {
   sectionHeader: string,
   sectionSubheader: string,
-  toggleItems: object,
+  toggleItems: Object, // TODO - add real props
 };
 
-type State = {
-  //
-};
-
-export default class Section extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-
-    this.state = {
-      //
-    };
-  }
-
-  componentWillMount() {
-    // check stored toggle preferences
-  }
-
+export default class Section extends Component<Props> {
   render() {
     const { sectionHeader, sectionSubheader, toggleItems } = this.props;
 
