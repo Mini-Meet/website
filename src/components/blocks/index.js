@@ -11,4 +11,6 @@ export { default as OnboardingCards } from './OnboardingCards/OnboardingCards.js
 export { default as ProductShowcase } from './ProductShowcase/ProductShowcase';
 export { default as ReferralBlock } from './ReferralBlock/ReferralBlock';
 export { default as RefereeInput } from './RefereeInput/RefereeInput';
+export { default as Section } from './Section/Section.js';
+export { default as SectionSummary } from './SectionSummary/SectionSummary.js';
 export { default as Testimonials } from './Testimonials/Testimonials';
