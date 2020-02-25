@@ -7,7 +7,7 @@ import './Menu.scss';
 
 type Props = {
   onIconClick: Function,
-  menuItems: object,
+  menuItems: Object, // TODO - define real props inside Object e.g. { title: string... }
 };
 
 type State = {
@@ -19,7 +19,7 @@ type MenuItemProps = {
   id: string,
   title: string,
   icon: string,
-  menuItems: object,
+  menuItems: Object, // TODO - define real props inside Object e.g. { title: string... }
 };
 
 export default class Menu extends Component<Props, State> {

@@ -1,29 +1,36 @@
 // @flow
 import React, { Component } from 'react';
+import { find, get, map } from 'lodash';
 import './Dropdown.scss';
-import { Card, Icon } from '..';
 
-// TODO
-// Props validation & Click handlers
+import { Card, Icon, DropdownItem } from '..';
 
 type Props = {
   title: string,
-  resetThenSet: Function,
-  list: Object,
+  items: {
+    id: number,
+    label: string,
+  },
 };
 
-export default class Dropdown extends Component<Props> {
+type State = {
+  listOpen: boolean,
+  selectedItemId: ?number,
+};
+
+export default class Dropdown extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
       listOpen: false,
-      headerTitle: this.props.title,
+      selectedItemId: null,
     };
     this.close = this.close.bind(this);
   }
 
   componentDidUpdate() {
     const { listOpen } = this.state;
+
     setTimeout(() => {
       if (listOpen) {
         window.addEventListener('click', this.close);
@@ -37,36 +44,20 @@ export default class Dropdown extends Component<Props> {
     window.removeEventListener('click', this.close);
   }
 
-  close() {
-    this.setState({
-      listOpen: false,
-    });
-  }
-
-  selectItem(title, id, stateKey) {
-    this.setState(
-      {
-        headerTitle: title,
-        listOpen: false,
-      },
-      this.props.resetThenSet(id, stateKey)
-    );
-  }
-
-  toggleList() {
-    this.setState(prevState => ({
-      listOpen: !prevState.listOpen,
-    }));
-  }
-
   render() {
-    const { list } = this.props;
+    const { items, title } = this.props;
+    const { listOpen, selectedItemId } = this.state;
+    const selectedItem = find(items, item => item.id === selectedItemId);
+    const selectedItemTitle = get(selectedItem, 'label', title);
 
-    const { listOpen, headerTitle } = this.state;
     return (
       <div className="dropdown">
-        <button className="dropdown__header" onClick={() => this.toggleList()}>
-          <button className="dropdown__header_title">{headerTitle}</button>
+        <div
+          className="dropdown__header"
+          role="presentation"
+          onClick={() => this.toggleList()}
+        >
+          <div className="dropdown__header_title">{selectedItemTitle}</div>
           {listOpen ? (
             <Icon
               icon="arrow_drop_up"
@@ -80,37 +71,48 @@ export default class Dropdown extends Component<Props> {
               classOverride="dropdown__header_icondown"
             />
           )}
-        </button>
+        </div>
         {listOpen && (
           <Card cardActive="cardActive">
             <ul>
-              <button onClick={e => e.stopPropagation()} className="cardShow">
-                {list.map(item => (
-                  <button
-                    className="cardItem"
+              <div
+                onClick={e => e.stopPropagation()}
+                role="presentation"
+                className="cardShow"
+              >
+                {map(items, item => (
+                  <DropdownItem
+                    id={item.id}
                     key={item.id}
-                    onClick={() =>
-                      this.selectItem(item.title, item.id, item.key)
-                    }
-                    onKeyDown={() =>
-                      this.selectItem(item.title, item.id, item.key)
-                    }
-                  >
-                    {item.title}{' '}
-                    {item.selected && (
-                      <Icon
-                        icon="done"
-                        inactive16="inactive16"
-                        classOverride="icon"
-                      />
-                    )}
-                  </button>
+                    label={item.label}
+                    onSelect={this.selectItem}
+                    isSelected={selectedItemId === item.id}
+                  />
                 ))}
-              </button>
+              </div>
             </ul>
           </Card>
         )}
       </div>
     );
   }
+
+  close = () => {
+    this.setState({
+      listOpen: false,
+    });
+  };
+
+  selectItem = (id: number) => {
+    this.setState({
+      listOpen: false,
+      selectedItemId: id,
+    });
+  };
+
+  toggleList = () => {
+    this.setState({
+      listOpen: !this.state.listOpen,
+    });
+  };
 }
