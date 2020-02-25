@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 
 import { storiesOf } from "@storybook/react";
@@ -7,32 +8,22 @@ import { Dropdown, DropdownItem } from '../src/components/elements'
 const dropdownItems = [
   {
     id: 0,
-    title: 'Fully Remote',
-    key: 'remote',
+    label: 'Fully Remote',
   },
   {
     id: 1,
-    title: 'Part-Remote',
-    key: 'remote',
+    label: 'Part-Remote',
   },
   {
     id: 2,
-    title: 'In-Office',
-    key: 'remote',
+    label: 'In-Office',
   },
 ];
 
 storiesOf("Elements/Dropdown", module)
-.add("Dropdown: Item", () => (
-  <DropdownItem
-    title="Hello"
-  />
-))
-  .add("Dropdown: Example", () => (
+  .add("Dropdown: Simple", () => (
     <Dropdown
-      headerTitle="Do you work remote?"
-      dropdownList={dropdownItems}
-      resetThenSet={action(`select item ${dropdownItems.id}`)}
+      title="Do you work remote?"
+      items={dropdownItems}
     />
-  ))
-;
+  ));

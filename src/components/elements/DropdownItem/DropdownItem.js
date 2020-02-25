@@ -8,7 +8,7 @@ type Props = {
   id: number,
   label: string,
   isSelected: boolean,
-  onClick: Function,
+  onSelect: Function,
 };
 
 export default class DropdownItem extends Component<Props> {
@@ -32,6 +32,6 @@ export default class DropdownItem extends Component<Props> {
   }
 
   onSelect = (id: number) => {
-    this.props.onClick(id);
+    this.props.onSelect(id);
   };
 }

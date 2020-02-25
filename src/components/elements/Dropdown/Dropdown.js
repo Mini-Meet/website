@@ -85,8 +85,7 @@ export default class Dropdown extends Component<Props, State> {
                     id={item.id}
                     key={item.id}
                     label={item.label}
-                    onClick={this.selectItem}
-                    onKeyDown={this.selectItem}
+                    onSelect={this.selectItem}
                     isSelected={selectedItemId === item.id}
                   />
                 ))}
