@@ -6,12 +6,16 @@ import { Modal, Icon } from '../../elements';
 import './ModalConfirm.scss';
 
 type Props = {
-  confirmModalButtons: object,
+  confirmModalButtons: Object, // TODO - add real props
   buttonAction: Function,
 };
 
-export default class ModalConfirm extends Component<Props> {
-  constructor(props) {
+type State = {
+  showModal: boolean,
+};
+
+export default class ModalConfirm extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

@@ -1,13 +1,16 @@
 // @flow
 import React, { Component } from 'react';
+import { map } from 'lodash';
 import './Modal.scss';
 
 import { Card, Button } from '..';
 
+type ButtonProps = Object; // TODO - add real props
+
 type Props = {
   title: string,
   text: string,
-  buttons: object,
+  buttons: Array<ButtonProps>,
   hideModal: Function,
 };
 
@@ -22,9 +25,9 @@ export default class Modal extends Component<Props> {
             <div className="modal__title">{title}</div>
             <div className="modal__text">{text}</div>
             <div className="modal__btnContainer">
-              {buttons.map((button, buttonId) => (
+              {map(buttons, (button, key) => (
                 <Button
-                  key={buttonId}
+                  key={key}
                   tertiary="tertiary"
                   onClick={this.onClick.bind(this, button)}
                 >
@@ -38,8 +41,10 @@ export default class Modal extends Component<Props> {
     );
   }
 
-  onClick = button => {
-    button.onPress && button.onPress();
+  onClick = (button: ButtonProps) => {
+    if (button.onPress) {
+      button.onPress();
+    }
     this.props.hideModal();
   };
 }
