@@ -9,14 +9,12 @@
 
   &__header {
     @extend %input;
-    @include padding(right, 1);
     @include row;
     @include transition-in-out;
 
     align-items: center;
     justify-content: space-between;
     max-height: 48px;
-    min-width: 288px;
 
     &:hover > &_title {
       @include transition-in-out;
