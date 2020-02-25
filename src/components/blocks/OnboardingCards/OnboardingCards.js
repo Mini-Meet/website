@@ -5,9 +5,11 @@ import { OnboardingCard } from '../../elements';
 
 import './OnboardingCards.scss';
 
-type OnboardingCardsProps = {
+type OnboardingCardProps = Object; // TODO - define real props inside Object e.g. { title: string... }
+
+type Props = {
   onClick: Function,
-  onboardingCards: object,
+  onboardingCards: Array<OnboardingCardProps>, // TODO - define real props inside Object e.g. { title: string... }
 };
 
 export default class OnboardingCards extends Component<Props> {
@@ -35,7 +37,7 @@ export default class OnboardingCards extends Component<Props> {
     );
   }
 
-  handleCardClick = (onboardingCard: OnboardingCardsProps) => {
+  handleCardClick = (onboardingCard: OnboardingCardProps) => {
     Mixpanel.track(`Onboarding: ${onboardingCard.title}`);
   };
 }
