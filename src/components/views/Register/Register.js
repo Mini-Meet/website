@@ -5,60 +5,42 @@ import { Input, Dropdown } from '../../elements';
 
 import './Register.scss';
 
-export default class Register extends Component {
-  constructor() {
-    super();
-    this.state = {
-      role: [
-        {
-          id: 0,
-          title: 'CEO',
-          selected: false,
-          key: 'role',
-        },
-        {
-          id: 1,
-          title: 'Product Manager',
-          selected: false,
-          key: 'role',
-        },
-        {
-          id: 2,
-          title: 'HR',
-          selected: false,
-          key: 'role',
-        },
-        {
-          id: 3,
-          title: 'Developer',
-          selected: false,
-          key: 'role',
-        },
-      ],
-      remote: [
-        {
-          id: 0,
-          title: 'Fully Remote',
-          selected: false,
-          key: 'remote',
-        },
-        {
-          id: 1,
-          title: 'Part-Remote',
-          selected: false,
-          key: 'remote',
-        },
-        {
-          id: 2,
-          title: 'In-Office',
-          selected: false,
-          key: 'remote',
-        },
-      ],
-    };
-  }
-
+export default class Register extends Component<void> {
   render() {
+    const roleDropdownItems = [
+      {
+        id: 0,
+        label: 'CEO',
+      },
+      {
+        id: 1,
+        label: 'Product Manager',
+      },
+      {
+        id: 2,
+        label: 'HR',
+      },
+      {
+        id: 3,
+        label: 'Developer',
+      },
+    ];
+
+    const remoteSelectionDropdownItems = [
+      {
+        id: 0,
+        label: 'Fully Remote',
+      },
+      {
+        id: 1,
+        label: 'Part-Remote',
+      },
+      {
+        id: 2,
+        label: 'In-Office',
+      },
+    ];
+
     return (
       <div className="App">
         <div className="register">
@@ -68,35 +50,13 @@ export default class Register extends Component {
           </p>
           <Input placeholder="Company Email" type="text" />
           <Input placeholder="Full Name" type="text" />
-          <Dropdown
-            title="Select role"
-            dropdownList={this.state.role}
-            resetThenSet={this.resetThenSet}
-          />
+          <Dropdown title="Select role" items={roleDropdownItems} />
           <Dropdown
             title="Do you work remote?"
-            dropdownList={this.state.remote}
-            resetThenSet={this.resetThenSet}
+            items={remoteSelectionDropdownItems}
           />
         </div>
       </div>
     );
   }
-
-  toggleSelected = (id, key) => {
-    const temp = JSON.parse(JSON.stringify(this.state[key]));
-    temp[id].selected = !temp[id].selected;
-    this.setState({
-      [key]: temp,
-    });
-  };
-
-  resetThenSet = (id, key) => {
-    const temp = JSON.parse(JSON.stringify(this.state[key]));
-    temp.forEach(item => (item.selected = false));
-    temp[id].selected = true;
-    this.setState({
-      [key]: temp,
-    });
-  };
 }

@@ -1,30 +1,29 @@
 // @flow
 import React, { Component } from 'react';
-import { Icon } from '../';
+import { Icon } from '..';
 
 import './DropdownItem.scss';
 
 type Props = {
-  id: string,
-  key: string,
-  title: string,
-  selected: boolean,
+  id: number,
+  label: string,
+  isSelected: boolean,
+  onClick: Function,
 };
 
 export default class DropdownItem extends Component<Props> {
   render() {
-    const { title, key, id, selected } = this.props;
+    const { label, id, isSelected } = this.props;
 
     return (
-      <div id={id}>
+      <div>
         <button
           className="cardItem"
-          key={key}
-          onClick={this.onSelect.bind(this)}
-          onKeyDown={this.onSelect.bind(this)}
+          onClick={this.onSelect.bind(this, id)}
+          onKeyDown={this.onSelect.bind(this, id)}
         >
-          {title}
-          {selected && (
+          {label}
+          {isSelected && (
             <Icon icon="done" inactive16="inactive16" classOverride="icon" />
           )}
         </button>
@@ -32,7 +31,7 @@ export default class DropdownItem extends Component<Props> {
     );
   }
 
-  onSelect = () => {
-    this.props.onClick();
+  onSelect = (id: number) => {
+    this.props.onClick(id);
   };
 }

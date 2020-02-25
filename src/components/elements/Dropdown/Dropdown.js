@@ -1,18 +1,21 @@
 // @flow
 import React, { Component } from 'react';
+import { find, get, map } from 'lodash';
 import './Dropdown.scss';
 
 import { Card, Icon, DropdownItem } from '..';
 
 type Props = {
-  headerTitle: string,
-  resetThenSet: Function,
-  dropdownList: Object,
+  title: string,
+  items: {
+    id: number,
+    label: string,
+  },
 };
 
 type State = {
   listOpen: boolean,
-  itemSelected: boolean,
+  selectedItemId: ?number,
 };
 
 export default class Dropdown extends Component<Props, State> {
@@ -20,7 +23,7 @@ export default class Dropdown extends Component<Props, State> {
     super(props);
     this.state = {
       listOpen: false,
-      itemSelected: false,
+      selectedItemId: null,
     };
     this.close = this.close.bind(this);
   }
@@ -42,13 +45,19 @@ export default class Dropdown extends Component<Props, State> {
   }
 
   render() {
-    const { dropdownList, headerTitle } = this.props;
-    const { listOpen, itemSelected } = this.state;
+    const { items, title } = this.props;
+    const { listOpen, selectedItemId } = this.state;
+    const selectedItem = find(items, item => item.id === selectedItemId);
+    const selectedItemTitle = get(selectedItem, 'label', title);
 
     return (
       <div className="dropdown">
-        <button className="dropdown__header" onClick={() => this.toggleList()}>
-          <button className="dropdown__header_title">{headerTitle}</button>
+        <div
+          className="dropdown__header"
+          role="presentation"
+          onClick={() => this.toggleList()}
+        >
+          <div className="dropdown__header_title">{selectedItemTitle}</div>
           {listOpen ? (
             <Icon
               icon="arrow_drop_up"
@@ -62,47 +71,49 @@ export default class Dropdown extends Component<Props, State> {
               classOverride="dropdown__header_icondown"
             />
           )}
-        </button>
+        </div>
         {listOpen && (
           <Card cardActive="cardActive">
             <ul>
-              <button onClick={e => e.stopPropagation()} className="cardShow">
-                {dropdownList.map(item => (
+              <div
+                onClick={e => e.stopPropagation()}
+                role="presentation"
+                className="cardShow"
+              >
+                {map(items, item => (
                   <DropdownItem
                     id={item.id}
                     key={item.id}
-                    title={item.title}
-                    onClick={() => this.selectItem(item)}
-                    onKeyDown={() => this.selectItem(item)}
-                    selected={itemSelected}
+                    label={item.label}
+                    onClick={this.selectItem}
+                    onKeyDown={this.selectItem}
+                    isSelected={selectedItemId === item.id}
                   />
                 ))}
-              </button>
+              </div>
             </ul>
           </Card>
         )}
       </div>
     );
   }
-  close() {
+
+  close = () => {
     this.setState({
       listOpen: false,
     });
-  }
+  };
 
-  selectItem(item) {
+  selectItem = (id: number) => {
     this.setState({
-      headerTitle: item.title,
       listOpen: false,
-      itemSelected: true,
+      selectedItemId: id,
     });
+  };
 
-    this.props.resetThenSet(item);
-  }
-
-  toggleList() {
-    this.setState(prevState => ({
-      listOpen: !prevState.listOpen,
-    }));
-  }
+  toggleList = () => {
+    this.setState({
+      listOpen: !this.state.listOpen,
+    });
+  };
 }
