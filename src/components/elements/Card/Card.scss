@@ -19,6 +19,7 @@
 
 .cardModal {
   @include card-modal;
+  @include padding(all, reset);
   min-height: 140px;
 }
 
