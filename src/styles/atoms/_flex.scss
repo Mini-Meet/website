@@ -38,6 +38,12 @@ $column: $col;
   flex-direction: row;
 }
 
+// Used for grids
+@mixin wrap {
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
 @mixin position-center {
   align-items: center;
   justify-content: center;
@@ -57,6 +63,7 @@ $column: $col;
 }
 
 @mixin wrap {
+  @extend %flex;
   flex-wrap: wrap;
   overflow: auto;
 }

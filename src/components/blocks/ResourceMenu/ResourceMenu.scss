@@ -1,0 +1,30 @@
+@import '../../../styles/main';
+
+.resourceMenu {
+  @include background-very-light;
+  @include col;
+  @include fade-in;
+  @include padding(top, 7);
+  transition: box-shadow 0.3s ease-in-out;
+
+  &__menu {
+    @include flex;
+    @include padding(left, reset);
+    @include transition-in-out;
+    box-shadow: inset -4px 0 10px #e0e0e024;
+
+    @media (min-width: $screen-sm-min) {
+      @include padding(left, 2);
+    }
+
+    @media (min-width: $screen-md-min) {
+      @include padding(left, 5);
+    }
+
+    &_list {
+      @include col;
+      @include padding(top bottom, 2);
+      width: 100%;
+    }
+  }
+}

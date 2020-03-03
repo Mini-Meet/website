@@ -1,0 +1,22 @@
+@import '../../../styles/main';
+
+.resources {
+  @include row;
+
+  &__btn {
+    position: absolute;
+    right: 24px;
+    top: 16px;
+  }
+
+  &__menuwrap {
+    min-width: 27%;
+    position: fixed;
+  }
+
+  &__cardswrap {
+    left: 27%;
+    position: relative;
+    width: 70%;
+  }
+}
