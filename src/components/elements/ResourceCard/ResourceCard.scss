@@ -2,8 +2,8 @@
 
 .resourceCard {
   @include margin(all, 0);
-  min-width: 240px;
   max-width: 288px;
+  min-width: 240px;
 
   &__bg {
     @include background-dark;
