@@ -21,7 +21,7 @@ export default class Refer extends Component {
     return (
       <div className="refereeInput">
         {!isSubmitting && (
-          <div className="refereeInput__main">
+          <div className="refereeInput__form">
             <input
               key="userEmail"
               type="email"
@@ -29,7 +29,9 @@ export default class Refer extends Component {
               onChange={e => this.setState({ userEmail: e.target.value })}
             />
 
-            <Button onClick={this.onRefer}>Skip Waiting List</Button>
+            <Button primary onClick={this.onRefer}>
+              Join Waiting List
+            </Button>
           </div>
         )}
 
@@ -43,7 +45,8 @@ export default class Refer extends Component {
         </div>
 
         <p className="refereeInput__footnote">
-          Access to the Public Beta is by invitation only. Request access today.
+          Access to the Beta Programme is by invitation only. Request access
+          today.
         </p>
       </div>
     );
@@ -70,7 +73,7 @@ export default class Refer extends Component {
           return;
         }
         // Success response - redirect and set tracker
-        Mixpanel.track('PM.c Referee: My Email Added');
+        Mixpanel.track('A / Referral / Signup');
         window.location.href = `/statistics/${response.data.user.referral_link}`;
       })
       .catch(error => {

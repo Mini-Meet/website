@@ -36,3 +36,8 @@
   @extend %background-base;
   background-color: $dark;
 }
+
+@mixin background-primary {
+  @extend %background-base;
+  background-color: $primary;
+}

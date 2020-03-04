@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { Mixpanel } from '../../../Mixpanel';
 import {
+  Banner,
   Footer,
   Header,
   Hero,
@@ -13,9 +14,23 @@ import {
 } from '../../blocks';
 import './Home.scss';
 
+// Product Showcase Images
+import imgCourse from '../../../assets/images/prototype/product_course.png';
+import imgCourse101 from '../../../assets/images/prototype/product_course101.png';
+import imgTribe from '../../../assets/images/prototype/product_tribe.png';
+import imgMentors from '../../../assets/images/prototype/product_mentors.png';
+// import imgStrategy from '../../../assets/images/prototype/product_strategy.png';
+// import imgGuide from '../../../assets/images/prototype/product_guide.png';
+// import imgRemote from '../../../assets/images/prototype/product_remote.png';
+// import imgOnboarding from '../../../assets/images/prototype/product_onboarding.png';
+// import imgStandup from '../../../assets/images/prototype/product_standup.png';
+// import imgSprints from '../../../assets/images/prototype/product_sprints.png';
+// import imgRetro from '../../../assets/images/prototype/product_retro.png';
+// import imgTools from '../../../assets/images/prototype/product_tools.png';
+
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('PM.c Signup: Home');
+    Mixpanel.track('A / Home');
   }
 
   render() {
@@ -29,7 +44,7 @@ export default class Home extends Component {
           link={
             <div>
               <Link to="/legal" className="cookie-link">
-                Read Our Terms & Conditions
+                Read Terms & Conditions
               </Link>
             </div>
           }
@@ -39,31 +54,48 @@ export default class Home extends Component {
         <Hero
           title="Master Product"
           titleTwo="Management"
-          subtitle="Junior/mid-level PM? Learn how to double your salary & unlock remote work without spending $5k & months on a course with our toolkit for world-class product management"
+          subtitle="Junior/Mid-Level PM? Learn how to build great, innovative products that solve real problems with just a few minutes per day, without spending $5k & months on an ineffective course"
+          btnText="Join Waiting List"
           mixpanelEvent="Subscribed"
-          mailchimpForm
-          url="https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04"
+          referralForm
         />
         <Featured header="Where our Product Masters Work" />
         <ProductShowcase
-          header="Your Secret Weapon For Better Product Work"
-          blockOneHeader="Become a Better PM"
-          blockTwoHeader="Organise Your Team Within Minutes"
-          blockThreeHeader="Find Your Product Mentor"
-          blockFourHeader="Learn Remote Best Practice"
+          header="Your Secret Weapon For Building Great Products"
+          blockOneHeader="Access The Product Mastery Course"
+          blockOneBody="Learn how the world’s best Product Managers run their product teams, from vision & strategy to prioritisation & navigating stakeholder management"
+          blockOneImage={imgCourse}
+          blockTwoHeader="World-Class Product Mentors"
+          blockTwoBody="Get advice & mentorship from our product experts. Whatever the question, whether your work for an early-stage startup or corporate, we have it covered."
+          blockTwoImage={imgMentors}
+          blockThreeHeader="Join A Tribe of High-Performing PMs"
+          blockThreeBody="Find the right tribe for you within our network of Product Managers. Support each other's work, review projects & help each other grow professionally."
+          blockThreeImage={imgTribe}
           url="#signup"
-          cta="Request Access >"
+          cta="Join Waiting List >"
         />
-        <Testimonials />
         <Hero
           title="Ready to transform your product career?"
-          subtitle="Start seeing an impact within just a few minutes & start building the right skill set to rapidly become a world-class Product Manager:"
+          subtitle="Start building the right skill set to rapidly become a world-class Product Manager:"
+          btnText="Join Waiting List"
           mixpanelEvent="Subscribed"
-          mailchimpForm
-          url="https://scribeapp.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=3dd26bab04"
+          referralForm
         />
+        <Banner
+          header="50% Off Our Intro Course This Week!"
+          blockHeader="Try our Product Management 101 Course"
+          blockBody="In 12 lessons, learn how to build great products with our intro to product strategy & building effective product teams. For a short time only, we're offering 50% off! Use coupon code 50%OFF at checkout"
+          blockImage={imgCourse101}
+          btnText="See Course Curriculum"
+          onClick={this.handleBannerBtnClick}
+          url="https://courses.productmastery.co/"
+        />
+        <Testimonials />
         <Footer page="HOME" />
       </div>
     );
   }
+  handleBannerBtnClick = () => {
+    Mixpanel.track('A / Page / PM101');
+  };
 }

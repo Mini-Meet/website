@@ -13,11 +13,11 @@
 // Primary Button
 
 @mixin button-primary-elevation-flat {
-  box-shadow: 0 4px 8px transparentize($secondary, 0.6);
+  box-shadow: 0 4px 8px transparentize($secondary, 0.7);
 }
 
 @mixin button-primary-elevation-raised {
-  box-shadow: 0 6px 12px transparentize($secondary, 0.6);
+  box-shadow: 0 6px 12px transparentize($secondary, 0.8);
 }
 
 // Secondary Button

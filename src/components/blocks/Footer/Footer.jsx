@@ -9,7 +9,8 @@ class Footer extends Component {
   render() {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
     const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
-    const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
+    const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
+    const pricing = this.props.page === 'PRICING' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
       this.props.page === 'TERMS & CONDITIONS' ? 'active' : 'inactive';
@@ -34,13 +35,24 @@ class Footer extends Component {
           </div>
           <div className="footer__list_item">
             <a
-              className={blog}
-              href="https://productmastery.substack.com"
-              onClick={this.goToBlog}
+              className={courses}
+              href="https://courses.productmastery.co/"
+              onClick={this.goToCourses}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Blog
+              Courses
+            </a>
+          </div>
+          <div className="footer__list_item">
+            <a
+              className={pricing}
+              href="https://productmastery.substack.com/p/pricing"
+              onClick={this.goToPricing}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pricing
             </a>
           </div>
           <div className="footer__list_item">
@@ -63,10 +75,13 @@ class Footer extends Component {
   }
 
   goToAbout = () => {
-    Mixpanel.track('PM.c Signup: About');
+    Mixpanel.track('A / Page / About');
   };
-  goToBlog = () => {
-    Mixpanel.track('PM.c Signup: Blog');
+  goToCourses = () => {
+    Mixpanel.track('A / Page / PM101');
+  };
+  goToPricing = () => {
+    Mixpanel.track('A / Page / Pricing');
   };
 }
 
