@@ -106,7 +106,7 @@ export default class Menu extends Component<Props, State> {
       hideMenu: !hideMenu,
     });
 
-    Mixpanel.track(`Menu = ${hideMenu ? 'true' : 'false'}`);
+    Mixpanel.track(`A / Menu / ${hideMenu ? 'true' : 'false'}`);
   };
 
   handleMenuItemClick = (menuItem: MenuItemProps) => {

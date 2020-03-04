@@ -31,8 +31,7 @@
     @include button-primary-elevation-raised;
     @include transition-in-out;
 
-    // transform: translateY(-2px);
-    transform: scaleY(1.05);
+    transform: scaleX(1.01);
   }
 
   i {

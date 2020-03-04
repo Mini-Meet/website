@@ -5,6 +5,7 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Loader from 'react-loader-spinner';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
+import { RefereeInput } from '..';
 import './Hero.scss';
 
 type Props = {
@@ -13,8 +14,9 @@ type Props = {
   subtitle: string,
   url: string,
   mixpanelEvent: string,
-  mailchimpForm: boolean,
   typeform: boolean,
+  referralForm: boolean,
+  mailchimpForm: boolean,
 };
 
 type FormTypes = {
@@ -24,7 +26,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    Mixpanel.track('C Signup: Subscribed!');
+    Mixpanel.track('A / Subscribed!');
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -44,7 +46,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
       />
       <br />
       <Button primary onClick={submit}>
-        Request Free Early Access
+        Join Waiting List
       </Button>
     </div>
   );
@@ -56,8 +58,9 @@ export default class Hero extends Component<Props> {
       title,
       titleTwo,
       subtitle,
-      mailchimpForm,
       typeform,
+      referralForm,
+      mailchimpForm,
       url,
     } = this.props;
 
@@ -78,6 +81,8 @@ export default class Hero extends Component<Props> {
             </a>
           </div>
         )}
+
+        {referralForm && <RefereeInput />}
 
         {mailchimpForm && (
           <MailchimpSubscribe
@@ -145,6 +150,6 @@ export default class Hero extends Component<Props> {
   }
 
   goToTypeform = () => {
-    Mixpanel.track(`C Signup: ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`A / ${this.props.mixpanelEvent}`);
   };
 }
