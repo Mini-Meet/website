@@ -30,7 +30,7 @@ export default class Banner extends Component<Props> {
       <div className="banner">
         <h2 className="banner__header">{header}</h2>
 
-        <div className="info block__reverse">
+        <div className="info info__reverse">
           <div className="info__text info__text_left">
             <h3>{blockHeader}</h3>
             <p>{blockBody}</p>
