@@ -14,34 +14,37 @@
 }
 
 %modal-base {
-  @include corner-radius;
-  @include modal-elevation;
+  @include col;
   @include transition-in-out;
-
-  background-color: $white;
-  display: flex;
-  flex-direction: column;
-  width: 420px;
+  max-width: 420px;
 }
 
 @mixin confirmation-modal {
   @extend %modal-base;
 
-  .title {
+  &__title {
     @include h4;
-
-    padding: 32px 0 0 24px;
+    @include padding(top, 4);
+    @include padding(bottom, 2);
+    @include padding(left right, 3);
   }
 
-  .text {
+  &__text {
+    @include padding(bottom, 3);
+    @include padding(left right, 3);
     @include text;
-
-    padding: 16px 24px 24px;
+    text-align: center;
   }
 
-  .buttonContainer {
-    border-top: 1px solid var(--line-color);
-    display: flex;
+  &__btnContainer {
+    @include border-top;
+    @include flex;
+    @include padding(top bottom, 0);
     justify-content: space-around;
+    width: 100%;
+
+    .btnContainer:first-child button {
+      color: $inactive-grey;
+    }
   }
 }

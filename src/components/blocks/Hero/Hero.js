@@ -1,10 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import Loader from 'react-loader-spinner';
 import { Mixpanel } from '../../../Mixpanel';
-import { Button } from '../../elements';
+import { Button, Loading } from '../../elements';
 import { RefereeInput } from '..';
 import './Hero.scss';
 
@@ -98,13 +96,7 @@ export default class Hero extends Component<Props> {
                 )}
                 {status === 'sending' && (
                   <div className="hero__form__loading">
-                    <Loader
-                      type="Triangle" // or "Grid"
-                      color="#fff"
-                      height={60}
-                      width={60}
-                      timeout={3000}
-                    />
+                    <Loading dark />
                   </div>
                 )}
                 {status === 'error' && (
@@ -117,13 +109,7 @@ export default class Hero extends Component<Props> {
                 {status === 'success' && (
                   <div>
                     <div className="hero__form__loading">
-                      <Loader
-                        type="Triangle"
-                        color="#fff"
-                        height={60}
-                        width={60}
-                        timeout={3000}
-                      />
+                      <Loading dark />
                     </div>
                     <iframe
                       title="Survey"

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { get, map, isArray, without } from 'lodash';
 import axios from 'axios';
 import { Mixpanel } from '../../../Mixpanel';
-import { Button, Icon } from '../../elements';
+import { Button, Icon, Loading } from '../../elements';
 
 import './ReferralBlock.scss';
 
@@ -89,9 +89,8 @@ export default class ReferralBlock extends Component {
         ]}
 
         <div className="refer__state">
-          {isSubmitting && (
-            <p className="refer__state__submitting">Submitting...</p>
-          )}
+          {isSubmitting && <Loading dark />}
+
           {error && !isArray(error) && (
             <p className="refer__state__error">{error}</p>
           )}

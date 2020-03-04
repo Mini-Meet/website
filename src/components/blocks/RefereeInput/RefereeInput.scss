@@ -2,12 +2,12 @@
 
 .refereeInput {
   @include col;
-  @include padding(top, 3);
+  @include padding(top, 0);
   @include padding(left right, reset);
-  @include padding(bottom, 3);
+  @include padding(bottom, 0);
 
   @media (min-width: $screen-sm-min) {
-    @include padding(bottom, 3);
+    @include padding(bottom, 0);
   }
 
   &__form {

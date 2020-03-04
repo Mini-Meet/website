@@ -1,0 +1,64 @@
+@import '../../../styles/main';
+
+.toggle {
+  @include corner-radius;
+  @include margin(top bottom, 0);
+
+  // Shared SCSS properties
+  button {
+    @include h5;
+    @include padding(top bottom, 1);
+    @include padding(left, 1);
+    @include padding(right, 1);
+    @include row;
+
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+
+    &:hover {
+      @include background-light;
+    }
+  }
+
+  // Shared SCSS properties
+  &__icon {
+    @include padding(all, reset);
+    @include padding(right, 1);
+    @include transition-in-out;
+
+    // inactive
+    &_inactive {
+      //
+    }
+
+    // active
+    &_active {
+      //
+    }
+  }
+
+  // inactive
+  &__inactive {
+    //
+  }
+
+  // active
+  &__active {
+    //
+  }
+
+  &__content {
+    @include padding(left, 4);
+    @include padding(right, 4);
+    @include padding(top, 1);
+    @include padding(bottom, 3);
+    @include transition-in-out;
+
+    h1,
+    p {
+      text-align: left;
+    }
+  }
+}
