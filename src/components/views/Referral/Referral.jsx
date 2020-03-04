@@ -5,7 +5,7 @@ import { Header, ReferralBlock, Footer } from '../../blocks';
 
 import './Referral.scss';
 
-const discount = '70% OFF';
+const discount = '70% OFF ';
 
 export default class Referral extends Component {
   constructor(props) {
@@ -48,9 +48,10 @@ export default class Referral extends Component {
           <div className="referral__referrals">
             <h5>{`So far you have ${acceptedReferrals.length} referrals`}</h5>
             <p className="small">
-              Refer 5 friends to get {discount} & skip the waiting list when
-              they successfully sign up. Track these signups & see where you are
-              on the waiting list by visiting this URL!
+              Refer 5 friends & we will email you a coupon for {discount} & to
+              skip the waiting list when they successfully sign up. Track these
+              signups & see where you are on the waiting list by visiting this
+              URL!
             </p>
           </div>
         </div>
