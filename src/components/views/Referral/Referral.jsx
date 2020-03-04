@@ -41,7 +41,7 @@ export default class Referral extends Component {
             <h3>Want to cut the line AND save €700+ euros?</h3>
             <p>
               Invite 5 of your friends below to enjoy <b>{discount}</b>
-              the Product Mastery programme
+              the Product Mastery programme when we launch our next cohort
             </p>
             <ReferralBlock referralLink={referralLink} />
           </div>
