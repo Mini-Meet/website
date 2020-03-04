@@ -39,7 +39,7 @@ export default class ResourceCards extends Component<Props> {
     );
   }
 
-  onClick = (resourceCard: resourceCardProps) => {
+  onClick = (resourceCard: ResourceCardProps) => {
     Mixpanel.track(`Onboarding: ${resourceCard.title}`);
 
     this.props.onCardClick();
