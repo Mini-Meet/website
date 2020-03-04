@@ -3,7 +3,7 @@
 .footer {
   @include background-dark;
   @include padding(left right, 1);
-  @include padding(top bottom, 2);
+  @include padding(top bottom, 4);
   @include col;
 
   @media (min-width: $screen-sm-min) {

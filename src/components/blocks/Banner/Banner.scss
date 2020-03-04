@@ -1,7 +1,7 @@
 @import '../../../styles/main';
 
-.product {
-  @include background-white;
+.banner {
+  @include background-primary;
   @include col;
   @include padding(top, 3);
   @include padding(bottom, 2);
@@ -25,7 +25,7 @@
   }
 }
 
-.block {
+.info {
   @include col;
   @include padding(top bottom, 3);
 
@@ -41,6 +41,7 @@
 
   &__reverse {
     flex-direction: column-reverse;
+    width: 100%;
 
     @media (min-width: $screen-md-min) {
       @include row;
@@ -61,12 +62,17 @@
     &__bg {
       width: 100%;
     }
+
+    &_link {
+      @include cursor-pointer;
+    }
   }
 
   &__text {
     @include col;
     @include padding(top bottom, 2);
     justify-content: center;
+    @include padding(left right, 0);
 
     @media (min-width: $screen-sm-min) {
       @include padding(top, 1);
@@ -87,32 +93,39 @@
 
   h3,
   p {
-    // display: flex;
     margin: 0 auto;
     max-width: 360px;
     text-align: center;
-    // width: 100%;
 
     @media (min-width: $screen-md-min) {
       text-align: left;
     }
   }
 
+  p {
+    color: transparentize($dark, 0.6);
+  }
+
   &__cta {
-    @include padding(top, 3);
-    @include caption-center;
-    color: $primary;
-    text-decoration: none;
+    margin: 0 auto;
 
     @media (min-width: $screen-md-min) {
-      @include padding(top bottom, 2);
-      margin: 0 auto;
-      text-align: left;
-      width: 360px;
+      min-width: 360px;
     }
 
+    a {
+      text-decoration: none;
+    }
+  }
+
+  button {
+    background-color: $white;
+    color: $primary;
+    margin: 24px 0;
+
     &:hover {
-      @include opacity(1.3);
+      color: $dark;
+      opacity: 1;
     }
   }
 }

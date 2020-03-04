@@ -16,7 +16,7 @@ import './Mentors.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('PM.c Signup: Mentors');
+    Mixpanel.track('A / Page / Mentors');
   }
 
   render() {

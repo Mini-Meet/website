@@ -2,15 +2,16 @@
 
 .refereeInput {
   @include col;
-  @include padding(top, 4);
+  @include padding(top, 3);
   @include padding(left right, reset);
-  @include padding(bottom, 5);
+  @include padding(bottom, 1);
 
   @media (min-width: $screen-sm-min) {
-    @include padding(bottom, 5);
+    @include padding(top, 2);
+    @include padding(bottom, 0);
   }
 
-  &__main {
+  &__form {
     @include col;
     margin: 0 auto;
     max-width: 820px;
@@ -25,17 +26,16 @@
       min-width: 242px;
 
       @media (min-width: $screen-sm-min) {
-        @include margin(right, 0);
+        border-radius: 100px 0 0 100px;
+        margin-right: -24px;
         min-width: 420px;
       }
     }
 
     button {
-      font-size: 11px;
-      min-width: 288px;
-
       @media (min-width: $screen-sm-min) {
-        min-width: 120px;
+        @include margin(left, reset);
+        font-size: 11px;
       }
     }
   }

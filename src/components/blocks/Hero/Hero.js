@@ -12,9 +12,9 @@ type Props = {
   subtitle: string,
   url: string,
   mixpanelEvent: string,
-  mailchimpForm: boolean,
   typeform: boolean,
-  refereeForm: boolean,
+  referralForm: boolean,
+  mailchimpForm: boolean,
 };
 
 type FormTypes = {
@@ -24,7 +24,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    Mixpanel.track('PM.c Signup: Subscribed!');
+    Mixpanel.track('A / Subscribed!');
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -44,7 +44,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
       />
       <br />
       <Button primary onClick={submit}>
-        Request Free Early Access
+        Join Waiting List
       </Button>
     </div>
   );
@@ -56,9 +56,9 @@ export default class Hero extends Component<Props> {
       title,
       titleTwo,
       subtitle,
-      mailchimpForm,
       typeform,
-      refereeForm,
+      referralForm,
+      mailchimpForm,
       url,
     } = this.props;
 
@@ -70,8 +70,6 @@ export default class Hero extends Component<Props> {
           <p>{subtitle}</p>
         </div>
 
-        {refereeForm && <RefereeInput />}
-
         {typeform && (
           <div className="hero__typeform">
             <a href={url} target="_blank" rel="noopener noreferrer">
@@ -81,6 +79,8 @@ export default class Hero extends Component<Props> {
             </a>
           </div>
         )}
+
+        {referralForm && <RefereeInput />}
 
         {mailchimpForm && (
           <MailchimpSubscribe
@@ -136,6 +136,6 @@ export default class Hero extends Component<Props> {
   }
 
   goToTypeform = () => {
-    Mixpanel.track(`PM.c Signup: ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`A / ${this.props.mixpanelEvent}`);
   };
 }
