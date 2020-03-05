@@ -82,10 +82,13 @@ export default class Refer extends Component<Props> {
         window.location.href = `/statistics/${response.data.user.referral_link}`;
       })
       .catch(error => {
-        this.setState({
-          error: 'An error ocurred!',
-          isSubmitting: false,
-        });
+        if (error) {
+          this.setState({
+            error: 'An error ocurred!',
+            isSubmitting: false,
+          });
+          return;
+        }
       });
   };
 }
