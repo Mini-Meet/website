@@ -48,10 +48,10 @@ export default class Referral extends Component {
           <div className="referral__referrals">
             <h5>{`So far you have ${acceptedReferrals.length} referrals`}</h5>
             <p className="small">
-              Refer 5 friends & we will email you a coupon for {discount} & to
-              skip the waiting list when they successfully sign up. Track these
-              signups & see where you are on the waiting list by visiting this
-              URL!
+              Refer 5 friends & we will email you a coupon for {discount}. You
+              will also skip the waiting list when they successfully sign up.
+              Track your signups & see where you are on the waiting list by
+              visiting this URL!
             </p>
           </div>
         </div>

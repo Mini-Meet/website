@@ -16,9 +16,9 @@ export default class Home extends Component {
         <Header light />
         <Hero
           title="Upgrade Your"
-          titleTwo="Product Career For FREE"
-          subtitle="Invite 5 friends to join our Beta programme, skip the waiting list & enjoy FREE access to our Product Mastery Programme (saving €999!) when they accept!"
-          btnText="Save"
+          titleTwo="Product Career Now"
+          subtitle="Invite 5 friends to join our Beta programme, skip the waiting list & enjoy 70% 0FF our Product Mastery Programme (saving €700!) when they accept!"
+          btnText="Next"
           mixpanelEvent="Referee / Subscribed!"
           referralForm
         />
