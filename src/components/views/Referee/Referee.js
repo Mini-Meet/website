@@ -17,7 +17,7 @@ export default class Home extends Component {
         <Hero
           title="Upgrade Your"
           titleTwo="Product Career For FREE"
-          subtitle="Invite 5 friends to join our Beta programme & enjoy FREE access to our Product Mastery Programme (saving €999!) & skip the waiting list"
+          subtitle="Invite 5 friends to join our Beta programme, skip the waiting list & enjoy FREE access to our Product Mastery Programme (saving €999!) when they accept!"
           btnText="Save"
           mixpanelEvent="Referee / Subscribed!"
           referralForm
