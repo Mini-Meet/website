@@ -87,7 +87,6 @@ export default class Refer extends Component<Props> {
             error: 'An error ocurred!',
             isSubmitting: false,
           });
-          return;
         }
       });
   };

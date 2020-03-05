@@ -21,10 +21,10 @@ type FormTypes = {
   onSubscribe: Function,
 };
 
-const CustomForm = ({ onSubscribe }: FormTypes) => {
+const CustomForm = ({ onSubscribe }: FormTypes, props: Props) => {
   let email;
   const submit = () => {
-    Mixpanel.track(`A / ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`A / ${mixpanelEvent}`);
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
