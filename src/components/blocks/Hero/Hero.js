@@ -23,8 +23,9 @@ type FormTypes = {
 
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
+  const { mixpanelEvent } = this.props;
   const submit = () => {
-    Mixpanel.track('A / Subscribed!');
+    Mixpanel.track(`A / ${mixpanelEvent}`);
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -58,6 +59,7 @@ export default class Hero extends Component<Props> {
       subtitle,
       typeform,
       referralForm,
+      mixpanelEvent,
       mailchimpForm,
       url,
     } = this.props;
@@ -80,7 +82,7 @@ export default class Hero extends Component<Props> {
           </div>
         )}
 
-        {referralForm && <RefereeInput />}
+        {referralForm && <RefereeInput mixpanelEvent={mixpanelEvent} />}
 
         {mailchimpForm && (
           <MailchimpSubscribe

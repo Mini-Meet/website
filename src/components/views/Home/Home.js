@@ -56,7 +56,7 @@ export default class Home extends Component {
           titleTwo="Management"
           subtitle="Junior/Mid-Level PM? Learn how to build great, innovative products that solve real problems with just a few minutes per day, without spending $5k & months on an ineffective course"
           btnText="Join Waiting List"
-          mixpanelEvent="Subscribed"
+          mixpanelEvent="Home / Subscribed!"
           referralForm
         />
         <Featured header="Where our Product Masters Work" />
@@ -78,7 +78,7 @@ export default class Home extends Component {
           title="Ready to transform your product career?"
           subtitle="Start building the right skill set to rapidly become a world-class Product Manager:"
           btnText="Join Waiting List"
-          mixpanelEvent="Subscribed"
+          mixpanelEvent="Home / Subscribed!"
           referralForm
         />
         <Banner

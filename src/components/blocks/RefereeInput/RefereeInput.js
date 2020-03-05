@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -6,7 +7,11 @@ import { Button, Loading } from '../../elements';
 
 import './RefereeInput.scss';
 
-export default class Refer extends Component {
+type Props = {
+  mixpanelEvent: string,
+};
+
+export default class Refer extends Component<Props> {
   constructor() {
     super();
     this.state = {
@@ -73,7 +78,7 @@ export default class Refer extends Component {
           return;
         }
         // Success response - redirect and set tracker
-        Mixpanel.track('A / Referral / Signup');
+        Mixpanel.track(`A / ${this.props.mixpanelEvent}`);
         window.location.href = `/statistics/${response.data.user.referral_link}`;
       })
       .catch(error => {

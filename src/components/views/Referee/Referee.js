@@ -16,9 +16,11 @@ export default class Home extends Component {
         <Header light />
         <Hero
           title="Upgrade Your"
-          titleTwo="Product Career Now"
-          subtitle="Invite your friends to join our Beta Programme & enjoy FREE product membership for 1 year. Skip the growing waiting list by entering your email below & inviting your friends:"
-          refereeForm
+          titleTwo="Product Career For FREE"
+          subtitle="Invite 5 friends to join our Beta programme & enjoy FREE access to our Product Mastery Programme (saving €999!) & skip the waiting list"
+          btnText="Save"
+          mixpanelEvent="Referee / Subscribed!"
+          referralForm
         />
       </div>
     );
