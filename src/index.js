@@ -13,6 +13,8 @@ import Home from './components/views/Home/Home';
 import About from './components/views/About/About';
 import Privacy from './components/views/Privacy/Privacy';
 import Legal from './components/views/Legal/Legal';
+// acquisiton experiment
+import LinkedIn from './components/views/LinkedIn/LinkedIn';
 import Mentors from './components/views/Mentors/Mentors';
 import Referee from './components/views/Referee/Referee';
 import Referral from './components/views/Referral/Referral';
@@ -35,6 +37,7 @@ ReactDOM.render(
         <Route path="/referee" exact component={Referee} />
         <Route path="/register" exact component={Register} />
         <Route path="/legal" exact component={Legal} />
+        <Route path="/beta" exact component={LinkedIn} />
         <Route path="/mentors" exact component={Mentors} />
         <Route path="/statistics/:referralLink" exact component={Referral} />
         <Route path="/register" exact component={Register} />

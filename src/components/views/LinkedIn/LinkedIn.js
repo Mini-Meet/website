@@ -12,7 +12,7 @@ import {
   ProductShowcase,
   Testimonials,
 } from '../../blocks';
-import './Home.scss';
+import './LinkedIn.scss';
 
 // Product Showcase Images
 import imgCourse from '../../../assets/images/prototype/product_course.png';
@@ -30,7 +30,7 @@ import imgMentors from '../../../assets/images/prototype/product_mentors.png';
 
 export default class LinkedIn extends Component {
   componentDidMount() {
-    Mixpanel.track('A / Home');
+    Mixpanel.track('A / Felix');
   }
 
   render() {
@@ -56,7 +56,7 @@ export default class LinkedIn extends Component {
           titleTwo="Management"
           subtitle="Junior/Mid-Level PM? Learn how to build great, innovative products that solve real problems with just a few minutes per day, without spending $5k & months on an ineffective course"
           btnText="Join Waiting List"
-          mixpanelEvent="Home / Subscribed!"
+          mixpanelEvent="Felix / Subscribed!"
           referralForm
         />
         <Featured header="Where our Product Masters Work" />
@@ -78,7 +78,7 @@ export default class LinkedIn extends Component {
           title="Ready to transform your product career?"
           subtitle="Start building the right skill set to rapidly become a world-class Product Manager:"
           btnText="Join Waiting List"
-          mixpanelEvent="Home / Subscribed!"
+          mixpanelEvent="Felix / Subscribed!"
           referralForm
         />
         <Banner
@@ -96,6 +96,6 @@ export default class LinkedIn extends Component {
     );
   }
   handleBannerBtnClick = () => {
-    Mixpanel.track('A / Page / PM101');
+    Mixpanel.track('A / Felix / PM101');
   };
 }
