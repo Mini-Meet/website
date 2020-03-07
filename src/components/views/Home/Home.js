@@ -1,24 +1,14 @@
 import React, { Component } from 'react';
-import CookieBanner from 'react-cookie-banner';
-import { Link } from 'react-router-dom';
 
 import { Mixpanel } from '../../../Mixpanel';
-import {
-  Banner,
-  Footer,
-  Header,
-  Hero,
-  Featured,
-  ProductShowcase,
-  Testimonials,
-} from '../../blocks';
+import { Banner, Header, Hero, Featured } from '../../blocks';
 import './Home.scss';
 
 // Product Showcase Images
-import imgCourse from '../../../assets/images/prototype/product_course.png';
+// import imgCourse from '../../../assets/images/prototype/product_course.png';
 import imgCourse101 from '../../../assets/images/prototype/product_course101.png';
-import imgTribe from '../../../assets/images/prototype/product_tribe.png';
-import imgMentors from '../../../assets/images/prototype/product_mentors.png';
+// import imgTribe from '../../../assets/images/prototype/product_tribe.png';
+// import imgMentors from '../../../assets/images/prototype/product_mentors.png';
 // import imgStrategy from '../../../assets/images/prototype/product_strategy.png';
 // import imgGuide from '../../../assets/images/prototype/product_guide.png';
 // import imgRemote from '../../../assets/images/prototype/product_remote.png';
