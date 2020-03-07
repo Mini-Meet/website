@@ -11,7 +11,6 @@ class Footer extends Component {
     const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
     const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
     const pricing = this.props.page === 'PRICING' ? 'active' : 'inactive';
-    // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
       this.props.page === 'TERMS & CONDITIONS' ? 'active' : 'inactive';
     return (
@@ -60,9 +59,6 @@ class Footer extends Component {
               Terms of Service
             </Link>
           </div>
-          {/*
-          <li className='footer__list_item'><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
-        */}
         </div>
 
         <div className="footer__logo">
