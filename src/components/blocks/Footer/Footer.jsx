@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Mixpanel } from '../../../Mixpanel';
 import Logo from '../../../assets/images/logoWhite.svg';
+import Book from '../../../assets/images/book.jpg';
 
 import './Footer.scss';
 
@@ -60,14 +61,23 @@ class Footer extends Component {
               Terms of Service
             </Link>
           </div>
-          {/*
-          <li className='footer__list_item'><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
-        */}
         </div>
 
         <div className="footer__logo">
-          <Link to="/home">
-            <img alt="logo" src={Logo} className="footer__logo_img" />
+          <div className="footer__logo_book">
+            <img alt="logo" src={Book} className="footer__logo_bookimg" />
+            <p>Want to learn more about building great products?</p>
+            <a
+              href="https://productmastery.substack.com/"
+              onClick={this.goToBook}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>CHECK OUT OUR BOOK</p>
+            </a>
+          </div>
+          <Link to="/home" className="footer__logo_img">
+            <img alt="logo" src={Logo} className="footer__logo_imglogo" />
           </Link>
         </div>
       </div>
@@ -75,13 +85,16 @@ class Footer extends Component {
   }
 
   goToAbout = () => {
-    Mixpanel.track('A / Page / About');
+    Mixpanel.track('C / Page / About');
   };
   goToCourses = () => {
-    Mixpanel.track('A / Page / PM101');
+    Mixpanel.track('C / Page / PM101');
   };
   goToPricing = () => {
-    Mixpanel.track('A / Page / Pricing');
+    Mixpanel.track('C / Page / Pricing');
+  };
+  goToBook = () => {
+    Mixpanel.track('C / Page / Book');
   };
 }
 

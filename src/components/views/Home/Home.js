@@ -190,7 +190,7 @@ const toggleItems = [
 
 export default class LinkedIn extends Component {
   componentDidMount() {
-    Mixpanel.track('A / Home');
+    Mixpanel.track('C / Home');
   }
 
   render() {
@@ -261,6 +261,6 @@ export default class LinkedIn extends Component {
     );
   }
   handleBannerBtnClick = () => {
-    Mixpanel.track('A / Page / PM101');
+    Mixpanel.track('C / Page / PM101');
   };
 }

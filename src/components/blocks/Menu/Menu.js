@@ -90,7 +90,7 @@ export default class Menu extends Component<Props, State> {
       hideMenu: !hideMenu,
     });
 
-    Mixpanel.track(`A / Menu / ${hideMenu ? 'true' : 'false'}`);
+    Mixpanel.track(`C / Menu / ${hideMenu ? 'true' : 'false'}`);
   };
 
   // handleMenuItemClick = (id: string) => {
