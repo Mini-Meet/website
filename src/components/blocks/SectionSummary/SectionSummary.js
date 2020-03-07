@@ -42,7 +42,7 @@ export default class SectionSummary extends Component<Props> {
 
   onShowToggle = (toggle: ToggleProps) => {
     const { sectionHeader } = this.props;
-
-    Mixpanel.track(`${sectionHeader} / ${toggle.title} / Toggle`);
+    console.log(`A / Home / ${sectionHeader} / ${toggle.title}`);
+    Mixpanel.track(`A / Home / ${sectionHeader} / ${toggle.title}`);
   };
 }

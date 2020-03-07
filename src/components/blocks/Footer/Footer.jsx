@@ -10,7 +10,7 @@ class Footer extends Component {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
     const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
     const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
-    const pricing = this.props.page === 'PRICING' ? 'active' : 'inactive';
+    const pricing = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
       this.props.page === 'TERMS & CONDITIONS' ? 'active' : 'inactive';
@@ -47,12 +47,12 @@ class Footer extends Component {
           <div className="footer__list_item">
             <a
               className={pricing}
-              href="https://productmastery.substack.com/p/pricing"
+              href="https://productmastery.substack.com/"
               onClick={this.goToPricing}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Pricing
+              Blog
             </a>
           </div>
           <div className="footer__list_item">
