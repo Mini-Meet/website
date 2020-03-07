@@ -7,7 +7,7 @@ import './Referee.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('A / Page / Referee');
+    Mixpanel.track('B / Page / Referee');
   }
 
   render() {

@@ -75,13 +75,13 @@ class Footer extends Component {
   }
 
   goToAbout = () => {
-    Mixpanel.track('A / Page / About');
+    Mixpanel.track('B / Page / About');
   };
   goToCourses = () => {
-    Mixpanel.track('A / Page / PM101');
+    Mixpanel.track('B / Page / PM101');
   };
   goToPricing = () => {
-    Mixpanel.track('A / Page / Pricing');
+    Mixpanel.track('B / Page / Pricing');
   };
 }
 
