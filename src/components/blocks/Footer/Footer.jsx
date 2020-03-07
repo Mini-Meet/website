@@ -68,7 +68,7 @@ class Footer extends Component {
             <img alt="logo" src={Book} className="footer__logo_bookimg" />
             <p>Want to learn more about building great products?</p>
             <a
-              href="https://productmastery.substack.com/"
+              href="https://www.amazon.com/Why-Your-Startup-Failing-foundations-ebook/dp/B07XD444YV/ref=pd_rhf_ee_p_img_1?_encoding=UTF8&psc=1&refRID=5X596WYG1237FMSSWZ7E"
               onClick={this.goToBook}
               target="_blank"
               rel="noopener noreferrer"
