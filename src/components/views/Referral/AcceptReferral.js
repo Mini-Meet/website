@@ -20,7 +20,7 @@ export default class AcceptReferral extends Component {
     }
     axios
       .post(
-        `https://tt-media.hr/public/api/referrals/accept/${referralLink}`,
+        `https://api.tt-media.hr/api/referrals/accept/${referralLink}`,
         {}
       )
       .then(response => {

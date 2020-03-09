@@ -61,7 +61,7 @@ export default class Referral extends Component {
 
   getStatistics = referralLink => {
     axios
-      .get(`https://tt-media.hr/public/api/referrals/${referralLink}`, {})
+      .get(`https://api.tt-media.hr/api/referrals/${referralLink}`, {})
       .then(response => {
         if (response.data.hasError) {
           this.setState({
