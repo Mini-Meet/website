@@ -36,7 +36,7 @@ ReactDOM.render(
         <Route path="/register" exact component={Register} />
         <Route path="/legal" exact component={Legal} />
         <Route path="/mentors" exact component={Mentors} />
-        <Route path="/statistics/:referralLink" exact component={Referral} />
+        <Route path="/referrals/:referralLink" exact component={Referral} />
         <Route path="/register" exact component={Register} />
         <Route
           path="/referrals/accept/:referralLink"
