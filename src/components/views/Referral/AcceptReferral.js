@@ -19,10 +19,7 @@ export default class AcceptReferral extends Component {
       return;
     }
     axios
-      .post(
-        `https://api.tt-media.hr/api/referrals/accept/${referralLink}`,
-        {}
-      )
+      .post(`https://api.tt-media.hr/api/referrals/accept/${referralLink}`, {})
       .then(response => {
         if (response.data.hasError) {
           this.setState({ error: response.data.errMessage });
