@@ -124,7 +124,7 @@ export default class ReferralBlock extends Component {
     });
 
     axios
-      .post('https://tt-media.hr/public/api/referrals/send-link', {
+      .post('https://api.tt-media.hr/api/referrals/send-link', {
         referrerEmail: get(statistics, [0, 'referrer_email']),
         referralEmails,
       })
@@ -156,7 +156,7 @@ export default class ReferralBlock extends Component {
 
   getStatistics = referralLink => {
     axios
-      .get(`https://tt-media.hr/public/api/referrals/${referralLink}`, {})
+      .get(`https://api.tt-media.hr/api/referrals/${referralLink}`, {})
       .then(response => {
         if (response.data.hasError) {
           this.setState({
