@@ -79,7 +79,7 @@ export default class Refer extends Component<Props> {
         }
         // Success response - redirect and set tracker
         Mixpanel.track(`A / ${this.props.mixpanelEvent}`);
-        window.location.href = `/statistics/${response.data.user.referral_link}`;
+        window.location.href = `/referrals/${response.data.user.referral_link}`;
       })
       .catch(error => {
         if (error) {
