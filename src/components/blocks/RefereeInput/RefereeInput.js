@@ -66,7 +66,7 @@ export default class Refer extends Component<Props> {
     });
 
     axios
-      .post('https://tt-media.hr/public/api/add-user', {
+      .post('https://api.tt-media.hr/api/add-user', {
         userEmail,
       })
       .then(response => {
