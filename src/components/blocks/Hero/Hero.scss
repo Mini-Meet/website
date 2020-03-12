@@ -42,6 +42,16 @@
     }
   }
 
+  // nextpage
+
+  &__nextpage {
+    @include margin(top bottom, 3);
+
+    a {
+      text-decoration: none;
+    }
+  }
+
   // typeform
 
   &__typeform {

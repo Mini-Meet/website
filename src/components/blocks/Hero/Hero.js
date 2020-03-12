@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button, Loading } from '../../elements';
@@ -12,6 +13,8 @@ type Props = {
   subtitle: string,
   url: string,
   mixpanelEvent: string,
+  nextpage: boolean,
+  nextpageUrl: string,
   typeform: boolean,
   referralForm: boolean,
   mailchimpForm: boolean,
@@ -56,6 +59,8 @@ export default class Hero extends Component<Props> {
       title,
       titleTwo,
       subtitle,
+      nextpage,
+      nextpageUrl,
       typeform,
       referralForm,
       mixpanelEvent,
@@ -70,6 +75,16 @@ export default class Hero extends Component<Props> {
           <h1>{titleTwo}</h1>
           <p>{subtitle}</p>
         </div>
+
+        {nextpage && (
+          <div className="hero__nextpage">
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              <Link to={nextpageUrl}>
+                <Button onClick={this.goToNextPage}>FREE Case Study</Button>
+              </Link>
+            </a>
+          </div>
+        )}
 
         {typeform && (
           <div className="hero__typeform">
@@ -137,6 +152,10 @@ export default class Hero extends Component<Props> {
   }
 
   goToTypeform = () => {
+    Mixpanel.track(`C / ${this.props.mixpanelEvent}`);
+  };
+
+  goToNextPage = () => {
     Mixpanel.track(`C / ${this.props.mixpanelEvent}`);
   };
 }
