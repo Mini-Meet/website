@@ -12,9 +12,10 @@ export default class Legal extends Component {
           <h1>Terms & Conditions</h1>
           <h3>Objective</h3>
           <span>
-            Product Mastery products are designed to help you improve remote
-            team culture through our suite of digital tools & professional
-            advice based on years of experience within the field of remote HR.
+            Product Mastery products are designed to help Product Managers build
+            great products & accelerate their career through our suite of
+            digital tools & professional advice based on years of experience
+            within the field of product management.
           </span>
           <br />
           <h3>Our Products</h3>
