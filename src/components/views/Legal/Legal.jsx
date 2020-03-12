@@ -21,18 +21,18 @@ export default class Legal extends Component {
           <span>
             Product Mastery products are developed by Scribe Services Ltd., a
             limited company based in London, United Kingdom, and operated by our
-            team based between London & Berlin. Our website (team.Product
-            Mastery.app), as well as our sub-domains (such as this one) are run
-            by our internal team. We use third party services to build our
-            products, keep in touch with customers and to help us understand how
-            we can improve our products through analytics data. Many of those
-            services collect data about you, our customers, but we aim to also
-            be as explicit and transparent as possible when this is the case. As
-            such, below we outline precisely what those services are, how we use
-            them, as well as how we store & utilise any data those services
-            provide. For any questions, please reach out to Henry, our Head of
-            Product & Co-founder directly, at henrylatham5555@gmail.com. If you
-            contact Product Mastery by e-mail, we may keep a record of your
+            team based between London & Berlin. Our website (productmastery.co),
+            as well as our sub-domains (such as this one) are run by our
+            internal team. We use third party services to build our products,
+            keep in touch with customers and to help us understand how we can
+            improve our products through analytics data. Many of those services
+            collect data about you, our customers, but we aim to also be as
+            explicit and transparent as possible when this is the case. As such,
+            below we outline precisely what those services are, how we use them,
+            as well as how we store & utilise any data those services provide.
+            For any questions, please reach out to Henry, our Head of Product &
+            Co-founder directly, at henry@productmastery.co. If you contact
+            Product Mastery by e-mail, we may keep a record of your
             correspondence or comments. We may ask for your name, e-mail address
             and contact information in order to send you a reply.
           </span>
@@ -94,7 +94,7 @@ export default class Legal extends Component {
             functionality within our products. If you contact us, however, we
             will respond & act swiftly to delete any data stored on our
             services. Please contact Henry, our Head of Product & Co-founder
-            directly if this is the case: henrylatham5555@gmail.com
+            directly if this is the case: henry@productmastery.co
           </span>
           <br />
           <h3>Your use of the Product Mastery Products</h3>
