@@ -7,7 +7,7 @@
 
   &__widget {
     @include padding(top bottom, 6);
-    min-width: 320px;
     height: 630px;
+    min-width: 320px;
   }
 }
