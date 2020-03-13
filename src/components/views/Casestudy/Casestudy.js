@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Mixpanel } from '../../../Mixpanel';
-import { Button, Loading } from '../../elements';
+import { Button, Loading, Video } from '../../elements';
 import { Header } from '../../blocks';
 
 import './Casestudy.scss';
@@ -17,7 +17,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    // Mixpanel.track(`C / ${mixpanelEvent}`);
+    Mixpanel.track(`MBA / Casestudy / Submit`);
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -27,7 +27,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
   };
 
   return (
-    <div className="video__cta">
+    <div className="casestudymain__cta">
       <input
         ref={node => {
           email = node;
@@ -44,6 +44,11 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 };
 
 export default class Casestudy extends Component<Props> {
+  componentDidMount() {
+    Mixpanel.track('MBA / Casestudy');
+    console.log('MBA / Casestudy');
+  }
+
   render() {
     return (
       <div>
@@ -58,11 +63,15 @@ export default class Casestudy extends Component<Props> {
               Matters:{'"'}
             </h3>
           </div>
-          <div className="video">
-            <div className="video__img">
-              <img alt="Onboarding" src={video} className="video__img__bg" />
+          <div className="casestudymain">
+            <div className="casestudymain__img">
+              <img
+                alt="Onboarding"
+                src={video}
+                className="casestudymain__img__bg"
+              />
             </div>
-            <div className="video__text">
+            <div className="casestudymain__text">
               <h4>FREE Case Study Reveals:</h4>
               <br />
               <p>Why you need to focus on one thing</p>
@@ -71,7 +80,7 @@ export default class Casestudy extends Component<Props> {
               <br />
               <p>The simple 3-step system to getting stakeholder buy-in</p>
 
-              <div className="video__cta">
+              <div className="casestudymain__cta">
                 <MailchimpSubscribe
                   url="https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa"
                   render={({ subscribe, status, message }) => (
@@ -84,13 +93,13 @@ export default class Casestudy extends Component<Props> {
                         />
                       )}
                       {status === 'sending' && (
-                        <div className="video__cta__loading">
+                        <div className="casestudymain__cta__loading">
                           <Loading dark />
                         </div>
                       )}
                       {status === 'error' && (
                         <p
-                          className="video__cta__error"
+                          className="casestudymain__cta__error"
                           // eslint-disable-next-line
                           dangerouslySetInnerHTML={{ __html: message }}
                         />
@@ -98,12 +107,18 @@ export default class Casestudy extends Component<Props> {
                       {status === 'success' && (
                         <div className="overlay">
                           <div className="overlay__content">
+                            <Video
+                              id="MBA / Casestudy"
+                              header="Watch This Case Study Right Now:"
+                              videoId="https://media.w3.org/2010/05/sintel/trailer_hd.mp4#t=0.1"
+                              videoPoster={video}
+                            />
                             <p>
                               Now that you’ve absorbed all the cool training
                               above, if you feel you’re ready to STEP UP and
-                              move forwards fast with your business then apply
-                              now and let’s see how I can help EXPLODE your
-                              business by clicking below now…
+                              move forwards fast as a Product Manager, then
+                              apply now and let’s see how I can help ACCELERATE
+                              your career by clicking below now:
                             </p>
                             <Link to="/book-session">
                               <Button onClick={this.goToBookSession}>
@@ -125,6 +140,6 @@ export default class Casestudy extends Component<Props> {
   }
 
   goToBookSession = () => {
-    Mixpanel.track('C / Casestudy / Click Book Session');
+    Mixpanel.track('MBA / Casestudy / Click Book Session');
   };
 }

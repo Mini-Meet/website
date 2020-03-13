@@ -11,7 +11,7 @@ class Footer extends Component {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
     const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
     const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
-    const pricing = this.props.page === 'BLOG' ? 'active' : 'inactive';
+    const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
       this.props.page === 'TERMS & CONDITIONS' ? 'active' : 'inactive';
@@ -24,15 +24,9 @@ class Footer extends Component {
             </Link>
           </div>
           <div className="footer__list_item">
-            <a
-              className={about}
-              href="https://productmastery.substack.com/about"
-              onClick={this.goToAbout}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to="/about" className={terms}>
               About
-            </a>
+            </Link>
           </div>
           <div className="footer__list_item">
             <a
@@ -47,9 +41,9 @@ class Footer extends Component {
           </div>
           <div className="footer__list_item">
             <a
-              className={pricing}
+              className={blog}
               href="https://productmastery.substack.com/"
-              onClick={this.goToPricing}
+              onClick={this.goToBlog}
               target="_blank"
               rel="noopener noreferrer"
             >

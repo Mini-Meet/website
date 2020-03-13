@@ -22,7 +22,7 @@
   }
 }
 
-.video {
+.casestudymain {
   @include col;
   @include padding(top bottom, 3);
 
@@ -116,11 +116,15 @@
 
 .overlay {
   @include overlay-container;
+  overflow-y: scroll;
 
   &__content {
+    @include col;
+    @include padding(top bottom, 4);
+    max-width: 760px;
+
     p {
       @include padding(bottom, 3);
-      @include padding(top, 2);
     }
   }
 }
