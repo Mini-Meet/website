@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Mixpanel } from '../../../Mixpanel';
-import { Loading } from '../../elements';
+// import { Loading } from '../../elements';
 import { Header } from '../../blocks';
 
 import './Booking.scss';
@@ -25,7 +25,7 @@ export default class Booking extends Component<Props> {
         <Header dark />
         <div className="booking">
           <div
-            class="calendly-inline-widget booking__widget"
+            className="calendly-inline-widget booking__widget"
             data-url="https://calendly.com/henry_latham"
           ></div>
         </div>

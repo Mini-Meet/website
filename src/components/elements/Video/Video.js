@@ -12,6 +12,7 @@ type Props = {
   id: string,
   header: string,
   icon: string,
+  videoPoster: string,
 };
 
 type State = {

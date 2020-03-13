@@ -46,7 +46,6 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 export default class Casestudy extends Component<Props> {
   componentDidMount() {
     Mixpanel.track('MBA / Casestudy');
-    console.log('MBA / Casestudy');
   }
 
   render() {
