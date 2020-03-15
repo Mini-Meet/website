@@ -22,11 +22,11 @@ export default class Booking extends Component<Props> {
   render() {
     return (
       <div>
-        <Header dark />
+        <Header light />
         <div className="booking">
           <div
             className="calendly-inline-widget booking__widget"
-            data-url="https://calendly.com/henry_latham"
+            data-url="https://calendly.com/henry_latham/strategy-session"
           ></div>
         </div>
       </div>

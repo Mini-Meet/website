@@ -58,7 +58,7 @@ export default class Casestudy extends Component<Props> {
               Case Study For Product Managers:
             </p>
             <h3 className="casestudy__header_h3">
-              {'"'}How I Train Product Managers to Focus On The One Thing That
+              {'"'}How I Train Product Managers to Focus On The ONE Thing That
               Matters:{'"'}
             </h3>
           </div>
@@ -73,11 +73,15 @@ export default class Casestudy extends Component<Props> {
             <div className="casestudymain__text">
               <h4>FREE Case Study Reveals:</h4>
               <br />
-              <p>Why you need to focus on one thing</p>
+              <p>The biggest mistakes PMs make when building products</p>
               <br />
-              <p>The secret weapon to massive product success</p>
+              <p>The TWO things that separate the good from the great</p>
               <br />
-              <p>The simple 3-step system to getting stakeholder buy-in</p>
+              <p>
+                The simple, proven “4-Step System” that you can put to work
+                immediately for building a great product{' '}
+                <b>in your current role</b>
+              </p>
 
               <div className="casestudymain__cta">
                 <MailchimpSubscribe
@@ -119,7 +123,10 @@ export default class Casestudy extends Component<Props> {
                               apply now and let’s see how I can help ACCELERATE
                               your career by clicking below now:
                             </p>
-                            <Link to="/book-session">
+                            <Link
+                              to="/book-session"
+                              className="overlay__content_cta"
+                            >
                               <Button onClick={this.goToBookSession}>
                                 Apply Now To See If You Qualify
                               </Button>

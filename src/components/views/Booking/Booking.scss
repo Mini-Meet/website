@@ -3,7 +3,6 @@
 .booking {
   @include col;
   margin: 0 auto;
-  max-width: 800px;
 
   &__widget {
     @include padding(top bottom, 6);
