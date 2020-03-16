@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CookieBanner from 'react-cookie-banner';
 import { Link } from 'react-router-dom';
 
 import { Mixpanel } from '../../../Mixpanel';
@@ -36,19 +35,6 @@ export default class LinkedIn extends Component {
   render() {
     return (
       <div className="homePageWrapper">
-        <CookieBanner
-          message="This website uses cookies: "
-          onAccept={() => {}}
-          cookie="user-has-accepted-cookies"
-          dismissOnScroll={false}
-          link={
-            <div>
-              <Link to="/legal" className="cookie-link">
-                Read Terms & Conditions
-              </Link>
-            </div>
-          }
-        />
         <Header light />
         <div id="signup" />
         <Hero
