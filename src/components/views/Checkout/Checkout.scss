@@ -1,0 +1,12 @@
+@import '../../../styles/main';
+
+.booking {
+  @include col;
+  margin: 0 auto;
+
+  &__widget {
+    @include padding(top bottom, 6);
+    height: 630px;
+    min-width: 320px;
+  }
+}

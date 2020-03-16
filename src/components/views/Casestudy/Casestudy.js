@@ -75,7 +75,9 @@ export default class Casestudy extends Component<Props> {
               <br />
               <p>The biggest mistakes PMs make when building products</p>
               <br />
-              <p>The TWO things that separate the good from the great</p>
+              <p>
+                The <b>TWO</b> things that separate the good from the great
+              </p>
               <br />
               <p>
                 The simple, proven “4-Step System” that you can put to work
@@ -113,15 +115,14 @@ export default class Casestudy extends Component<Props> {
                             <Video
                               id="MBA / Casestudy"
                               header="Watch This Case Study Right Now:"
-                              videoId="https://media.w3.org/2010/05/sintel/trailer_hd.mp4#t=0.1"
+                              videoId="https://firebasestorage.googleapis.com/v0/b/pmba-d78ea.appspot.com/o/Value%20Video.mp4?alt=media&token=38391ed6-86e9-4960-b0dd-5123dd561e50"
                               videoPoster={video}
                             />
                             <p>
-                              Now that you’ve absorbed all the cool training
-                              above, if you feel you’re ready to STEP UP and
-                              move forwards fast as a Product Manager, then
-                              apply now and let’s see how I can help ACCELERATE
-                              your career by clicking below now:
+                              Now that you’ve touched the surface with our
+                              training above, if you feel ready to STEP UP &
+                              accelerate your product career, book a call with
+                              us:
                             </p>
                             <Link
                               to="/book-session"

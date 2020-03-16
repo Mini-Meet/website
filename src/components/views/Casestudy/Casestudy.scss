@@ -39,12 +39,14 @@
   &__img {
     @include col;
     @include padding(top, 2);
+    @include padding(bottom, 1);
     align-items: center;
     max-width: 100%;
     order: reverse;
 
     @media (min-width: $screen-md-min) {
       @include row;
+      @include padding(bottom, 4);
     }
 
     &__bg {
@@ -137,4 +139,8 @@
       margin: 0 auto;
     }
   }
+}
+
+.video {
+  @include modal-elevation;
 }

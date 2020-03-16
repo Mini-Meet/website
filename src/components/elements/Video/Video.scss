@@ -2,7 +2,7 @@
 
 .video {
   @include margin(top bottom, 4);
-  max-width: 560px;
+  max-width: 760px;
 
   &__header {
     @include row;
@@ -30,7 +30,7 @@
     border-radius: 3px;
     display: block;
     margin: 100px auto;
-    max-width: 520px !important;
+    max-width: 760px !important;
     outline: none !important;
     padding-top: 30% !important;
     width: 50% !important;
