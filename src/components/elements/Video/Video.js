@@ -77,7 +77,6 @@ export default class Video extends Component<Props, State> {
     if (toInteger(state.currentTime) === 30 && !videoTimerSet) {
       this.setState({ videoTimerSet: true });
       Mixpanel.track(`${id} / Video / ${toInteger(state.currentTime)}`);
-      console.log(`${id} / Video / ${toInteger(state.currentTime)}`);
     }
   };
 }

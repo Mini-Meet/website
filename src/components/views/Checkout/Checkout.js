@@ -6,7 +6,7 @@ import { Header } from '../../blocks';
 
 import './Checkout.scss';
 
-export default class Checkout extends Component<Props> {
+export default class Checkout extends Component {
   componentDidMount() {
     Mixpanel.track('MBA / Checkout');
   }
