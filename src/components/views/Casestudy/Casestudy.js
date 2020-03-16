@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Mixpanel } from '../../../Mixpanel';
-import { Button, Loading, Video } from '../../elements';
+import { Button, Loading } from '../../elements';
 import { Header } from '../../blocks';
 
 import './Casestudy.scss';
 
-import video from '../../../assets/images/course/henry-video.png';
+import videoImg from '../../../assets/images/course/henry-video.png';
 
 type FormTypes = {
   onSubscribe: Function,
@@ -52,6 +52,7 @@ export default class Casestudy extends Component<Props> {
     return (
       <div>
         <Header dark />
+
         <div className="casestudy">
           <div className="casestudy__header">
             <p className="casestudy__header_caption">
@@ -66,7 +67,7 @@ export default class Casestudy extends Component<Props> {
             <div className="casestudymain__img">
               <img
                 alt="Onboarding"
-                src={video}
+                src={videoImg}
                 className="casestudymain__img__bg"
               />
             </div>
@@ -112,12 +113,13 @@ export default class Casestudy extends Component<Props> {
                       {status === 'success' && (
                         <div className="overlay">
                           <div className="overlay__content">
-                            <Video
-                              id="MBA / Casestudy"
-                              header="Watch This Case Study Right Now:"
-                              videoId="https://firebasestorage.googleapis.com/v0/b/pmba-d78ea.appspot.com/o/Value%20Video.mp4?alt=media&token=38391ed6-86e9-4960-b0dd-5123dd561e50"
-                              videoPoster={video}
-                            />
+                            <div className="overlay__content_video wistia_responsive_padding">
+                              <div className="wistia_responsive_wrapper">
+                                <span className="wistia_embed wistia_async_a9qo01emc9 popover=true popoverAnimateThumbnail=true videoFoam=true">
+                                  &nbsp;
+                                </span>
+                              </div>
+                            </div>
                             <p>
                               Now that you’ve touched the surface with our
                               training above, if you feel ready to STEP UP &

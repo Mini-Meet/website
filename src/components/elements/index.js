@@ -11,4 +11,3 @@ export { default as Modal } from './Modal/Modal.js';
 export { default as OnboardingCard } from './OnboardingCard/OnboardingCard.js';
 export { default as Tag } from './Tag/Tag';
 export { default as Toggle } from './Toggle/Toggle';
-export { default as Video } from './Video/Video.js';

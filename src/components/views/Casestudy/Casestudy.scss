@@ -127,7 +127,7 @@
     max-width: 760px;
 
     p {
-      @include padding(bottom, 3);
+      @include padding(top bottom, 3);
       @include padding(left right, 0);
     }
 
@@ -138,9 +138,33 @@
     &_cta {
       margin: 0 auto;
     }
+
+    &_video {
+      @include modal-elevation;
+    }
   }
 }
 
-.video {
-  @include modal-elevation;
+// .video {
+//   @include modal-elevation;
+// }
+
+.wistia_responsive_padding {
+  padding: 62.5% 0 0;
+  position: relative;
+}
+
+.wistia_responsive_wrapper {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.wistia_embed {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 100%;
 }
