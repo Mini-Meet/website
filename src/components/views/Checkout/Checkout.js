@@ -21,11 +21,6 @@ export default class Checkout extends Component<Props> {
     return (
       <div>
         <Header light />
-        //{' '}
-        <Elements stripe={stripePromise}>
-          // <CheckoutForm />
-          //{' '}
-        </Elements>
       </div>
     );
   }
