@@ -71,12 +71,6 @@ export default class Casestudy extends Component<Props> {
               />
             </div>
             <div className="casestudymain__text">
-              <Video
-                id="MBA / Casestudy"
-                header="Watch This Case Study Right Now:"
-                videoId="https://firebasestorage.googleapis.com/v0/b/pmba-d78ea.appspot.com/o/Value%20Video.mp4?alt=media&token=38391ed6-86e9-4960-b0dd-5123dd561e50"
-                videoPoster={video}
-              />
               <h4>FREE Case Study Reveals:</h4>
               <br />
               <p>The biggest mistakes PMs make when building products</p>
@@ -118,14 +112,12 @@ export default class Casestudy extends Component<Props> {
                       {status === 'success' && (
                         <div className="overlay">
                           <div className="overlay__content">
-                            {
-                              //   <Video
-                              //   id="MBA / Casestudy"
-                              //   header="Watch This Case Study Right Now:"
-                              //   videoId="https://firebasestorage.googleapis.com/v0/b/pmba-d78ea.appspot.com/o/Value%20Video.mp4?alt=media&token=38391ed6-86e9-4960-b0dd-5123dd561e50"
-                              //   videoPoster={video}
-                              // />
-                            }
+                            <Video
+                              id="MBA / Casestudy"
+                              header="Watch This Case Study Right Now:"
+                              videoId="https://firebasestorage.googleapis.com/v0/b/pmba-d78ea.appspot.com/o/Value%20Video.mp4?alt=media&token=38391ed6-86e9-4960-b0dd-5123dd561e50"
+                              videoPoster={video}
+                            />
                             <p>
                               Now that you’ve touched the surface with our
                               training above, if you feel ready to STEP UP &
