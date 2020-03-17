@@ -9,5 +9,6 @@ export { default as Loading } from './Loading/Loading';
 export { default as MenuItem } from './MenuItem/MenuItem.js';
 export { default as Modal } from './Modal/Modal.js';
 export { default as OnboardingCard } from './OnboardingCard/OnboardingCard.js';
+export { default as ResourceCard } from './ResourceCard/ResourceCard.js';
 export { default as Tag } from './Tag/Tag';
 export { default as Toggle } from './Toggle/Toggle';

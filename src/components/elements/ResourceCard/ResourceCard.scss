@@ -1,0 +1,111 @@
+@import '../../../styles/main';
+
+.resourceCard {
+  @include margin(all, 0);
+  max-width: 288px;
+  min-width: 240px;
+
+  &__bg {
+    @include background-dark;
+    @include card-image-corner-radius;
+    @include flex;
+    min-height: 96px;
+    width: 100%;
+
+    // Logo container
+    &_container {
+      @include background-light;
+      @include border-white;
+      @include circular-radius;
+      @include flex;
+      @include position-center;
+      height: 64px;
+      left: 10px;
+      position: relative;
+      top: 48px;
+      width: 64px;
+    }
+
+    // Logo image
+    &_logo {
+      width: 66%;
+    }
+  }
+
+  &__title,
+  &__description {
+    text-align: left;
+  }
+
+  &__title {
+    @include padding(top, 3);
+    @include padding(left right, 1);
+  }
+
+  &__description {
+    @include text;
+    @include small;
+    @include padding(left right, 1);
+    @include padding(bottom, 2);
+  }
+
+  &__open {
+    @include transition-in-out;
+    bottom: 4px;
+    left: 85%;
+    opacity: 0;
+    position: relative;
+  }
+
+  &__icon {
+    color: $primary;
+  }
+
+  &__share {
+    @include circular-radius;
+    @include transition-in-out;
+    border: solid 2px $white-transparent;
+    bottom: 204px;
+    left: 83%;
+    opacity: 0;
+    position: relative;
+  }
+
+  // On Hover
+
+  &:hover &__open {
+    @include transition-in;
+    bottom: 8px;
+    opacity: 100%;
+  }
+
+  &:hover &__share {
+    @include transition-in;
+    bottom: 200px;
+    opacity: 100%;
+
+    &:hover {
+      border: solid 2px $white-low-opacity;
+      opacity: 80%;
+    }
+  }
+
+  &:hover &__title {
+    color: $primary;
+  }
+}
+
+// Card Overrides
+
+.card {
+  @include margin(all, reset);
+}
+
+.cardDefault {
+  @include padding(all, reset);
+
+  &:hover {
+    border-color: $light-grey;
+    transform: translateY(-1px);
+  }
+}

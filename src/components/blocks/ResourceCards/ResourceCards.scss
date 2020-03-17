@@ -1,0 +1,24 @@
+@import '../../../styles/main';
+
+.resourceCards {
+  @include col;
+  @include padding(left, 3);
+  @include padding(top, 4);
+
+  h4 {
+    @include row;
+    @include padding(top, 5);
+    @include padding(bottom, 3);
+    @include padding(left, 1);
+    text-align: left;
+  }
+
+  &__cards {
+    @include wrap;
+    @include padding(bottom, 5);
+
+    @media (min-width: $screen-sm-min) {
+      //
+    }
+  }
+}

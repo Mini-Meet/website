@@ -69,6 +69,10 @@
     &:hover > &__icon {
       color: $primary;
     }
+
+    .resourceCards {
+      left: -272px;
+    }
   }
 
   &__menu {
