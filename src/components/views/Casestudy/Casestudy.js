@@ -59,8 +59,8 @@ export default class Casestudy extends Component<Props> {
               Case Study For Product Managers:
             </p>
             <h3 className="casestudy__header_h3">
-              {'"'}How I Train Product Managers to Focus On The ONE Thing That
-              Matters:{'"'}
+              {'"'}How I Train Product Leaders to Prosper in The Remote,
+              Uncertain world of Covid-19:{'"'}
             </h3>
           </div>
           <div className="casestudymain">
@@ -74,7 +74,10 @@ export default class Casestudy extends Component<Props> {
             <div className="casestudymain__text">
               <h4>FREE Case Study Reveals:</h4>
               <br />
-              <p>The biggest mistakes PMs make when building products</p>
+              <p>
+                The biggest mistakes Product Leaders make when managing remote
+                product teams
+              </p>
               <br />
               <p>
                 The <b>TWO</b> things that separate the good from the great
@@ -83,7 +86,7 @@ export default class Casestudy extends Component<Props> {
               <p>
                 The simple, proven “4-Step System” that you can put to work
                 immediately for building a great product{' '}
-                <b>in your current role</b>
+                <b>in an uncertain, remote world</b>
               </p>
 
               <div className="casestudymain__cta">
