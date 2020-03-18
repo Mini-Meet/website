@@ -11,7 +11,7 @@ type Props = {
   title: string,
   titleTwo: string,
   subtitle: string,
-  btn: string,
+  btnText: string,
   url: string,
   mixpanelEvent: string,
   nextpage: boolean,

@@ -9,7 +9,7 @@ import './Footer.scss';
 class Footer extends Component {
   render() {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
-    const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
+    // const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
     const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
     const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
