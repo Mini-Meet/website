@@ -13,6 +13,7 @@ type Props = {
   subtitle: string,
   url: string,
   mixpanelEvent: string,
+  nextpageBtnText: string,
   nextpage: boolean,
   nextpageUrl: string,
   typeform: boolean,
@@ -27,7 +28,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    // Mixpanel.track(`C / ${mixpanelEvent}`);
+    // Mixpanel.track(`Remote / ${mixpanelEvent}`);
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -59,6 +60,7 @@ export default class Hero extends Component<Props> {
       title,
       titleTwo,
       subtitle,
+      btnText,
       nextpage,
       nextpageUrl,
       typeform,
@@ -80,7 +82,7 @@ export default class Hero extends Component<Props> {
           <div className="hero__nextpage">
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Link to={nextpageUrl}>
-                <Button onClick={this.goToNextPage}>FREE Case Study</Button>
+                <Button onClick={this.goToNextPage}>{btnText}</Button>
               </Link>
             </a>
           </div>
@@ -89,9 +91,7 @@ export default class Hero extends Component<Props> {
         {typeform && (
           <div className="hero__typeform">
             <a href={url} target="_blank" rel="noopener noreferrer">
-              <Button onClick={this.goToTypeform}>
-                Become a Product Mentor
-              </Button>
+              <Button onClick={this.goToTypeform}>{btnText}</Button>
             </a>
           </div>
         )}
@@ -152,7 +152,7 @@ export default class Hero extends Component<Props> {
   }
 
   goToTypeform = () => {
-    Mixpanel.track(`C / ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`Remote / ${this.props.mixpanelEvent}`);
   };
 
   goToNextPage = () => {

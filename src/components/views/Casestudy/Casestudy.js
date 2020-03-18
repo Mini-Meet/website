@@ -17,7 +17,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    Mixpanel.track(`MBA / Casestudy / Submit`);
+    Mixpanel.track(`Remote / Casestudy / Submit`);
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -45,7 +45,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
 export default class Casestudy extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('MBA / Casestudy');
+    Mixpanel.track('Remote / Casestudy');
   }
 
   render() {
@@ -149,6 +149,6 @@ export default class Casestudy extends Component<Props> {
   }
 
   goToBookSession = () => {
-    Mixpanel.track('MBA / Casestudy / Click Book Session');
+    Mixpanel.track('Remote / Casestudy / Click Book Session');
   };
 }

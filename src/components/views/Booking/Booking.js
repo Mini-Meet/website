@@ -8,7 +8,7 @@ import './Booking.scss';
 
 export default class Booking extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('MBA / Booking');
+    Mixpanel.track('Remote / Booking');
 
     const head = document.querySelector('head');
     const script = document.createElement('script');
@@ -34,6 +34,6 @@ export default class Booking extends Component<Props> {
   }
 
   goToBookSession = () => {
-    Mixpanel.track('MBA / Casestudy / Click Book Session');
+    Mixpanel.track('Remote / Casestudy / Click Book Session');
   };
 }

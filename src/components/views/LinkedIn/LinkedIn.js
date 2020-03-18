@@ -28,7 +28,7 @@ import imgMentors from '../../../assets/images/prototype/product_mentors.png';
 
 export default class LinkedIn extends Component {
   componentDidMount() {
-    Mixpanel.track('C / Felix');
+    Mixpanel.track('Remote / Felix');
   }
 
   render() {
@@ -81,6 +81,6 @@ export default class LinkedIn extends Component {
     );
   }
   handleBannerBtnClick = () => {
-    Mixpanel.track('C / Felix / PM101');
+    Mixpanel.track('Remote / Felix / PM101');
   };
 }

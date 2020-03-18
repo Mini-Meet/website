@@ -11,7 +11,7 @@ import portrait from '../../../assets/images/course/henry-portrait.jpg';
 
 export default class About extends Component {
   componentDidMount() {
-    Mixpanel.track('C / About');
+    Mixpanel.track('Remote / About');
   }
 
   render() {
@@ -55,6 +55,6 @@ export default class About extends Component {
   }
 
   goToAboutCaseStudy = () => {
-    Mixpanel.track('C / About / Click Case Study');
+    Mixpanel.track('Remote / About / Click Case Study');
   };
 }

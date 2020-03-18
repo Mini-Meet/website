@@ -6,7 +6,7 @@ import './Home.scss';
 
 export default class LinkedIn extends Component {
   componentDidMount() {
-    Mixpanel.track('MBA / Home');
+    Mixpanel.track('Remote / Home');
   }
 
   render() {
@@ -14,12 +14,12 @@ export default class LinkedIn extends Component {
       <div className="homePageWrapper">
         <Header light />
         <Hero
-          title="We Train Product Managers to Build The Next Big Thing"
-          subtitle="Junior/Mid-Level PM stuck building ineffective features & frustrated in your current role? If you're interested in learning how to build great products, enjoy more autonomy & achieve rapid promotion, click the button below to learn more:"
-          btnText="Join Waiting List"
-          mixpanelEvent="MBA / Home / Click Case Study"
-          nextpage
-          nextpageUrl="/case-study"
+          title="We Empower Product Leaders to Prosper in A Remote, Uncertain World"
+          subtitle="Worried about your job security during The Covid Crisis? About how to adapt your product to a new reality? Urgently need to adapt your management style in a remote world? Learn how to turn crisis into opportunity with our free webinar, teaching you how to run effective, adaptable, remote product teams:"
+          btnText="Join Free Webinar"
+          mixpanelEvent="Remote / Home / Click Webinar"
+          typeform
+          url="https://product-mastery.webinargeek.com/how-your-product-team-can-prosper-in-a-remote-uncertain-world"
         />
         <Featured header="Where our Product Masters Work" />
         <Footer page="HOME" />

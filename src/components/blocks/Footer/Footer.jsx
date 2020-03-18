@@ -60,7 +60,10 @@ class Footer extends Component {
         <div className="footer__logo">
           <div className="footer__logo_book">
             <img alt="logo" src={Book} className="footer__logo_bookimg" />
-            <p>Want to learn more about building great products?</p>
+            <p>
+              Want to learn more about building the foundations for startup
+              success?
+            </p>
             <a
               href="https://www.amazon.com/Why-Your-Startup-Failing-foundations-ebook/dp/B07XD444YV/ref=pd_rhf_ee_p_img_1?_encoding=UTF8&psc=1&refRID=5X596WYG1237FMSSWZ7E"
               onClick={this.goToBook}
@@ -79,16 +82,16 @@ class Footer extends Component {
   }
 
   goToAbout = () => {
-    Mixpanel.track('C / Page / About');
+    Mixpanel.track('Remote / Page / About');
   };
   goToCourses = () => {
-    Mixpanel.track('C / Page / PM101');
+    Mixpanel.track('Remote / Page / PM101');
   };
   goToPricing = () => {
-    Mixpanel.track('C / Page / Pricing');
+    Mixpanel.track('Remote / Page / Pricing');
   };
   goToBook = () => {
-    Mixpanel.track('C / Page / Book');
+    Mixpanel.track('Remote / Page / Book');
   };
 }
 
