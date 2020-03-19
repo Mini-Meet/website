@@ -10,7 +10,7 @@ class Footer extends Component {
   render() {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
     // const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
-    const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
+    // const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
     const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
@@ -28,17 +28,19 @@ class Footer extends Component {
               About
             </Link>
           </div>
-          <div className="footer__list_item">
-            <a
-              className={courses}
-              href="https://courses.productmastery.co/"
-              onClick={this.goToCourses}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Courses
-            </a>
-          </div>
+          {
+            //   <div className="footer__list_item">
+            //   <a
+            //     className={courses}
+            //     href="https://courses.productmastery.co/"
+            //     onClick={this.goToCourses}
+            //     target="_blank"
+            //     rel="noopener noreferrer"
+            //   >
+            //     Courses
+            //   </a>
+            // </div>
+          }
           <div className="footer__list_item">
             <a
               className={blog}
