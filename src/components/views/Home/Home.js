@@ -16,10 +16,10 @@ export default class Home extends Component {
         <Hero
           title="We Empower Product Leaders to Prosper in A Remote, Uncertain World"
           subtitle="Worried about your job security during The Covid Crisis? About how to adapt your product to a new reality? Urgently need to adapt your management style in a remote world? Learn how to turn crisis into opportunity with our free webinar, teaching you how to run effective, adaptable, remote product teams:"
-          btnText="Join Free Webinar"
+          btnText="Your Free Case Study"
           mixpanelEvent="Home / Click Webinar"
-          typeform
-          url="https://product-mastery.webinargeek.com/how-your-product-team-can-prosper-in-a-remote-uncertain-world"
+          nextpage
+          nextpageUrl="/case-study"
         />
         <Featured header="Where our Product Masters Work" />
         <Footer page="HOME" />
