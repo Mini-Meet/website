@@ -14,8 +14,8 @@ export default class Home extends Component {
       <div className="homePageWrapper">
         <Header light />
         <Hero
-          title="We Empower Product Leaders to Prosper in A Remote, Uncertain World"
-          subtitle="Worried about your job security during The Covid Crisis? About how to adapt your product to a new reality? Urgently need to adapt your management style in a remote world? Learn how to turn crisis into opportunity with our free webinar, teaching you how to run effective, adaptable, remote product teams:"
+          title="We Coach Product Leaders to Thrive in A Remote, Uncertain World"
+          subtitle="Worried about your job security during The Covid Crisis? About how to adapt your product to a new reality? Urgently need to adapt your management style in a remote world? Learn how to turn crisis into opportunity with our training programme, teaching you how to run effective, adaptable, remote product teams:"
           btnText="Your Free Case Study"
           mixpanelEvent="Home / Click Webinar"
           nextpage

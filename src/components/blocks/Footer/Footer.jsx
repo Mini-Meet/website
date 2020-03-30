@@ -44,7 +44,7 @@ class Footer extends Component {
           <div className="footer__list_item">
             <a
               className={blog}
-              href="https://productmastery.substack.com/"
+              href="https://blog.productmastery.co"
               onClick={this.goToBlog}
               target="_blank"
               rel="noopener noreferrer"
