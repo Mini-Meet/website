@@ -92,6 +92,7 @@
     &__loading,
     &__error,
     &__success {
+      @include text;
       @include padding(top bottom, 1);
       margin: 0 auto;
       max-width: 400px;

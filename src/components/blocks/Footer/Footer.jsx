@@ -10,7 +10,7 @@ class Footer extends Component {
   render() {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
     // const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
-    // const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
+    const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
     const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
@@ -28,19 +28,17 @@ class Footer extends Component {
               About
             </Link>
           </div>
-          {
-            //   <div className="footer__list_item">
-            //   <a
-            //     className={courses}
-            //     href="https://courses.productmastery.co/"
-            //     onClick={this.goToCourses}
-            //     target="_blank"
-            //     rel="noopener noreferrer"
-            //   >
-            //     Courses
-            //   </a>
-            // </div>
-          }
+          <div className="footer__list_item">
+            <a
+              className={courses}
+              href="https://courses.productmastery.co/"
+              onClick={this.goToCourses}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Courses
+            </a>
+          </div>
           <div className="footer__list_item">
             <a
               className={blog}
@@ -84,16 +82,16 @@ class Footer extends Component {
   }
 
   goToAbout = () => {
-    Mixpanel.track('Remote / Page / About');
+    Mixpanel.track('Slack / Page / About');
   };
   goToCourses = () => {
-    Mixpanel.track('Remote / Page / PM101');
+    Mixpanel.track('Slack / Page / PM101');
   };
   goToPricing = () => {
-    Mixpanel.track('Remote / Page / Pricing');
+    Mixpanel.track('Slack / Page / Pricing');
   };
   goToBook = () => {
-    Mixpanel.track('Remote / Page / Book');
+    Mixpanel.track('Slack / Page / Book');
   };
 }
 

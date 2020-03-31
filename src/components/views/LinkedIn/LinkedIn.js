@@ -6,7 +6,7 @@ import './LinkedIn.scss';
 
 export default class LinkedIn extends Component {
   componentDidMount() {
-    Mixpanel.track('Remote / Home');
+    Mixpanel.track('Slack / Home');
   }
 
   render() {

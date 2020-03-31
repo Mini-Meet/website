@@ -26,9 +26,9 @@ export default class AcceptReferral extends Component {
           return;
         }
         // Generic Mixpanel event to track funnel
-        Mixpanel.track('Remote / Referral / Accepted');
+        Mixpanel.track('Slack / Referral / Accepted');
         // Success response - redirect and set tracker
-        Mixpanel.track(`Remote / Referral / Accepted: ${referralLink}`);
+        Mixpanel.track(`Slack / Referral / Accepted: ${referralLink}`);
         window.location.href = 'www.productmastery.co';
       })
       .catch(() => {

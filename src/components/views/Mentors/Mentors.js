@@ -14,7 +14,7 @@ import './Mentors.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('Remote / Page / Mentors');
+    Mixpanel.track('Slack / Page / Mentors');
   }
 
   render() {

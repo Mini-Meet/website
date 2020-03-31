@@ -8,7 +8,7 @@ import './Checkout.scss';
 
 export default class Checkout extends Component {
   componentDidMount() {
-    Mixpanel.track('Remote / Checkout');
+    Mixpanel.track('Slack / Checkout');
   }
 
   render() {

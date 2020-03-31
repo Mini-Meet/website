@@ -16,7 +16,7 @@ type Props = {
   mixpanelEvent: string,
   nextpage: boolean,
   nextpageUrl: string,
-  typeform: boolean,
+  externalPage: boolean,
   referralForm: boolean,
   mailchimpForm: boolean,
 };
@@ -27,10 +27,11 @@ type FormTypes = {
 
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
-  const submit = () => {
-    // Mixpanel.track(`Remote / ${mixpanelEvent}`);
 
+  const submit = () => {
     if (email && email.value && email.value.indexOf('@') > -1) {
+      Mixpanel.track(`Slack / Home / Subscribe!`);
+
       onSubscribe({
         EMAIL: email.value,
       });
@@ -63,7 +64,7 @@ export default class Hero extends Component<Props> {
       btnText,
       nextpage,
       nextpageUrl,
-      typeform,
+      externalPage,
       referralForm,
       mixpanelEvent,
       mailchimpForm,
@@ -88,10 +89,10 @@ export default class Hero extends Component<Props> {
           </div>
         )}
 
-        {typeform && (
+        {externalPage && (
           <div className="hero__typeform">
             <a href={url} target="_blank" rel="noopener noreferrer">
-              <Button onClick={this.goToTypeform}>{btnText}</Button>
+              <Button onClick={this.goToExternalLink}>{btnText}</Button>
             </a>
           </div>
         )}
@@ -124,17 +125,19 @@ export default class Hero extends Component<Props> {
                 )}
                 {status === 'success' && (
                   <div>
-                    <div className="hero__form__loading">
-                      <Loading dark />
+                    <div className="hero__form__success">
+                      Successfully added!
                     </div>
-                    <iframe
-                      title="Survey"
-                      id="typeform-full"
-                      width="100%"
-                      height="200%"
-                      frameBorder="0"
-                      src="https://productmastery.typeform.com/to/fAD2UV"
-                    ></iframe>
+                    {
+                      // <iframe
+                      //   title="Survey"
+                      //   id="typeform-full"
+                      //   width="100%"
+                      //   height="200%"
+                      //   frameBorder="0"
+                      //   src="https://productmastery.typeform.com/to/fAD2UV"
+                      // ></iframe>
+                    }
                   </div>
                 )}
                 {!status && (
@@ -151,8 +154,8 @@ export default class Hero extends Component<Props> {
     );
   }
 
-  goToTypeform = () => {
-    Mixpanel.track(`Remote / ${this.props.mixpanelEvent}`);
+  goToExternalLink = () => {
+    Mixpanel.track(`Slack / ${this.props.mixpanelEvent}`);
   };
 
   goToNextPage = () => {

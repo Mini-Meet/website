@@ -90,7 +90,7 @@ export default class Menu extends Component<Props, State> {
       hideMenu: !hideMenu,
     });
 
-    Mixpanel.track(`Remote / Menu / ${hideMenu ? 'true' : 'false'}`);
+    Mixpanel.track(`Slack / Menu / ${hideMenu ? 'true' : 'false'}`);
   };
 
   // handleMenuItemClick = (id: string) => {
