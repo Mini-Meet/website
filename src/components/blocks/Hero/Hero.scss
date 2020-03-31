@@ -65,6 +65,7 @@
   // Mailchimp Form
   &__form {
     @include col;
+    align-items: center;
     margin: 0 auto;
     max-width: 820px;
 
@@ -85,8 +86,11 @@
     }
 
     button {
+      @include flex;
       @include margin(left, reset);
+      @include padding(left right, 3);
       font-size: 11px;
+      text-align: center;
     }
 
     &__loading,

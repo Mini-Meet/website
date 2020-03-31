@@ -47,7 +47,6 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
         type="email"
         placeholder="Enter your email"
       />
-      <br />
       <Button primary onClick={submit}>
         Join Waiting List
       </Button>
