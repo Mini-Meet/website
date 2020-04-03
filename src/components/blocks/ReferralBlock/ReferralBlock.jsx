@@ -137,7 +137,7 @@ export default class ReferralBlock extends Component {
           });
           return;
         }
-        Mixpanel.track('Slack / Referral / Sent');
+        Mixpanel.track('Course / Referral / Sent');
         this.getStatistics(this.props.referralLink);
         this.setState({
           error: response.data.data.failureMessages,

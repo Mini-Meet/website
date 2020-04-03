@@ -7,7 +7,7 @@
 
 @mixin border-input {
   @extend %border-base;
-  border-color: $secondary;
+  border-color: transparentize($secondary, 0.7);
 }
 
 @mixin border-input-focus {

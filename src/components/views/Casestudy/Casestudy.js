@@ -17,7 +17,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    Mixpanel.track(`Slack / Casestudy / Submit`);
+    Mixpanel.track(`Course / Casestudy / Submit`);
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -37,7 +37,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
       />
       <br />
       <Button primary onClick={submit}>
-        Get Your Case Study Now {'>'}
+        Get Your Case Study {'>'}
       </Button>
     </div>
   );
@@ -45,7 +45,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
 export default class Casestudy extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('Slack / Casestudy');
+    Mixpanel.track('Course / CS');
   }
 
   render() {
@@ -59,8 +59,8 @@ export default class Casestudy extends Component<Props> {
               Case Study For Product Managers:
             </p>
             <h3 className="casestudy__header_h3">
-              {'"'}How I Train Product Leaders to Prosper in The Remote,
-              Uncertain world of Covid-19:{'"'}
+              {'"'}How I Train Product Managers to Build High-Value Products
+              Within 40 Days{'"'}
             </h3>
           </div>
           <div className="casestudymain">
@@ -75,8 +75,7 @@ export default class Casestudy extends Component<Props> {
               <h4>FREE Case Study Reveals:</h4>
               <br />
               <p>
-                The biggest mistakes Product Leaders make when managing remote
-                product teams
+                How <b>most</b> Product Managers sabotage their career
               </p>
               <br />
               <p>
@@ -84,9 +83,8 @@ export default class Casestudy extends Component<Props> {
               </p>
               <br />
               <p>
-                The simple, proven “4-Step System” that you can put to work
-                immediately for building a great product{' '}
-                <b>in an uncertain, remote world</b>
+                Our proven process for <b>launching profitable products</b> by
+                yourself, in your current role{' '}
               </p>
 
               <div className="casestudymain__cta">
@@ -118,7 +116,7 @@ export default class Casestudy extends Component<Props> {
                           <div className="overlay__content">
                             <div className="overlay__content_video wistia_responsive_padding">
                               <div className="wistia_responsive_wrapper">
-                                <span className="wistia_embed wistia_async_a9qo01emc9 popover=true popoverAnimateThumbnail=true videoFoam=true">
+                                <span className="wistia_embed wistia_async_hziirxzwao popover=true popoverAnimateThumbnail=true videoFoam=true">
                                   &nbsp;
                                 </span>
                               </div>
@@ -152,6 +150,6 @@ export default class Casestudy extends Component<Props> {
   }
 
   goToBookSession = () => {
-    Mixpanel.track('Slack / Casestudy / Click Book Session');
+    Mixpanel.track('Course / CS / Click Book');
   };
 }

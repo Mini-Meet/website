@@ -20,14 +20,14 @@ export default class Testimonials extends Component {
         name: 'Craig Lawson',
         title: 'Product Manager, Sift',
         comment:
-          'Putting the theory of concepts like product strategy into practice, with the guidance of mentors, has been absolutely invaluable',
+          'Being able to identify & validate new business opportunities by putting product strategy into practice has been invaluable!',
       },
       {
         photo: customer2,
         name: 'Rebeca Casa',
         title: 'Junior Product Manager, HeyCater',
         comment:
-          'The autonomy I have gained from moving away from project management towards a true product management role has been really rewarding',
+          'I love the autonomy I have gained from moving away from project management by showing I can identify & actually generate revenue from new opportunities',
       },
       {
         photo: customer1,
