@@ -17,7 +17,7 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    Mixpanel.track(`Course / Casestudy / Submit`);
+    Mixpanel.track(`Course / CS Submit`);
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -150,6 +150,6 @@ export default class Casestudy extends Component<Props> {
   }
 
   goToBookSession = () => {
-    Mixpanel.track('Course / CS / Click Book');
+    Mixpanel.track('Course / CS / Book');
   };
 }
