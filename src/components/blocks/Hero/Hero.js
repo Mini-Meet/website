@@ -158,6 +158,6 @@ export default class Hero extends Component<Props> {
   };
 
   goToNextPage = () => {
-    Mixpanel.track(`${this.props.mixpanelEvent}`);
+    Mixpanel.track(`Course / ${this.props.mixpanelEvent}`);
   };
 }
