@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Mixpanel } from '../../../Mixpanel';
 
 import { Header, Footer } from '../../blocks';
@@ -11,7 +10,7 @@ import portrait from '../../../assets/images/course/henry-portrait.jpg';
 
 export default class About extends Component {
   componentDidMount() {
-    Mixpanel.track('Course / About');
+    Mixpanel.track('LDJ / About');
   }
 
   render() {
@@ -43,9 +42,9 @@ export default class About extends Component {
               great products & rapidly level up their product career.{' '}
             </p>
 
-            <Link to="/case-study">
-              <Button onClick={this.goToAboutCaseStudy}>FREE Case Study</Button>
-            </Link>
+            <a href="https://calendly.com/henry_latham/strategy-session">
+              <Button onClick={this.goToAboutCaseStudy}>Book A Call</Button>
+            </a>
           </div>
         </div>
 
@@ -55,6 +54,6 @@ export default class About extends Component {
   }
 
   goToAboutCaseStudy = () => {
-    Mixpanel.track('Course / About / Click Case Study');
+    Mixpanel.track('LDJ / About / Click Case Study');
   };
 }

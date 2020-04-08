@@ -90,7 +90,7 @@ export default class Menu extends Component<Props, State> {
       hideMenu: !hideMenu,
     });
 
-    Mixpanel.track(`Course / Menu / ${hideMenu ? 'true' : 'false'}`);
+    Mixpanel.track(`LDJ / Menu / ${hideMenu ? 'true' : 'false'}`);
   };
 
   // handleMenuItemClick = (id: string) => {

@@ -8,7 +8,7 @@ import './Checkout.scss';
 
 export default class Checkout extends Component {
   componentDidMount() {
-    Mixpanel.track('Course / Checkout');
+    Mixpanel.track('LDJ / Checkout');
   }
 
   render() {

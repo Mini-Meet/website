@@ -30,7 +30,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
   const submit = () => {
     if (email && email.value && email.value.indexOf('@') > -1) {
-      Mixpanel.track(`Course / Home / Subscribe!`);
+      Mixpanel.track(`LDJ / Home / Subscribe!`);
 
       onSubscribe({
         EMAIL: email.value,
@@ -154,10 +154,10 @@ export default class Hero extends Component<Props> {
   }
 
   goToExternalLink = () => {
-    Mixpanel.track(`Course / ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`LDJ / ${this.props.mixpanelEvent}`);
   };
 
   goToNextPage = () => {
-    Mixpanel.track(`Course / ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`LDJ / ${this.props.mixpanelEvent}`);
   };
 }

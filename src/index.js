@@ -16,7 +16,7 @@ import Home from './components/views/Home/Home';
 import Privacy from './components/views/Privacy/Privacy';
 import Legal from './components/views/Legal/Legal';
 // acquisiton experiment
-import LinkedIn from './components/views/LinkedIn/LinkedIn';
+import Training from './components/views/Training/Training';
 import Mentors from './components/views/Mentors/Mentors';
 import Referee from './components/views/Referee/Referee';
 import Referral from './components/views/Referral/Referral';
@@ -41,7 +41,7 @@ ReactDOM.render(
         <Route path="/referee" exact component={Referee} />
         <Route path="/register" exact component={Register} />
         <Route path="/legal" exact component={Legal} />
-        <Route path="/beta" exact component={LinkedIn} />
+        <Route path="/training" exact component={Training} />
         <Route path="/mentors" exact component={Mentors} />
         <Route path="/referrals/:referralLink" exact component={Referral} />
         <Route path="/register" exact component={Register} />

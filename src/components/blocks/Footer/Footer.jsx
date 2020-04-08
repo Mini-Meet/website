@@ -10,7 +10,7 @@ class Footer extends Component {
   render() {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
     // const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
-    // const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
+    const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
     const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
@@ -37,6 +37,17 @@ class Footer extends Component {
               rel="noopener noreferrer"
             >
               Blog
+            </a>
+          </div>
+          <div className="footer__list_item">
+            <a
+              className={courses}
+              href="https://courses.productmastery.co/"
+              onClick={this.goToCourses}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Courses
             </a>
           </div>
           <div className="footer__list_item">
@@ -71,16 +82,16 @@ class Footer extends Component {
   }
 
   goToAbout = () => {
-    Mixpanel.track('Course / Page / About');
+    Mixpanel.track('LDJ / Page / About');
   };
   goToCourses = () => {
-    Mixpanel.track('Course / Page / PM101');
+    Mixpanel.track('LDJ / Page / PM101');
   };
   goToPricing = () => {
-    Mixpanel.track('Course / Page / Pricing');
+    Mixpanel.track('LDJ / Page / Pricing');
   };
   goToBook = () => {
-    Mixpanel.track('Course / Page / Book');
+    Mixpanel.track('LDJ / Page / Book');
   };
 }
 
