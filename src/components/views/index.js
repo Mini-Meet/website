@@ -2,6 +2,7 @@
 export { default as About } from './About/About';
 export { default as Booking } from './Booking/Booking';
 export { default as Casestudy } from './Casestudy/Casestudy.js';
+export { default as Guide2020 } from './Guide2020/Guide2020';
 export { default as Home } from './Home/Home';
 export { default as Legal } from './Legal/Legal';
 export { default as Mentors } from './Mentors/Mentors';

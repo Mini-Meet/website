@@ -11,6 +11,7 @@ type Props = {
   blockTwoHeader: string,
   blockTwoBody: string,
   blockTwoImage: string,
+  blockThree: boolean,
   blockThreeHeader: string,
   blockThreeBody: string,
   blockThreeImage: string,
@@ -32,6 +33,7 @@ export default class ProductShowcase extends Component<Props> {
       blockTwoHeader,
       blockTwoBody,
       blockTwoImage,
+      blockThree,
       blockThreeHeader,
       blockThreeBody,
       blockThreeImage,
@@ -91,27 +93,29 @@ export default class ProductShowcase extends Component<Props> {
           </div>
         </div>
 
-        <div className="block block__reverse">
-          <div className="block__text block__text_left">
-            <h3>{blockThreeHeader}</h3>
-            <p>{blockThreeBody}</p>
-            <a
-              className="block__cta"
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {cta}
-            </a>
+        {blockThree && (
+          <div className="block block__reverse">
+            <div className="block__text block__text_left">
+              <h3>{blockThreeHeader}</h3>
+              <p>{blockThreeBody}</p>
+              <a
+                className="block__cta"
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {cta}
+              </a>
+            </div>
+            <div className="block__img">
+              <img
+                alt="Team Retreats"
+                src={blockThreeImage}
+                className="block__img__bg"
+              />
+            </div>
           </div>
-          <div className="block__img">
-            <img
-              alt="Team Retreats"
-              src={blockThreeImage}
-              className="block__img__bg"
-            />
-          </div>
-        </div>
+        )}
 
         {blockFour && (
           <div className="block">

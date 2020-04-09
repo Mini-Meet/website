@@ -42,6 +42,7 @@ export default class Home extends Component {
           blockTwoHeader="Prioritise Your Roadmap in 60 Minutes"
           blockTwoBody="Align your teams around a clear strategic objective & define high-impact, low-effort features, validated with real customers"
           blockTwoImage={blockTwoImage}
+          blockThree
           blockThreeHeader="No Idea How To Run Experiments & Measure Success?"
           blockThreeBody="Considering 50-70% of feature ideas will fail, it's essential you build a culture of experimentation & continuous improvement. Luckily, we are here to help."
           blockThreeImage={blockThreeImage}

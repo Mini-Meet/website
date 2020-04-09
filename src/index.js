@@ -13,6 +13,7 @@ import About from './components/views/About/About';
 import Booking from './components/views/Booking/Booking';
 import Casestudy from './components/views/Casestudy/Casestudy.js';
 import Home from './components/views/Home/Home';
+import Guide2020 from './components/views/Guide2020/Guide2020';
 import Privacy from './components/views/Privacy/Privacy';
 import Legal from './components/views/Legal/Legal';
 // acquisiton experiment
@@ -37,6 +38,7 @@ ReactDOM.render(
         <Route path="/about" exact component={About} />
         <Route path="/book-session" exact component={Booking} />
         <Route path="/case-study" exact component={Casestudy} />
+        <Route path="/guide-2020" exact component={Guide2020} />
         <Route path="/privacy" exact component={Privacy} />
         <Route path="/referee" exact component={Referee} />
         <Route path="/register" exact component={Register} />
