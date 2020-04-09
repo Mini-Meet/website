@@ -21,7 +21,7 @@ export default class Home extends Component {
   }
 
   render() {
-    const url = 'https://calendly.com/henry_latham/strategy-session';
+    const url = 'https://calendly.com/henry_latham/30min';
 
     return (
       <div className="homePageWrapper">

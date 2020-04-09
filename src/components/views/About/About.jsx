@@ -42,7 +42,7 @@ export default class About extends Component {
               great products & rapidly level up their product career.{' '}
             </p>
 
-            <a href="https://calendly.com/henry_latham/strategy-session">
+            <a href="https://calendly.com/henry_latham/30min">
               <Button onClick={this.goToAboutCaseStudy}>Book A Call</Button>
             </a>
           </div>
