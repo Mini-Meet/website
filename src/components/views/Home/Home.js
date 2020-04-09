@@ -11,8 +11,8 @@ import {
 import './Home.scss';
 
 // Images
-// import blockOneImage from '../../../assets/images/prototype/product_slack.png';
-// import blockTwoImage from '../../../assets/images/prototype/product_upvote.png';
+import blockOneImage from '../../../assets/images/prototype/product_strategy_session.png';
+import blockTwoImage from '../../../assets/images/prototype/product_workshop.png';
 import blockThreeImage from '../../../assets/images/prototype/product_q&a.png';
 
 export default class Home extends Component {
@@ -35,15 +35,15 @@ export default class Home extends Component {
           url={url}
         />
         <ProductShowcase
-          header="Our Process"
-          blockOneHeader="Product Leaders With No Clear Strategy?"
-          blockOneBody=" We start with a 1-hour strategy call to understand your current business challenges"
-          blockOneImage={blockThreeImage}
-          blockTwoHeader="PM Not Sure How To Prioritise?"
-          blockTwoBody="We help you create a framework for strong, autonomous decision-making"
-          blockTwoImage={blockThreeImage}
-          blockThreeHeader="No Idea How To Experiment & Measure Success?"
-          blockThreeBody="We set up an iterative, ongoing process of continuous improvemnet"
+          header="Our Process For Building High-Value Products"
+          blockOneHeader="Define A Clear Product Strategy"
+          blockOneBody=" Join us for a free 1x1 strategy session to define a high-impact objective for the workshop"
+          blockOneImage={blockOneImage}
+          blockTwoHeader="Prioritise Your Roadmap in 60 Minutes"
+          blockTwoBody="Align your teams around a clear strategic objective & define high-impact, low-effort features, validated with real customers"
+          blockTwoImage={blockTwoImage}
+          blockThreeHeader="No Idea How To Run Experiments & Measure Success?"
+          blockThreeBody="Considering 50-70% of feature ideas will fail, it's essential you build a culture of experimentation & continuous improvement. Luckily, we are here to help."
           blockThreeImage={blockThreeImage}
           cta="Get Started >"
           url={url}

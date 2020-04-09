@@ -20,21 +20,21 @@ export default class Testimonials extends Component {
         name: 'Craig Lawson',
         title: 'Product Manager, Sift',
         comment:
-          'Being able to identify & validate new business opportunities by putting product strategy into practice has been invaluable!',
+          'We have always struggling aligning leadership around clear objectives & communicating those to our product leads - until running our first workshop!',
       },
       {
         photo: customer2,
         name: 'Rebeca Casa',
         title: 'Junior Product Manager, HeyCater',
         comment:
-          'I love the autonomy I have gained from moving away from project management by showing I can identify & actually generate revenue from new opportunities',
+          'I love the autonomy that has come from having a crystal clear objective & buy-in from management on which features we are testing.',
       },
       {
         photo: customer1,
         name: 'Mark Sarifidis',
         title: 'Product Lead, Growth Media',
         comment:
-          'We read The Lean Startup, Hacking Growth, etc, but never really worked out how to apply the principles of lean experimentation & measuring impact - until now',
+          'We read The Lean Startup & Hacking Growth, but never worked out how to apply the principles in practice. Workshops & their ongoing support have been a huge help.',
       },
     ];
 

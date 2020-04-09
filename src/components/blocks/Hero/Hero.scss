@@ -60,6 +60,10 @@
     a {
       text-decoration: none;
     }
+
+    button {
+      @include padding(left right, 3);
+    }
   }
 
   // Mailchimp Form

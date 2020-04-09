@@ -51,7 +51,12 @@ export default class ProductShowcase extends Component<Props> {
           <div className="block__text block__text_left">
             <h3>{blockOneHeader}</h3>
             <p>{blockOneBody}</p>
-            <a className="block__cta" href={url}>
+            <a
+              className="block__cta"
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {cta}
             </a>
           </div>
@@ -75,7 +80,12 @@ export default class ProductShowcase extends Component<Props> {
           <div className="block__text">
             <h3>{blockTwoHeader}</h3>
             <p>{blockTwoBody}</p>
-            <a className="block__cta" href={url}>
+            <a
+              className="block__cta"
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {cta}
             </a>
           </div>
@@ -85,7 +95,12 @@ export default class ProductShowcase extends Component<Props> {
           <div className="block__text block__text_left">
             <h3>{blockThreeHeader}</h3>
             <p>{blockThreeBody}</p>
-            <a className="block__cta" href={url}>
+            <a
+              className="block__cta"
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {cta}
             </a>
           </div>
@@ -110,7 +125,12 @@ export default class ProductShowcase extends Component<Props> {
             <div className="block__text">
               <h3>{blockFourHeader}</h3>
               <p>{blockFourBody}</p>
-              <a className="block__cta" href={url}>
+              <a
+                className="block__cta"
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {cta}
               </a>
             </div>
