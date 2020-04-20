@@ -10,6 +10,7 @@ type Props = {
   description: string,
   btnText: string,
   url: string,
+  mixpanelEvent: string,
 };
 
 export default class Description extends Component<Props> {
