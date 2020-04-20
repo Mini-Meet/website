@@ -30,7 +30,8 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
   const submit = () => {
     if (email && email.value && email.value.indexOf('@') > -1) {
-      Mixpanel.track(`Course / Home / Subscribe!`);
+      Mixpanel.track(`MBA / Home / Subscribe`);
+      Mixpanel.track(`MBA / Subscribe`);
 
       onSubscribe({
         EMAIL: email.value,
@@ -48,7 +49,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
         placeholder="Enter your email"
       />
       <Button primary onClick={submit}>
-        Join Waiting List
+        Join Mini MBA
       </Button>
     </div>
   );
@@ -141,8 +142,8 @@ export default class Hero extends Component<Props> {
                 )}
                 {!status && (
                   <p className="hero__small">
-                    Access to the Public Beta is by invitation only. Request
-                    access today
+                    Access to the Prod MBA is by application only. We will
+                    contact you when applications are open.
                   </p>
                 )}
               </div>
@@ -154,10 +155,10 @@ export default class Hero extends Component<Props> {
   }
 
   goToExternalLink = () => {
-    Mixpanel.track(`Course / ${this.props.mixpanelEvent}`);
+    // Mixpanel.track(`Course / ${this.props.mixpanelEvent}`);
   };
 
   goToNextPage = () => {
-    Mixpanel.track(`Course / ${this.props.mixpanelEvent}`);
+    // Mixpanel.track(`Course / ${this.props.mixpanelEvent}`);
   };
 }

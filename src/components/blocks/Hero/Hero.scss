@@ -14,7 +14,7 @@
   &__header {
     @include col;
     color: $white;
-    max-width: 720px;
+    max-width: 740px;
 
     @media (min-width: $screen-sm-min) {
       @include center-block(horizontal);
@@ -27,7 +27,7 @@
     }
 
     p {
-      @include padding(top bottom, 2);
+      @include padding(top bottom, 3);
       @include padding(left right, 0);
       color: transparentize($white, 0.4);
       text-align: center;

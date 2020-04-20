@@ -24,13 +24,13 @@ class Footer extends Component {
             </Link>
           </div>
           <div className="footer__list_item">
-            <Link to="/about" className={terms}>
-              About
+            <Link to="/product-mba" className={mba}>
+              Prod MBA
             </Link>
           </div>
           <div className="footer__list_item">
-            <Link to="/product-mba" className={mba}>
-              Product MBA
+            <Link to="/about" className={terms}>
+              About
             </Link>
           </div>
           <div className="footer__list_item">
@@ -74,18 +74,20 @@ class Footer extends Component {
       </div>
     );
   }
-
   goToAbout = () => {
-    Mixpanel.track('Footer / About');
+    Mixpanel.track('MBA / Footer / Prod MBA');
+  };
+  goToAbout = () => {
+    Mixpanel.track('MBA / Footer / About');
   };
   goToCourses = () => {
-    Mixpanel.track('Footer / PM101');
+    Mixpanel.track('MBA / Footer / PM101');
   };
   goToPricing = () => {
-    Mixpanel.track('Footer / Pricing');
+    Mixpanel.track('MBA / Footer / Pricing');
   };
   goToBook = () => {
-    Mixpanel.track('Footer / Book');
+    Mixpanel.track('MBA / Footer / Book');
   };
 }
 

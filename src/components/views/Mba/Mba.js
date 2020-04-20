@@ -12,36 +12,124 @@ import {
   Testimonials,
 } from '../../blocks';
 
+import curriculum1 from '../../../assets/images/course/curriculum_1.jpg';
+import curriculum2 from '../../../assets/images/course/curriculum_2.jpg';
+import curriculum3 from '../../../assets/images/course/curriculum_3.jpg';
+
 import './Mba.scss';
 
 const faqOne = (
   <div>
-    <p>Hello</p>
+    <p>
+      We fundamentally believe that much of what is taught in traditional MBA
+      programmes (as well as in many companies for that matter) largely
+      distracts from the core function of a business.
+    </p>
+    <br />
+    <p>
+      Rather than focusing on identifying the right opportunity to pursue, many
+      founders & product leaders jump immediately into questions of scale, or
+      how to sell the idea to an investor to raise capital.
+    </p>
+    <br />
+    <p>
+      We believe that a different model should be pursued: One which focuses on
+      quickly moving to profitabiltiy, sometimes at the expense of growth. We
+      are aware that the startup eco-system is focused on growth at the expense
+      of everything else, but the winds are already starting to change, with
+      many hyper-growth companies failing in 2020.
+    </p>
+    <br />
+    <p>
+      Crazy idea, right? That a business should actually need to make more money
+      than it spends? Being somebody that can map out that path & move a company
+      towards profitability is going to be extremely valuable.
+    </p>
+    <br />
   </div>
 );
 const faqTwo = (
   <div>
-    <p>Hello</p>
+    <p>
+      You will need to be able to commit 6-8 hours per week for 6 weeks during
+      the programme.
+    </p>
+    <p>
+      We have tried to minimise the amount of content & focus only on extremely
+      high-impact exercises, but the kind of work we are doing does require
+      time, focus & some dedication. We have made all the weekly calls optional,
+      apart from Week 1, where you will meet the other alumni, but the weekly
+      cycle of consuming content & putting that into practice must be kept to to
+      get real value from the programme.
+    </p>
+    <br />
   </div>
 );
 const faqThree = (
   <div>
-    <p>Hello</p>
+    <p>
+      For our first batch, we will be sending out an application form in the
+      coming weeks & interviewing those we believe will make a good fit for the
+      programme.
+    </p>
+    <br />
+    <p>
+      What do we mean by ${"'"}good fit${"'"}, you may ask? Somebody who we
+      believe has a strong motivation to complete the course, regardless of
+      whether they are working full-time or not, regardless of whether they are
+      motivated by starting their own business or simply getting a promotion.
+    </p>
+    <br />
   </div>
 );
 const faqFour = (
   <div>
-    <p>Hello</p>
+    <p>
+      Week 1 is essential. Joining the welcome call will create a strong
+      foundation for the rest of the course, providing you with motivation
+      through accountability & a support network to help you improve your work.
+    </p>
+    <br />
+    <p>
+      Without a deep understanding of the concepts & frameworks we cover in Week
+      1, you will struggle to get a product to market that resonates with your
+      target audience. We would even go as far as to say that Week 1 is worth
+      paying a few thousand euros for as its own mini-course.
+    </p>
+    <br />
+    <p>
+      On an on-going basis, it is in theory OK to miss deadlines, but data
+      suggest you will quickly fall behind in such cases. Missing one week is
+      fine. Missing two and you may struggle to catch up.
+    </p>
+    <br />
   </div>
 );
 const faqFive = (
   <div>
-    <p>Hello</p>
+    <p>
+      The value of the other alumni is in providing feedback for your work each
+      week, stress-testing or honing your ideas.
+    </p>
+    <br />
+    <p>
+      Students are able to work in small teams, for example, if 2 students find
+      themselves passionate about a similar idea, but it is better in our view
+      to work on your project, as the psychological aspect of this is, we
+      believe, an essential part of the experience we feel will most benefit our
+      students.
+    </p>
+    <br />
   </div>
 );
 const faqSix = (
   <div>
-    <p>Hello</p>
+    <p>
+      Henry, our CEO & Founder, will be running all of the sessions in the first
+      few cohorts, so we can ensure the learning process is as consistent as
+      possible. We will, however, be bringing in some of our product experts for
+      specific sessions & to cover specific topics in the content.
+    </p>
   </div>
 );
 
@@ -73,7 +161,7 @@ const faqItems = [
   },
   {
     id: '6',
-    title: 'How much will I collaborate with other participants?',
+    title: 'Who will run the sessions?',
     content: faqSix,
   },
 ];
@@ -135,6 +223,7 @@ const contentOne = (
       call to review your work at the end of the week.
     </p>
     <br />
+    <img alt="Curriculum" src={curriculum1} />
     <p>
       Our learning approach is designed to be as effective as possible,
       combining theory with putting theory into practice in the real world, with
@@ -146,7 +235,7 @@ const contentOne = (
     <p>
       <b>
         Join our next intake, starting on May 11th 2020. Try the 7-day mini MBA
-        to see if the Product MBA is right for you. We will notify you when
+        to see if the Prod MBA is right for you. We will notify you when
         applications open. Space is limited to 30 participants.
       </b>
     </p>
@@ -187,8 +276,7 @@ const contentTwo = (
       revenue within 6 weeks.
     </p>
     <br />
-    <p>&nbsp;</p>
-    <br />
+    <img alt="Curriculum" src={curriculum2} />
   </div>
 );
 
@@ -255,15 +343,18 @@ const contentFour = (
     <br />
     <p>The schedule looks like this:</p>
     <br />
-    <p>&nbsp;</p>
-    <br />
+    <img
+      alt="Curriculum"
+      src={curriculum3}
+      className="curriculum__main_largeImg"
+    />
   </div>
 );
 
 const contentFive = (
   <div>
     <p>
-      The Product MBA has been designed for experienced product people - whether
+      The Prod MBA has been designed for experienced product people - whether
       Product Managers, CPOs or founders - to learn critical strategic &amp;
       business skills that are integral to the success of any venture, whether
       that be of your business, or an individual product line within a business.
@@ -307,8 +398,6 @@ const contentFive = (
       process).
     </p>
     <br />
-    <p>&nbsp;</p>
-    <br />
   </div>
 );
 
@@ -321,8 +410,6 @@ const contentSix = (
       select for the programme, to ensure we are able to deliver huge results.
       There are only 30 places available.
     </p>
-    <br />
-    <p>&nbsp;</p>
     <br />
   </div>
 );
@@ -356,7 +443,7 @@ const toggleItems = [
   },
   {
     id: '5',
-    title: 'Who is The Product MBA for?',
+    title: 'Who is The Prod MBA for?',
     content: contentFive,
   },
   {
@@ -376,7 +463,7 @@ const url =
 
 export default class Mba extends Component {
   componentDidMount() {
-    Mixpanel.track('Mba Page');
+    Mixpanel.track('MBA / MBA');
   }
 
   render() {
@@ -384,17 +471,17 @@ export default class Mba extends Component {
       <div className="homePageWrapper">
         <Header light />
         <Hero
-          title="Master Product With The Prod.MBA"
+          title="Master Product With The Prod MBA"
           subtitle="Learn the fundamentals of business & strategy to deliver a real, revenue-generating product in our part-time, 6-week programme:"
         />
         <Description
-          header="Prod.MBA"
-          description="This is the world's first Product Management training focused on profitability & agility. It's a 6-week part-time programme, It’s not just another mass open online course but rather a carefully crafted experience where you will be taken on a journey in a small group of designers and mentors, who will care about your progress. "
+          header="Prod MBA"
+          description="This is the world's first Product Management training focused on 'path to profitability'. It's a 6-week part-time programme crafted by a team of experienced product leaders, run in groups of carefully selected applicants, to teach you the fundamentals of product strategy in practice."
           btnText="Apply Now"
           url={url}
         />
         <Newsletter
-          title="Get The Free 7-Day Mini Product MBA"
+          title="Get The Free 7-Day Mini MBA"
           subtitle="Subscribe and get the free 7-day email course, explaining the steps towards building a profitable, boostrapped product:"
           mailchimpForm
           url={url}

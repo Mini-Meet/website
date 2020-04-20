@@ -6,11 +6,11 @@
 
 .about {
   @include col;
-  @include padding(left right, 3);
   @include padding(bottom, 6);
   @include padding(top, 3);
 
   @media (min-width: $screen-sm-min) {
+    @include padding(left right, 3);
     margin: 0 auto;
     max-width: 50%;
   }
@@ -45,10 +45,11 @@
   &__text {
     @include col;
     @include padding(top, 4);
+    @include padding(bottom, 2);
     justify-content: center;
 
     @media (min-width: $screen-sm-min) {
-      @include padding(top, 1);
+      @include padding(top bottom, 1);
     }
 
     @media (min-width: $screen-md-min) {
@@ -72,6 +73,7 @@
 
   h4,
   p {
+    @include padding(left right, 0);
     max-width: 480px;
     text-align: center;
 

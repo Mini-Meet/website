@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Mixpanel } from '../../../Mixpanel';
 
-import { Header, Footer } from '../../blocks';
-import { Button } from '../../elements';
+import { Header, Newsletter, Footer } from '../../blocks';
+// import { Button } from '../../elements';
 
 import './About.scss';
 
 import portrait from '../../../assets/images/course/henry-portrait.jpg';
 
+const url =
+  'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
+
 export default class About extends Component {
   componentDidMount() {
-    Mixpanel.track('Course / About');
+    Mixpanel.track('MBA / About');
   }
 
   render() {
@@ -43,10 +46,19 @@ export default class About extends Component {
               great products & rapidly level up their product career.{' '}
             </p>
 
-            <Link to="/case-study">
-              <Button onClick={this.goToAboutCaseStudy}>FREE Case Study</Button>
-            </Link>
+            {
+              // <Link to="/case-study">
+              //   <Button onClick={this.goToAboutCaseStudy}>FREE Case Study</Button>
+              // </Link>
+            }
           </div>
+
+          <Newsletter
+            title="Get The Free 7-Day Mini MBA"
+            subtitle="Subscribe and get the free 7-day email course, explaining the steps towards building a profitable, boostrapped product:"
+            mailchimpForm
+            url={url}
+          />
         </div>
 
         <Footer page="ABOUT" />

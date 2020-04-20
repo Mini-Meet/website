@@ -72,7 +72,7 @@ const contentOne = (
     <p>
       <b>
         Join our next intake, starting on May 11th 2020. Try the 7-day mini MBA
-        to see if the Product MBA is right for you. We will notify you when
+        to see if the Prod MBA is right for you. We will notify you when
         applications open. Space is limited to 30 participants.
       </b>
     </p>
@@ -189,7 +189,7 @@ const contentFour = (
 const contentFive = (
   <div>
     <p>
-      The Product MBA has been designed for experienced product people - whether
+      The Prod MBA has been designed for experienced product people - whether
       Product Managers, CPOs or founders - to learn critical strategic &amp;
       business skills that are integral to the success of any venture, whether
       that be of your business, or an individual product line within a business.
@@ -282,7 +282,7 @@ const toggleItems = [
   },
   {
     id: '5',
-    title: 'Who is The Product MBA for?',
+    title: 'Who is The Prod MBA for?',
     content: contentFive,
   },
   {

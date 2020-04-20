@@ -21,7 +21,22 @@
   &__main {
     max-width: 720px;
 
-    strong {
+    &_largeImg {
+      margin-left: -20%;
+      width: 140% !important;
+    }
+
+    img {
+      @include padding(top bottom, 2);
+      width: 100%;
+    }
+
+    p {
+      min-width: 180px;
+    }
+
+    strong,
+    b {
       color: $dark;
     }
   }

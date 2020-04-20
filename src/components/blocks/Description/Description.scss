@@ -1,26 +1,21 @@
 @import '../../../styles/main';
 
 .description {
-  @include background-light;
+  @include background-white;
 
   @media (min-width: $screen-md-min) {
   }
 
   &__content {
-    @include background-white;
-    @include card-elevation;
-    @include card-corner-radius;
     @include col;
     @include padding(top, 4);
-    @include padding(bottom, 3);
+    @include padding(bottom, 4);
     align-items: center;
     margin: 0 auto;
     max-width: 600px;
-    position: relative;
-    top: -72px;
 
     @media (min-width: $screen-md-min) {
-      @include padding(bottom, 3);
+      @include padding(bottom, 4);
       @include padding(top, 4);
       @include padding(left right, 3);
     }
@@ -35,10 +30,15 @@
       }
     }
 
+    &_main {
+      @include padding(left right, 0);
+    }
+
     h3,
     p {
       max-width: 480px;
       text-align: center;
+      width: 100%;
 
       @media (min-width: $screen-md-min) {
         text-align: left;
