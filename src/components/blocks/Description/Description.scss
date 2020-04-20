@@ -1,0 +1,48 @@
+@import '../../../styles/main';
+
+.description {
+  @include background-light;
+
+  @media (min-width: $screen-md-min) {
+  }
+
+  &__content {
+    @include background-white;
+    @include card-elevation;
+    @include card-corner-radius;
+    @include col;
+    @include padding(top, 4);
+    @include padding(bottom, 3);
+    align-items: center;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    top: -72px;
+
+    @media (min-width: $screen-md-min) {
+      @include padding(bottom, 3);
+      @include padding(top, 4);
+      @include padding(left right, 3);
+    }
+
+    &__header {
+      @include margin(bottom, 0);
+      @include margin(top, 4);
+
+      @media (min-width: $screen-md-min) {
+        @include margin(bottom, 3);
+        @include margin(top, 1);
+      }
+    }
+
+    h3,
+    p {
+      max-width: 480px;
+      text-align: center;
+
+      @media (min-width: $screen-md-min) {
+        text-align: left;
+      }
+    }
+  }
+}

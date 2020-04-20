@@ -60,7 +60,7 @@ export default class Casestudy extends Component<Props> {
             </p>
             <h3 className="casestudy__header_h3">
               {'"'}How I Train Product Managers to Build High-Value Products
-              Within 40 Days{'"'}
+              Within 6 weeks{'"'}
             </h3>
           </div>
           <div className="casestudymain">

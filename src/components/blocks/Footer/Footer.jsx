@@ -10,7 +10,7 @@ class Footer extends Component {
   render() {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
     // const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
-    // const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
+    const mba = this.props.page === 'MBA' ? 'active' : 'inactive';
     const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
@@ -26,6 +26,11 @@ class Footer extends Component {
           <div className="footer__list_item">
             <Link to="/about" className={terms}>
               About
+            </Link>
+          </div>
+          <div className="footer__list_item">
+            <Link to="/product-mba" className={mba}>
+              Product MBA
             </Link>
           </div>
           <div className="footer__list_item">
@@ -50,7 +55,7 @@ class Footer extends Component {
           <div className="footer__logo_book">
             <img alt="logo" src={Book} className="footer__logo_bookimg" />
             <p>
-              Want to learn more about building the foundations for startup
+              Want to learn more about building the foundations for business
               success?
             </p>
             <a
@@ -71,16 +76,16 @@ class Footer extends Component {
   }
 
   goToAbout = () => {
-    Mixpanel.track('Course / Page / About');
+    Mixpanel.track('Footer / About');
   };
   goToCourses = () => {
-    Mixpanel.track('Course / Page / PM101');
+    Mixpanel.track('Footer / PM101');
   };
   goToPricing = () => {
-    Mixpanel.track('Course / Page / Pricing');
+    Mixpanel.track('Footer / Pricing');
   };
   goToBook = () => {
-    Mixpanel.track('Course / Page / Book');
+    Mixpanel.track('Footer / Book');
   };
 }
 

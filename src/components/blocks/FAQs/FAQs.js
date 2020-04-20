@@ -4,26 +4,35 @@ import { SectionSummary } from '..';
 
 import './FAQs.scss';
 
-type Props = {
-  sectionHeader: string,
-  sectionSubheader: string,
-  toggleItems: Object, // TODO - add real props
-};
+const faqOne = (
+  <div>
+    <p>Hello</p>
+  </div>
+);
+const faqTwo = (
+  <div>
+    <p>Hello</p>
+  </div>
+);
+
+const faqItems = [
+  {
+    id: '1',
+    title: 'Who pays?',
+    content: faqOne,
+  },
+  {
+    id: '2',
+    title: 'Who does this?',
+    content: faqTwo,
+  },
+];
 
 export default class FAQs extends Component<Props> {
   render() {
-    const { sectionHeader, sectionSubheader, toggleItems } = this.props;
-
     return (
       <div className="faqs">
-        <div className="faqs__header">
-          <h1>{sectionHeader}</h1>
-          <p>{sectionSubheader}</p>
-        </div>
-        <SectionSummary
-          toggleItems={toggleItems}
-          sectionHeader={sectionHeader}
-        />
+        <SectionSummary toggleItems={faqItems} />
       </div>
     );
   }

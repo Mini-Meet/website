@@ -1,6 +1,8 @@
 // Elements definition (ASC order)
 export { default as AppPrototype } from './AppPrototype/AppPrototype';
 export { default as Banner } from './Banner/Banner';
+export { default as Curriculum } from './Curriculum/Curriculum';
+export { default as Description } from './Description/Description';
 export { default as FAQs } from './FAQs/FAQs';
 export { default as Featured } from './Featured/Featured';
 export { default as Footer } from './Footer/Footer';
@@ -9,6 +11,7 @@ export { default as Hero } from './Hero/Hero.js';
 export { default as Image } from './Image/Image';
 export { default as Menu } from './Menu/Menu.js';
 export { default as ModalConfirm } from './ModalConfirm/ModalConfirm.js';
+export { default as Newsletter } from './Newsletter/Newsletter.js';
 export { default as OnboardingCards } from './OnboardingCards/OnboardingCards.js';
 export { default as ProductShowcase } from './ProductShowcase/ProductShowcase';
 export { default as ReferralBlock } from './ReferralBlock/ReferralBlock';

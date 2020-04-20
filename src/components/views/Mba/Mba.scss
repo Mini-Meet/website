@@ -1,0 +1,28 @@
+@import '../../../styles/main';
+
+.curriculum {
+  @include col;
+  @include fade-in;
+  @include padding(bottom, 5);
+  @include padding(top, 4);
+  margin: 0 auto;
+  max-width: 620px;
+
+  &__header {
+    @include padding(top, 3);
+    @include padding(bottom, 2);
+    @include padding(left right, 1);
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  &__main {
+    max-width: 720px;
+
+    strong {
+      color: $dark;
+    }
+  }
+}

@@ -32,7 +32,7 @@ export default class Testimonials extends Component {
       {
         photo: customer1,
         name: 'Mark Sarifidis',
-        title: 'Product Lead, Growth Media',
+        title: 'Founder, Growth Media',
         comment:
           'We read The Lean Startup, Hacking Growth, etc, but never really worked out how to apply the principles of lean experimentation & measuring impact - until now',
       },

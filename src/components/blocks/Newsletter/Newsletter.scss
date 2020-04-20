@@ -1,11 +1,11 @@
 @import '../../../styles/main';
 
-.hero {
-  @include background-image;
+.newsletter {
+  @include background-light;
   @include col;
-  @include padding(top, 6);
+  @include padding(top, 4);
   @include padding(left right, reset);
-  @include padding(bottom, 4);
+  @include padding(bottom, 3);
 
   @media (min-width: $screen-sm-min) {
     @include padding(bottom, 5);
@@ -20,23 +20,28 @@
       @include center-block(horizontal);
     }
 
-    h1 {
+    h4 {
       @include padding(all, 0);
       @include padding(top, reset);
-      color: $white;
+      color: $dark;
     }
 
     p {
+      @include small;
       @include padding(top bottom, 2);
       @include padding(left right, 0);
-      color: transparentize($white, 0.4);
       text-align: center;
+      color: transparentize($dark, 0.6);
 
       @media (min-width: $screen-sm-min) {
         @include padding(top, 0);
-        @include padding(bottom, 4);
+        @include padding(bottom, 3);
       }
     }
+  }
+
+  input {
+    background-color: $white;
   }
 
   // nextpage
