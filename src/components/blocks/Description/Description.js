@@ -1,21 +1,21 @@
 // @flow
 import React, { Component } from 'react';
 // import { Mixpanel } from '../../../Mixpanel';
-import { Button } from '../../elements';
+// import { Button } from '../../elements';
 
 import './Description.scss';
 
 type Props = {
   header: string,
   description: string,
-  btnText: string,
-  url: string,
-  mixpanelEvent: string,
+  // btnText: string,
+  // url: string,
+  // mixpanelEvent: string,
 };
 
 export default class Description extends Component<Props> {
   render() {
-    const { header, description, btnText, url } = this.props;
+    const { header, description } = this.props;
 
     return (
       <div className="description">
