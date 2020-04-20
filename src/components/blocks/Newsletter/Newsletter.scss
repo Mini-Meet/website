@@ -30,8 +30,8 @@
       @include small;
       @include padding(top bottom, 2);
       @include padding(left right, 0);
-      text-align: center;
       color: transparentize($dark, 0.6);
+      text-align: center;
 
       @media (min-width: $screen-sm-min) {
         @include padding(top, 0);
