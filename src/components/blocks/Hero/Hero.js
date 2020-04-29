@@ -151,7 +151,7 @@ export default class Hero extends Component<Props> {
                   <p className="hero__subtext">
                     {subText}
                     <Link
-                      to="/product-mba"
+                      to={subTextUrl}
                       className="hero__subtext_link"
                       onClick={this.goToSubTextLink}
                     >
@@ -173,7 +173,6 @@ export default class Hero extends Component<Props> {
 
   goToExternalLink = () => {
     Mixpanel.track(`${this.props.mixpanelPageEvent}/Apply`);
-    console.log(`${this.props.mixpanelPageEvent}/Apply`);
   };
 
   goToNextPage = () => {

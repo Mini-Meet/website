@@ -25,7 +25,7 @@ export default class Home extends Component {
           subtitle="Worried about your job security or levelling up your CV? Want to start a side hustle or your own business? Join our mini Prod MBA programme to deliver a real, revenue-generating product in 6 weeks:"
           btnText="Join Mini MBA"
           subText="Access to the Prod MBA is now open:  "
-          subTextUrl="https://calendly.com/henry_latham/product-mba"
+          subTextUrl="/product-mba"
           subTextUrlText="Apply Now"
           mixpanelPageEvent={mixpanelPageEvent}
           mailchimpForm
