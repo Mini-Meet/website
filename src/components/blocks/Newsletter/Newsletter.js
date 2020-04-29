@@ -127,12 +127,6 @@ export default class Newsletter extends Component<Props> {
                     </div>
                   </div>
                 )}
-                {!status && (
-                  <p className="newsletter__small">
-                    Access to the Prod MBA is by application only. We will
-                    contact you when applications are open.
-                  </p>
-                )}
               </div>
             )}
           />

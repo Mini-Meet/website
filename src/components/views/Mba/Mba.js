@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 import { Mixpanel } from '../../../Mixpanel';
+
+import { Button } from '../../elements';
+
 import {
   Description,
   Header,
@@ -461,9 +464,11 @@ const toggleItems = [
 const url =
   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 
+const mixpanelPageEvent = 'MBA / MBA';
+
 export default class Mba extends Component {
   componentDidMount() {
-    Mixpanel.track('MBA / MBA');
+    Mixpanel.track({ mixpanelPageEvent });
   }
 
   render() {
@@ -473,10 +478,15 @@ export default class Mba extends Component {
         <Hero
           title="Master Product With The Prod MBA"
           subtitle="Learn the fundamentals of business & strategy to deliver a real, revenue-generating product in our part-time, 6-week programme:"
+          externalPage
+          url="https://calendly.com/henry_latham/prod-mba"
+          btnText="Apply For The Prod MBA Now"
+          mixpanelPageEvent={mixpanelPageEvent}
         />
         <Description
-          header="Prod MBA"
-          description="This is the world's first Product Management training focused on 'path to profitability'. It's a 6-week part-time programme crafted by a team of experienced product leaders, run in groups of carefully selected applicants, to teach you the fundamentals of product strategy in practice."
+          header="This is Not Just Another Course"
+          description1="This is the world's first Product Management training focused on 'path to profitability', not just 'growth' or understanding how to use Jira."
+          description2="It's a 6-week part-time programme crafted by a team of experienced product leaders, run in groups of carefully selected applicants, to teach you the fundamentals of product strategy & building a profitable business in practice."
           btnText="Apply Now"
           url={url}
         />
@@ -493,6 +503,15 @@ export default class Mba extends Component {
               sectionHeader="Curriculum"
               toggleItems={toggleItems}
             />
+            <a
+              href="https://calendly.com/henry_latham/prod-mba"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button onClick={this.goToFaqApply}>
+                Apply For The Prod MBA Now
+              </Button>
+            </a>
           </div>
         </div>
         <Testimonials />
@@ -501,4 +520,8 @@ export default class Mba extends Component {
       </div>
     );
   }
+
+  goToFaqApply = () => {
+    Mixpanel.track(`${mixpanelPageEvent}/Apply`);
+  };
 }

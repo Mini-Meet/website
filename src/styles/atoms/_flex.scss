@@ -22,6 +22,12 @@ $column: $col;
   flex-direction: column;
 }
 
+@mixin col-reverse {
+  @extend %flex;
+  flex: 1;
+  flex-direction: column-reverse;
+}
+
 @mixin col-no-flex {
   @extend %flex;
   flex-direction: column;

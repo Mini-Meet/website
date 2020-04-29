@@ -51,8 +51,8 @@
 
   // typeform
 
-  &__typeform {
-    @include margin(top bottom, 3);
+  &__external {
+    @include margin(top bottom, 0);
 
     a {
       text-decoration: none;
@@ -109,11 +109,15 @@
     }
   }
 
-  &__small {
+  &__subtext {
     @include small;
     @include padding(top, 1);
     @include padding(bottom, 3);
     color: $secondary;
+
+    &_link {
+      //
+    }
   }
 }
 

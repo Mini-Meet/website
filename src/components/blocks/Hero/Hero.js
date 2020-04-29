@@ -12,6 +12,10 @@ type Props = {
   titleTwo: string,
   subtitle: string,
   btnText: string,
+  subText: string,
+  subTextUrl: string,
+  subTextUrlText: string,
+  mixpanelPageEvent: string,
   url: string,
   mixpanelEvent: string,
   nextpage: boolean,
@@ -62,6 +66,9 @@ export default class Hero extends Component<Props> {
       titleTwo,
       subtitle,
       btnText,
+      subText,
+      subTextUrl,
+      subTextUrlText,
       nextpage,
       nextpageUrl,
       externalPage,
@@ -90,7 +97,7 @@ export default class Hero extends Component<Props> {
         )}
 
         {externalPage && (
-          <div className="hero__typeform">
+          <div className="hero__external">
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Button onClick={this.goToExternalLink}>{btnText}</Button>
             </a>
@@ -141,9 +148,15 @@ export default class Hero extends Component<Props> {
                   </div>
                 )}
                 {!status && (
-                  <p className="hero__small">
-                    Access to the Prod MBA is by application only. We will
-                    contact you when applications are open.
+                  <p className="hero__subtext">
+                    {subText}
+                    <Link
+                      to="/product-mba"
+                      className="hero__subtext_link"
+                      onClick={this.goToSubTextLink}
+                    >
+                      {subTextUrlText}
+                    </Link>
                   </p>
                 )}
               </div>
@@ -154,8 +167,13 @@ export default class Hero extends Component<Props> {
     );
   }
 
+  goToSubTextLink = () => {
+    Mixpanel.track(`${this.props.mixpanelPageEvent}/GoTo MBA`);
+  };
+
   goToExternalLink = () => {
-    // Mixpanel.track(`Course / ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`${this.props.mixpanelPageEvent}/Apply`);
+    console.log(`${this.props.mixpanelPageEvent}/Apply`);
   };
 
   goToNextPage = () => {

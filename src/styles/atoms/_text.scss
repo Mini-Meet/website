@@ -111,9 +111,8 @@ li {
 }
 
 @mixin link {
-  @extend %header-text;
+  @extend %text-base;
   color: $primary;
-  font-size: 11px;
 }
 
 a {

@@ -24,5 +24,13 @@
     strong {
       color: $dark;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      @include margin(top, 3);
+    }
   }
 }
