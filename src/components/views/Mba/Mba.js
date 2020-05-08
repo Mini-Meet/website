@@ -478,10 +478,10 @@ export default class Mba extends Component {
         <Hero
           title="Master Product With The Prod MBA"
           subtitle="Learn the fundamentals of business & strategy to deliver a real, revenue-generating product in our part-time, 6-week programme:"
-          externalPage
-          url="https://calendly.com/henry_latham/prod-mba"
-          btnText="Apply For The Prod MBA Now"
-          mixpanelPageEvent={mixpanelPageEvent}
+          // externalPage
+          // url="https://calendly.com/henry_latham/prod-mba"
+          // btnText="Apply For The Prod MBA Now"
+          // mixpanelPageEvent={mixpanelPageEvent}
         />
         <Description
           header="This is Not Just Another Course"
@@ -491,8 +491,8 @@ export default class Mba extends Component {
           url={url}
         />
         <Newsletter
-          title="Get The Free 7-Day Mini MBA"
-          subtitle="Subscribe and get the free 7-day email course, explaining the steps towards building a profitable, boostrapped product:"
+          title="Try The Free 7-Day Mini MBA"
+          subtitle="Subscribe and get the free 7-day email course, explaining the steps towards building a profitable, boostrapped product & giving you a taster of the full Prod MBA (we'll let you know when applications are open by email):"
           mailchimpForm
           url={url}
         />
@@ -508,9 +508,11 @@ export default class Mba extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button onClick={this.goToFaqApply}>
-                Apply For The Prod MBA Now
-              </Button>
+              {
+                //   <Button onClick={this.goToFaqApply}>
+                //   Apply For The Prod MBA Now
+                // </Button>
+              }
             </a>
           </div>
         </div>

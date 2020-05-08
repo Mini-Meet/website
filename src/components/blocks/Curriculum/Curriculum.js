@@ -71,7 +71,7 @@ const contentOne = (
     <br />
     <p>
       <b>
-        Join our next intake, starting on May 11th 2020. Try the 7-day mini MBA
+        Join our next intake, starting on June 30th 2020. Try the 7-day mini MBA
         to see if the Prod MBA is right for you. We will notify you when
         applications open. Space is limited to 30 participants.
       </b>
@@ -162,16 +162,19 @@ const contentThree = (
 
 const contentFour = (
   <div>
-    <p>The programme will run from 6 weeks, starting on Monday 11th May.</p>
+    <p>
+      The programme will run for 6 weeks, with the next cohort starting June
+      30th
+    </p>
     <br />
     <p>
-      On Sunday of each week, we will realise the content for that week on our
+      On Saturday of each week, we will realise the content for that week on our
       online portal, which we will invite you to during the onboarding process.
     </p>
     <br />
     <p>
       There will be 2-3 videos to watch to provide you with some theory, with a
-      real-world exercise to complete by Friday 5pm CET before our group call.
+      real-world exercise to complete by Friday 12pm CET before our group call.
     </p>
     <br />
     <p>
@@ -241,11 +244,9 @@ const contentFive = (
 const contentSix = (
   <div>
     <p>
-      We are launching our first cohort on May 11th 2020, so are offering the
-      programme for free (although we plan to charge $2,999 in future). Despite
-      it being free, we are being extremely careful in which applicants we
-      select for the programme, to ensure we are able to deliver huge results.
-      There are only 30 places available.
+      The programme costs €999. Please note that we are extremely careful in
+      which applicants we select for the programme, to ensure we are able to
+      deliver real results. There are only 20 places available in each cohort.
     </p>
     <br />
     <p>&nbsp;</p>

@@ -22,11 +22,11 @@ export default class Home extends Component {
         <Header light />
         <Hero
           title="We Teach You to Build a Profitable Product in 6 weeks"
-          subtitle="Worried about your job security or levelling up your CV? Want to start a side hustle or your own business? Join our mini Prod MBA programme to deliver a real, revenue-generating product in 6 weeks:"
+          subtitle="Worried about your job security or levelling up your CV? Want to start a side hustle or your own business? Sign up for our free Mini MBA programme to learn how to deliver a real, revenue-generating product in 6 weeks:"
           btnText="Join Mini MBA"
-          subText="Access to the Prod MBA is now open:  "
+          subText="Applications for the Prod MBA are currently closed:  "
           subTextUrl="/product-mba"
-          subTextUrlText="Apply Now"
+          subTextUrlText="Learn More"
           mixpanelPageEvent={mixpanelPageEvent}
           mailchimpForm
           url={url}
