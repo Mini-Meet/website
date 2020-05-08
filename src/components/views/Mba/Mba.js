@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Mixpanel } from '../../../Mixpanel';
 
-import { Button } from '../../elements';
+// import { Button } from '../../elements';
 
 import {
   Description,
