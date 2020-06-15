@@ -8,7 +8,6 @@ import {
   Description,
   Header,
   Hero,
-  Featured,
   Footer,
   Newsletter,
   SectionSummary,
