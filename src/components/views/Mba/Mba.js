@@ -517,7 +517,6 @@ export default class Mba extends Component {
           </div>
         </div>
         <Testimonials />
-        <Featured header="Built With Product Leaders From:" />
         <Footer page="HOME" />
       </div>
     );

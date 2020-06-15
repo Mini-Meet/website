@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import customer1 from '../../../assets/images/testimonials/mark.jpeg';
-import customer2 from '../../../assets/images/testimonials/rebeca.jpeg';
+// import customer2 from '../../../assets/images/testimonials/rebeca.jpeg';
 import customer3 from '../../../assets/images/testimonials/craig.png';
 
 import Card from './Card/Card.jsx';
@@ -21,13 +21,6 @@ export default class Testimonials extends Component {
         title: 'Product Manager, Sift',
         comment:
           'Being able to identify & validate new business opportunities by putting product strategy into practice has been invaluable!',
-      },
-      {
-        photo: customer2,
-        name: 'Rebeca Casa',
-        title: 'Junior Product Manager, HeyCater',
-        comment:
-          'I love the autonomy I have gained from moving away from project management by showing I can identify & actually generate revenue from new opportunities',
       },
       {
         photo: customer1,
