@@ -20,6 +20,8 @@ import curriculum3 from '../../../assets/images/course/curriculum_3.jpg';
 
 import './Mba.scss';
 
+const launchDate = '3rd August 2020';
+
 const faqOne = (
   <div>
     <p>
@@ -236,7 +238,7 @@ const contentOne = (
     <br />
     <p>
       <b>
-        Join our next intake, starting on May 11th 2020. Try the 7-day mini MBA
+        Join our next intake, starting on {launchDate}. Try the 7-day mini MBA
         to see if the Prod MBA is right for you. We will notify you when
         applications open. Space is limited to 30 participants.
       </b>
@@ -326,7 +328,7 @@ const contentThree = (
 
 const contentFour = (
   <div>
-    <p>The programme will run from 6 weeks, starting on Monday 11th May.</p>
+    <p>The programme will run from 6 weeks, starting on {launchDate}</p>
     <br />
     <p>
       On Sunday of each week, we will realise the content for that week on our
@@ -406,11 +408,11 @@ const contentFive = (
 const contentSix = (
   <div>
     <p>
-      We are launching our first cohort on May 11th 2020, so are offering the
-      programme for free (although we plan to charge $2,999 in future). Despite
-      it being free, we are being extremely careful in which applicants we
-      select for the programme, to ensure we are able to deliver huge results.
-      There are only 30 places available.
+      $999 per person, with the next cohort starting on {launchDate}.<br />
+      <br />
+      Note that we limit this to 12 places & are extremely careful in selecting
+      only applicants we feel are a good fit for the programme & who we believe
+      will be able to deliver huge results.
     </p>
     <br />
   </div>
