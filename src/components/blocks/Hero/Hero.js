@@ -34,8 +34,8 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
   const submit = () => {
     if (email && email.value && email.value.indexOf('@') > -1) {
-      Mixpanel.track(`MBA / Home / Subscribe`);
-      Mixpanel.track(`MBA / Subscribe`);
+      Mixpanel.track(`0. Home / Subscribe`);
+      Mixpanel.track(`1. Subscribe`);
 
       onSubscribe({
         EMAIL: email.value,
@@ -104,7 +104,9 @@ export default class Hero extends Component<Props> {
           </div>
         )}
 
-        {referralForm && <RefereeInput mixpanelEvent={mixpanelEvent} />}
+        {referralForm && (
+          <RefereeInput mixpanelEvent="#1 / Referral Subscribe" />
+        )}
 
         {mailchimpForm && (
           <MailchimpSubscribe
@@ -168,14 +170,14 @@ export default class Hero extends Component<Props> {
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track(`${this.props.mixpanelPageEvent}/GoTo MBA`);
+    Mixpanel.track('#1 / Home Subtext Link');
   };
 
   goToExternalLink = () => {
-    Mixpanel.track(`${this.props.mixpanelPageEvent}/Apply`);
+    Mixpanel.track('#1 / Home External Link');
   };
 
   goToNextPage = () => {
-    // Mixpanel.track(`Course / ${this.props.mixpanelEvent}`);
+    Mixpanel.track('#1 / Home Next Page');
   };
 }

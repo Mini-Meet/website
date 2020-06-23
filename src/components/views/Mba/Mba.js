@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Mixpanel } from '../../../Mixpanel';
 
-// import { Button } from '../../elements';
+import { Button } from '../../elements';
 
 import {
   Description,
@@ -408,11 +408,11 @@ const contentFive = (
 const contentSix = (
   <div>
     <p>
-      $999 per person, with the next cohort starting on {launchDate}.<br />
+      There are only 12 places in each cohort & we are extremely careful in
+      selecting only applicants we feel are a good fit for the programme & who
+      we believe will be able to deliver huge results.
       <br />
-      Note that we limit this to 12 places & are extremely careful in selecting
-      only applicants we feel are a good fit for the programme & who we believe
-      will be able to deliver huge results.
+      The next cohort starts on {launchDate}.<br />
     </p>
     <br />
   </div>
@@ -452,7 +452,7 @@ const toggleItems = [
   },
   {
     id: '6',
-    title: 'Tuition Fee',
+    title: 'How many students are there?',
     content: contentSix,
   },
   {
@@ -465,11 +465,9 @@ const toggleItems = [
 const url =
   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 
-const mixpanelPageEvent = 'MBA / MBA';
-
 export default class Mba extends Component {
   componentDidMount() {
-    Mixpanel.track({ mixpanelPageEvent });
+    Mixpanel.track('0. MBA');
   }
 
   render() {
@@ -509,11 +507,9 @@ export default class Mba extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {
-                //   <Button onClick={this.goToFaqApply}>
-                //   Apply For The Prod MBA Now
-                // </Button>
-              }
+              <Button onClick={this.goToFaqApply}>
+                Apply For The Prod MBA Now
+              </Button>
             </a>
           </div>
         </div>
@@ -524,6 +520,6 @@ export default class Mba extends Component {
   }
 
   goToFaqApply = () => {
-    Mixpanel.track(`${mixpanelPageEvent}/Apply`);
+    Mixpanel.track('0. MBA FAQ Click Apply');
   };
 }

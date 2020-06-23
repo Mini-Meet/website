@@ -7,11 +7,9 @@ import './Home.scss';
 const url =
   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 
-const mixpanelPageEvent = 'MBA / Home';
-
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track({ mixpanelPageEvent });
+    Mixpanel.track('0. Home');
   }
 
   render() {
@@ -27,7 +25,6 @@ export default class Home extends Component {
           subText="Applications for the Prod MBA are currently closed:  "
           subTextUrl="/product-mba"
           subTextUrlText="Learn More"
-          mixpanelPageEvent={mixpanelPageEvent}
           mailchimpForm
           url={url}
         />

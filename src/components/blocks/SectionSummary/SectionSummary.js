@@ -45,7 +45,7 @@ export default class SectionSummary extends Component<Props> {
 
     // console.log(`${sectionHeader} / ${toggle.title}`);
     // console.log(`Toggle`);
-    Mixpanel.track(`MBA / ${sectionHeader} / ${toggle.title}`);
-    Mixpanel.track(`MBA / Toggle`);
+    Mixpanel.track(`0. MBA ${sectionHeader} / ${toggle.title}`);
+    Mixpanel.track(`0. MBA Toggle`);
   };
 }
