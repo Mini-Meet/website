@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Mixpanel } from '../../../Mixpanel';
 
 import { Header, Newsletter, Footer } from '../../blocks';
