@@ -15,9 +15,7 @@ type Props = {
   subText: string,
   subTextUrl: string,
   subTextUrlText: string,
-  mixpanelPageEvent: string,
   url: string,
-  mixpanelEvent: string,
   nextpage: boolean,
   nextpageUrl: string,
   externalPage: boolean,
@@ -34,8 +32,8 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
   const submit = () => {
     if (email && email.value && email.value.indexOf('@') > -1) {
-      Mixpanel.track(`0. Home / Subscribe`);
-      Mixpanel.track(`1. Subscribe`);
+      Mixpanel.track(`0. Home MiniMBA Subscribe`);
+      Mixpanel.track(`0. MiniMBA Subscribe`);
 
       onSubscribe({
         EMAIL: email.value,
@@ -73,7 +71,6 @@ export default class Hero extends Component<Props> {
       nextpageUrl,
       externalPage,
       referralForm,
-      mixpanelEvent,
       mailchimpForm,
       url,
     } = this.props;
