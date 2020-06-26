@@ -20,11 +20,11 @@ export default class Featured extends Component<Props> {
             <p>Student Rating</p>
           </div>
           <div className="stats__row_col">
-            <h3>89%</h3>
+            <h3>86%</h3>
             <p>Completion Rate</p>
           </div>
           <div className="stats__row_col">
-            <h3>27</h3>
+            <h3>26</h3>
             <p>Students</p>
           </div>
         </div>

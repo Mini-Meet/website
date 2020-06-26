@@ -18,23 +18,23 @@ export default class Mentors extends Component {
       {
         photo: dom,
         name: 'Dom Wolf',
-        title: 'Product • Marketing',
+        title: '#product #marketing',
         comment:
-          'Product consultant & mentor with 20 years experience across B2B & B2C products.',
+          'Dom is a senior product manager & strategy director with 11+ years of hands-on experience. With a marketing and product background, he`s an expert at building and growing award-winning platforms, mobile apps and websites.',
       },
       {
         photo: henry,
         name: 'Henry Latham',
-        title: 'Product • Entrepreneurship',
+        title: '#product #entrepreneurship',
         comment:
-          '8 years Founder & Head of Product experience in early-stage startups. Author of "Why Your Startup is Failing" ',
+          'Henry has 8 years of experience as a Founder & Head of Product with early-stage startups. He is the author of "Why Your Startup is Failing" & founder of the Prod MBA programme.',
       },
       {
         photo: elvis,
         name: 'Elvis Malkic',
-        title: 'Growth • Acquisition',
+        title: '#growth #acquisition',
         comment:
-          'Results-driven FinTech, MarTech, Inbound & App Marketing Growth Hacker. ',
+          'Results-driven FinTech, MarTech, Inbound & App Marketing Growth Hacker who has run over 400 growth experiments over the last 2 years. ',
       },
     ];
 
