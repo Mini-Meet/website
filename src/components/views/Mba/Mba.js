@@ -173,10 +173,10 @@ const faqSeven = (
     <br />
     <p>
       If you want to discuss this with your HR team or manager, we suggest
-      covering: - What the course is about - What you'll personally get from it
-      - What the company/your team will get from you participating - How you'll
-      apply the learnings to your work - How long it will take you to complete -
-      The cost
+      covering: - What the course is about - What you{"'"}ll personally get from
+      it - What the company/your team will get from you participating - How you
+      {"'"}ll apply the learnings to your work - How long it will take you to
+      complete - The cost
     </p>
     <br />
     <p>

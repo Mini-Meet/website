@@ -8,6 +8,8 @@ import './Featured.scss';
 type Props = {
   header: string,
   mixpanelEvent: string,
+  url: string,
+  btnText: string,
 };
 
 export default class Featured extends Component<Props> {
