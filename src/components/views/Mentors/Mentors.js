@@ -7,7 +7,7 @@ import {
   Hero,
   Featured,
   ProductShowcase,
-  Testimonials,
+  Mentors,
 } from '../../blocks';
 
 import './Mentors.scss';
@@ -39,7 +39,7 @@ export default class Home extends Component {
           url="#signup"
           cta="Become A Mentor >"
         />
-        <Testimonials />
+        <Mentors />
         <Hero
           title="Become a Product Mentor"
           subtitle="Add to Your CV & Experience Whilst Helping Junior/Mid-Level Product Managers Accelerate Their Career"

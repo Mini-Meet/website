@@ -26,7 +26,7 @@ export default class Booking extends Component<Props> {
         <div className="booking">
           <div
             className="calendly-inline-widget booking__widget"
-            data-url="https://calendly.com/henry_latham/product-mba"
+            data-url="https://calendly.com/henry_latham/prod-mba"
           ></div>
         </div>
       </div>

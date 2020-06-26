@@ -71,4 +71,16 @@
       }
     }
   }
+
+  &__button {
+    @include padding(top, 2);
+
+    @media (min-width: $screen-sm-min) {
+      @include row;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
 }

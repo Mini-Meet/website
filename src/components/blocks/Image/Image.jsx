@@ -1,23 +1,26 @@
-import React from 'react';
+// @flow
+import React, { Component } from 'react';
 
 import './Image.scss';
 
-function Header() {
-  return (
-    <div className="showcase">
-      <div className="showcase__img" />
-      {
-        // 3 Points to describe product
-        // <ol className='showcase__list'>
-        //   <li className='showcase__list_item'>Morning & evening questions to frame & reflect on your day</li>
-        //
-        //   <li className='showcase__list_item'>Customise your questions</li>
-        //
-        //   <li className='showcase__list_item'> Review your day, week, month & even year</li>
-        // </ol>
-      }
-    </div>
-  );
-}
+type Props = {
+  title: string,
+  imgDesktop: string,
+  imgMobile: string,
+};
 
-export default Header;
+export default class Card extends Component<Props> {
+  render() {
+    const { title, imgDesktop, imgMobile } = this.props;
+
+    return (
+      <div className="imgFullWidth">
+        <h3>{title}</h3>
+        <picture>
+          <source srcSet={imgDesktop} media="(min-width: 500px)" />
+          <img alt="profile pic" src={imgMobile} />
+        </picture>
+      </div>
+    );
+  }
+}

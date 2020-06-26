@@ -1,33 +1,32 @@
 // @flow
 import React, { Component } from 'react';
-
-import google from '../../../assets/images/partners/partner_google.svg';
-import insta from '../../../assets/images/partners/partner_insta.svg';
-import linkedin from '../../../assets/images/partners/partner_linkedin.svg';
-import netflix from '../../../assets/images/partners/partner_netflix.svg';
-import twitter from '../../../assets/images/partners/partner_twitter.svg';
+import { Mixpanel } from '../../../Mixpanel';
+import { Button } from '../../elements';
 
 import './Featured.scss';
 
 type Props = {
   header: string,
+  mixpanelEvent: string,
 };
 
 export default class Featured extends Component<Props> {
   render() {
-    const { header } = this.props;
+    const { header, btnText, url } = this.props;
 
     return (
       <div className="featured">
         <p className="featured__header">{header}</p>
-        <div className="featured__logos">
-          <img alt="logo" src={google} className="featured__logos_img" />
-          <img alt="logo" src={insta} className="featured__logos_img" />
-          <img alt="logo" src={linkedin} className="featured__logos_img" />
-          <img alt="logo" src={netflix} className="featured__logos_img" />
-          <img alt="logo" src={twitter} className="featured__logos_img" />
+        <div className="featured__logos"></div>
+        <div className="featured__button">
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            <Button onClick={this.goToApplicationPage}>{btnText}</Button>
+          </a>
         </div>
       </div>
     );
   }
+  goToApplicationPage = () => {
+    Mixpanel.track(`${this.props.mixpanelEvent}`);
+  };
 }

@@ -7,33 +7,45 @@
   @include col;
 
   @media (min-width: $screen-sm-min) {
-    @include padding(left right, 3);
+    @include padding(left right, 0);
     @include padding(top bottom, 5);
   }
 
   &__header {
     @include caption-center;
-    @include padding(bottom, 3);
+    @include padding(bottom, 0);
   }
 
   &__logos {
-    @include row;
-    @include margin(left, 2);
-    @include padding(left right, 0);
-    justify-content: space-around;
-    overflow-x: scroll;
+    background-image: url('../../../assets/images/partners/companies_mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
 
     @media (min-width: $screen-xs-min) {
-      @include margin(left, reset);
     }
 
     @media (min-width: $screen-sm-min) {
-      @include margin(left right, 6);
-      @include padding(left right, 3);
+      background-image: url('../../../assets/images/partners/companies_desktop.png');
+      height: 400px;
     }
 
     &_img {
       max-height: 48px;
     }
+  }
+
+  &__button {
+    @include padding(top, 2);
+
+    @media (min-width: $screen-sm-min) {
+      // @include row;
+    }
+  }
+
+  a {
+    text-decoration: none;
   }
 }

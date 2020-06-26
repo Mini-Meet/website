@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
-// import { Mixpanel } from '../../../Mixpanel';
-// import { Button } from '../../elements';
+import { Mixpanel } from '../../../Mixpanel';
+import { Button } from '../../elements';
 
 import overview from '../../../assets/images/course/curriculum_overview.png';
 
@@ -11,14 +11,14 @@ type Props = {
   header: string,
   description1: string,
   description2: string,
-  // btnText: string,
-  // url: string,
-  // mixpanelEvent: string,
+  btnText: string,
+  url: string,
+  mixpanelEvent: string,
 };
 
 export default class Description extends Component<Props> {
   render() {
-    const { header, description1, description2 } = this.props;
+    const { header, description1, description2, btnText, url } = this.props;
 
     return (
       <div className="description">
@@ -28,13 +28,11 @@ export default class Description extends Component<Props> {
             <p>{description1}</p>
             <br />
             <p>{description2}</p>
-            {
-              //   <div className="hero__typeform">
-              //   <a href={url} target="_blank" rel="noopener noreferrer">
-              //     <Button onClick={this.goToApplicationPage}>{btnText}</Button>
-              //   </a>
-              // </div>
-            }
+            <div className="description__button">
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                <Button onClick={this.goToApplicationPage}>{btnText}</Button>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -50,6 +48,6 @@ export default class Description extends Component<Props> {
   }
 
   goToApplicationPage = () => {
-    // Mixpanel.track(`'MBA / Course / ${this.props.mixpanelEvent}`);
+    Mixpanel.track(`${this.props.mixpanelEvent}`);
   };
 }

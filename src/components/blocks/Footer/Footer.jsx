@@ -24,7 +24,7 @@ class Footer extends Component {
             </Link>
           </div>
           <div className="footer__list_item">
-            <Link to="/product-mba" className={mba}>
+            <Link to="/prod-mba" className={mba}>
               Prod MBA
             </Link>
           </div>

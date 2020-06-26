@@ -21,6 +21,7 @@ type Props = {
   externalPage: boolean,
   referralForm: boolean,
   mailchimpForm: boolean,
+  mixpanelEvent: string,
 };
 
 type FormTypes = {
@@ -101,9 +102,7 @@ export default class Hero extends Component<Props> {
           </div>
         )}
 
-        {referralForm && (
-          <RefereeInput mixpanelEvent="#1 / Referral Subscribe" />
-        )}
+        {referralForm && <RefereeInput mixpanelEvent="0. Referral Subscribe" />}
 
         {mailchimpForm && (
           <MailchimpSubscribe
@@ -167,14 +166,14 @@ export default class Hero extends Component<Props> {
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track('#1 / Home Subtext Link');
+    Mixpanel.track('0. / Home Subtext Link');
   };
 
   goToExternalLink = () => {
-    Mixpanel.track('#1 / Home External Link');
+    Mixpanel.track(`${this.props.mixpanelEvent}`);
   };
 
   goToNextPage = () => {
-    Mixpanel.track('#1 / Home Next Page');
+    Mixpanel.track(`${this.props.mixpanelEvent}`);
   };
 }

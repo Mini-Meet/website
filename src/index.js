@@ -41,7 +41,7 @@ ReactDOM.render(
         <Route path="/referee" exact component={Referee} />
         <Route path="/register" exact component={Register} />
         <Route path="/legal" exact component={Legal} />
-        <Route path="/product-mba" exact component={Mba} />
+        <Route path="/prod-mba" exact component={Mba} />
         <Route path="/mentors" exact component={Mentors} />
         <Route path="/referrals/:referralLink" exact component={Referral} />
         <Route path="/register" exact component={Register} />
