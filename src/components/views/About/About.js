@@ -1,20 +1,18 @@
+// @flow
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import { Mixpanel } from '../../../Mixpanel';
 
-import { Header, Newsletter, Footer } from '../../blocks';
-// import { Button } from '../../elements';
+import { Header, Footer } from '../../blocks';
+import { Button } from '../../elements';
+import portrait from '../../../assets/images/course/henry-portrait.jpg';
 
 import './About.scss';
 
-import portrait from '../../../assets/images/course/henry-portrait.jpg';
+const url = 'https://calendly.com/henry_latham/prod-mba';
 
-const url =
-  'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
-
-export default class About extends Component {
+export default class About extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('MBA / About');
+    Mixpanel.track('0. About');
   }
 
   render() {
@@ -46,19 +44,17 @@ export default class About extends Component {
               great products & rapidly level up their product career.{' '}
             </p>
 
+            <div className="hero__nextpage">
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                <Button onClick={this.goToNextPage}>Apply to Prod MBA</Button>
+              </a>
+            </div>
             {
               // <Link to="/case-study">
               //   <Button onClick={this.goToAboutCaseStudy}>FREE Case Study</Button>
               // </Link>
             }
           </div>
-
-          <Newsletter
-            title="Get The Free 7-Day Mini MBA"
-            subtitle="Subscribe and get the free 7-day email course, explaining the steps towards building a profitable, boostrapped product:"
-            mailchimpForm
-            url={url}
-          />
         </div>
 
         <Footer page="ABOUT" />
@@ -66,7 +62,12 @@ export default class About extends Component {
     );
   }
 
-  goToAboutCaseStudy = () => {
-    Mixpanel.track('Course / About / Click Case Study');
+  goToNextPage = () => {
+    Mixpanel.track('0. About Apply');
+    Mixpanel.track('0. MBA Apply');
   };
+
+  // goToAboutCaseStudy = () => {
+  //   Mixpanel.track('Course / About / Click Case Study');
+  // };
 }

@@ -38,6 +38,10 @@
 
     &_main {
       @include padding(left right, 0);
+
+      @media (min-width: $screen-md-min) {
+        @include padding(left right, reset);
+      }
     }
 
     h3,

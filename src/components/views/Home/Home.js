@@ -19,12 +19,13 @@ export default class Home extends Component {
       <div className="homePageWrapper">
         <Header light />
         <Hero
-          title="We Teach You to Build a Profitable Product in 6 weeks"
-          subtitle="Worried about your job security or levelling up your CV? Want to start a side hustle or your own business? Learn more about our 6-week Prod MBA programme:" // Sign up for our free Mini MBA programme to learn how to deliver a real, revenue-generating product in 6 weeks:
+          title="Build a Profitable Product in 6 weeks With the Prod MBA"
+          subtitle="Worried about your job security or levelling up your CV? Want to start a side hustle or your own business? Learn more about our 6-week Prod MBA programme here:" // Sign up for our free Mini MBA programme to learn how to deliver a real, revenue-generating product in 6 weeks:
           btnText="View Prod MBA Programme"
           nextpage
           nextpageUrl="/prod-mba"
           url={url}
+          mixpanelEvent="0. Home / View Prod MBA"
           // subText="Applications for the Prod MBA are currently closed:  "
           // subTextUrl="/prod-mba"
           // subTextUrlText="Learn More"

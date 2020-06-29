@@ -476,6 +476,7 @@ const contentSix = (
       careful in selecting only applicants we feel are a good fit for the
       programme & who we believe will be able to deliver huge results.
       <br />
+      <br />
       The next cohort starts on {launchDate}.<br />
     </p>
     <br />
@@ -541,7 +542,7 @@ export default class Mba extends Component {
       <div className="homePageWrapper">
         <Header light />
         <Hero
-          title="Build A Profitable Product in 6 Weeks"
+          title="Build A Profitable Product in 6 Weeks With the Prod MBA"
           subtitle="Learn the fundamentals of business & strategy to deliver a real, revenue-generating product with our part-time, 6-week Prod MBA programme:"
           externalPage
           url={calendlyUrl}
@@ -588,8 +589,8 @@ export default class Mba extends Component {
           quote="Can I just say that I love this programme. I know we're only a week in, but this is the most hands-on thing I've ever done."
         />
         <Newsletter
-          title="Try The Free 7-Day Mini MBA"
-          subtitle="Subscribe and get the free 7-day email course, explaining the steps towards building a profitable, boostrapped product & giving you a taster of the full Prod MBA (we'll let you know when applications are open by email):"
+          title="Want To Get A Feel For the Prod MBA?"
+          subtitle="Subscribe and get our free 7-day Mini MBA email course, explaining the steps towards building a profitable, boostrapped product & giving you a taster of the full Prod MBA:"
           mailchimpForm
           url={url}
         />

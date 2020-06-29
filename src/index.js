@@ -9,7 +9,7 @@ import {
 import * as serviceWorker from './serviceWorker';
 
 // Components declaration
-import About from './components/views/About/About';
+import About from './components/views/About/About.js';
 import Booking from './components/views/Booking/Booking';
 import Casestudy from './components/views/Casestudy/Casestudy.js';
 import Home from './components/views/Home/Home';
