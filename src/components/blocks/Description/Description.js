@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react';
+import ReactPixel from '@zsajjad/react-facebook-pixel';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
 
@@ -14,6 +15,7 @@ type Props = {
   btnText: string,
   url: string,
   mixpanelEvent: string,
+  facebookEvent: string,
 };
 
 export default class Description extends Component<Props> {
@@ -49,5 +51,6 @@ export default class Description extends Component<Props> {
 
   goToApplicationPage = () => {
     Mixpanel.track(`${this.props.mixpanelEvent}`);
+    ReactPixel.track('track', `${this.props.facebookEvent}`);
   };
 }

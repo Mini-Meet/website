@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import ReactPixel from '@zsajjad/react-facebook-pixel';
 import { Mixpanel } from '../../../Mixpanel';
 
 import { Button } from '../../elements';
@@ -530,11 +531,14 @@ const toggleItems = [
 const url =
   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
+
 const mixpanelEvent = '0. MBA Apply';
+const facebookEvent = 'SubmitApplication';
 
 export default class Mba extends Component {
   componentDidMount() {
     Mixpanel.track('0. MBA');
+    ReactPixel.track('track', 'ViewContent');
   }
 
   render() {
@@ -548,6 +552,7 @@ export default class Mba extends Component {
           url={calendlyUrl}
           btnText="Apply To Prod MBA"
           mixpanelEvent={mixpanelEvent}
+          facebookEvent={facebookEvent}
         />
         <Description
           header="This is Not Just Another Course"
@@ -556,6 +561,7 @@ export default class Mba extends Component {
           btnText="Apply To Prod MBA"
           url={calendlyUrl}
           mixpanelEvent={mixpanelEvent}
+          facebookEvent={facebookEvent}
         />
         <Testimonial
           name="Richard Illig, ex-Head of Product, now Founder at ProductPeers"
@@ -568,6 +574,7 @@ export default class Mba extends Component {
           btnText="Apply To Join These Alumni"
           url={calendlyUrl}
           mixpanelEvent={mixpanelEvent}
+          facebookEvent={facebookEvent}
         />
         <div className="curriculum">
           <h3 className="curriculum__header">Curriculum</h3>
@@ -607,5 +614,6 @@ export default class Mba extends Component {
 
   goToFaqApply = () => {
     Mixpanel.track(`${mixpanelEvent}`);
+    ReactPixel.track('track', `${facebookEvent}`);
   };
 }
