@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import ReactPixel from '@zsajjad/react-facebook-pixel';
+import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button, Loading } from '../../elements';
 import { RefereeInput } from '..';
@@ -37,7 +37,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
     if (email && email.value && email.value.indexOf('@') > -1) {
       Mixpanel.track(`0. Home MiniMBA Subscribe`);
       Mixpanel.track(`0. MiniMBA Subscribe`);
-      ReactPixel.track('track', 'Lead');
+      FacebookPixel.track('Lead');
 
       onSubscribe({
         EMAIL: email.value,
@@ -174,11 +174,11 @@ export default class Hero extends Component<Props> {
 
   goToExternalLink = () => {
     Mixpanel.track(`${this.props.mixpanelEvent}`);
-    ReactPixel.track('track', `${this.props.facebookEvent}`);
+    FacebookPixel.track(`${this.props.facebookEvent}`);
   };
 
   goToNextPage = () => {
     Mixpanel.track(`${this.props.mixpanelEvent}`);
-    ReactPixel.track('track', `${this.props.facebookEvent}`);
+    FacebookPixel.track(`${this.props.facebookEvent}`);
   };
 }

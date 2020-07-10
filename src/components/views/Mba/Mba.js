@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ReactPixel from '@zsajjad/react-facebook-pixel';
+import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 
 import { Button } from '../../elements';
@@ -538,7 +538,7 @@ const facebookEvent = 'SubmitApplication';
 export default class Mba extends Component {
   componentDidMount() {
     Mixpanel.track('0. MBA');
-    ReactPixel.track('track', 'ViewContent');
+    FacebookPixel.track('ViewContent');
   }
 
   render() {
@@ -614,6 +614,6 @@ export default class Mba extends Component {
 
   goToFaqApply = () => {
     Mixpanel.track(`${mixpanelEvent}`);
-    ReactPixel.track('track', `${facebookEvent}`);
+    FacebookPixel.track(`${facebookEvent}`);
   };
 }
