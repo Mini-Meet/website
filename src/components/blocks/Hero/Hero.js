@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
-import { MailchimpForm } from '../../blocks';
+import { MailchimpForm, RefereeInput } from '..';
 import { Button } from '../../elements';
-import { RefereeInput } from '..';
 import './Hero.scss';
 
 type Props = {

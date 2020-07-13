@@ -12,7 +12,6 @@ type Props = {
   subText: string,
   subTextUrl: string,
   subTextUrlText: string,
-  url: string,
 };
 
 type FormTypes = {
@@ -51,7 +50,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
 export default class MailchimpForm extends Component<Props> {
   render() {
-    const { subText, subTextUrl, subTextUrlText, url } = this.props;
+    const { subText, subTextUrl, subTextUrlText } = this.props;
 
     return (
       <div>

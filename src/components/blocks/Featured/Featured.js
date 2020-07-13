@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 // import { Button } from '../../elements';
-import { MailchimpForm } from '../../blocks';
+import { MailchimpForm } from '..';
 
 import './Featured.scss';
 

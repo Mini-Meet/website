@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 // import { FacebookPixel } from '../../../FacebookPixel';
 // import { Mixpanel } from '../../../Mixpanel';
-import { MailchimpForm } from '../../blocks';
+import { MailchimpForm } from '..';
 // import { Button } from '../../elements';
 
 import overview from '../../../assets/images/course/curriculum_overview.png';
