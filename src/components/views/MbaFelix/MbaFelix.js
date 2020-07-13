@@ -1,8 +1,10 @@
+// @flow
 import React, { Component } from 'react';
 
+import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 
-import { Button } from '../../elements';
+// import { Button } from '../../elements';
 
 import {
   Description,
@@ -11,6 +13,7 @@ import {
   Featured,
   Footer,
   Image,
+  MailchimpForm,
   Newsletter,
   SectionSummary,
   Stats,
@@ -30,6 +33,12 @@ import antonia from '../../../assets/images/testimonials/antonia.png';
 import richard from '../../../assets/images/testimonials/richard.png';
 
 import './MbaFelix.scss';
+
+type Props = {
+  subText: string,
+  subTextUrl: string,
+  subTextUrlText: string,
+};
 
 const launchDate = '3rd August 2020';
 
@@ -173,16 +182,36 @@ const faqSeven = (
     <br />
     <p>
       If you want to discuss this with your HR team or manager, we suggest
-      covering: - What the course is about - What you{"'"}ll personally get from
-      it - What the company/your team will get from you participating - How you
-      {"'"}ll apply the learnings to your work - How long it will take you to
-      complete - The cost
+      covering:
+      <br />
+      <br />
+      <li>What the course is about</li>
+      <li>What you{"'"}ll personally get from it</li>
+      <li>What the company/your team will get from you participating</li>
+      <li>How you{"'"}ll apply the learnings to your work</li>
+      <li>How long it will take you to</li>
+      complete
+      <li>The cost</li>
     </p>
     <br />
     <p>
       If you get the green light, you can then either invoice the company or pay
       for it yourself & request reimbursement from your company
     </p>
+  </div>
+);
+
+const faqEight = (
+  <div>
+    <p>
+      There are only {noOfParticipants} places in each cohort & we are extremely
+      careful in selecting only applicants we feel are a good fit for the
+      programme & who we believe will be able to deliver huge results.
+      <br />
+      <br />
+      The next cohort starts on {launchDate}.<br />
+    </p>
+    <br />
   </div>
 );
 
@@ -221,6 +250,11 @@ const faqItems = [
     id: '7',
     title: 'Can I get my company to pay for the programme?',
     content: faqSeven,
+  },
+  {
+    id: '8',
+    title: 'How many students are there?',
+    content: faqEight,
   },
 ];
 
@@ -324,7 +358,10 @@ const contentTwo = (
     </p>
     <br />
     <p>
-      We only teach you the essential skills to building a product-led business.
+      We only teach you the essential skills to building a product-led business,
+      giving you a massive competitive advantage in your career, whether that be
+      in getting promotion, applying for your ideal job or launching that
+      business you&#39;ve always dreamed of.
     </p>
     <br />
     <p>
@@ -334,9 +371,14 @@ const contentTwo = (
     </p>
     <br />
     <p>
+      We teach you how to become invaluable to your company by focusing on the
+      few things that really matter.
+    </p>
+    <br />
+    <p>
       Each week, we teach you high-impact theory &amp; expect our students to
       put that theory into practice, moving from a business idea to generating
-      revenue within 6 weeks.
+      revenue within 6 weeks, as many of our alumni have successfully done.
     </p>
     <br />
     <img alt="Curriculum" src={curriculum2} />
@@ -346,8 +388,8 @@ const contentTwo = (
 const contentThree = (
   <div>
     <p>
-      Unlike many of the quite frankly, over-priced &amp; low-impact courses out
-      there that just teach you enough product management theory to help you
+      Unlike many of the, quite frankly, over-priced &amp; low-impact courses
+      out there that just teach you enough product management theory to help you
       find your first job, we only focus on what really matters:
     </p>
     <br />
@@ -472,12 +514,37 @@ const contentFive = (
 const contentSix = (
   <div>
     <p>
-      There are only {noOfParticipants} places in each cohort & we are extremely
-      careful in selecting only applicants we feel are a good fit for the
-      programme & who we believe will be able to deliver huge results.
+      <strong>
+        Exclusively for July 2020, we have introduced a special offer of £999
+        (reduced from £2,999).
+      </strong>
+    </p>
+    <br />
+    <p>
+      Note that your company may cover the cost from their training budgets,
+      where they actually have money kept aside for their employees to take
+      courses like this to help your professional development. If your company
+      doesn{"'"}t have a budget, it
+      {"'"}s worth raising the possibility with them.
+    </p>
+    <br />
+    <p>
+      If you want to discuss this with your HR team or manager, we suggest
+      covering:
       <br />
       <br />
-      The next cohort starts on {launchDate}.<br />
+      <li>What the course is about</li>
+      <li>What you{"'"}ll personally get from it</li>
+      <li>What the company/your team will get from you participating</li>
+      <li>How you{"'"}ll apply the learnings to your work</li>
+      <li>How long it will take you to</li>
+      complete
+      <li>The cost</li>
+    </p>
+    <br />
+    <p>
+      If you get the green light, you can then either invoice the company or pay
+      for it yourself & request reimbursement from your company.
     </p>
     <br />
   </div>
@@ -517,7 +584,7 @@ const toggleItems = [
   },
   {
     id: '6',
-    title: 'How Many students are There?',
+    title: 'How Much Does it Cost?',
     content: contentSix,
   },
   {
@@ -530,32 +597,42 @@ const toggleItems = [
 const url =
   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
-const mixpanelEvent = '1.F MBA Apply';
 
-export default class Mba extends Component {
+const mixpanelEvent = '1.F MBA Apply';
+const facebookEvent = 'SubmitApplication';
+
+export default class Mba extends Component<Props> {
   componentDidMount() {
     Mixpanel.track('1.F MBA');
+    FacebookPixel.track('ViewContent');
   }
 
   render() {
+    const { subText, subTextUrl, subTextUrlText } = this.props;
+
     return (
       <div className="homePageWrapper">
         <Header light />
         <Hero
           title="Build A Profitable Product in 6 Weeks With the Prod MBA"
           subtitle="Learn the fundamentals of business & strategy to deliver a real, revenue-generating product with our part-time, 6-week Prod MBA programme:"
-          externalPage
-          url={calendlyUrl}
-          btnText="Apply To Prod MBA"
-          mixpanelEvent={mixpanelEvent}
+          mailchimpForm
+          subText="By sharing your email, you agree to our "
+          subTextUrlText="Terms & Conditions"
+          subTextUrl="/legal"
+          // url={calendlyUrl}
+          // btnText="Apply To Prod MBA"
+          // mixpanelEvent={mixpanelEvent}
+          // facebookEvent={facebookEvent}
         />
         <Description
           header="This is Not Just Another Course"
           description1="This is the world's first Product Management training focused on 'path to profitability', not just 'growth' or understanding how to use Jira."
-          description2="It's a 6-week part-time programme crafted by a team of experienced product leaders, run in groups of carefully selected applicants, to teach you the fundamentals of product strategy & building a profitable business in practice."
+          description2="It's a 6-week part-time programme crafted by a team of experienced product leaders, run in small groups of carefully selected applicants, to teach you the fundamentals of product strategy & building a profitable business in practice:"
           btnText="Apply To Prod MBA"
-          url={calendlyUrl}
+          url={url}
           mixpanelEvent={mixpanelEvent}
+          facebookEvent={facebookEvent}
         />
         <Testimonial
           name="Richard Illig, ex-Head of Product, now Founder at ProductPeers"
@@ -568,6 +645,7 @@ export default class Mba extends Component {
           btnText="Apply To Join These Alumni"
           url={calendlyUrl}
           mixpanelEvent={mixpanelEvent}
+          facebookEvent={facebookEvent}
         />
         <div className="curriculum">
           <h3 className="curriculum__header">Curriculum</h3>
@@ -576,11 +654,22 @@ export default class Mba extends Component {
               sectionHeader="Curriculum"
               toggleItems={toggleItems}
             />
-            <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
-              <Button onClick={this.goToFaqApply}>
-                Apply For The Prod MBA Now
-              </Button>
-            </a>
+            <h4 className="curriculum__cta">
+              See the Full Curriculum & Pricing Options:
+            </h4>
+            <MailchimpForm
+              url={url}
+              subText={subText}
+              subTextUrl={subTextUrl}
+              subTextUrlText={subTextUrlText}
+            />
+            {
+              // <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+              // <Button onClick={this.goToFaqApply}>
+              //   Apply For The Prod MBA Now
+              // </Button>
+              // </a>
+            }
           </div>
         </div>
         <Testimonial
@@ -607,5 +696,6 @@ export default class Mba extends Component {
 
   goToFaqApply = () => {
     Mixpanel.track(`${mixpanelEvent}`);
+    FacebookPixel.track(`${facebookEvent}`);
   };
 }
