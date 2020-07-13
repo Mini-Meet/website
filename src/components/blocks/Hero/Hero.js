@@ -1,10 +1,10 @@
 // @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
-import { Button, Loading } from '../../elements';
+import { MailchimpForm } from '../../blocks';
+import { Button } from '../../elements';
 import { RefereeInput } from '..';
 import './Hero.scss';
 
@@ -24,41 +24,6 @@ type Props = {
   mailchimpForm: boolean,
   mixpanelEvent: string,
   facebookEvent: string,
-};
-
-type FormTypes = {
-  onSubscribe: Function,
-};
-
-const CustomForm = ({ onSubscribe }: FormTypes) => {
-  let email;
-
-  const submit = () => {
-    if (email && email.value && email.value.indexOf('@') > -1) {
-      Mixpanel.track(`0. Home MiniMBA Subscribe`);
-      Mixpanel.track(`0. MiniMBA Subscribe`);
-      FacebookPixel.track('Lead');
-
-      onSubscribe({
-        EMAIL: email.value,
-      });
-    }
-  };
-
-  return (
-    <div className="hero__form">
-      <input
-        ref={node => {
-          email = node;
-        }}
-        type="email"
-        placeholder="Enter your email"
-      />
-      <Button primary onClick={submit}>
-        Join Mini MBA
-      </Button>
-    </div>
-  );
 };
 
 export default class Hero extends Component<Props> {
@@ -108,60 +73,11 @@ export default class Hero extends Component<Props> {
         {referralForm && <RefereeInput mixpanelEvent="0. Referral Subscribe" />}
 
         {mailchimpForm && (
-          <MailchimpSubscribe
+          <MailchimpForm
             url={url}
-            render={({ subscribe, status, message }) => (
-              <div>
-                {(!status || status === 'error') && (
-                  <CustomForm
-                    status={status}
-                    message={message}
-                    onSubscribe={formData => subscribe(formData)}
-                  />
-                )}
-                {status === 'sending' && (
-                  <div className="hero__form__loading">
-                    <Loading dark />
-                  </div>
-                )}
-                {status === 'error' && (
-                  <p
-                    className="hero__form__error"
-                    // eslint-disable-next-line
-                    dangerouslySetInnerHTML={{ __html: message }}
-                  />
-                )}
-                {status === 'success' && (
-                  <div>
-                    <div className="hero__form__success">
-                      Successfully added!
-                    </div>
-                    {
-                      // <iframe
-                      //   title="Survey"
-                      //   id="typeform-full"
-                      //   width="100%"
-                      //   height="200%"
-                      //   frameBorder="0"
-                      //   src="https://productmastery.typeform.com/to/fAD2UV"
-                      // ></iframe>
-                    }
-                  </div>
-                )}
-                {!status && (
-                  <p className="hero__subtext">
-                    {subText}
-                    <Link
-                      to={subTextUrl}
-                      className="hero__subtext_link"
-                      onClick={this.goToSubTextLink}
-                    >
-                      {subTextUrlText}
-                    </Link>
-                  </p>
-                )}
-              </div>
-            )}
+            subText={subText}
+            subTextUrl={subTextUrl}
+            subTextUrlText={subTextUrlText}
           />
         )}
       </div>
@@ -169,7 +85,7 @@ export default class Hero extends Component<Props> {
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track('0. / Home Subtext Link');
+    Mixpanel.track('1. / Home Subtext Link');
   };
 
   goToExternalLink = () => {

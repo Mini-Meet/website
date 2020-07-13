@@ -530,11 +530,11 @@ const toggleItems = [
 const url =
   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
-const mixpanelEvent = '0.F MBA Apply';
+const mixpanelEvent = '1.F MBA Apply';
 
 export default class Mba extends Component {
   componentDidMount() {
-    Mixpanel.track('0.F MBA');
+    Mixpanel.track('1.F MBA');
   }
 
   render() {

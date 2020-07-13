@@ -28,9 +28,10 @@
     a {
       text-decoration: none;
     }
+  }
 
-    button {
-      @include margin(top, 3);
-    }
+  &__cta {
+    @include padding(top, 4);
+    @include padding(bottom, 2);
   }
 }

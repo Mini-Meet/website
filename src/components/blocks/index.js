@@ -9,6 +9,7 @@ export { default as Footer } from './Footer/Footer';
 export { default as Header } from './Header/Header';
 export { default as Hero } from './Hero/Hero.js';
 export { default as Image } from './Image/Image';
+export { default as MailchimpForm } from './MailchimpForm/MailchimpForm.js';
 export { default as Menu } from './Menu/Menu.js';
 export { default as Mentors } from './Mentors/Mentors';
 export { default as ModalConfirm } from './ModalConfirm/ModalConfirm.js';

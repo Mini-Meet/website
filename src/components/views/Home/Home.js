@@ -9,7 +9,7 @@ const url =
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('0. Home');
+    Mixpanel.track('1. Home');
   }
 
   render() {

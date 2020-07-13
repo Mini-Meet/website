@@ -69,9 +69,14 @@
       margin: 16px auto 0;
       width: 100%;
 
-      @media (min-width: $screen-md-min) {
-        margin: 32px auto;
-        width: 70%;
+      @media (min-width: $screen-sm-min) {
+        margin: 56px auto 32px;
+        width: 80%;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        margin: 56px auto 32px;
+        width: 80%;
       }
     }
   }

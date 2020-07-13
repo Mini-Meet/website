@@ -1,8 +1,9 @@
 // @flow
 import React, { Component } from 'react';
-import { FacebookPixel } from '../../../FacebookPixel';
-import { Mixpanel } from '../../../Mixpanel';
-import { Button } from '../../elements';
+// import { FacebookPixel } from '../../../FacebookPixel';
+// import { Mixpanel } from '../../../Mixpanel';
+import { MailchimpForm } from '../../blocks';
+// import { Button } from '../../elements';
 
 import overview from '../../../assets/images/course/curriculum_overview.png';
 
@@ -12,15 +13,27 @@ type Props = {
   header: string,
   description1: string,
   description2: string,
-  btnText: string,
   url: string,
-  mixpanelEvent: string,
-  facebookEvent: string,
+  // btnText: string,
+  // mixpanelEvent: string,
+  // facebookEvent: string,
+  subText: string,
+  subTextUrl: string,
+  subTextUrlText: string,
 };
 
 export default class Description extends Component<Props> {
   render() {
-    const { header, description1, description2, btnText, url } = this.props;
+    const {
+      header,
+      description1,
+      description2,
+      // btnText,
+      url,
+      subText,
+      subTextUrl,
+      subTextUrlText,
+    } = this.props;
 
     return (
       <div className="description">
@@ -31,9 +44,17 @@ export default class Description extends Component<Props> {
             <br />
             <p>{description2}</p>
             <div className="description__button">
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                <Button onClick={this.goToApplicationPage}>{btnText}</Button>
-              </a>
+              {
+                // <a href={url} target="_blank" rel="noopener noreferrer">
+                // <Button onClick={this.goToApplicationPage}>{btnText}</Button>
+                // </a>
+              }
+              <MailchimpForm
+                url={url}
+                subText={subText}
+                subTextUrl={subTextUrl}
+                subTextUrlText={subTextUrlText}
+              />
             </div>
           </div>
         </div>
@@ -49,8 +70,8 @@ export default class Description extends Component<Props> {
     );
   }
 
-  goToApplicationPage = () => {
-    Mixpanel.track(`${this.props.mixpanelEvent}`);
-    FacebookPixel.track('track', `${this.props.facebookEvent}`);
-  };
+  // goToApplicationPage = () => {
+  //   Mixpanel.track(`${this.props.mixpanelEvent}`);
+  //   FacebookPixel.track('track', `${this.props.facebookEvent}`);
+  // };
 }

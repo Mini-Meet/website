@@ -6,9 +6,13 @@
   @include padding(bottom, 3);
   @include col;
   box-shadow: 0 20px 40px $phone-elevation;
-  height: 208px;
+  height: 288px;
   max-width: 480px;
   width: 480px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 208px;
+  }
 }
 
 .profile-pic {

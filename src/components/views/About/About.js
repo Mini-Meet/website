@@ -12,7 +12,7 @@ const url = 'https://calendly.com/henry_latham/prod-mba';
 
 export default class About extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('0. About');
+    Mixpanel.track('1. About');
   }
 
   render() {
@@ -63,8 +63,8 @@ export default class About extends Component<Props> {
   }
 
   goToNextPage = () => {
-    Mixpanel.track('0. About Apply');
-    Mixpanel.track('0. MBA Apply');
+    Mixpanel.track('1. About Apply');
+    Mixpanel.track('1. MBA Apply');
   };
 
   // goToAboutCaseStudy = () => {

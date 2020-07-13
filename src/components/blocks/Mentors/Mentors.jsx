@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import dom from '../../../assets/images/mentors/dom.jpeg';
 import henry from '../../../assets/images/mentors/henry.jpg';
 import elvis from '../../../assets/images/mentors/elvis.jpeg';
+import sofi from '../../../assets/images/mentors/sofi.jpeg';
 
 import Card from './Card/Card.jsx';
 
@@ -27,14 +28,21 @@ export default class Mentors extends Component {
         name: 'Henry Latham',
         title: '#product #entrepreneurship',
         comment:
-          'Henry has 8 years of experience as a Founder & Head of Product with early-stage startups. He is the author of "Why Your Startup is Failing" & founder of the Prod MBA programme.',
+          'Henry has 8 years of experience as a Founder & Head of Product with early-stage startups. He is the author of "Why Your Startup is Failing" & founder of the Prod MBA programme, where he teaches essential discovery & product operations skills to aspiring founders & ambitious product people.',
+      },
+      {
+        photo: sofi,
+        name: 'Sofi Newsham',
+        title: '#product #scale',
+        comment:
+          'Sofi is a Senior Product Manager & Consultant with a wealth of experience across marketplace, finance and eCommerce. She has rocketed revenue by millions, increased signups by up to 10 times & boosted user reported satisfaction by 5 NPS points - and loves using data to shape the perfect customer journey.',
       },
       {
         photo: elvis,
         name: 'Elvis Malkic',
         title: '#growth #acquisition',
         comment:
-          'Results-driven FinTech, MarTech, Inbound & App Marketing Growth Hacker who has run over 400 growth experiments over the last 2 years. ',
+          'Elvis is a results-driven FinTech, MarTech, Inbound & App Marketing Growth Hacker who has run over 400 growth experiments over the last 2 years. ',
       },
     ];
 
