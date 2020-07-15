@@ -615,7 +615,7 @@ const toggleItems = [
 
 const url =
   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
-const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
+// const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
 
 const mixpanelEvent = '1. MBA Apply';
 const facebookEvent = 'SubmitApplication';
