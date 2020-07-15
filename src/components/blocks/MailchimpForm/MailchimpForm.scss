@@ -56,8 +56,16 @@
     @include padding(bottom, 3);
     color: $secondary;
 
+    a {
+      text-decoration: underline;
+    }
+
     &_link {
       font-size: 12px;
     }
   }
+}
+
+a {
+  text-decoration: none;
 }

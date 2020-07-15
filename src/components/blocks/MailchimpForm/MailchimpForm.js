@@ -6,6 +6,8 @@ import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 import { Button, Loading } from '../../elements';
 
+import brochurePdf from '../../../assets/pdf/prod-mba-brochure.pdf';
+
 import './MailchimpForm.scss';
 
 type Props = {
@@ -24,7 +26,6 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
   const submit = () => {
     if (email && email.value && email.value.indexOf('@') > -1) {
       Mixpanel.track(`1. MBA Subscribe`);
-      FacebookPixel.track('Lead');
 
       onSubscribe({
         EMAIL: email.value,
@@ -80,9 +81,17 @@ export default class MailchimpForm extends Component<Props> {
               {status === 'success' && (
                 <div>
                   <div className="mailchimp__form__success">
-                    Successfully added! Check your email to download our
-                    brochure
+                    Success! Check our our full curriculum here:
                   </div>
+                  <a
+                    href={brochurePdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button onClick={this.goToPdf}>
+                      View Prod MBA Brochure
+                    </Button>
+                  </a>
                   {
                     // <iframe
                     //   title="Survey"
@@ -116,5 +125,11 @@ export default class MailchimpForm extends Component<Props> {
 
   goToSubTextLink = () => {
     Mixpanel.track('1. / Home Subtext Link');
+  };
+
+  goToPdf = () => {
+    Mixpanel.track('1. MBA View PDF');
+    FacebookPixel.track('Lead');
+    console.log('1. MBA View PDF');
   };
 }

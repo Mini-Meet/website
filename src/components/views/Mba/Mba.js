@@ -25,6 +25,7 @@ import curriculum1 from '../../../assets/images/course/curriculum_1.jpg';
 import curriculum1a from '../../../assets/images/course/curriculum_1a.jpg';
 import curriculum2 from '../../../assets/images/course/curriculum_2.jpg';
 import curriculum3 from '../../../assets/images/course/curriculum_3.jpg';
+import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyback.png';
 
 import testimonialCollage from '../../../assets/images/testimonials/collage.jpg';
 import testimonialCollageSmall from '../../../assets/images/testimonials/collageSmall.jpg';
@@ -41,8 +42,9 @@ type Props = {
 };
 
 const launchDate = '3rd August 2020';
-
 const noOfParticipants = '12';
+const courseCost = '£999';
+const courseDiscount = '£2,999';
 
 const faqOne = (
   <div>
@@ -514,17 +516,34 @@ const contentFive = (
 const contentSix = (
   <div>
     <p>
+      Exclusively for July 2020, we have introduced a special offer of
       <strong>
-        Exclusively for July 2020, we have introduced a special offer of £999
-        (reduced from £2,999).
+        {' '}
+        {courseCost} (reduced from {courseDiscount})
       </strong>
+      .
+    </p>
+    <img alt="Moneyback Guarantee" src={curriculumMoneyback} />
+    <p>
+      <strong>Our 100% Moneyback Guarantee</strong>
     </p>
     <br />
     <p>
-      Note that your company may cover the cost from their training budgets,
-      where they actually have money kept aside for their employees to take
-      courses like this to help your professional development. If your company
-      doesn{"'"}t have a budget, it
+      If you engage with the Prod MBA &, after a few weeks, do not feel it is a
+      good fit, then you can immediately get a 100% refund - no questions asked.
+    </p>
+    <br />
+    <p>
+      We’ve been delivering significant results with over 90% of our students,
+      so are very confident that, if you trust the process, the Prod MBA will
+      deliver results for you.
+    </p>
+    <br />
+    <p>
+      Note also that your company may cover the cost from their training
+      budgets, where they actually have money kept aside for their employees to
+      take courses like this to help your professional development. If your
+      company doesn{"'"}t have a budget, it
       {"'"}s worth raising the possibility with them.
     </p>
     <br />
