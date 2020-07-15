@@ -1,7 +1,6 @@
 // Elements definition (ASC order)
 export { default as AppPrototype } from './AppPrototype/AppPrototype';
 export { default as Banner } from './Banner/Banner';
-export { default as Curriculum } from './Curriculum/Curriculum';
 export { default as Description } from './Description/Description';
 export { default as FAQs } from './FAQs/FAQs';
 export { default as Featured } from './Featured/Featured';

@@ -650,6 +650,9 @@ export default class Mba extends Component<Props> {
           description2="It's a 6-week part-time programme crafted by a team of experienced product leaders, run in small groups of carefully selected applicants, to teach you the fundamentals of product strategy & building a profitable business in practice:"
           btnText="Apply To Prod MBA"
           url={url}
+          subText="By sharing your email, you agree to our "
+          subTextUrlText="Terms & Conditions"
+          subTextUrl="/legal"
           mixpanelEvent={mixpanelEvent}
           facebookEvent={facebookEvent}
         />
@@ -662,7 +665,9 @@ export default class Mba extends Component<Props> {
         <Featured
           header="The Prod MBA was taken by students from:"
           btnText="Apply To Join These Alumni"
-          url={calendlyUrl}
+          subText="By sharing your email, you agree to our "
+          subTextUrlText="Terms & Conditions"
+          subTextUrl="/legal"
           mixpanelEvent={mixpanelEvent}
           facebookEvent={facebookEvent}
         />

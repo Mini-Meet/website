@@ -130,6 +130,5 @@ export default class MailchimpForm extends Component<Props> {
   goToPdf = () => {
     Mixpanel.track('1. MBA View PDF');
     FacebookPixel.track('Lead');
-    console.log('1. MBA View PDF');
   };
 }
