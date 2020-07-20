@@ -5,7 +5,7 @@
     @include padding(all, 2);
     @include opacity(1);
     max-width: 32px; // default logo width: 140px;
-    position: fixed;
+    position: absolute;
     top: 0;
 
     @media (min-width: $screen-sm-min) {

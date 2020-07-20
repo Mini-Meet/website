@@ -29,7 +29,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
   const submit = () => {
     if (email && email.value && email.value.indexOf('@') > -1) {
-      Mixpanel.track(`1. MBA MiniMBA Subscribe`);
+      Mixpanel.track(`2. MBA MiniMBA Subscribe`);
       Mixpanel.track(`1. MiniMBA Subscribe`);
 
       onSubscribe({

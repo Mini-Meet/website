@@ -10,7 +10,6 @@ class Footer extends Component {
   render() {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
     // const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
-    const mba = this.props.page === 'MBA' ? 'active' : 'inactive';
     const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
@@ -21,11 +20,6 @@ class Footer extends Component {
           <div className="footer__list_item">
             <Link to="/home" className={home}>
               Home
-            </Link>
-          </div>
-          <div className="footer__list_item">
-            <Link to="/prod-mba" className={mba}>
-              Prod MBA
             </Link>
           </div>
           <div className="footer__list_item">

@@ -64,7 +64,7 @@ export default class About extends Component<Props> {
 
   goToNextPage = () => {
     Mixpanel.track('1. About Apply');
-    Mixpanel.track('1. MBA Apply');
+    Mixpanel.track('2. MBA Apply');
   };
 
   // goToAboutCaseStudy = () => {

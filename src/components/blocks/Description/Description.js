@@ -5,15 +5,16 @@ import React, { Component } from 'react';
 import { MailchimpForm } from '..';
 // import { Button } from '../../elements';
 
-import overview from '../../../assets/images/course/curriculum_overview.png';
-
 import './Description.scss';
 
 type Props = {
+  reverse: boolean,
   header: string,
   description1: string,
   description2: string,
+  description3: string,
   url: string,
+  image: string,
   // btnText: string,
   // mixpanelEvent: string,
   // facebookEvent: string,
@@ -25,9 +26,12 @@ type Props = {
 export default class Description extends Component<Props> {
   render() {
     const {
+      reverse,
       header,
       description1,
       description2,
+      description3,
+      image,
       // btnText,
       url,
       subText,
@@ -36,36 +40,77 @@ export default class Description extends Component<Props> {
     } = this.props;
 
     return (
-      <div className="description">
-        <div className="description__text">
-          <h3 className="description__text_header">{header}</h3>
-          <div className="description__text_main">
-            <p>{description1}</p>
-            <br />
-            <p>{description2}</p>
-            <div className="description__button">
-              {
-                // <a href={url} target="_blank" rel="noopener noreferrer">
-                // <Button onClick={this.goToApplicationPage}>{btnText}</Button>
-                // </a>
-              }
-              <MailchimpForm
-                url={url}
-                subText={subText}
-                subTextUrl={subTextUrl}
-                subTextUrlText={subTextUrlText}
+      <div>
+        {!reverse && (
+          <div className="description">
+            <div className="description__text">
+              <h3 className="description__text_header">{header}</h3>
+              <div className="description__text_main">
+                <p>{description1}</p>
+                <br />
+                <p>{description2}</p>
+                <br />
+                <p>{description3}</p>
+                <div className="description__button">
+                  {
+                    // <a href={url} target="_blank" rel="noopener noreferrer">
+                    // <Button onClick={this.goToApplicationPage}>{btnText}</Button>
+                    // </a>
+                  }
+                  <MailchimpForm
+                    url={url}
+                    subText={subText}
+                    subTextUrl={subTextUrl}
+                    subTextUrlText={subTextUrlText}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="description__imgblock">
+              <img
+                alt="overview"
+                src={image}
+                className="description__imgblock_img"
               />
             </div>
           </div>
-        </div>
+        )}
+        {reverse && (
+          <div className="description description__reverse">
+            <div className="description__imgblock">
+              <img
+                alt="overview"
+                src={image}
+                className="description__imgblock_img"
+              />
+            </div>
 
-        <div className="description__imgblock">
-          <img
-            alt="overview"
-            src={overview}
-            className="description__imgblock_img"
-          />
-        </div>
+            <div className="description__text description__text_reverse">
+              <h3 className="description__text_header">{header}</h3>
+              <div className="description__text_main">
+                <p>{description1}</p>
+                <br />
+                <p>{description2}</p>
+                <br />
+                <p>{description3}</p>
+                <div className="description__button">
+                  {
+                    // <a href={url} target="_blank" rel="noopener noreferrer">
+                    // <Button onClick={this.goToApplicationPage}>{btnText}</Button>
+                    // </a>
+                  }
+                  <MailchimpForm
+                    url={url}
+                    subText={subText}
+                    subTextUrl={subTextUrl}
+                    subTextUrlText={subTextUrlText}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   }

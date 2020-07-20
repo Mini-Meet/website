@@ -8,6 +8,14 @@
     @include row;
   }
 
+  &__reverse {
+    @include col;
+
+    @media (min-width: $screen-md-min) {
+      @include row;
+    }
+  }
+
   &__text {
     @include col;
     @include padding(top, 0);
@@ -24,6 +32,13 @@
       margin: 0 auto;
       max-width: 600px;
       width: 50%;
+    }
+
+    &_reverse {
+      @media (min-width: $screen-md-min) {
+        @include padding(left, reset);
+        @include padding(right, 3);
+      }
     }
 
     &_header {
@@ -70,12 +85,12 @@
       width: 100%;
 
       @media (min-width: $screen-sm-min) {
-        margin: 56px auto 32px;
+        margin: 72px auto 32px;
         width: 80%;
       }
 
       @media (min-width: $screen-lg-min) {
-        margin: 56px auto 32px;
+        margin: 72px auto 32px;
         width: 80%;
       }
     }

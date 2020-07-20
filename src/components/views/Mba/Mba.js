@@ -25,6 +25,8 @@ import curriculum1 from '../../../assets/images/course/curriculum_1.jpg';
 import curriculum1a from '../../../assets/images/course/curriculum_1a.jpg';
 import curriculum2 from '../../../assets/images/course/curriculum_2.jpg';
 import curriculum3 from '../../../assets/images/course/curriculum_3.jpg';
+import curriculumOverview from '../../../assets/images/course/curriculum_overview.png';
+import curriculumROI from '../../../assets/images/course/curriculum_roi.jpg';
 import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyback.png';
 
 import testimonialCollage from '../../../assets/images/testimonials/collage.jpg';
@@ -36,15 +38,12 @@ import richard from '../../../assets/images/testimonials/richard.png';
 import './Mba.scss';
 
 type Props = {
-  subText: string,
-  subTextUrl: string,
-  subTextUrlText: string,
+  //
 };
 
-const launchDate = '3rd August 2020';
+const launchDate = '14th Sep 2020';
 const noOfParticipants = '12';
-const courseCost = '£999';
-const courseDiscount = '£2,999';
+const courseCost = '£1,397';
 
 const faqOne = (
   <div>
@@ -83,6 +82,7 @@ const faqTwo = (
       You will need to be able to commit 8-10 hours per week for 6 weeks during
       the programme.
     </p>
+    <br />
     <p>
       We have tried to minimise the amount of content & focus only on extremely
       high-impact exercises, but the kind of work we are doing does require
@@ -91,6 +91,7 @@ const faqTwo = (
       alumni, but the weekly cycle of consuming content & putting that into
       practice must be kept to to get real value from the programme.
     </p>
+    <br />
     <p>
       Generally, each week consists of 2hrs of video content, 4hrs for the
       assignment & 2hrs of Slack interactions & workshops.
@@ -107,7 +108,7 @@ const faqThree = (
     </p>
     <br />
     <p>
-      What do we mean by ${"'"}good fit${"'"}, you may ask? Somebody who we
+      What do we mean by {"'"}good fit{"'"}, you may ask? Somebody who we
       believe has a strong motivation & the resilience to complete the
       programme, regardless of whether they are working full-time or not,
       regardless of whether they are motivated by starting their own business or
@@ -472,6 +473,20 @@ const contentFive = (
       that be of your business, or an individual product line within a business.
     </p>
     <br />
+    <br />
+    <p>&nbsp;</p>
+    <p>
+      <strong>Product Manager / Product Owner</strong>
+    </p>
+    <br />
+    <p>
+      Learn the fundamentals of business &amp; strategy to build great products
+      &amp; move away from &quot;the build trap&quot; of busily getting as many
+      features done as possible, rather than building the right features
+      (earning yourself promotion or helping you land your dream job in the
+      process).
+    </p>
+    <br />
     <p>&nbsp;</p>
     <br />
     <p>
@@ -495,20 +510,7 @@ const contentFive = (
       validated, revenue-generated product line without the risk of months of
       building an MVP &amp; an expensive product team you may not even need.
     </p>
-    <br />
-    <p>&nbsp;</p>
-    <br />
-    <p>
-      <strong>Product Manager / Product Owner</strong>
-    </p>
-    <br />
-    <p>
-      Learn the fundamentals of business &amp; strategy to build great products
-      &amp; move away from &quot;the build trap&quot; of busily getting as many
-      features done as possible, rather than building the right features
-      (earning yourself promotion or helping you land your dream job in the
-      process).
-    </p>
+
     <br />
   </div>
 );
@@ -516,12 +518,11 @@ const contentFive = (
 const contentSix = (
   <div>
     <p>
-      Exclusively for July 2020, we have introduced a special offer of
-      <strong>
-        {' '}
-        {courseCost} (reduced from {courseDiscount})
-      </strong>
-      .
+      The Prod MBA costs
+      <strong> {courseCost} </strong>& includes 6 weeks of weekly video content,
+      assignments reviewed by our mentors, Q&A sessions & workshops, as well as
+      lifetime access to the Prod MBA alumni network (including events &
+      workshops).
     </p>
     <img alt="Moneyback Guarantee" src={curriculumMoneyback} />
     <p>
@@ -539,6 +540,11 @@ const contentSix = (
       deliver results for you.
     </p>
     <br />
+    <br />
+    <p>
+      <strong>Get Your Company To Pay</strong>
+    </p>
+    <br />
     <p>
       Note also that your company may cover the cost from their training
       budgets, where they actually have money kept aside for their employees to
@@ -552,20 +558,39 @@ const contentSix = (
       covering:
       <br />
       <br />
-      <li>What the course is about</li>
-      <li>What you{"'"}ll personally get from it</li>
-      <li>What the company/your team will get from you participating</li>
-      <li>How you{"'"}ll apply the learnings to your work</li>
-      <li>How long it will take you to</li>
-      complete
-      <li>The cost</li>
+      <li>
+        <strong>What the course is about</strong>
+      </li>
+      <li>
+        <strong>What you{"'"}ll personally get from it:</strong> Learning key
+        skills to become an effective product leader, such as product strategy,
+        product discovery, stakeholder alignment & leadership techniques
+      </li>
+      <li>
+        <strong>
+          What the company/your team will get from you participating:
+        </strong>{' '}
+        Ability to discover & pursue new, high-potential product opportunities
+        with minimal resources, as well as your ability to pass on effective
+        product management processes & advice to other team members
+      </li>
+      <li>
+        <strong>How you{"'"}ll apply the learnings to your work:</strong> Focus
+        on your product team delivering more value for the business &
+        identifying new product opportunities & revenue streams
+      </li>
+      <li>
+        <strong>How long it will take you to complete</strong>
+      </li>
+      <li>
+        <strong>The cost</strong>
+      </li>
     </p>
     <br />
     <p>
       If you get the green light, you can then either invoice the company or pay
       for it yourself & request reimbursement from your company.
     </p>
-    <br />
   </div>
 );
 
@@ -617,24 +642,22 @@ const url =
   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 // const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
 
-const mixpanelEvent = '1. MBA Apply';
+const mixpanelEvent = '2. MBA Apply';
 const facebookEvent = 'SubmitApplication';
 
 export default class Mba extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('1. MBA');
+    Mixpanel.track('2. MBA');
     FacebookPixel.track('ViewContent');
   }
 
   render() {
-    const { subText, subTextUrl, subTextUrlText } = this.props;
-
     return (
       <div className="homePageWrapper">
         <Header light />
         <Hero
           title="Build A Profitable Product in 6 Weeks With the Prod MBA"
-          subtitle="Learn the fundamentals of business & strategy to deliver a real, revenue-generating product with our part-time, 6-week Prod MBA programme:"
+          subtitle="Learn product strategy, business & the 'entrepreneurial mindset' in practice by going from product idea to delivering a real, revenue-generating product in just 6 weeks:"
           mailchimpForm
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
@@ -645,9 +668,26 @@ export default class Mba extends Component<Props> {
           // facebookEvent={facebookEvent}
         />
         <Description
+          header="The ROI of The Prod MBA"
+          description1="- Learn the key skills you're missing to become a product leader, accelerating your path to more autonomy & double the salary as a Head of Product within just 2 years"
+          description2="- Make yourself invaluable to your company by understanding how to deliver massive value with minimal resources"
+          description3="- Learn how to launch a new, profitable product or your dream business with $50 or less, rather than $500k"
+          image={curriculumROI}
+          btnText="Apply To Prod MBA"
+          url={url}
+          subText="By sharing your email, you agree to our "
+          subTextUrlText="Terms & Conditions"
+          subTextUrl="/legal"
+          mixpanelEvent={mixpanelEvent}
+          facebookEvent={facebookEvent}
+        />
+        <Description
+          reverse
           header="This is Not Just Another Course"
-          description1="This is the world's first Product Management training focused on 'path to profitability', not just 'growth' or understanding how to use Jira."
-          description2="It's a 6-week part-time programme crafted by a team of experienced product leaders, run in small groups of carefully selected applicants, to teach you the fundamentals of product strategy & building a profitable business in practice:"
+          description1="The Prod MBA is an intense 6-week, part-time training programme crafted by a team of experienced product mentors, run in small groups of carefully selected applicants, to take you through the process of product discovery & validation in practice."
+          description2="If you're looking for an ineffective Scrum certification or overly-theoretical Udemy course to put on your CV, then you've come to the wrong place."
+          description3="Ready to truly level-up your career?"
+          image={curriculumOverview}
           btnText="Apply To Prod MBA"
           url={url}
           subText="By sharing your email, you agree to our "
@@ -657,9 +697,9 @@ export default class Mba extends Component<Props> {
           facebookEvent={facebookEvent}
         />
         <Testimonial
-          name="Richard Illig, ex-Head of Product, now Founder at ProductPeers"
+          name="Richard, ex-Head of Product, now Founder at ProductPeers"
           img={richard}
-          quote="60 LinkedIn conversations started, 30 website visitors, 2 newsletter subscribers and 1 SALE!"
+          quote="60 LinkedIn conversations started, 30 website visitors, 2 newsletter subscribers and 1 sale!"
         />
         <Stats header="Some statistics:" />
         <Featured
@@ -672,20 +712,18 @@ export default class Mba extends Component<Props> {
           facebookEvent={facebookEvent}
         />
         <div className="curriculum">
-          <h3 className="curriculum__header">Curriculum</h3>
+          <h3 className="curriculum__header">FAQs</h3>
           <div className="curriculum__main">
             <SectionSummary
               sectionHeader="Curriculum"
               toggleItems={toggleItems}
             />
-            <h4 className="curriculum__cta">
-              See the Full Curriculum & Pricing Options:
-            </h4>
+            <h4 className="curriculum__cta">Download the full curriculum:</h4>
             <MailchimpForm
               url={url}
-              subText={subText}
-              subTextUrl={subTextUrl}
-              subTextUrlText={subTextUrlText}
+              subText="By sharing your email, you agree to our "
+              subTextUrlText="Terms & Conditions"
+              subTextUrl="/legal"
             />
             {
               // <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
@@ -697,7 +735,7 @@ export default class Mba extends Component<Props> {
           </div>
         </div>
         <Testimonial
-          name="Antonia Landi, Product Owner"
+          name="Antonia, Product Owner"
           img={antonia}
           quote="Can I just say that I love this programme. I know we're only a week in, but this is the most hands-on thing I've ever done."
         />
