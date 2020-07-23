@@ -58,11 +58,13 @@ export default class Casestudy extends Component<Props> {
 
         <div className="casestudy">
           <div className="casestudy__header">
-            <p className="casestudy__header_caption">
-              Case Study For Product Managers & Owners:
-            </p>
+            {
+              // <p className="casestudy__header_caption">
+              //   Case Study For Product Managers & Owners:
+              // </p>
+            }
             <h3 className="casestudy__header_h3">
-              {'"'}How We Train You to Build High-Value Products{'"'}
+              {'"'}Learn How We Fast-Track POs & PMs to Head of Product{'"'}
             </h3>
           </div>
           <div className="casestudymain">
@@ -74,20 +76,21 @@ export default class Casestudy extends Component<Props> {
               />
             </div>
             <div className="casestudymain__text">
-              <h4>FREE Case Study Reveals:</h4>
-              <br />
-              <p>Why most product leaders are frusrated in their roles</p>
-              <br />
-              <p>
-                Our proven framework for overcoming the single biggest challenge
-                to startup success
-              </p>
-              <br />
-              <p>
-                How to become a 'Product Rainmaker' & dramatically accelerate
-                your product career
-              </p>
-
+              <h4>Unlock FREE Case Study:</h4>
+              {
+                // <br />
+                // <p>Why most product leaders are frusrated in their roles</p>
+                // <br />
+                // <p>
+                //   Our proven framework for overcoming the single biggest challenge
+                //   to startup success
+                // </p>
+                // <br />
+                // <p>
+                //   How to become a 'Product Rainmaker' & dramatically accelerate
+                //   your product career
+                // </p>
+              }
               <div className="casestudymain__cta">
                 <MailchimpSubscribe
                   url="https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa"

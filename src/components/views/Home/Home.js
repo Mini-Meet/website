@@ -647,8 +647,9 @@ export default class Home extends Component<Props> {
       <div className="homePageWrapper">
         <Header light />
         <Hero
-          title="We Train POs & PMs to Build Exceptional Products & Acheive Rapid Career Progression"
-          subtitle="Learn how to overcome the single biggest challenge to product success by going from idea to product validation with real revenue in just 6 weeks with our part-time Prod MBA training programme:"
+          title="We Fast-Track POs & PMs to Head of Product"
+          subtitle="Gain the autonomy & experience to build great products that give you purpose with our part-time, 6-week training programme:"
+          // subtitle="Learn how to overcome the single biggest challenge to product success by going from idea to product validation with real revenue in just 6 weeks with our part-time Prod MBA training programme:"
           nextPage
           nextPageUrl="/case-study"
           btnText="Get Free Case Study >"
@@ -723,31 +724,33 @@ export default class Home extends Component<Props> {
           img={stefanos}
           quote="Emphasizing that our daily product work should be focused on the impact our product has on our customers, the Prod MBA taught me some really actionable frameworks for validating product ideas, improving Product/Market Fit & bringing an entirely new product to life."
         />
-        <div className="curriculum">
-          <h3 className="curriculum__header">FAQs</h3>
-          <div className="curriculum__main">
-            <SectionSummary
-              sectionHeader="Curriculum"
-              toggleItems={toggleItems}
-            />
-            <h4 className="curriculum__cta">
-              Start levelling up your product career:
-            </h4>
-            <ButtonNextPage
-              nextPageUrl="/case-study"
-              btnText="Get Free Case Study >"
-              onClick={this.goToNextPage}
-            />
-            {
-              // <MailchimpForm
-              //   url={url}
-              //   subText="By sharing your email, you agree to our "
-              //   subTextUrlText="Terms & Conditions"
-              //   subTextUrl="/legal"
-              // />
-            }
-          </div>
-        </div>
+        {
+          // <div className="curriculum">
+          //   <h3 className="curriculum__header">FAQs</h3>
+          //   <div className="curriculum__main">
+          //     <SectionSummary
+          //       sectionHeader="Curriculum"
+          //       toggleItems={toggleItems}
+          //     />
+          //     <h4 className="curriculum__cta">
+          //       Start levelling up your product career:
+          //     </h4>
+          //     <ButtonNextPage
+          //       nextPageUrl="/case-study"
+          //       btnText="Get Free Case Study >"
+          //       onClick={this.goToNextPage}
+          //     />
+          //     {
+          //       // <MailchimpForm
+          //       //   url={url}
+          //       //   subText="By sharing your email, you agree to our "
+          //       //   subTextUrlText="Terms & Conditions"
+          //       //   subTextUrl="/legal"
+          //       // />
+          //     }
+          //   </div>
+          // </div>
+        }
         <Image
           title="Some more love from our students"
           imgDesktop={testimonialCollage}
