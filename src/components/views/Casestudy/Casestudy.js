@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Mixpanel } from '../../../Mixpanel';
+import { FacebookPixel } from '../../../FacebookPixel';
 import { Button, Loading } from '../../elements';
 import { Header } from '../../blocks';
 
@@ -17,7 +18,8 @@ type FormTypes = {
 const CustomForm = ({ onSubscribe }: FormTypes) => {
   let email;
   const submit = () => {
-    Mixpanel.track(`Course / CS Submit`);
+    Mixpanel.track(`3. Casestudy Submit`);
+    FacebookPixel.track(`Subscribe`);
 
     if (email && email.value && email.value.indexOf('@') > -1) {
       onSubscribe({
@@ -45,7 +47,8 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
 export default class Casestudy extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('Course / CS');
+    Mixpanel.track('3. Casestudy');
+    FacebookPixel.track('ViewContent');
   }
 
   render() {
@@ -56,11 +59,10 @@ export default class Casestudy extends Component<Props> {
         <div className="casestudy">
           <div className="casestudy__header">
             <p className="casestudy__header_caption">
-              Case Study For Product Managers:
+              Case Study For Product Managers & Owners:
             </p>
             <h3 className="casestudy__header_h3">
-              {'"'}How I Train Product Managers to Build High-Value Products
-              Within 6 weeks{'"'}
+              {'"'}How We Train You to Build High-Value Products{'"'}
             </h3>
           </div>
           <div className="casestudymain">
@@ -74,17 +76,16 @@ export default class Casestudy extends Component<Props> {
             <div className="casestudymain__text">
               <h4>FREE Case Study Reveals:</h4>
               <br />
+              <p>Why most product leaders are frusrated in their roles</p>
+              <br />
               <p>
-                How <b>most</b> Product Managers sabotage their career
+                Our proven framework for overcoming the single biggest challenge
+                to startup success
               </p>
               <br />
               <p>
-                The <b>TWO</b> things that separate the good from the great
-              </p>
-              <br />
-              <p>
-                Our proven process for <b>launching profitable products</b> by
-                yourself, in your current role{' '}
+                How to become a "Product Rainmaker" & dramatically accelerate
+                your product career
               </p>
 
               <div className="casestudymain__cta">
@@ -150,6 +151,8 @@ export default class Casestudy extends Component<Props> {
   }
 
   goToBookSession = () => {
-    Mixpanel.track('Course / CS / Book');
+    Mixpanel.track(`3. Casestudy Apply`);
+    FacebookPixel.track('SubmitApplication');
+    console.log('Submit Application');
   };
 }

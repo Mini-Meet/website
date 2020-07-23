@@ -13,19 +13,21 @@ import {
   Featured,
   Footer,
   Image,
-  MailchimpForm,
-  Newsletter,
+  // MailchimpForm,
   SectionSummary,
   Stats,
   Mentors,
   Testimonial,
 } from '../../blocks';
 
-import curriculum1 from '../../../assets/images/course/curriculum_1.jpg';
-import curriculum1a from '../../../assets/images/course/curriculum_1a.jpg';
-import curriculum2 from '../../../assets/images/course/curriculum_2.jpg';
-import curriculum3 from '../../../assets/images/course/curriculum_3.jpg';
+import { ButtonNextPage } from '../../elements';
+
+// import curriculumSixWeeks from '../../../assets/images/course/curriculum_1.jpg';
+import curriculumAssignment from '../../../assets/images/course/curriculum_1a.jpg';
+import curriculum3Steps from '../../../assets/images/course/curriculum_2.jpg';
+import curriculumSchedule from '../../../assets/images/course/curriculum_3.jpg';
 import curriculumOverview from '../../../assets/images/course/curriculum_overview.png';
+import curriculumFeatureFactory from '../../../assets/images/course/curriculum_feature_factory.jpg';
 import curriculumROI from '../../../assets/images/course/curriculum_roi.jpg';
 import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyback.png';
 
@@ -33,7 +35,7 @@ import testimonialCollage from '../../../assets/images/testimonials/collage.jpg'
 import testimonialCollageSmall from '../../../assets/images/testimonials/collageSmall.jpg';
 
 import antonia from '../../../assets/images/testimonials/antonia.png';
-import richard from '../../../assets/images/testimonials/richard.png';
+import stefanos from '../../../assets/images/testimonials/stefanos.jpeg';
 
 import './Home.scss';
 
@@ -45,37 +47,6 @@ const launchDate = '14th Sep 2020';
 const noOfParticipants = '12';
 const courseCost = '£1,397';
 
-const faqOne = (
-  <div>
-    <p>
-      We fundamentally believe that much of what is taught in traditional MBA
-      programmes (as well as in many companies for that matter) largely
-      distracts from the core function of a business.
-    </p>
-    <br />
-    <p>
-      Rather than focusing on identifying the right opportunity to pursue, many
-      founders & product leaders jump immediately into questions of scale, or
-      how to sell the idea to an investor to raise capital.
-    </p>
-    <br />
-    <p>
-      We believe that a different model should be pursued: One which focuses on
-      quickly moving to profitabiltiy, sometimes at the expense of growth. We
-      are aware that the startup eco-system is focused on growth at the expense
-      of everything else, but the winds are already starting to change, with
-      many hyper-growth companies crumbling during this recession.
-    </p>
-    <br />
-    <p>
-      Crazy idea, right? That a business should actually need to make more money
-      than it spends... Being one of the few people who can map out that path &
-      move a company towards profitability is going to be extremely valuable
-      over the next few years.
-    </p>
-    <br />
-  </div>
-);
 const faqTwo = (
   <div>
     <p>
@@ -220,11 +191,6 @@ const faqEight = (
 
 const faqItems = [
   {
-    id: '1',
-    title: 'How is this different from a regular MBA?',
-    content: faqOne,
-  },
-  {
     id: '2',
     title: 'How much time will I need for the programme?',
     content: faqTwo,
@@ -263,77 +229,106 @@ const faqItems = [
 
 const contentOne = (
   <div>
+    <p>
+      <strong>For You</strong>
+    </p>
     <p>&nbsp;</p>
     <p>
-      As we move further into 2020, one important question will be on the minds
-      of founders, product leaders &amp; investors alike:
-    </p>
-    <br />
-    <p>Profitability.</p>
-    <br />
-    <p>
-      How can we go beyond users, not just building a product that is useful
-      &amp; delightful to use, but that, ultimately, makes the company more
-      money than it costs to build?
+      Products need to deliver value for the customer and for the business (i.e.
+      revenue) to succeed. This is the essence of your role as a product leader.
     </p>
     <br />
     <p>
-      Whether you are looking for a new job, a promotion, or even thinking of
-      starting a new business, learning how to build profitable, high-value
-      products extremely quickly will give you a massive competitive advantage.
+      Failure to not only deliver value for the customer, but to get them to
+      love that product, is the single biggest reason startups fail.{' '}
     </p>
     <br />
     <p>
-      And you&#39;ll be left behind if you don&#39;t adapt, with ever more
-      companies realising that effective product management isn&#39;t about
-      getting things done quickly (tickets, story points &amp; sprints), but
-      about getting the right things done:
+      Understanding how to make customers love your product - how to achieve
+      “Product/Market Fit” - through our framework for move towards this with
+      your product team, will dramatically change your career.
     </p>
     <br />
     <p>
-      Things that help you move your product further along its path to
-      profitability.
+      It will help you become a “Product Rainmaker”, leading to rapid promotion,
+      autonomy in your work & the purpose that comes from building great
+      products that customers love.
+    </p>
+    <br />
+    <br />
+    <p>
+      <strong>For Your Company</strong>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+      Furthermore, many companies invest a huge amount of money into product
+      teams that do not deliver a return on investment.
     </p>
     <br />
     <p>
-      During our programme, we want you to forget everything you know about
-      product.
+      In a recession economy, this situation becomes unfeasible, with these
+      product teams disbanded, or drawing resources away from other parts of the
+      business that may more urgently need these resources.
     </p>
     <br />
     <p>
-      We want to start with the right foundations for product success, returning
-      to gain a deep understanding of what a business really is - and how
-      product ties into one.
+      By learning how to deeply understand your customer, to validate product
+      ideas rapidly & with limited resources, and to align your product team
+      around a clear product strategy that delivers maximum value to your
+      customer, you can ensure your team delivers massive value to your business
+      in the form of increased growth &, more importantly, profit.
+    </p>
+    <br />
+    <br />
+    <p>
+      <strong>Get Your Company To Pay</strong>
     </p>
     <br />
     <p>
-      We will take you from planning to action each week, supported by a group
-      of other product people (PMs, designers, developers, founders), to build
-      your own profitable product.
+      Note also that your company may cover the cost from their training
+      budgets, where they actually have money kept aside for their employees to
+      take courses like this to help your professional development. If your
+      company doesn{"'"}t have a budget, it
+      {"'"}s worth raising the possibility with them.
     </p>
     <br />
     <p>
-      Each week in our part-time, 6-week programme will consist of 2-3 training
-      videos to watch in your own time, a hands-on weekly assignment, a live
-      Q&amp;A session &amp; a group workshop to put theory into practice.
+      If you want to discuss this with your HR team or manager, we suggest
+      covering:
+      <br />
+      <br />
+      <li>
+        <strong>What the course is about</strong>
+      </li>
+      <li>
+        <strong>What you{"'"}ll personally get from it:</strong> Learning key
+        skills to become an effective product leader, such as product strategy,
+        product discovery, stakeholder alignment & leadership techniques
+      </li>
+      <li>
+        <strong>
+          What the company/your team will get from you participating:
+        </strong>{' '}
+        Ability to discover & pursue new, high-potential product opportunities
+        with minimal resources, as well as your ability to pass on effective
+        product management processes & advice to other team members
+      </li>
+      <li>
+        <strong>How you{"'"}ll apply the learnings to your work:</strong> Focus
+        on your product team delivering more value for the business &
+        identifying new product opportunities & revenue streams
+      </li>
+      <li>
+        <strong>How long it will take you to complete</strong>
+      </li>
+      <li>
+        <strong>The cost</strong>
+      </li>
     </p>
     <br />
-    <img alt="Curriculum" src={curriculum1} />
     <p>
-      Our learning approach is designed to be as effective as possible,
-      combining theory with putting theory into practice in the real world, with
-      a real product. The support of our mentorship &amp; the community is half
-      of the value as well, providing motivation &amp; answering any questions
-      you may have throughout &amp; beyond the programme.
-    </p>
-    <img alt="Curriculum" src={curriculum1a} />
-    <br />
-    <p>
-      <b>
-        Join our next intake, starting on {launchDate}. Try the 7-day mini MBA
-        to see if the Prod MBA is right for you. We will notify you when
-        applications open. Space is limited to {noOfParticipants} participants.
-      </b>
+      If you get the green light, you can then either invoice the company or pay
+      for it yourself & request reimbursement from your company.
     </p>
   </div>
 );
@@ -356,35 +351,29 @@ const contentTwo = (
     </p>
     <br />
     <p>
-      We don&#39;t teach you how to raise investment or scale your idea to
-      become the next Facebook.
+      We teach you the essential skills to set the right foundations for product
+      - and business - success.
     </p>
+    <br />
+    <img alt="Curriculum" src={curriculumSchedule} />
+    <p>
+      Each week, you have 1-2 hours of video content to watch, with a hands-on
+      assignment to submit at the end of the week. This could be "crafting your
+      High Experience customer" or "launching an acquisition strategy", which
+      will be reviewed by one of our product mentors.
+    </p>
+    <br />
+    <p>Example assignment:</p>
+    <img alt="Curriculum" src={curriculumAssignment} />
     <br />
     <p>
-      We only teach you the essential skills to building a product-led business,
-      giving you a massive competitive advantage in your career, whether that be
-      in getting promotion, applying for your ideal job or launching that
-      business you&#39;ve always dreamed of.
+      Also included is a weekly Q&A Session with Henry, our founder, as well as
+      a weekly workshop, where we cover a specific topic related to the course &
+      break off into smaller groups of 3-4.
     </p>
     <br />
-    <p>
-      We teach you how to build the right foundations for business success,
-      meaning identifying an acute problem to solve & generating revenue from a
-      lean product as quickly as possible.
-    </p>
-    <br />
-    <p>
-      We teach you how to become invaluable to your company by focusing on the
-      few things that really matter.
-    </p>
-    <br />
-    <p>
-      Each week, we teach you high-impact theory &amp; expect our students to
-      put that theory into practice, moving from a business idea to generating
-      revenue within 6 weeks, as many of our alumni have successfully done.
-    </p>
-    <br />
-    <img alt="Curriculum" src={curriculum2} />
+
+    <img alt="Curriculum" src={curriculum3Steps} />
   </div>
 );
 
@@ -396,39 +385,37 @@ const contentThree = (
       find your first job, we only focus on what really matters:
     </p>
     <br />
-    <p>Building a profitable product.</p>
+    <p>Building a product customers love & are willing to pay for.</p>
     <br />
     <p>
       Therefore, you won&#39;t see any content on &quot;how to manage an
       efficient sprint&quot; or &quot;how to estimate tasks quickly&quot;.{' '}
     </p>
     <p>
-      If you want to just focusing on getting better at Delivery, then checkout
-      Product School or the 1,000 Scrum certificates out there on the web.
+      If you want to just focusing on getting better at product delivery, then
+      check out Product School or the 1,000 Scrum certificates out there on the
+      internet.
     </p>
     <br />
     <p>
-      Instead, we will take you on a journey of Discovery, from defining a
-      business idea, validating that that idea resonates with its target
+      Instead, we will take you on a journey of product discovery, from defining
+      a business idea, validating that that idea resonates with its target
       audience through a real customer acquisition campaign you will run, and
       then actually prototyping a real product that you will charge those
       potential customers for.{' '}
     </p>
     <br />
     <p>
-      By the end of it, you will have iterated on a real business idea that has
-      real customers &amp; have generated real revenue from those customers.{' '}
+      The goal of the Prod MBA is to have you put our framework into practice,
+      iterating on a real product from idea to Offer/Market Fit & onwards
+      towards Product/Market Fit so that you can apply these real-world
+      learnings effectively in your current role.{' '}
     </p>
     <br />
     <p>
-      Whether you want to then build upon that foundation and turn it into a
-      real business, or simply use it to massively stand out from the crowd when
-      applying for a new product role, is up to you.
-    </p>
-    <br />
-    <p>
-      Our aim is to simply provide you with the framework to make ideas happen
-      &amp; build profitable product-led businesses.
+      (We have even had a few students, such as ex-Head of Product, Richard, who
+      decided to build upon their initial revenue-generating product out into a
+      full-time business!)
     </p>
     <br />
   </div>
@@ -438,29 +425,35 @@ const contentFour = (
   <div>
     <p>The programme will run from 6 weeks, starting on {launchDate}</p>
     <br />
+    <img alt="Curriculum" src={curriculumSchedule} />
     <p>
       On Sunday of each week, we will release the content for that week on our
       online portal, which we will invite you to during the onboarding process.
     </p>
     <br />
     <p>
-      There will be 2-3 videos to watch to provide you with some theory, with a
-      real-world exercise to complete by Sunday 5pm CET for the mentors &
-      students to review.
+      Each week, you have 1-2 hours of video content to watch, with a hands-on
+      assignment to submit at the end of the week. This could be "crafting your
+      High Experience customer" or "launching an acquisition strategy", which
+      will be reviewed by one of our product mentors.
+    </p>
+    <br />
+    <p>Example assignment:</p>
+    <img alt="Curriculum" src={curriculumAssignment} />
+    <br />
+    <p>
+      Also included is a weekly Q&A Session with Henry, our founder, as well as
+      a weekly workshop, where we cover a specific topic related to the course &
+      break off into smaller groups of 3-4.
     </p>
     <br />
     <p>
-      During the week, there will also be an opttional Q&amp;A Session on
-      Wednesday from 5-6pm CET for any questions or concerns you may have.
+      Finally, included in the price are 3x 30-minute mentorship calls with any
+      one of our product mentors, as well as ongoing access to our Slack
+      community & Q&A Sessions.
     </p>
     <br />
-    <p>The schedule looks like this:</p>
-    <br />
-    <img
-      alt="Curriculum"
-      src={curriculum3}
-      className="curriculum__main_largeImg"
-    />
+    <img alt="Curriculum" src={curriculum3Steps} />
   </div>
 );
 
@@ -487,19 +480,6 @@ const contentFive = (
       process).
     </p>
     <br />
-    <p>&nbsp;</p>
-    <br />
-    <p>
-      <strong>Founders</strong>
-    </p>
-    <br />
-    <p>
-      Define &amp; execute on a clear &quot;path to profitability&quot; to
-      create a sustainable future for your business without risking everything
-      on unrealistic, arbitrary growth targets set by investors.
-    </p>
-    <br />
-    <p>&nbsp;</p>
     <br />
     <p>
       <strong>CPOs / Heads of Product</strong>
@@ -510,7 +490,18 @@ const contentFive = (
       validated, revenue-generated product line without the risk of months of
       building an MVP &amp; an expensive product team you may not even need.
     </p>
-
+    <br />
+    <p>&nbsp;</p>
+    <p>
+      <strong>Founders</strong>
+    </p>
+    <br />
+    <p>
+      Define &amp; execute on a clear &quot;path to profitability&quot; &
+      Product/Market Fit to create a sustainable future for your business
+      without risking everything on unrealistic, arbitrary growth targets set by
+      investors.
+    </p>
     <br />
   </div>
 );
@@ -603,7 +594,7 @@ const contentSeven = (
 const toggleItems = [
   {
     id: '1',
-    title: 'A Curriculum For The New Product World',
+    title: 'What is the ROI for you & your company?',
     content: contentOne,
   },
   {
@@ -638,16 +629,16 @@ const toggleItems = [
   },
 ];
 
-const url =
-  'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
+// const url =
+//   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 // const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
 
-const mixpanelEvent = '2. MBA Apply';
-const facebookEvent = 'SubmitApplication';
+const mixpanelEvent = '3. MBA Next';
+const facebookEvent = 'Search';
 
 export default class Home extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('2. MBA');
+    Mixpanel.track('3. MBA');
     FacebookPixel.track('ViewContent');
   }
 
@@ -656,40 +647,71 @@ export default class Home extends Component<Props> {
       <div className="homePageWrapper">
         <Header light />
         <Hero
-          title="Build A Profitable Product in 6 Weeks With the Prod MBA"
-          subtitle="Learn product strategy, business & the 'entrepreneurial mindset' in practice by going from product idea to delivering a real, revenue-generating product in just 6 weeks:"
-          mailchimpForm
-          subText="By sharing your email, you agree to our "
-          subTextUrlText="Terms & Conditions"
-          subTextUrl="/legal"
+          title="We Train POs & PMs to Build Exceptional Products & Acheive Rapid Career Progression"
+          subtitle="Learn how to overcome the single biggest challenge to product success by going from idea to product validation with real revenue in just 6 weeks with our part-time Prod MBA training programme:"
+          nextPage
+          nextPageUrl="/case-study"
+          btnText="Get Free Case Study >"
+          onClick={this.goToNextPage}
+          // subText="By sharing your email, you agree to our "
+          // subTextUrlText="Terms & Conditions"
+          // subTextUrl="/legal"
           // url={calendlyUrl}
           // btnText="Apply To Prod MBA"
-          // mixpanelEvent={mixpanelEvent}
-          // facebookEvent={facebookEvent}
         />
         <Description
-          header="The ROI of The Prod MBA"
-          description1="- Learn the key skills you're missing to become a product leader, accelerating your path to more autonomy & double the salary as a Head of Product within just 2 years"
-          description2="- Make yourself invaluable to your company by understanding how to deliver massive value with minimal resources"
-          description3="- Learn how to launch a new, profitable product or your dream business with $50 or less, rather than $500k"
+          header="Become A 'Product Rainmaker'"
+          description1="Frustrated in your current role? Expensive Scrum certification or 'Agile Coach' haven't helped? Feel unable to prioritise or influence what you work on?"
+          description2="Gain autonomy & rapid promotion by learning how to build products that deliver massive value for your company."
+          description3="With the Prod MBA, you will learn - and practice - the skills of a true product leader, helping you to get there in 1-2 years, rather than 5-10."
+          // dollarise this!
           image={curriculumROI}
-          btnText="Apply To Prod MBA"
-          url={url}
-          subText="By sharing your email, you agree to our "
-          subTextUrlText="Terms & Conditions"
-          subTextUrl="/legal"
+          nextPageUrl="/case-study"
+          btnText="Get Free Case Study >"
+          onClick={this.goToNextPage}
+          mixpanelEvent={mixpanelEvent}
+          facebookEvent={facebookEvent}
+          // url={url}
+          // subText="By sharing your email, you agree to our "
+          // subTextUrlText="Terms & Conditions"
+          // subTextUrl="/legal"
+        />
+        <Description
+          reverse
+          header="Stop The Feature Factory"
+          description1="Escape the repetitive cycle of building an endless list of features that don't really make sense."
+          description2="Learn how to align stakeholders & product teams around a product strategy that makes sense through prioritised, high-value feature experiments."
+          description3="Unlock greater profit & growth with our framework to achieve Product/Market Fit:"
+          image={curriculumFeatureFactory}
+          nextPageUrl="/case-study"
+          btnText="Get Free Case Study >"
+          onClick={this.goToNextPage}
           mixpanelEvent={mixpanelEvent}
           facebookEvent={facebookEvent}
         />
         <Description
-          reverse
-          header="This is Not Just Another Course"
-          description1="The Prod MBA is an intense 6-week, part-time training programme crafted by a team of experienced product mentors, run in small groups of carefully selected applicants, to take you through the process of product discovery & validation in practice."
-          description2="If you're looking for an ineffective Scrum certification or overly-theoretical Udemy course to put on your CV, then you've come to the wrong place."
-          description3="Ready to truly level-up your career?"
+          header="This is Not Just 'Another Course'"
+          description1="The Prod MBA is an intense 6-week, part-time training programme crafted by a team of experienced product mentors, run in small groups of carefully selected applicants, to take you through the process of product strategy, discovery & validation to achieve Offer/Market Fit, in the pursuit of Product/Market Fit."
+          description2="A Scrum certification or overly-theoretical Udemy course may get you your first product job, but it won't help you become a product expert."
+          description3="The Prod MBA will."
           image={curriculumOverview}
-          btnText="Apply To Prod MBA"
-          url={url}
+          nextPageUrl="/case-study"
+          btnText="Get Free Case Study >"
+          onClick={this.goToNextPage}
+          mixpanelEvent={mixpanelEvent}
+          facebookEvent={facebookEvent}
+        />
+        <Testimonial
+          name="Antonia, Product Manager (Former PO)"
+          img={antonia}
+          quote="Can I just say that I love this programme. I know we're only a week in, but this is the most hands-on thing I've ever done."
+        />
+        <Stats header="Some statistics:" />
+        <Featured
+          header="The Prod MBA was taken by students from:"
+          nextPageUrl="/case-study"
+          btnText="Get Free Case Study >"
+          onClick={this.goToNextPage}
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
           subTextUrl="/legal"
@@ -697,19 +719,9 @@ export default class Home extends Component<Props> {
           facebookEvent={facebookEvent}
         />
         <Testimonial
-          name="Richard, ex-Head of Product, now Founder at ProductPeers"
-          img={richard}
-          quote="60 LinkedIn conversations started, 30 website visitors, 2 newsletter subscribers and 1 sale!"
-        />
-        <Stats header="Some statistics:" />
-        <Featured
-          header="The Prod MBA was taken by students from:"
-          btnText="Apply To Join These Alumni"
-          subText="By sharing your email, you agree to our "
-          subTextUrlText="Terms & Conditions"
-          subTextUrl="/legal"
-          mixpanelEvent={mixpanelEvent}
-          facebookEvent={facebookEvent}
+          name="Stefanos, Product Owner"
+          img={stefanos}
+          quote="Emphasizing that our daily product work should be focused on the impact our product has on our customers, the Prod MBA taught me some really actionable frameworks for validating product ideas, improving Product/Market Fit & bringing an entirely new product to life."
         />
         <div className="curriculum">
           <h3 className="curriculum__header">FAQs</h3>
@@ -718,33 +730,24 @@ export default class Home extends Component<Props> {
               sectionHeader="Curriculum"
               toggleItems={toggleItems}
             />
-            <h4 className="curriculum__cta">Download the full curriculum:</h4>
-            <MailchimpForm
-              url={url}
-              subText="By sharing your email, you agree to our "
-              subTextUrlText="Terms & Conditions"
-              subTextUrl="/legal"
+            <h4 className="curriculum__cta">
+              Start levelling up your product career:
+            </h4>
+            <ButtonNextPage
+              nextPageUrl="/case-study"
+              btnText="Get Free Case Study >"
+              onClick={this.goToNextPage}
             />
             {
-              // <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
-              // <Button onClick={this.goToFaqApply}>
-              //   Apply For The Prod MBA Now
-              // </Button>
-              // </a>
+              // <MailchimpForm
+              //   url={url}
+              //   subText="By sharing your email, you agree to our "
+              //   subTextUrlText="Terms & Conditions"
+              //   subTextUrl="/legal"
+              // />
             }
           </div>
         </div>
-        <Testimonial
-          name="Antonia, Product Owner"
-          img={antonia}
-          quote="Can I just say that I love this programme. I know we're only a week in, but this is the most hands-on thing I've ever done."
-        />
-        <Newsletter
-          title="Want To Get A Feel For the Prod MBA?"
-          subtitle="Subscribe and get our free 7-day Mini MBA email course, explaining the steps towards building a profitable, boostrapped product & giving you a taster of the full Prod MBA:"
-          mailchimpForm
-          url={url}
-        />
         <Image
           title="Some more love from our students"
           imgDesktop={testimonialCollage}
@@ -757,6 +760,11 @@ export default class Home extends Component<Props> {
   }
 
   goToFaqApply = () => {
+    Mixpanel.track(`${mixpanelEvent}`);
+    FacebookPixel.track(`${facebookEvent}`);
+  };
+
+  goToNextPage = () => {
     Mixpanel.track(`${mixpanelEvent}`);
     FacebookPixel.track(`${facebookEvent}`);
   };

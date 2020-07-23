@@ -1,7 +1,7 @@
 @import '../../../styles/main';
 
 .mentors {
-  @include background-light;
+  @include background-white;
   @include col;
   @include padding(top, 3);
   @include padding(bottom, 5);

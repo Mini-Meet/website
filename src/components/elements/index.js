@@ -1,5 +1,6 @@
 // Elements definition (ASC order)
 export { default as Button } from './Button/Button';
+export { default as ButtonNextPage } from './ButtonNextPage/ButtonNextPage';
 export { default as Card } from './Card/Card';
 export { default as Dropdown } from './Dropdown/Dropdown';
 export { default as DropdownItem } from './DropdownItem/DropdownItem';

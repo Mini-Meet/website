@@ -1,6 +1,8 @@
 @import '../../../styles/main';
 
 .imgFullWidth {
+  @include background-light;
+
   h3 {
     @include padding(top, 5);
     @include padding(bottom, 3);

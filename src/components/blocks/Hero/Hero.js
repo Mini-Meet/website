@@ -1,10 +1,9 @@
 // @flow
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 import { MailchimpForm, RefereeInput } from '..';
-import { Button } from '../../elements';
+import { Button, ButtonNextPage } from '../../elements';
 import './Hero.scss';
 
 type Props = {
@@ -16,8 +15,9 @@ type Props = {
   subTextUrl: string,
   subTextUrlText: string,
   url: string,
-  nextpage: boolean,
-  nextpageUrl: string,
+  nextPage: boolean,
+  nextPageUrl: string,
+  onClick: Function,
   externalPage: boolean,
   referralForm: boolean,
   mailchimpForm: boolean,
@@ -35,8 +35,9 @@ export default class Hero extends Component<Props> {
       subText,
       subTextUrl,
       subTextUrlText,
-      nextpage,
-      nextpageUrl,
+      nextPage,
+      nextPageUrl,
+      onClick,
       externalPage,
       referralForm,
       mailchimpForm,
@@ -51,13 +52,13 @@ export default class Hero extends Component<Props> {
           <p>{subtitle}</p>
         </div>
 
-        {nextpage && (
-          <div className="hero__nextpage">
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              <Link to={nextpageUrl}>
-                <Button onClick={this.goToNextPage}>{btnText}</Button>
-              </Link>
-            </a>
+        {nextPage && (
+          <div className="hero__nextPage">
+            <ButtonNextPage
+              nextPageUrl={nextPageUrl}
+              onClick={onClick}
+              btnText={btnText}
+            />
           </div>
         )}
 
@@ -88,11 +89,6 @@ export default class Hero extends Component<Props> {
   };
 
   goToExternalLink = () => {
-    Mixpanel.track(`${this.props.mixpanelEvent}`);
-    FacebookPixel.track(`${this.props.facebookEvent}`);
-  };
-
-  goToNextPage = () => {
     Mixpanel.track(`${this.props.mixpanelEvent}`);
     FacebookPixel.track(`${this.props.facebookEvent}`);
   };

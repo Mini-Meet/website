@@ -8,7 +8,7 @@ import './Booking.scss';
 
 export default class Booking extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('Course / Booking');
+    Mixpanel.track('3. Calendly');
 
     const head = document.querySelector('head');
     const script = document.createElement('script');
@@ -32,8 +32,4 @@ export default class Booking extends Component<Props> {
       </div>
     );
   }
-
-  goToBookSession = () => {
-    Mixpanel.track('Course / Casestudy / Click Book Session');
-  };
 }

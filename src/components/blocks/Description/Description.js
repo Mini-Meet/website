@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 // import { FacebookPixel } from '../../../FacebookPixel';
 // import { Mixpanel } from '../../../Mixpanel';
-import { MailchimpForm } from '..';
-// import { Button } from '../../elements';
+// import { MailchimpForm } from '..';
+import { ButtonNextPage } from '../../elements';
 
 import './Description.scss';
 
@@ -13,14 +13,16 @@ type Props = {
   description1: string,
   description2: string,
   description3: string,
-  url: string,
   image: string,
-  // btnText: string,
+  btnText: string,
+  nextPageUrl: string,
+  onClick: Function,
   // mixpanelEvent: string,
   // facebookEvent: string,
-  subText: string,
-  subTextUrl: string,
-  subTextUrlText: string,
+  // url: string,
+  // subText: string,
+  // subTextUrl: string,
+  // subTextUrlText: string,
 };
 
 export default class Description extends Component<Props> {
@@ -32,11 +34,13 @@ export default class Description extends Component<Props> {
       description2,
       description3,
       image,
-      // btnText,
-      url,
-      subText,
-      subTextUrl,
-      subTextUrlText,
+      btnText,
+      nextPageUrl,
+      onClick,
+      // url,
+      // subText,
+      // subTextUrl,
+      // subTextUrlText,
     } = this.props;
 
     return (
@@ -52,16 +56,10 @@ export default class Description extends Component<Props> {
                 <br />
                 <p>{description3}</p>
                 <div className="description__button">
-                  {
-                    // <a href={url} target="_blank" rel="noopener noreferrer">
-                    // <Button onClick={this.goToApplicationPage}>{btnText}</Button>
-                    // </a>
-                  }
-                  <MailchimpForm
-                    url={url}
-                    subText={subText}
-                    subTextUrl={subTextUrl}
-                    subTextUrlText={subTextUrlText}
+                  <ButtonNextPage
+                    nextPageUrl={nextPageUrl}
+                    onClick={onClick}
+                    btnText={btnText}
                   />
                 </div>
               </div>
@@ -95,16 +93,10 @@ export default class Description extends Component<Props> {
                 <br />
                 <p>{description3}</p>
                 <div className="description__button">
-                  {
-                    // <a href={url} target="_blank" rel="noopener noreferrer">
-                    // <Button onClick={this.goToApplicationPage}>{btnText}</Button>
-                    // </a>
-                  }
-                  <MailchimpForm
-                    url={url}
-                    subText={subText}
-                    subTextUrl={subTextUrl}
-                    subTextUrlText={subTextUrlText}
+                  <ButtonNextPage
+                    nextPageUrl={nextPageUrl}
+                    onClick={onClick}
+                    btnText={btnText}
                   />
                 </div>
               </div>
