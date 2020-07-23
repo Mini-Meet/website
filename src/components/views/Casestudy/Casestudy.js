@@ -84,7 +84,7 @@ export default class Casestudy extends Component<Props> {
               </p>
               <br />
               <p>
-                How to become a "Product Rainmaker" & dramatically accelerate
+                How to become a 'Product Rainmaker' & dramatically accelerate
                 your product career
               </p>
 
