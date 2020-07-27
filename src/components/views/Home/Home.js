@@ -648,7 +648,7 @@ export default class Home extends Component<Props> {
         <Header light />
         <Hero
           title="We Fast-Track POs & PMs to Head of Product"
-          subtitle="Gain the autonomy & experience to build great products that give you purpose with our part-time, 6-week training programme:"
+          subtitle="Our part-time programme teaches you product strategy in practice by taking a product from idea to revenue within 6 weeks, unlocking your ability to build great products, as well as more autonomy, purpose & a big pay rise, in your current role:"
           // subtitle="Learn how to overcome the single biggest challenge to product success by going from idea to product validation with real revenue in just 6 weeks with our part-time Prod MBA training programme:"
           nextPage
           nextPageUrl="/case-study"
@@ -663,7 +663,7 @@ export default class Home extends Component<Props> {
         <Description
           header="Become A 'Product Rainmaker'"
           description1="Frustrated in your current role? Expensive Scrum certification or 'Agile Coach' haven't helped? Feel unable to prioritise or influence what you work on?"
-          description2="Gain autonomy & rapid promotion by learning how to build products that deliver massive value for your company."
+          description2="Gain autonomy, purpose & rapid promotion by learning how to build products that deliver massive value for your company."
           description3="With the Prod MBA, you will learn - and practice - the skills of a true product leader, helping you to get there in 1-2 years, rather than 5-10."
           // dollarise this!
           image={curriculumROI}

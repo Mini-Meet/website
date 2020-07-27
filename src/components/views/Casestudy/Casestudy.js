@@ -128,15 +128,15 @@ export default class Casestudy extends Component<Props> {
                             <p>
                               Now that you’ve touched the surface with our
                               training above, if you feel ready to STEP UP &
-                              accelerate your product career, book a call with
-                              us:
+                              accelerate your product career, book a strategy
+                              session with us to see how we can help:
                             </p>
                             <Link
                               to="/book-session"
                               className="overlay__content_cta"
                             >
                               <Button onClick={this.goToBookSession}>
-                                Apply Now To See If You Qualify
+                                Book Free Strategy Session
                               </Button>
                             </Link>
                           </div>
