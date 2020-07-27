@@ -156,6 +156,5 @@ export default class Casestudy extends Component<Props> {
   goToBookSession = () => {
     Mixpanel.track(`3. Casestudy Apply`);
     FacebookPixel.track('SubmitApplication');
-    console.log('Submit Application');
   };
 }
