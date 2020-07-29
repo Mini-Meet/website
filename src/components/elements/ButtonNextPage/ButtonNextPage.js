@@ -6,22 +6,19 @@ import { Button } from '..';
 
 type Props = {
   btnText: string,
-  url: string,
   nextPageUrl: string,
   onClick: Function,
 };
 
 export default class ButtonNextPage extends Component<Props> {
   render() {
-    const { btnText, nextPageUrl, url, onClick } = this.props;
+    const { btnText, nextPageUrl, onClick } = this.props;
 
     return (
       <div>
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          <Link to={nextPageUrl}>
-            <Button onClick={onClick}>{btnText}</Button>
-          </Link>
-        </a>
+        <Link to={nextPageUrl}>
+          <Button onClick={onClick}>{btnText}</Button>
+        </Link>
       </div>
     );
   }

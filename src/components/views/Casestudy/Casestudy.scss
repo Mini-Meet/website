@@ -117,6 +117,19 @@
       // @include opacity(1.3);
     }
 
+    &_subtext {
+      @include small;
+      @include padding(top, 2);
+      @include padding(left, 0);
+      color: $primary;
+    }
+
+    &_subtext a {
+      @include small;
+      color: $primary;
+      text-decoration: underline;
+    }
+
     &__error,
     &__loading {
       @include small;

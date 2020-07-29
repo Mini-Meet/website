@@ -97,11 +97,25 @@ export default class Casestudy extends Component<Props> {
                   render={({ subscribe, status, message }) => (
                     <div>
                       {(!status || status === 'error') && (
-                        <CustomForm
-                          status={status}
-                          message={message}
-                          onSubscribe={formData => subscribe(formData)}
-                        />
+                        <div>
+                          <CustomForm
+                            status={status}
+                            message={message}
+                            onSubscribe={formData => subscribe(formData)}
+                          />
+                          <p className="casestudymain__cta_subtext">
+                            By signing up you agree to our{' '}
+                            <a
+                              className="casestudymain__cta_subtexturl"
+                              href="/legal"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              // onClick={this.goToSubTextLink}
+                            >
+                              Terms & Conditions
+                            </a>
+                          </p>
+                        </div>
                       )}
                       {status === 'sending' && (
                         <div className="casestudymain__cta__loading">
@@ -127,9 +141,9 @@ export default class Casestudy extends Component<Props> {
                             </div>
                             <p>
                               Now that you’ve touched the surface with our
-                              training above, if you feel ready to STEP UP &
-                              accelerate your product career, book a strategy
-                              session with us to see how we can help:
+                              training above, if you feel ready to step up &
+                              rapidly become a true product leader, book a
+                              strategy session with us to see how we can help:
                             </p>
                             <Link
                               to="/book-session"

@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 import { Mixpanel } from '../../../Mixpanel';
 
 import { Header, Footer } from '../../blocks';
-import { Button } from '../../elements';
+import { ButtonNextPage } from '../../elements';
 import portrait from '../../../assets/images/course/henry-portrait.jpg';
 
 import './About.scss';
 
-const url = 'https://calendly.com/henry_latham/prod-mba';
+const url = '/case-study';
 
 export default class About extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('1. About');
+    Mixpanel.track('3. About');
   }
 
   render() {
@@ -45,9 +45,11 @@ export default class About extends Component<Props> {
             </p>
 
             <div className="hero__nextpage">
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                <Button onClick={this.goToNextPage}>Apply to Prod MBA</Button>
-              </a>
+              <ButtonNextPage
+                nextPageUrl={url}
+                onClick={this.goToNextPage}
+                btnText="Get Free Case Study >"
+              />
             </div>
             {
               // <Link to="/case-study">
@@ -63,8 +65,7 @@ export default class About extends Component<Props> {
   }
 
   goToNextPage = () => {
-    Mixpanel.track('1. About Apply');
-    Mixpanel.track('2. MBA Apply');
+    Mixpanel.track('3. About Next');
   };
 
   // goToAboutCaseStudy = () => {
