@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Mixpanel } from '../../../Mixpanel';
 import { FacebookPixel } from '../../../FacebookPixel';
@@ -145,14 +144,16 @@ export default class Casestudy extends Component<Props> {
                               rapidly become a true product leader, book a
                               strategy session with us to see how we can help:
                             </p>
-                            <Link
-                              to="/book-session"
+                            <a
+                              href="https://calendly.com/henry_latham/prod-mba"
                               className="overlay__content_cta"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <Button onClick={this.goToBookSession}>
                                 Book Free Strategy Session
                               </Button>
-                            </Link>
+                            </a>
                           </div>
                         </div>
                       )}
