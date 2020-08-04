@@ -640,6 +640,7 @@ export default class Home extends Component<Props> {
   componentDidMount() {
     Mixpanel.track('4. MBA');
     FacebookPixel.track('ViewContent');
+    LinkedInTag.track('2862345'); // Page view
   }
 
   render() {

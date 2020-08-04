@@ -12,7 +12,6 @@ import './Booking.scss';
 export default class Booking extends Component<Props> {
   componentDidMount() {
     Mixpanel.track('4. Book Page');
-    LinkedInTag.track('2862345'); // Page view
     //
     // const head = document.querySelector('head');
     // const script = document.createElement('script');

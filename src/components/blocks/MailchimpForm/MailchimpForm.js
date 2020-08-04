@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react';
+import LinkedInTag from 'react-linkedin-insight';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Link } from 'react-router-dom';
 import { FacebookPixel } from '../../../FacebookPixel';
@@ -153,6 +154,7 @@ export default class MailchimpForm extends Component<Props> {
   goToBookSession = () => {
     Mixpanel.track('4. MBA / Book Call');
     FacebookPixel.track('SubmitApplication');
+    LinkedInTag.track('2862329');
   };
 
   goToPdf = () => {
