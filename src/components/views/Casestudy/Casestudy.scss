@@ -164,6 +164,12 @@
       @include modal-elevation;
     }
   }
+
+  &__linkedin {
+    display: none;
+    height: 1;
+    width: 1;
+  }
 }
 
 // .video {

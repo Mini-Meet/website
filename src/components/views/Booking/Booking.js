@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react';
+import LinkedInTag from 'react-linkedin-insight';
 import { Mixpanel } from '../../../Mixpanel';
 import { FacebookPixel } from '../../../FacebookPixel';
 import { Button } from '../../elements';
@@ -11,6 +12,7 @@ import './Booking.scss';
 export default class Booking extends Component<Props> {
   componentDidMount() {
     Mixpanel.track('4. Book Page');
+    LinkedInTag.track('2862345'); // Page view
     //
     // const head = document.querySelector('head');
     // const script = document.createElement('script');
@@ -46,11 +48,11 @@ export default class Booking extends Component<Props> {
             <Button onClick={this.goToBookSession}>
               Book Free Strategy Session
             </Button>
-            <a href={brochurePdf} target="_blank" rel="noopener noreferrer">
-              <Button tertiary="tertiary" onClick={this.goToPdf}>
-                View Prod MBA Brochure
-              </Button>
-            </a>
+          </a>
+          <a href={brochurePdf} target="_blank" rel="noopener noreferrer">
+            <Button tertiary="tertiary" onClick={this.goToPdf}>
+              View Prod MBA Brochure
+            </Button>
           </a>
         </div>
         {
@@ -71,6 +73,7 @@ export default class Booking extends Component<Props> {
   goToBookSession = () => {
     Mixpanel.track('4. Book / Book Call');
     FacebookPixel.track('SubmitApplication');
+    LinkedInTag.track('2862329');
   };
 
   goToPdf = () => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import LinkedInTag from 'react-linkedin-insight';
 import { createBrowserHistory } from 'history';
 import {
   BrowserRouter as Router,
@@ -28,6 +29,9 @@ import AcceptReferral from './components/views/Referral/AcceptReferral';
 import { PageLayout } from './components/layouts';
 
 const history = createBrowserHistory;
+
+LinkedInTag.init('2532697');
+LinkedInTag.track('2862345'); // Page view 2862345
 
 ReactDOM.render(
   <Router history={history}>
