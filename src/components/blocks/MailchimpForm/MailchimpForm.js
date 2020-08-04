@@ -25,7 +25,8 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
   const submit = () => {
     if (email && email.value && email.value.indexOf('@') > -1) {
-      Mixpanel.track(`2. MBA Subscribe`);
+      Mixpanel.track(`4. MBA Subscribe`);
+      FacebookPixel.track(`Subscribe`);
 
       onSubscribe({
         EMAIL: email.value,
@@ -43,7 +44,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
         placeholder="Enter your email"
       />
       <Button primary onClick={submit}>
-        Get Free Brochure
+        Get Free Case Study
       </Button>
     </div>
   );
@@ -79,19 +80,41 @@ export default class MailchimpForm extends Component<Props> {
                 />
               )}
               {status === 'success' && (
-                <div>
-                  <div className="mailchimp__form__success">
-                    Success! Check our our full curriculum here:
+                <div className="overlay">
+                  <div className="overlay__content">
+                    <div className="overlay__content_video wistia_responsive_padding">
+                      <div className="wistia_responsive_wrapper">
+                        <span className="wistia_embed wistia_async_hziirxzwao popover=true popoverAnimateThumbnail=true videoFoam=true">
+                          &nbsp;
+                        </span>
+                      </div>
+                    </div>
+                    <p>
+                      Now that you’ve touched the surface with our case study
+                      above, if you feel ready to step up & rapidly become a
+                      true product leader, book a strategy session with us to
+                      see how we can help:
+                    </p>
+                    <a
+                      href="https://calendly.com/henry_latham/prod-mba"
+                      className="overlay__content_cta"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button onClick={this.goToBookSession}>
+                        Book Free Strategy Session
+                      </Button>
+                      <a
+                        href={brochurePdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button tertiary="tertiary" onClick={this.goToPdf}>
+                          View Prod MBA Brochure
+                        </Button>
+                      </a>
+                    </a>
                   </div>
-                  <a
-                    href={brochurePdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button onClick={this.goToPdf}>
-                      View Prod MBA Brochure
-                    </Button>
-                  </a>
                   {
                     // <iframe
                     //   title="Survey"
@@ -124,11 +147,16 @@ export default class MailchimpForm extends Component<Props> {
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track('1. / Home Subtext Link');
+    Mixpanel.track('4. / Home Subtext Link');
+  };
+
+  goToBookSession = () => {
+    Mixpanel.track('4. MBA / Book Call');
+    FacebookPixel.track('SubmitApplication');
   };
 
   goToPdf = () => {
-    Mixpanel.track('2. MBA View PDF');
+    Mixpanel.track('4. MBA / View PDF');
     FacebookPixel.track('Lead');
   };
 }

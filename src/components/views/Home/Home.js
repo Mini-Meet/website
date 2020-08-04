@@ -631,14 +631,14 @@ type Props = {
 
 // const url =
 //   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
-// const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
+const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
 
-const mixpanelEvent = '3. MBA Next';
+const mixpanelEvent = '4. MBA Next';
 const facebookEvent = 'Search';
 
 export default class Home extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('3. MBA');
+    Mixpanel.track('4. MBA');
     FacebookPixel.track('ViewContent');
   }
 
@@ -650,14 +650,14 @@ export default class Home extends Component<Props> {
           title="We Fast-Track POs & PMs to Head of Product"
           subtitle="Our part-time programme teaches you product strategy in practice by taking a product from idea to revenue within 6 weeks, unlocking your ability to build great products, as well as more autonomy, purpose & a big pay rise, in your current role:"
           // subtitle="Learn how to overcome the single biggest challenge to product success by going from idea to product validation with real revenue in just 6 weeks with our part-time Prod MBA training programme:"
-          nextPage
+          mailchimpForm
           nextPageUrl="/case-study"
           btnText="Get Free Case Study >"
           onClick={this.goToNextPage}
-          // subText="By sharing your email, you agree to our "
-          // subTextUrlText="Terms & Conditions"
-          // subTextUrl="/legal"
-          // url={calendlyUrl}
+          subText="By sharing your email, you agree to our "
+          subTextUrlText="Terms & Conditions"
+          subTextUrl="/legal"
+          url={calendlyUrl}
           // btnText="Apply To Prod MBA"
         />
         <Description
@@ -670,12 +670,10 @@ export default class Home extends Component<Props> {
           nextPageUrl="/case-study"
           btnText="Get Free Case Study >"
           onClick={this.goToNextPage}
-          mixpanelEvent={mixpanelEvent}
-          facebookEvent={facebookEvent}
-          // url={url}
-          // subText="By sharing your email, you agree to our "
-          // subTextUrlText="Terms & Conditions"
-          // subTextUrl="/legal"
+          mailchimpForm
+          subText="By sharing your email, you agree to our "
+          subTextUrlText="Terms & Conditions"
+          subTextUrl="/legal"
         />
         <Description
           reverse
@@ -687,8 +685,10 @@ export default class Home extends Component<Props> {
           nextPageUrl="/case-study"
           btnText="Get Free Case Study >"
           onClick={this.goToNextPage}
-          mixpanelEvent={mixpanelEvent}
-          facebookEvent={facebookEvent}
+          mailchimpForm
+          subText="By sharing your email, you agree to our "
+          subTextUrlText="Terms & Conditions"
+          subTextUrl="/legal"
         />
         <Description
           header="This is Not Just 'Another Course'"
@@ -699,8 +699,10 @@ export default class Home extends Component<Props> {
           nextPageUrl="/case-study"
           btnText="Get Free Case Study >"
           onClick={this.goToNextPage}
-          mixpanelEvent={mixpanelEvent}
-          facebookEvent={facebookEvent}
+          mailchimpForm
+          subText="By sharing your email, you agree to our "
+          subTextUrlText="Terms & Conditions"
+          subTextUrl="/legal"
         />
         <Testimonial
           name="Antonia, Product Manager (Former PO)"
@@ -710,6 +712,7 @@ export default class Home extends Component<Props> {
         <Stats header="Some statistics:" />
         <Featured
           header="The Prod MBA was taken by students from:"
+          mailchimpForm
           nextPageUrl="/case-study"
           btnText="Get Free Case Study >"
           onClick={this.goToNextPage}

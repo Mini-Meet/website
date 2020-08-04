@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 // import { FacebookPixel } from '../../../FacebookPixel';
 // import { Mixpanel } from '../../../Mixpanel';
-// import { MailchimpForm } from '..';
+import { MailchimpForm } from '..';
 import { ButtonNextPage } from '../../elements';
 
 import './Description.scss';
@@ -17,12 +17,12 @@ type Props = {
   btnText: string,
   nextPageUrl: string,
   onClick: Function,
-  // mixpanelEvent: string,
-  // facebookEvent: string,
-  // url: string,
-  // subText: string,
-  // subTextUrl: string,
-  // subTextUrlText: string,
+  buttonNext: boolean,
+  //
+  mailchimpForm: boolean,
+  subText: string,
+  subTextUrl: string,
+  subTextUrlText: string,
 };
 
 export default class Description extends Component<Props> {
@@ -37,10 +37,12 @@ export default class Description extends Component<Props> {
       btnText,
       nextPageUrl,
       onClick,
-      // url,
-      // subText,
-      // subTextUrl,
-      // subTextUrlText,
+      buttonNext,
+      //
+      mailchimpForm,
+      subText,
+      subTextUrl,
+      subTextUrlText,
     } = this.props;
 
     return (
@@ -56,11 +58,20 @@ export default class Description extends Component<Props> {
                 <br />
                 <p>{description3}</p>
                 <div className="description__button">
-                  <ButtonNextPage
-                    nextPageUrl={nextPageUrl}
-                    onClick={onClick}
-                    btnText={btnText}
-                  />
+                  {buttonNext && (
+                    <ButtonNextPage
+                      nextPageUrl={nextPageUrl}
+                      onClick={onClick}
+                      btnText={btnText}
+                    />
+                  )}
+                  {mailchimpForm && (
+                    <MailchimpForm
+                      subText={subText}
+                      subTextUrl={subTextUrl}
+                      subTextUrlText={subTextUrlText}
+                    />
+                  )}
                 </div>
               </div>
             </div>
@@ -93,11 +104,20 @@ export default class Description extends Component<Props> {
                 <br />
                 <p>{description3}</p>
                 <div className="description__button">
-                  <ButtonNextPage
-                    nextPageUrl={nextPageUrl}
-                    onClick={onClick}
-                    btnText={btnText}
-                  />
+                  {buttonNext && (
+                    <ButtonNextPage
+                      nextPageUrl={nextPageUrl}
+                      onClick={onClick}
+                      btnText={btnText}
+                    />
+                  )}
+                  {mailchimpForm && (
+                    <MailchimpForm
+                      subText={subText}
+                      subTextUrl={subTextUrl}
+                      subTextUrlText={subTextUrlText}
+                    />
+                  )}
                 </div>
               </div>
             </div>

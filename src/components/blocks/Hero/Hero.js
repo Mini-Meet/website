@@ -14,15 +14,15 @@ type Props = {
   subText: string,
   subTextUrl: string,
   subTextUrlText: string,
-  url: string,
   nextPage: boolean,
   nextPageUrl: string,
   onClick: Function,
   externalPage: boolean,
+  url: string,
   referralForm: boolean,
   mailchimpForm: boolean,
-  mixpanelEvent: string,
-  facebookEvent: string,
+  mixpanelEvent: boolean,
+  facebookEvent: boolean,
 };
 
 export default class Hero extends Component<Props> {
@@ -39,9 +39,9 @@ export default class Hero extends Component<Props> {
       nextPageUrl,
       onClick,
       externalPage,
+      url,
       referralForm,
       mailchimpForm,
-      url,
     } = this.props;
 
     return (
@@ -70,11 +70,10 @@ export default class Hero extends Component<Props> {
           </div>
         )}
 
-        {referralForm && <RefereeInput mixpanelEvent="0. Referral Subscribe" />}
+        {referralForm && <RefereeInput mixpanelEvent="4. Referral Subscribe" />}
 
         {mailchimpForm && (
           <MailchimpForm
-            url={url}
             subText={subText}
             subTextUrl={subTextUrl}
             subTextUrlText={subTextUrlText}
@@ -85,7 +84,7 @@ export default class Hero extends Component<Props> {
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track('1. / Home Subtext Link');
+    Mixpanel.track('4. / MBA Subtext Link');
   };
 
   goToExternalLink = () => {
