@@ -11,7 +11,7 @@ import './Booking.scss';
 
 export default class Booking extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('4. Book Page');
+    Mixpanel.track('5. Book Page');
     //
     // const head = document.querySelector('head');
     // const script = document.createElement('script');
@@ -70,13 +70,13 @@ export default class Booking extends Component<Props> {
   }
 
   goToBookSession = () => {
-    Mixpanel.track('4. Book / Book Call');
+    Mixpanel.track('5. Book / Book Call');
     FacebookPixel.track('SubmitApplication');
     LinkedInTag.track('2862329');
   };
 
   goToPdf = () => {
-    Mixpanel.track('4. Book / View PDF');
+    Mixpanel.track('5. Book / View PDF');
     FacebookPixel.track('Lead');
   };
 }
