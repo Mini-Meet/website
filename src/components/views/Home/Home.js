@@ -23,7 +23,7 @@ import {
 
 // import { ButtonNextPage } from '../../elements';
 
-import curriculumSixWeeks from '../../../assets/images/course/curriculum_1.jpg';
+// import curriculumSixWeeks from '../../../assets/images/course/curriculum_1.jpg';
 import curriculumAssignment from '../../../assets/images/course/curriculum_1a.jpg';
 import curriculum3Steps from '../../../assets/images/course/curriculum_2.jpg';
 import curriculumSchedule from '../../../assets/images/course/curriculum_3.jpg';
