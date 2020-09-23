@@ -9,13 +9,19 @@
   max-width: 620px;
 
   &__cta {
-    @include padding(top, 3);
-    @include padding(bottom, 2);
+    @include padding(top, 4);
+    @include padding(bottom, 0);
     @include padding(left right, 1);
 
     h1 {
       text-align: center;
     }
+  }
+
+  &__small {
+    @include text;
+    @include small;
+    @include padding(bottom, 2);
   }
 
   &__main {

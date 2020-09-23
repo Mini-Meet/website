@@ -29,7 +29,7 @@ import curriculum3Steps from '../../../assets/images/course/curriculum_2.jpg';
 import curriculumSchedule from '../../../assets/images/course/curriculum_3.jpg';
 import curriculumOverview from '../../../assets/images/course/curriculum_overview.png';
 import curriculumFeatureFactory from '../../../assets/images/course/curriculum_feature_factory.jpg';
-import curriculumROI from '../../../assets/images/course/curriculum_roi.jpg';
+import curriculumCompetencies from '../../../assets/images/course/curriculum_competencies.png';
 import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyback.png';
 
 import testimonialCollage from '../../../assets/images/testimonials/collage.jpg';
@@ -44,9 +44,9 @@ type Props = {
   //
 };
 
-const launchDate = '14th Sep 2020';
-const noOfParticipants = '12';
-const courseCost = '£1,397';
+const launchDate = '11th Jan 2020';
+const noOfParticipants = '18';
+const courseCost = '£1,997';
 
 const faqTwo = (
   <div>
@@ -74,9 +74,9 @@ const faqTwo = (
 const faqThree = (
   <div>
     <p>
-      To join the Prod MBA, you must apply through the website. If after the
-      30-minute interview we believe you would be a good fit, we will then offer
-      you a place on the programme.
+      To join the Prod MBA, you must apply through our email announcements. If
+      after the 30-minute interview we believe you would be a good fit, we will
+      then offer you a place on the programme.
     </p>
     <br />
     <p>
@@ -283,7 +283,7 @@ const contentOne = (
     <br />
     <br />
     <p>
-      <strong>Get Your Company To Pay</strong>
+      <strong>Your company will probably pay for it</strong>
     </p>
     <br />
     <p>
@@ -510,13 +510,26 @@ const contentFive = (
 
 const contentSix = (
   <div>
+    {
+      // <p>
+      //   The Prod MBA costs
+      //   <strong> {courseCost} </strong>& includes 6 weeks of weekly video content,
+      //   a weekly assigned reviewed by our mentors, weekly Q&A sessions &
+      //   workshops, 3x 1x1 sessions with our mentors, as well as lifetime access to
+      //   the Prod MBA alumni network (including events & workshops).
+      // </p>
+    }
+
     <p>
-      The Prod MBA costs
-      <strong> {courseCost} </strong>& includes 6 weeks of weekly video content,
-      a weekly assigned reviewed by our mentors, weekly Q&A sessions &
-      workshops, 3x 1x1 sessions with our mentors, as well as lifetime access to
-      the Prod MBA alumni network (including events & workshops).
+      <strong>
+        The First Priority Price will be announced in November 2020.
+      </strong>
+      The price includes 6 weeks of weekly video content, exclusive resources, a
+      weekly assigned reviewed by our mentors, weekly Q&A sessions & workshops,
+      3x 1x1 sessions with our mentors, as well as lifetime access to the Prod
+      MBA alumni network (including job postings, events & workshops).
     </p>
+
     <img alt="Moneyback Guarantee" src={curriculumMoneyback} />
     <p>
       <strong>Our 100% Moneyback Guarantee</strong>
@@ -529,13 +542,12 @@ const contentSix = (
     <br />
     <p>
       We’ve been delivering significant results with over 90% of our students,
-      so are very confident that, if you trust the process, the Prod MBA will
-      deliver results for you.
+      so have luckily not required to refund any students so far.
     </p>
     <br />
     <br />
     <p>
-      <strong>Get Your Company To Pay</strong>
+      <strong>Your company will probably pay for it</strong>
     </p>
     <br />
     <p>
@@ -635,12 +647,12 @@ const url =
   'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
 
-const mixpanelEvent = '5. MBA Next';
+const mixpanelEvent = '6. MBA Next';
 const facebookEvent = 'Search';
 
 export default class Home extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('5. MBA');
+    Mixpanel.track('6. MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
   }
@@ -651,8 +663,20 @@ export default class Home extends Component<Props> {
         <Header light />
         <Hero
           title="We Fast-Track POs & PMs to Head of Product"
-          subtitle="Our part-time programme teaches you product strategy in practice by taking a product from idea to revenue within 6 weeks, unlocking your ability to build great products, as well as more autonomy, purpose & a big pay rise, in your current role:"
-          // subtitle="Learn how to overcome the single biggest challenge to product success by going from idea to product validation with real revenue in just 6 weeks with our part-time Prod MBA training programme:"
+          subtitleOne="The Prod MBA is a hands-on, 6-week bootcamp designed for PMs & POs to become an effective product leader by learning how to take a product from idea to revenue in practice in just 6 weeks"
+          subtitleTwo="The best way to learn about the Prod MBA is to join our email series for insights, updates & application deadlines:"
+          mailchimpForm
+          nextPageUrl="/case-study"
+          btnText="Keep Me Posted"
+          onClick={this.goToNextPage}
+          // subText="By sharing your email, you agree to our "
+          // subTextUrlText="Terms & Conditions"
+          // subTextUrl="/legal"
+          url={calendlyUrl}
+          // btnText="Apply To Prod MBA"
+        />
+        <Featured
+          header="The Prod MBA was taken by students from:"
           mailchimpForm
           nextPageUrl="/case-study"
           btnText="Get Free Case Study >"
@@ -660,16 +684,16 @@ export default class Home extends Component<Props> {
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
           subTextUrl="/legal"
-          url={calendlyUrl}
-          // btnText="Apply To Prod MBA"
+          mixpanelEvent={mixpanelEvent}
+          facebookEvent={facebookEvent}
         />
         <Description
           header="Become A 'Product Rainmaker'"
-          description1="Frustrated in your current role? Expensive Scrum certification or 'Agile Coach' haven't helped? Feel unable to prioritise or influence what you work on?"
+          description1="Frustrated in your current role? Stuck focused on delivery? Understand the theoory, but unable to prioritise or influence what you work on in practice?"
           description2="Gain autonomy, purpose & rapid promotion by learning how to build products that deliver massive value for your company."
-          description3="With the Prod MBA, you will learn - and practice - the skills of a true product leader, helping you to get there in 1-2 years, rather than 5-10."
+          description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10."
           // dollarise this!
-          image={curriculumROI}
+          image={curriculumCompetencies}
           nextPageUrl="/case-study"
           btnText="Get Free Case Study >"
           onClick={this.goToNextPage}
@@ -713,18 +737,12 @@ export default class Home extends Component<Props> {
           quote="Can I just say that I love this programme. I know we're only a week in, but this is the most hands-on thing I've ever done."
         />
         <Stats header="Some statistics:" />
-        <Featured
-          header="The Prod MBA was taken by students from:"
-          mailchimpForm
-          nextPageUrl="/case-study"
-          btnText="Get Free Case Study >"
-          onClick={this.goToNextPage}
-          subText="By sharing your email, you agree to our "
-          subTextUrlText="Terms & Conditions"
-          subTextUrl="/legal"
-          mixpanelEvent={mixpanelEvent}
-          facebookEvent={facebookEvent}
+        <Image
+          title="Some more love from our students"
+          imgDesktop={testimonialCollage}
+          imgMobile={testimonialCollageSmall}
         />
+        <Mentors />
         <Testimonial
           name="Stefanos, Product Owner"
           img={stefanos}
@@ -737,9 +755,11 @@ export default class Home extends Component<Props> {
               sectionHeader="Curriculum"
               toggleItems={toggleItems}
             />
-            <h4 className="curriculum__cta">
-              Start levelling up your product career:
-            </h4>
+            <h4 className="curriculum__cta">Level-up your product career</h4>
+            <p className="curriculum__small">
+              The best way to learn about the Prod MBA is to join our email
+              series for insights, updates & application deadlines:
+            </p>
             <MailchimpForm
               url={url}
               subText="By sharing your email, you agree to our "
@@ -755,12 +775,6 @@ export default class Home extends Component<Props> {
             }
           </div>
         </div>
-        <Image
-          title="Some more love from our students"
-          imgDesktop={testimonialCollage}
-          imgMobile={testimonialCollageSmall}
-        />
-        <Mentors />
         <Footer page="HOME" />
       </div>
     );

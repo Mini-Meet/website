@@ -20,7 +20,7 @@
 
 @mixin h1 {
   @extend %header-text;
-  font-size: 38px;
+  font-size: 32px;
 
   @media (min-width: $screen-sm-min) {
     font-size: 46px;

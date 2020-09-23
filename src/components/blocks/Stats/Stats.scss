@@ -44,6 +44,13 @@
       h3 {
         color: $primary;
       }
+
+      &_small {
+        @include padding(top, 0);
+        @include text;
+        @include small;
+        color: transparentize($dark, 0.7);
+      }
     }
   }
 }

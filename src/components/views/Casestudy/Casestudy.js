@@ -46,7 +46,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
 export default class Casestudy extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('5. Casestudy');
+    Mixpanel.track('6. Casestudy');
     FacebookPixel.track('ViewContent');
   }
 
@@ -169,7 +169,7 @@ export default class Casestudy extends Component<Props> {
   }
 
   goToBookSession = () => {
-    Mixpanel.track(`5. Casestudy Apply`);
+    Mixpanel.track(`6.Casestudy Apply`);
     FacebookPixel.track('SubmitApplication');
   };
 }

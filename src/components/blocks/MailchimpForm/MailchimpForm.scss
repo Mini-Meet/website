@@ -54,10 +54,11 @@
     @include small;
     @include padding(top, 1);
     @include padding(bottom, 3);
-    color: $secondary;
+    color: transparentize($dark, 0.7);
 
     a {
       text-decoration: underline;
+      color: transparentize($dark, 0.7);
     }
 
     &_link {

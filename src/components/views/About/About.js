@@ -12,7 +12,7 @@ const url = '/case-study';
 
 export default class About extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('5. About');
+    Mixpanel.track('6. About');
   }
 
   render() {
@@ -65,7 +65,7 @@ export default class About extends Component<Props> {
   }
 
   goToNextPage = () => {
-    Mixpanel.track('5. About Next');
+    Mixpanel.track('6. About Next');
   };
 
   // goToAboutCaseStudy = () => {

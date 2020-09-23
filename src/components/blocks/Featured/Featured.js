@@ -38,6 +38,10 @@ export default class Featured extends Component<Props> {
         <p className="featured__header">{header}</p>
         <div className="featured__logos"></div>
         <h4 className="featured__cta">Learn how to join these alumni:</h4>
+        <p className="featured__small">
+          The best way to learn about the Prod MBA is to join our email series
+          for insights, updates & application deadlines:
+        </p>
         <div className="featured__button">
           {buttonNext && (
             <ButtonNextPage

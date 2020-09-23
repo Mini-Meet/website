@@ -8,7 +8,7 @@
   @include padding(bottom, 4);
 
   @media (min-width: $screen-sm-min) {
-    @include padding(bottom, 5);
+    @include padding(bottom, 3);
   }
 
   &__header {
@@ -26,7 +26,7 @@
       color: $white;
     }
 
-    p {
+    &_large {
       @include padding(top bottom, 1);
       @include padding(left right, 0);
       color: transparentize($white, 0.4);
@@ -34,7 +34,20 @@
 
       @media (min-width: $screen-sm-min) {
         @include padding(top, 0);
-        @include padding(bottom, 3);
+        @include padding(bottom, 1);
+      }
+    }
+
+    &_small {
+      @include padding(top, 2);
+      @include padding(bottom, 1);
+      @include padding(left right, 0);
+      @include small;
+      color: transparentize($primary, 0.4);
+
+      @media (min-width: $screen-sm-min) {
+        @include padding(top, 4);
+        @include padding(bottom, 1);
       }
     }
   }

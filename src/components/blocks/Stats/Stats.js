@@ -16,15 +16,16 @@ export default class Featured extends Component<Props> {
         <p className="stats__header">{header}</p>
         <div className="stats__row">
           <div className="stats__row_col">
-            <h3>8.9</h3>
-            <p>Student Rating</p>
+            <h3>9.1</h3>
+            <p>Average Student Rating</p>
           </div>
           <div className="stats__row_col">
             <h3>86%</h3>
-            <p>Completion Rate</p>
+            <p>Completion Rate*</p>
+            <p className="stats__row_col_small">(Industry average is 10-30%)</p>
           </div>
           <div className="stats__row_col">
-            <h3>26</h3>
+            <h3>39</h3>
             <p>Students</p>
           </div>
         </div>

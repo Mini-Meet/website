@@ -9,7 +9,8 @@ import './Hero.scss';
 type Props = {
   title: string,
   titleTwo: string,
-  subtitle: string,
+  subtitleOne: string,
+  subtitleTwo: string,
   btnText: string,
   subText: string,
   subTextUrl: string,
@@ -29,8 +30,8 @@ export default class Hero extends Component<Props> {
   render() {
     const {
       title,
-      titleTwo,
-      subtitle,
+      subtitleOne,
+      subtitleTwo,
       btnText,
       subText,
       subTextUrl,
@@ -48,8 +49,8 @@ export default class Hero extends Component<Props> {
       <div className="hero">
         <div className="hero__header">
           <h1>{title}</h1>
-          <h1>{titleTwo}</h1>
-          <p>{subtitle}</p>
+          <p className="hero__header_large">{subtitleOne}</p>
+          <p className="hero__header_small">{subtitleTwo}</p>
         </div>
 
         {nextPage && (
@@ -84,7 +85,7 @@ export default class Hero extends Component<Props> {
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track('5. / MBA Subtext Link');
+    Mixpanel.track('6. / MBA Subtext Link');
   };
 
   goToExternalLink = () => {

@@ -1,10 +1,12 @@
 @import '../../../styles/main';
 
 .description {
+  @include padding(left right, 0);
   @include background-white;
   @include col-reverse;
 
   @media (min-width: $screen-md-min) {
+    @include padding(left right, 2);
     @include row;
   }
 
@@ -86,12 +88,12 @@
 
       @media (min-width: $screen-sm-min) {
         margin: 72px auto 32px;
-        width: 80%;
+        width: 100%;
       }
 
       @media (min-width: $screen-lg-min) {
         margin: 72px auto 32px;
-        width: 80%;
+        width: 100%;
       }
     }
   }
