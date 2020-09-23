@@ -46,7 +46,7 @@ type Props = {
 
 const launchDate = '11th Jan 2020';
 const noOfParticipants = '18';
-const courseCost = '£1,997';
+// const courseCost = '£1,997';
 
 const faqTwo = (
   <div>
