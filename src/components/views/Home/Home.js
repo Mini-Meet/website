@@ -133,10 +133,10 @@ const faqFive = (
 const faqSix = (
   <div>
     <p>
-      Henry, our CEO & Founder, runs most of the workshops in order to make the
-      learning process is as consistent as possible. We do, however, bring in
-      some of our product experts for specific sessions & talks to cover certain
-      topics.
+      Henry, Founder & Lead Mentor, runs most of the workshops in order to make
+      the learning process is as consistent as possible. We do, however, bring
+      in some of our product experts for specific sessions & talks to cover
+      certain topics.
     </p>
     <br />
     <p>
@@ -360,9 +360,10 @@ const contentTwo = (
     <img alt="Curriculum" src={curriculumSchedule} />
     <p>
       Each week, you have 1-2 hours of video content to watch, with a hands-on
-      assignment to submit at the end of the week. This could be "crafting your
-      High Experience customer" or "launching an acquisition strategy", which
-      will be reviewed by one of our product mentors.
+      assignment to submit at the end of the week. This could be
+      &quot;validating your High Experience customer&quot; or &quot;launching an
+      acquisition strategy&quot;, which will be reviewed by one of our product
+      mentors.
     </p>
     <br />
     <p>Example assignment:</p>
@@ -435,9 +436,9 @@ const contentFour = (
     <br />
     <p>
       Each week, you have 1-2 hours of video content to watch, with a hands-on
-      assignment to submit at the end of the week. This could be "crafting your
-      High Experience customer" or "launching an acquisition strategy", which
-      will be reviewed by one of our product mentors.
+      assignment to submit at the end of the week. This could be &quot;crafting
+      your High Experience customer&quot; or &quot;launching an acquisition
+      strategy&quot;, which will be reviewed by one of our product mentors.
     </p>
     <br />
     <p>Example assignment:</p>
