@@ -360,8 +360,8 @@ const contentTwo = (
     <img alt="Curriculum" src={curriculumSchedule} />
     <p>
       Each week, you have 1-2 hours of video content to watch, with a hands-on
-      assignment to submit at the end of the week. This could be "crafting your
-      High Experience customer" or "launching an acquisition strategy", which
+      assignment to submit at the end of the week. This could be 'crafting your
+      High Experience customer' or 'launching an acquisition strategy', which
       will be reviewed by one of our product mentors.
     </p>
     <br />
@@ -435,8 +435,8 @@ const contentFour = (
     <br />
     <p>
       Each week, you have 1-2 hours of video content to watch, with a hands-on
-      assignment to submit at the end of the week. This could be "crafting your
-      High Experience customer" or "launching an acquisition strategy", which
+      assignment to submit at the end of the week. This could be 'crafting your
+      High Experience customer' or 'launching an acquisition strategy', which
       will be reviewed by one of our product mentors.
     </p>
     <br />
