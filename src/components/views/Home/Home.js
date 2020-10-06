@@ -652,7 +652,7 @@ const facebookEvent = 'Search';
 
 export default class Home extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('6. MBA');
+    Mixpanel.track('7. MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
   }
@@ -667,7 +667,7 @@ export default class Home extends Component<Props> {
           subtitleTwo="The best way to learn about the Prod MBA is to join our email series for insights, updates & application deadlines:"
           mailchimpForm
           nextPageUrl="/case-study"
-          btnText="Keep Me Posted"
+          btnText="Get Free Brochure"
           onClick={this.goToNextPage}
           // subText="By sharing your email, you agree to our "
           // subTextUrlText="Terms & Conditions"
