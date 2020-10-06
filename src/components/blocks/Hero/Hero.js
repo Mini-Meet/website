@@ -8,7 +8,6 @@ import './Hero.scss';
 
 type Props = {
   title: string,
-  titleTwo: string,
   subtitleOne: string,
   subtitleTwo: string,
   btnText: string,
