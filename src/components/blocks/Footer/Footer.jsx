@@ -49,7 +49,7 @@ class Footer extends Component {
           <div className="footer__logo_book">
             <img alt="logo" src={Book} className="footer__logo_bookimg" />
             <p>
-              Want to learn more about building the foundations for business
+              Want to learn more about building the foundations for product
               success?
             </p>
             <a

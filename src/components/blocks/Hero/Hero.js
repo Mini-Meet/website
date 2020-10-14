@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { FacebookPixel } from '../../../FacebookPixel';
+// import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 import { MailchimpForm, RefereeInput } from '..';
 import { Button, ButtonNextPage } from '../../elements';
@@ -65,7 +65,7 @@ export default class Hero extends Component<Props> {
         {externalPage && (
           <div className="hero__external">
             <a href={url} target="_blank" rel="noopener noreferrer">
-              <Button onClick={this.goToExternalLink}>{btnText}</Button>
+              <Button onClick={onClick}>{btnText}</Button>
             </a>
           </div>
         )}
@@ -84,11 +84,6 @@ export default class Hero extends Component<Props> {
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track('7. / MBA Subtext Link');
-  };
-
-  goToExternalLink = () => {
-    Mixpanel.track(`${this.props.mixpanelEvent}`);
-    FacebookPixel.track(`${this.props.facebookEvent}`);
+    Mixpanel.track('8. / MBA Subtext Link');
   };
 }

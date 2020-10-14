@@ -11,6 +11,7 @@ type Props = {
   nextPageUrl: string,
   onClick: Function,
   buttonNext: boolean,
+  textAboveCTA: string,
   //
   mailchimpForm: boolean,
   subText: string,
@@ -26,6 +27,7 @@ export default class Featured extends Component<Props> {
       nextPageUrl,
       onClick,
       buttonNext,
+      textAboveCTA,
       //
       mailchimpForm,
       subText,
@@ -37,11 +39,8 @@ export default class Featured extends Component<Props> {
       <div className="featured">
         <p className="featured__header">{header}</p>
         <div className="featured__logos"></div>
-        <h4 className="featured__cta">Learn how to join these alumni:</h4>
-        <p className="featured__small">
-          The best way to learn about the Prod MBA is to join our email series
-          for insights, updates & application deadlines:
-        </p>
+        <h4 className="featured__cta">Learn how to join these alumni</h4>
+        <p className="featured__small">{textAboveCTA}</p>
         <div className="featured__button">
           {buttonNext && (
             <ButtonNextPage

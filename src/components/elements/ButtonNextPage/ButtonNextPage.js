@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Button } from '..';
 // import './ButtonNextPage.scss';
 
@@ -16,9 +16,9 @@ export default class ButtonNextPage extends Component<Props> {
 
     return (
       <div>
-        <Link to={nextPageUrl}>
+        <a href={nextPageUrl} target="_blank" rel="noopener noreferrer">
           <Button onClick={onClick}>{btnText}</Button>
-        </Link>
+        </a>
       </div>
     );
   }

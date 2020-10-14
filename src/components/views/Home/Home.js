@@ -14,14 +14,14 @@ import {
   Featured,
   Footer,
   Image,
-  MailchimpForm,
+  // MailchimpForm,
   SectionSummary,
   Stats,
   Mentors,
   Testimonial,
 } from '../../blocks';
 
-// import { ButtonNextPage } from '../../elements';
+import { ButtonNextPage } from '../../elements';
 
 // import curriculumSixWeeks from '../../../assets/images/course/curriculum_1.jpg';
 import curriculumAssignment from '../../../assets/images/course/curriculum_1a.jpg';
@@ -643,16 +643,20 @@ const toggleItems = [
   },
 ];
 
-const url =
-  'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
-const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
+// const url =
+// 'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
+// const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
+const signUpUrl = 'https://productmastery.ac-page.com/sign-up';
+const signUpCTA = 'Test Your Product Skills';
+const textAboveCTA =
+  'Assess your product skills using our Product Skills Matrix to see whether you may be a good fit:';
 
-const mixpanelEvent = '6. MBA Next';
+const mixpanelEvent = '8. MBA Next';
 const facebookEvent = 'Search';
 
 export default class Home extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('7. MBA');
+    Mixpanel.track('8. MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
   }
@@ -664,22 +668,25 @@ export default class Home extends Component<Props> {
         <Hero
           title="We Fast-Track POs & PMs to Head of Product"
           subtitleOne="The Prod MBA is a hands-on, 6-week bootcamp designed for PMs & POs to become an effective product leader by learning how to take a product from idea to revenue in practice in just 6 weeks"
-          subtitleTwo="The best way to learn about the Prod MBA is to join our email series for insights, updates & application deadlines:"
-          mailchimpForm
-          nextPageUrl="/case-study"
-          btnText="Get Free Brochure"
+          subtitleTwo={textAboveCTA}
+          externalPage
+          btnText={signUpCTA}
+          url={signUpUrl}
           onClick={this.goToNextPage}
+          // mailchimpForm
+          // nextPageUrl="/case-study"
           // subText="By sharing your email, you agree to our "
           // subTextUrlText="Terms & Conditions"
           // subTextUrl="/legal"
-          url={calendlyUrl}
           // btnText="Apply To Prod MBA"
         />
         <Featured
           header="The Prod MBA was taken by students from:"
-          mailchimpForm
-          nextPageUrl="/case-study"
-          btnText="Get Free Case Study >"
+          // mailchimpForm
+          buttonNext
+          nextPageUrl={signUpUrl}
+          btnText={signUpCTA}
+          textAboveCTA={textAboveCTA}
           onClick={this.goToNextPage}
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
@@ -694,10 +701,12 @@ export default class Home extends Component<Props> {
           description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10."
           // dollarise this!
           image={curriculumCompetencies}
-          nextPageUrl="/case-study"
-          btnText="Get Free Case Study >"
+          // next page button
+          nextPageUrl={signUpUrl}
+          btnText={signUpCTA}
           onClick={this.goToNextPage}
-          mailchimpForm
+          buttonNext
+          // mailchimpForm
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
           subTextUrl="/legal"
@@ -709,10 +718,12 @@ export default class Home extends Component<Props> {
           description2="Learn how to align stakeholders & product teams around a product strategy that makes sense through prioritised, high-value feature experiments."
           description3="Unlock greater profit & growth with our framework to achieve Product/Market Fit:"
           image={curriculumFeatureFactory}
-          nextPageUrl="/case-study"
-          btnText="Get Free Case Study >"
+          // next page button
+          nextPageUrl={signUpUrl}
+          btnText={signUpCTA}
           onClick={this.goToNextPage}
-          mailchimpForm
+          buttonNext
+          // mailchimpForm
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
           subTextUrl="/legal"
@@ -723,10 +734,12 @@ export default class Home extends Component<Props> {
           description2="A Scrum certification or overly-theoretical Udemy course may get you your first product job, but it won't help you become a product expert."
           description3="The Prod MBA will."
           image={curriculumOverview}
-          nextPageUrl="/case-study"
-          btnText="Get Free Case Study >"
+          // next page button
+          nextPageUrl={signUpUrl}
+          btnText={signUpCTA}
           onClick={this.goToNextPage}
-          mailchimpForm
+          buttonNext
+          // mailchimpForm
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
           subTextUrl="/legal"
@@ -756,23 +769,20 @@ export default class Home extends Component<Props> {
               toggleItems={toggleItems}
             />
             <h4 className="curriculum__cta">Level-up your product career</h4>
-            <p className="curriculum__small">
-              The best way to learn about the Prod MBA is to join our email
-              series for insights, updates & application deadlines:
-            </p>
-            <MailchimpForm
-              url={url}
-              subText="By sharing your email, you agree to our "
-              subTextUrlText="Terms & Conditions"
-              subTextUrl="/legal"
-            />
+            <p className="curriculum__small">{textAboveCTA}</p>
             {
-              // <ButtonNextPage
-              //   nextPageUrl="/case-study"
-              //   btnText="Get Free Case Study >"
-              //   onClick={this.goToNextPage}
+              // <MailchimpForm
+              //   url={url}
+              //   subText="By sharing your email, you agree to our "
+              //   subTextUrlText="Terms & Conditions"
+              //   subTextUrl="/legal"
               // />
             }
+            <ButtonNextPage
+              nextPageUrl={signUpUrl}
+              btnText={signUpCTA}
+              onClick={this.goToNextPage}
+            />
           </div>
         </div>
         <Footer page="HOME" />

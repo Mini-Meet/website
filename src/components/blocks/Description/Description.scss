@@ -101,7 +101,7 @@
   &__button {
     @include padding(top, 2);
 
-    @media (min-width: $screen-sm-min) {
+    @media (min-width: $screen-md-min) {
       @include row;
     }
   }

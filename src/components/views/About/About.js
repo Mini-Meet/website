@@ -8,11 +8,11 @@ import portrait from '../../../assets/images/course/henry-portrait.jpg';
 
 import './About.scss';
 
-const url = '/case-study';
+const url = 'https://productmastery.ac-page.com/sign-up';
 
 export default class About extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('7. About');
+    Mixpanel.track('8. About');
   }
 
   render() {
@@ -48,7 +48,7 @@ export default class About extends Component<Props> {
               <ButtonNextPage
                 nextPageUrl={url}
                 onClick={this.goToNextPage}
-                btnText="Get Free Case Study >"
+                btnText="Assess Your Product Skills"
               />
             </div>
             {
@@ -65,7 +65,7 @@ export default class About extends Component<Props> {
   }
 
   goToNextPage = () => {
-    Mixpanel.track('7. About Next');
+    Mixpanel.track('8. About Next');
   };
 
   // goToAboutCaseStudy = () => {
