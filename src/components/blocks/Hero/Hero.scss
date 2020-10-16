@@ -41,13 +41,14 @@
     &_small {
       @include padding(top, 2);
       @include padding(bottom, 1);
-      @include padding(left right, 0);
+      @include padding(left right, 3);
       @include small;
       color: transparentize($primary, 0.4);
 
       @media (min-width: $screen-sm-min) {
         @include padding(top, 4);
         @include padding(bottom, 1);
+        @include padding(left right, 5);
       }
     }
   }

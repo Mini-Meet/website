@@ -45,8 +45,9 @@ type Props = {
 };
 
 const launchDate = '11th Jan 2020';
-const noOfParticipants = '18';
-// const courseCost = '£1,997';
+const noOfParticipants = '21';
+const courseCost = '£1,397';
+const fullCourseCost = '£1,997';
 
 const faqTwo = (
   <div>
@@ -522,8 +523,12 @@ const contentSix = (
 
     <p>
       <strong>
-        The First Priority Price will be announced in November 2020.
+        The next cohort starts on {launchDate}. The Early Bird Price for
+        November 2020 will be {courseCost}, increasing to {fullCourseCost} in
+        December.
       </strong>
+      <br />
+      <br />
       The price includes 6 weeks of weekly video content, exclusive resources, a
       weekly assigned reviewed by our mentors, weekly Q&A sessions & workshops,
       3x 1x1 sessions with our mentors, as well as lifetime access to the Prod
@@ -541,8 +546,8 @@ const contentSix = (
     </p>
     <br />
     <p>
-      We’ve been delivering significant results with over 90% of our students,
-      so have luckily not required to refund any students so far.
+      We have not needed to refund a single student since starting the
+      programme.
     </p>
     <br />
     <br />
@@ -647,16 +652,16 @@ const toggleItems = [
 // 'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 // const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
 const signUpUrl = 'https://productmastery.ac-page.com/sign-up';
-const signUpCTA = 'Test Your Product Skills';
+const signUpCTA = 'Assess Your Product Skills';
 const textAboveCTA =
-  'Assess your product skills using our Product Skills Matrix to see whether you may be a good fit:';
+  'Assess your product skills using our Product Skills Matrix to see how you can accelerate your product career & increase your salary:';
 
 const mixpanelEvent = '8. MBA Next';
 const facebookEvent = 'Search';
 
 export default class Home extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('8. MBA');
+    Mixpanel.track('9. MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
   }

@@ -5,7 +5,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import dom from '../../../assets/images/mentors/dom.jpeg';
 import henry from '../../../assets/images/mentors/henry.jpg';
-import elvis from '../../../assets/images/mentors/elvis.jpeg';
 import sofi from '../../../assets/images/mentors/sofi.jpeg';
 
 import Card from './Card/Card.jsx';
@@ -36,13 +35,6 @@ export default class Mentors extends Component {
         title: '#product #scale',
         comment:
           'Sofi is a Senior Product Manager & Consultant with a wealth of experience across marketplace, finance and eCommerce. She has rocketed revenue by millions, increased signups by up to 10 times & boosted user reported satisfaction by 5 NPS points - and loves using data to shape the perfect customer journey.',
-      },
-      {
-        photo: elvis,
-        name: 'Elvis Malkic',
-        title: '#growth #acquisition',
-        comment:
-          'Elvis is a results-driven FinTech, MarTech, Inbound & App Marketing Growth Hacker who has run over 400 growth experiments over the last 2 years. ',
       },
     ];
 

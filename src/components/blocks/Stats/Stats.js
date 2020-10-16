@@ -20,7 +20,7 @@ export default class Featured extends Component<Props> {
             <p>Average Student Rating</p>
           </div>
           <div className="stats__row_col">
-            <h3>86%</h3>
+            <h3>93%</h3>
             <p>Completion Rate*</p>
             <p className="stats__row_col_small">(Industry average is 10-30%)</p>
           </div>
