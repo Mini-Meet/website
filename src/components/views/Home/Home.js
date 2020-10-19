@@ -656,12 +656,12 @@ const signUpCTA = 'Assess Your Product Skills';
 const textAboveCTA =
   'Assess your product skills using our Product Skills Matrix to see how you can accelerate your product career & increase your salary:';
 
-const mixpanelEvent = '8. MBA Next';
+const mixpanelEvent = '10. MBA Next';
 const facebookEvent = 'Search';
 
 export default class Home extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('9. MBA');
+    Mixpanel.track('10. MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
   }
