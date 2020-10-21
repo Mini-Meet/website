@@ -652,9 +652,9 @@ const toggleItems = [
 // 'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 // const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
 const signUpUrl = 'https://productmastery.ac-page.com/sign-up';
-const signUpCTA = 'Assess Your Product Skills';
+const signUpCTA = 'TRY 2-MINUTE PRODUCT SKILLS TEST';
 const textAboveCTA =
-  'Assess your product skills using our Product Skills Matrix to see how you can accelerate your product career & increase your salary:';
+  'Try our 2-minute Product Skills Matrix to assess your product skills & see how you can accelerate your product career:';
 
 const mixpanelEvent = '10. MBA Next';
 const facebookEvent = 'Search';
