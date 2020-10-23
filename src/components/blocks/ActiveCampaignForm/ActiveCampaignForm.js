@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import { Mixpanel } from '../../../Mixpanel';
 import { Button } from '../../elements';
 
-import brochurePdf from '../../../assets/pdf/prod-mba-brochure.pdf';
+// import brochurePdf from '../../../assets/pdf/prod-mba-brochure.pdf';
 
 import './ActiveCampaignForm.scss';
 
@@ -59,7 +59,7 @@ export default class ActiveCampaignForm extends Component {
             </div>
             <div className="_clear-element"></div>
           </div>
-          <div classNames="_form-thank-you" style={{ display: 'none' }}></div>
+          <div classNames="_form-thank-you">{formId}</div>
         </form>
       </div>
     );
