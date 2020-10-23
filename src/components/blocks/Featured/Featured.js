@@ -30,9 +30,6 @@ export default class Featured extends Component<Props> {
       textAboveCTA,
       //
       activeCampaignForm,
-      subText,
-      subTextUrl,
-      subTextUrlText,
     } = this.props;
 
     return (

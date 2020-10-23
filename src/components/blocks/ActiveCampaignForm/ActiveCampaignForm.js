@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 // import { Mixpanel } from '../../../Mixpanel';
-import { Button, Loading } from '../../elements';
+import { Button } from '../../elements';
 
 import brochurePdf from '../../../assets/pdf/prod-mba-brochure.pdf';
 
@@ -9,10 +9,8 @@ import './ActiveCampaignForm.scss';
 
 const formId = 1;
 
-export default class ActiveCampaignForm extends Component<Props> {
+export default class ActiveCampaignForm extends Component {
   render(formId) {
-    const { subText, subTextUrl, subTextUrlText } = this.props;
-
     // const formResponse = (
     // window.location.href.match(/success\/\?type=(.*\b)/) ?
     // window.location.href.match(/success\/\?type=(.*\b)/)[1] :

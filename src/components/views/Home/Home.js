@@ -21,7 +21,7 @@ import {
   Testimonial,
 } from '../../blocks';
 
-import { ButtonNextPage } from '../../elements';
+// import { ButtonNextPage } from '../../elements';
 
 // import curriculumSixWeeks from '../../../assets/images/course/curriculum_1.jpg';
 import curriculumAssignment from '../../../assets/images/course/curriculum_1a.jpg';

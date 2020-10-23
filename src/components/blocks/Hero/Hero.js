@@ -22,8 +22,6 @@ type Props = {
   referralForm: boolean,
   mailchimpForm: boolean,
   activeCampaignForm: boolean,
-  mixpanelEvent: boolean,
-  facebookEvent: boolean,
 };
 
 export default class Hero extends Component<Props> {
