@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 // import { FacebookPixel } from '../../../FacebookPixel';
 // import { Mixpanel } from '../../../Mixpanel';
-import { MailchimpForm } from '..';
+import { ActiveCampaignForm, MailchimpForm } from '..';
 import { ButtonNextPage } from '../../elements';
 
 import './Description.scss';
@@ -17,6 +17,7 @@ type Props = {
   btnText: string,
   nextPageUrl: string,
   onClick: Function,
+  activeCampaignForm: boolean,
   buttonNext: boolean,
   //
   mailchimpForm: boolean,
@@ -37,6 +38,7 @@ export default class Description extends Component<Props> {
       btnText,
       nextPageUrl,
       onClick,
+      activeCampaignForm,
       buttonNext,
       //
       mailchimpForm,
@@ -72,6 +74,7 @@ export default class Description extends Component<Props> {
                       subTextUrlText={subTextUrlText}
                     />
                   )}
+                  {activeCampaignForm && <ActiveCampaignForm />}
                 </div>
               </div>
             </div>
@@ -118,6 +121,7 @@ export default class Description extends Component<Props> {
                       subTextUrlText={subTextUrlText}
                     />
                   )}
+                  {activeCampaignForm && <ActiveCampaignForm />}
                 </div>
               </div>
             </div>

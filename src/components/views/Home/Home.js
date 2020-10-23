@@ -14,7 +14,7 @@ import {
   Featured,
   Footer,
   Image,
-  // MailchimpForm,
+  ActiveCampaignForm,
   SectionSummary,
   Stats,
   Mentors,
@@ -652,16 +652,16 @@ const toggleItems = [
 // 'https://productmastery.us5.list-manage.com/subscribe/post?u=9452004c3109652cfc9a9e3e1&amp;id=10e19965fa';
 // const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
 const signUpUrl = 'https://productmastery.ac-page.com/sign-up';
-const signUpCTA = 'TRY 2-MINUTE PRODUCT SKILLS TEST';
+const signUpCTA = 'JOIN FREE MINI MBA';
 const textAboveCTA =
-  'Try our 2-minute Product Skills Matrix to assess your product skills & see how you can accelerate your product career:';
+  'Take the free 7-day Mini MBA to discover our proven formula for building great products, as well as for updates on our Jan 2021 cohort:';
 
-const mixpanelEvent = '10. MBA Next';
+const mixpanelEvent = '11. MBA Next';
 const facebookEvent = 'Search';
 
 export default class Home extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('10. MBA');
+    Mixpanel.track('11. MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
   }
@@ -674,7 +674,7 @@ export default class Home extends Component<Props> {
           title="We Fast-Track POs & PMs to Head of Product"
           subtitleOne="The Prod MBA is a hands-on, 6-week bootcamp designed for PMs & POs to become an effective product leader by learning how to take a product from idea to revenue in practice in just 6 weeks"
           subtitleTwo={textAboveCTA}
-          externalPage
+          activeCampaignForm
           btnText={signUpCTA}
           url={signUpUrl}
           onClick={this.goToNextPage}
@@ -687,8 +687,8 @@ export default class Home extends Component<Props> {
         />
         <Featured
           header="The Prod MBA was taken by students from:"
-          // mailchimpForm
-          buttonNext
+          activeCampaignForm
+          // buttonNext
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
           textAboveCTA={textAboveCTA}
@@ -710,7 +710,8 @@ export default class Home extends Component<Props> {
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
           onClick={this.goToNextPage}
-          buttonNext
+          activeCampaignForm
+          // buttonNext
           // mailchimpForm
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
@@ -727,7 +728,8 @@ export default class Home extends Component<Props> {
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
           onClick={this.goToNextPage}
-          buttonNext
+          activeCampaignForm
+          // buttonNext
           // mailchimpForm
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
@@ -743,7 +745,8 @@ export default class Home extends Component<Props> {
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
           onClick={this.goToNextPage}
-          buttonNext
+          activeCampaignForm
+          // buttonNext
           // mailchimpForm
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
@@ -783,11 +786,14 @@ export default class Home extends Component<Props> {
               //   subTextUrl="/legal"
               // />
             }
-            <ButtonNextPage
-              nextPageUrl={signUpUrl}
-              btnText={signUpCTA}
-              onClick={this.goToNextPage}
-            />
+            <ActiveCampaignForm />
+            {
+              // <ButtonNextPage
+              //   nextPageUrl={signUpUrl}
+              //   btnText={signUpCTA}
+              //   onClick={this.goToNextPage}
+              // />
+            }
           </div>
         </div>
         <Footer page="HOME" />

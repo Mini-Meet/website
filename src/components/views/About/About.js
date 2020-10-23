@@ -12,7 +12,7 @@ const url = 'https://productmastery.ac-page.com/sign-up';
 
 export default class About extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('10. About');
+    Mixpanel.track('11. About');
   }
 
   render() {
@@ -65,7 +65,7 @@ export default class About extends Component<Props> {
   }
 
   goToNextPage = () => {
-    Mixpanel.track('10. About Next');
+    Mixpanel.track('11. About Next');
   };
 
   // goToAboutCaseStudy = () => {

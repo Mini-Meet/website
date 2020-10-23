@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { ButtonNextPage } from '../../elements';
-import { MailchimpForm } from '..';
+import { ActiveCampaignForm } from '..';
 
 import './Featured.scss';
 
@@ -13,7 +13,7 @@ type Props = {
   buttonNext: boolean,
   textAboveCTA: string,
   //
-  mailchimpForm: boolean,
+  activeCampaignForm: boolean,
   subText: string,
   subTextUrl: string,
   subTextUrlText: string,
@@ -29,7 +29,7 @@ export default class Featured extends Component<Props> {
       buttonNext,
       textAboveCTA,
       //
-      mailchimpForm,
+      activeCampaignForm,
       subText,
       subTextUrl,
       subTextUrlText,
@@ -49,13 +49,7 @@ export default class Featured extends Component<Props> {
               btnText={btnText}
             />
           )}
-          {mailchimpForm && (
-            <MailchimpForm
-              subText={subText}
-              subTextUrl={subTextUrl}
-              subTextUrlText={subTextUrlText}
-            />
-          )}
+          {activeCampaignForm && <ActiveCampaignForm />}
         </div>
       </div>
     );

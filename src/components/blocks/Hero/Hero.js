@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 // import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
-import { MailchimpForm, RefereeInput } from '..';
+import { MailchimpForm, ActiveCampaignForm, RefereeInput } from '..';
 import { Button, ButtonNextPage } from '../../elements';
 import './Hero.scss';
 
@@ -21,6 +21,7 @@ type Props = {
   url: string,
   referralForm: boolean,
   mailchimpForm: boolean,
+  activeCampaignForm: boolean,
   mixpanelEvent: boolean,
   facebookEvent: boolean,
 };
@@ -42,6 +43,7 @@ export default class Hero extends Component<Props> {
       url,
       referralForm,
       mailchimpForm,
+      activeCampaignForm,
     } = this.props;
 
     return (
@@ -79,11 +81,13 @@ export default class Hero extends Component<Props> {
             subTextUrlText={subTextUrlText}
           />
         )}
+
+        {activeCampaignForm && <ActiveCampaignForm />}
       </div>
     );
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track('10. / MBA Subtext Link');
+    Mixpanel.track('11. / MBA Subtext Link');
   };
 }
