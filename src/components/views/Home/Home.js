@@ -654,7 +654,7 @@ const toggleItems = [
 const signUpUrl = 'https://productmastery.ac-page.com/sign-up';
 const signUpCTA = 'JOIN FREE MINI MBA';
 const textAboveCTA =
-  'Take the free 7-day Mini MBA to discover our proven formula for building great products, as well as for updates on our Jan 2021 cohort:';
+  'Take the free 7-day Mini MBA to learn product vision, strategy & customer insight in practice, as well as for info on applying to our Jan 2021 cohort:';
 
 const mixpanelEvent = '11. MBA Next';
 const facebookEvent = 'Search';
