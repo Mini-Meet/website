@@ -7,10 +7,8 @@ import { Button } from '../../elements';
 
 import './ActiveCampaignForm.scss';
 
-const formId = 1;
-
 export default class ActiveCampaignForm extends Component {
-  render(formId) {
+  render() {
     // const formResponse = (
     // window.location.href.match(/success\/\?type=(.*\b)/) ?
     // window.location.href.match(/success\/\?type=(.*\b)/)[1] :
@@ -19,6 +17,8 @@ export default class ActiveCampaignForm extends Component {
 
     const ACTIVE_CAMPAIGN_FORM_ACTION_URL =
       'https://productmastery.activehosted.com/proc.php?';
+
+    const formId = 1;
 
     return (
       <div className="activeCampaign">
@@ -29,8 +29,8 @@ export default class ActiveCampaignForm extends Component {
           className="activeCampaign__form"
           noValidate
         >
-          <input type="hidden" name="u" value="1" />
-          <input type="hidden" name="f" value="1" />
+          <input type="hidden" name="u" value={formId} />
+          <input type="hidden" name="f" value={formId} />
           <input type="hidden" name="s" />
           <input type="hidden" name="c" value="0" />
           <input type="hidden" name="m" value="0" />
@@ -59,7 +59,7 @@ export default class ActiveCampaignForm extends Component {
             </div>
             <div className="_clear-element"></div>
           </div>
-          <div classNames="_form-thank-you">{formId}</div>
+          <div classNames="_form-thank-you"></div>
         </form>
       </div>
     );
