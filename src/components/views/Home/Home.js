@@ -44,10 +44,10 @@ type Props = {
   //
 };
 
-const launchDate = '11th Jan 2020';
-const noOfParticipants = '21';
-const courseCost = '£1,397';
-const fullCourseCost = '£1,997';
+const launchDate = '23rd Mar 2020';
+const noOfParticipants = '20';
+const courseCost = '£1,999';
+const fullCourseCost = '£2,999';
 
 const faqTwo = (
   <div>
@@ -426,7 +426,7 @@ const contentThree = (
 
 const contentFour = (
   <div>
-    <p>The programme will run from 6 weeks, starting on {launchDate}</p>
+    <p>The programme will run for 8 weeks, starting on {launchDate}</p>
     <br />
     <img alt="Curriculum" src={curriculumSchedule} />
     <p>
@@ -523,13 +523,13 @@ const contentSix = (
 
     <p>
       <strong>
-        The next cohort starts on {launchDate}. The Early Bird Price for
-        November 2020 will be {courseCost}, increasing to {fullCourseCost} in
-        December.
+        The next cohort starts on {launchDate}. The Early Bird Price for this
+        will be {courseCost}, increasing to {fullCourseCost} once the first 10
+        places have been closed.
       </strong>
       <br />
       <br />
-      The price includes 6 weeks of weekly video content, exclusive resources, a
+      The price includes 8 weeks of weekly video content, exclusive resources, a
       weekly assigned reviewed by our mentors, weekly Q&A sessions & workshops,
       3x 1x1 sessions with our mentors, as well as lifetime access to the Prod
       MBA alumni network (including job postings, events & workshops).
@@ -672,7 +672,7 @@ export default class Home extends Component<Props> {
         <Header light />
         <Hero
           title="We Fast-Track POs & PMs to Head of Product"
-          subtitleOne="The Prod MBA is a hands-on, 6-week bootcamp designed for PMs & POs to become an effective product leader by learning how to take a product from idea to revenue in practice in just 6 weeks"
+          subtitleOne="The Prod MBA is a hands-on, 8-week bootcamp designed for PMs & POs to become an effective product leader by learning how to take a product from idea to revenue in practice in just 8 weeks"
           subtitleTwo={textAboveCTA}
           activeCampaignForm
           btnText={signUpCTA}
