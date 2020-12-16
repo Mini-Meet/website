@@ -30,7 +30,7 @@ export default class SectionSummary extends Component<Props> {
               key={toggle.key}
               id={toggle.id}
               title={toggle.title}
-              // onShowToggle={this.onShowToggle.bind(this, toggle)}
+              onShowToggle={this.onShowToggle.bind(this, toggle)}
             >
               {toggle.content}
             </Toggle>
@@ -40,12 +40,12 @@ export default class SectionSummary extends Component<Props> {
     );
   }
 
-  // onShowToggle = (toggle: ToggleProps) => {
-  // const { sectionHeader } = this.props;
+  onShowToggle = (toggle: ToggleProps) => {
+    const { sectionHeader } = this.props;
 
-  // console.log(`${sectionHeader} / ${toggle.title}`);
-  // console.log(`Toggle`);
-  // Mixpanel.track(`11.MBA ${sectionHeader} / ${toggle.title}`);
-  // Mixpanel.track(`11.MBA Toggle`);
-  // };
+    console.log(`${sectionHeader} / ${toggle.title}`);
+    console.log(`Toggle`);
+    // Mixpanel.track(`11.MBA ${sectionHeader} / ${toggle.title}`);
+    // Mixpanel.track(`11.MBA Toggle`);
+  };
 }

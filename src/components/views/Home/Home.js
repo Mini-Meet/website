@@ -134,10 +134,10 @@ const faqFive = (
 const faqSix = (
   <div>
     <p>
-      Henry, our CEO & Founder, runs most of the workshops in order to make the
-      learning process is as consistent as possible. We do, however, bring in
-      some of our product experts for specific sessions & talks to cover certain
-      topics.
+      Henry, our Founder & Lead Mentor, runs around half of the workshops, in
+      order to make the learning process is as consistent as possible. We do,
+      however, bring in some of our product experts for specific sessions &
+      talks to cover certain topics.
     </p>
     <br />
     <p>
@@ -534,6 +534,14 @@ const contentSix = (
       3x 1x1 sessions with our mentors, as well as lifetime access to the Prod
       MBA alumni network (including job postings, events & workshops).
     </p>
+    <br />
+    <p>
+      You can also{' '}
+      <a href="https://www.dropbox.com/s/2by9bxj7xxwqxh5/Prod%20MBA%20Brochure.pdf?dl=0">
+        download the full brochure here
+      </a>{' '}
+      to learn more about the Prod MBA.
+    </p>
 
     <img alt="Moneyback Guarantee" src={curriculumMoneyback} />
     <p>
@@ -606,6 +614,37 @@ const contentSix = (
 
 const contentSeven = (
   <div>
+    <p>The application process is simple:</p>
+    <br />
+    <p>
+      You will have a 30-minute call with our founder, Henry, to better
+      understand your product experience & career goals, in order to see whether
+      you would be a good fit:
+    </p>
+    <br />
+    <p>
+      You can <a href="calendly.com/henry_latham/prod-mba">book a call here</a>.
+    </p>
+    <br />
+    <p>
+      No prior product experience is required, but the Prod MBA is usually most
+      valuable for PM/POs with at least 1-2 years of experience, as well as
+      aspiring entrepreneurs.
+    </p>
+    <br />
+    <p>
+      You can also{' '}
+      <a href="https://www.dropbox.com/s/2by9bxj7xxwqxh5/Prod%20MBA%20Brochure.pdf?dl=0">
+        download the full brochure here
+      </a>{' '}
+      to learn more about the Prod MBA.
+    </p>
+    <br />
+  </div>
+);
+
+const contentEight = (
+  <div>
     <SectionSummary sectionHeader="FAQs" toggleItems={faqItems} />
   </div>
 );
@@ -643,8 +682,13 @@ const toggleItems = [
   },
   {
     id: '7',
-    title: 'Other FAQs',
+    title: 'How To Apply?',
     content: contentSeven,
+  },
+  {
+    id: '8',
+    title: 'Other FAQs',
+    content: contentEight,
   },
 ];
 
