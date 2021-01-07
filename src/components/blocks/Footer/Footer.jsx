@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Mixpanel } from '../../../Mixpanel';
 import Logo from '../../../assets/images/logoWhite.svg';
-import Book from '../../../assets/images/book.jpg';
+import Book from '../../../assets/images/leadership_book.png';
 
 import './Footer.scss';
 
@@ -49,16 +49,15 @@ class Footer extends Component {
           <div className="footer__logo_book">
             <img alt="logo" src={Book} className="footer__logo_bookimg" />
             <p>
-              Want to learn more about building the foundations for product
-              success?
+              Want to learn about the secret to effective product leadership?
             </p>
             <a
-              href="https://www.amazon.com/Why-Your-Startup-Failing-foundations-ebook/dp/B07XD444YV/ref=pd_rhf_ee_p_img_1?_encoding=UTF8&psc=1&refRID=5X596WYG1237FMSSWZ7E"
+              href="https://www.amazon.com/Product-Leadership-Starts-You-Surprising-ebook/dp/B08R8MK71C/ref=sr_1_1?dchild=1&keywords=product+leadership+starts+with+you&qid=1610011047&sr=8-1"
               onClick={this.goToBook}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p>CHECK OUT OUR BOOK</p>
+              <p>BUY BOOK FOR UNDER £1</p>
             </a>
           </div>
           <Link to="/home" className="footer__logo_img">
