@@ -44,7 +44,7 @@ type Props = {
   //
 };
 
-const launchDate = '23rd Mar 2020';
+const launchDate = '22nd Mar 2020';
 const noOfParticipants = '20';
 const courseCost = '£1,999';
 const fullCourseCost = '£2,999';
