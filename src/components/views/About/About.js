@@ -8,11 +8,11 @@ import portrait from '../../../assets/images/course/henry-portrait.jpg';
 
 import './About.scss';
 
-const url = 'https://productmastery.ac-page.com/sign-up';
+const url = 'https://test.prod.mba/';
 
 export default class About extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('11. About');
+    Mixpanel.track('MBA / About');
   }
 
   render() {
@@ -29,19 +29,20 @@ export default class About extends Component<Props> {
             <br />
             <p>
               Henry Latham is an entrepreneur from London, UK, who started his
-              first business whilst on a solo trip down the Amazon river.
+              first business whilst on a solo trip down the Amazon river & has
+              bootstrapped two businesses to profitability.
             </p>
             <p>
-              Henry is a product management consultant who helps Product
-              Managers accelerate their career by teaching them the one key
-              skill to building great products. He has personally managed a
-              variety of B2C/B2B product teams in London, Berlin, Lisbon & São
-              Paulo over the last 8 years in the industry.
+              Now, he is lead mentor at Prod MBA, helping Product Managers &
+              Owners accelerate their career by teaching them the one key skill
+              to building great products. He has personally managed a variety of
+              B2C/B2B product teams in London, Berlin, Lisbon & São Paulo over
+              the last 8 years in the industry.
             </p>
             <p>
-              Henry{"'"}s clients work for anything from early-stage startups to
-              corporates, with a common goal to learn the skills to building
-              great products & rapidly level up their product career.{' '}
+              Henry{"'"}s clients range from Heads of Products to Junior PMs &
+              aspiring founders, all with a common goal to learn the skills to
+              building great products & rapidly level up their product career.{' '}
             </p>
 
             <div className="hero__nextpage">
@@ -65,7 +66,7 @@ export default class About extends Component<Props> {
   }
 
   goToNextPage = () => {
-    Mixpanel.track('11. About Next');
+    Mixpanel.track('MBA / About Next');
   };
 
   // goToAboutCaseStudy = () => {

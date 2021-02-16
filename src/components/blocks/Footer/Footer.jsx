@@ -9,6 +9,7 @@ import './Footer.scss';
 class Footer extends Component {
   render() {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
+    const test = this.props.page === 'TEST' ? 'active' : 'inactive';
     // const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
     const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
@@ -21,6 +22,17 @@ class Footer extends Component {
             <Link to="/home" className={home}>
               Home
             </Link>
+          </div>
+          <div className="footer__list_item">
+            <a
+              className={test}
+              href="https://test.prod.mba/"
+              onClick={this.goToSkillsTest}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Product Skills Test
+            </a>
           </div>
           <div className="footer__list_item">
             <Link to="/about" className={terms}>
@@ -67,8 +79,8 @@ class Footer extends Component {
       </div>
     );
   }
-  goToAbout = () => {
-    Mixpanel.track('MBA / Footer / Prod MBA');
+  goToSkillsTest = () => {
+    Mixpanel.track('MBA / Footer / Skills Test');
   };
   goToAbout = () => {
     Mixpanel.track('MBA / Footer / About');
