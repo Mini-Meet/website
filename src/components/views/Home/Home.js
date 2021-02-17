@@ -29,12 +29,13 @@ import curriculum3Steps from '../../../assets/images/course/curriculum_2.jpg';
 import curriculumSchedule from '../../../assets/images/course/curriculum_3.jpg';
 import curriculumOverview from '../../../assets/images/course/curriculum_overview.png';
 import curriculumFeatureFactory from '../../../assets/images/course/curriculum_feature_factory.jpg';
-import curriculumCompetencies from '../../../assets/images/course/curriculum_competencies.png';
+import curriculumCompetencies from '../../../assets/images/course/four_graph.png';
 import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyback.png';
 
 import testimonialCollage from '../../../assets/images/testimonials/collage.jpg';
 import testimonialCollageSmall from '../../../assets/images/testimonials/collageSmall.jpg';
 
+import richard from '../../../assets/images/testimonials/richard.png';
 import antonia from '../../../assets/images/testimonials/antonia.png';
 import stefanos from '../../../assets/images/testimonials/stefanos.jpeg';
 
@@ -157,8 +158,15 @@ const faqSeven = (
     </p>
     <br />
     <p>
-      If you want to discuss this with your HR team or manager, we suggest
-      covering:
+      If you want to discuss this with your HR team or manager,{' '}
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.dropbox.com/s/bxe41in7x2ptnkr/Convincing%20Your%20Boss%20-%20Prod%20MBA.pdf?dl=0"
+      >
+        here is an email script
+      </a>{' '}
+      we suggest sending to get approval. Essentially, we suggest covering:
       <br />
       <br />
       <li>What the course is about</li>
@@ -253,9 +261,9 @@ const contentOne = (
     </p>
     <br />
     <p>
-      It will help you become a “Product Rainmaker”, leading to rapid promotion,
-      autonomy in your work & the purpose that comes from building great
-      products that customers love.
+      It will help you become an effective product leader, leading to rapid
+      promotion, autonomy in your work & the purpose that comes from building
+      great products that customers love.
     </p>
     <br />
     <br />
@@ -265,7 +273,16 @@ const contentOne = (
     <p>&nbsp;</p>
     <p>
       Furthermore, many companies invest a huge amount of money into product
-      teams that do not deliver a return on investment.
+      teams that do not deliver a return on investment. It's estimated that
+      80-90% of product ideas do not deliver a positive business outcome.
+      Considering a product team costs around £400,000 per year, this means at
+      least £300,000 is spent on wasted product work each year.
+    </p>
+    <br />
+    <p>
+      Even developing an MVP is estimated to cost £500k, yet the same outcome
+      can usually be achieved with under £50 (if the product leader has the
+      right skills & experience, that is).
     </p>
     <br />
     <p>
@@ -288,45 +305,31 @@ const contentOne = (
     </p>
     <br />
     <p>
-      Note also that your company may cover the cost from their training
-      budgets, where they actually have money kept aside for their employees to
-      take courses like this to help your professional development. If your
-      company doesn{"'"}t have a budget, it
+      A lot of companies have training budgets, where they actually have money
+      kept aside for their employees to take courses like this to help their
+      professional development. If your company doesn{"'"}t have a budget, it
       {"'"}s worth raising the possibility with them.
     </p>
     <br />
     <p>
-      If you want to discuss this with your HR team or manager, we suggest
-      covering:
+      If you want to discuss this with your HR team or manager,{' '}
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.dropbox.com/s/bxe41in7x2ptnkr/Convincing%20Your%20Boss%20-%20Prod%20MBA.pdf?dl=0"
+      >
+        here is an email script
+      </a>{' '}
+      we suggest sending to get approval. Essentially, we suggest covering:
       <br />
       <br />
-      <li>
-        <strong>What the course is about</strong>
-      </li>
-      <li>
-        <strong>What you{"'"}ll personally get from it:</strong> Learning key
-        skills to become an effective product leader, such as product strategy,
-        product discovery, stakeholder alignment & leadership techniques
-      </li>
-      <li>
-        <strong>
-          What the company/your team will get from you participating:
-        </strong>{' '}
-        Ability to discover & pursue new, high-potential product opportunities
-        with minimal resources, as well as your ability to pass on effective
-        product management processes & advice to other team members
-      </li>
-      <li>
-        <strong>How you{"'"}ll apply the learnings to your work:</strong> Focus
-        on your product team delivering more value for the business &
-        identifying new product opportunities & revenue streams
-      </li>
-      <li>
-        <strong>How long it will take you to complete</strong>
-      </li>
-      <li>
-        <strong>The cost</strong>
-      </li>
+      <li>What the course is about</li>
+      <li>What you{"'"}ll personally get from it</li>
+      <li>What the company/your team will get from you participating</li>
+      <li>How you{"'"}ll apply the learnings to your work</li>
+      <li>How long it will take you to</li>
+      complete
+      <li>The cost</li>
     </p>
     <br />
     <p>
@@ -698,7 +701,7 @@ const toggleItems = [
 const signUpUrl = 'https://productmastery.ac-page.com/sign-up';
 const signUpCTA = 'JOIN FREE MINI MBA';
 const textAboveCTA =
-  'Take the free 7-day Mini MBA to learn product vision, strategy & customer insight in practice, as well as for info on applying to our Jan 2021 cohort:';
+  'Take the free 7-day Mini MBA to learn product vision, strategy & customer insight in practice, as well as for info on applying to our Mar 2021 cohort:';
 
 const mixpanelEvent = '11. MBA Next';
 const facebookEvent = 'Search';
@@ -716,7 +719,7 @@ export default class Home extends Component<Props> {
         <Header light />
         <Hero
           title="We Fast-Track POs & PMs to Head of Product"
-          subtitleOne="The Prod MBA is a hands-on, 8-week bootcamp designed for PMs & POs to become an effective product leader by learning how to take a product from idea to revenue in practice in just 8 weeks"
+          subtitleOne="The Prod MBA is a hands-on, part-time bootcamp designed for PMs & POs to become an effective product leader by actually building a real product from idea to revenue in just 8 weeks"
           subtitleTwo={textAboveCTA}
           activeCampaignForm
           btnText={signUpCTA}
@@ -743,8 +746,15 @@ export default class Home extends Component<Props> {
           mixpanelEvent={mixpanelEvent}
           facebookEvent={facebookEvent}
         />
+        <Testimonial
+          name="Richard, Lead Product Manager"
+          img={richard}
+          quote="I managed to craft & validate a company-wide product strategy within 3 weeks of joining my new role - as well as getting buy-in from stakeholders along the way - thanks to the frameworks I learnt from Prod MBA."
+        />
         <Description
-          header="Become A 'Product Rainmaker'"
+          header="Become A Confident Product Leader"
+          // e.g. Richard - 9 MVOs - years of work - and cash
+          // "Become A 'Product Rainmaker'"
           description1="Frustrated in your current role? Stuck focused on delivery? Understand the theoory, but unable to prioritise or influence what you work on in practice?"
           description2="Gain autonomy, purpose & rapid promotion by learning how to build products that deliver massive value for your company."
           description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10."
@@ -764,6 +774,7 @@ export default class Home extends Component<Props> {
         <Description
           reverse
           header="Stop The Feature Factory"
+          // "30% found a new role"
           description1="Escape the repetitive cycle of building an endless list of features that don't really make sense."
           description2="Learn how to align stakeholders & product teams around a product strategy that makes sense through prioritised, high-value feature experiments."
           description3="Unlock greater profit & growth with our framework to achieve Product/Market Fit:"
@@ -781,8 +792,9 @@ export default class Home extends Component<Props> {
         />
         <Description
           header="This is Not Just 'Another Course'"
-          description1="The Prod MBA is an intense 6-week, part-time training programme crafted by a team of experienced product mentors, run in small groups of carefully selected applicants, to take you through the process of product strategy, discovery & validation to achieve Offer/Market Fit, in the pursuit of Product/Market Fit."
-          description2="A Scrum certification or overly-theoretical Udemy course may get you your first product job, but it won't help you become a product expert."
+          // Focus on confidence and soft skills
+          description1="The Prod MBA is an intense 8-week, part-time training programme crafted by a team of experienced product mentors, run in small groups of carefully selected applicants, to take you through the process of product strategy, discovery & validation to achieve Offer/Market Fit, in the pursuit of Product/Market Fit."
+          description2="A Scrum certification or overly-theoretical Udemy course may make you feel like you 'know product', but it won't help you become a product expert."
           description3="The Prod MBA will."
           image={curriculumOverview}
           // next page button
@@ -797,7 +809,7 @@ export default class Home extends Component<Props> {
           subTextUrl="/legal"
         />
         <Testimonial
-          name="Antonia, Product Manager (Former PO)"
+          name="Antonia, PM (Promoted to Senior PM within 3 months)"
           img={antonia}
           quote="Can I just say that I love this programme. I know we're only a week in, but this is the most hands-on thing I've ever done."
         />
@@ -811,7 +823,7 @@ export default class Home extends Component<Props> {
         <Testimonial
           name="Stefanos, Product Owner"
           img={stefanos}
-          quote="Emphasizing that our daily product work should be focused on the impact our product has on our customers, the Prod MBA taught me some really actionable frameworks for validating product ideas, improving Product/Market Fit & bringing an entirely new product to life."
+          quote="Emphasizing that our daily product work should be focused on the impact our product has on our customers, the Prod MBA taught me some really actionable frameworks for validating product ideas, improving Product/Market Fit & bringing an entirely new product to life. I even generated revenue from my niche craft beer offer!"
         />
         <div className="curriculum">
           <h3 className="curriculum__header">FAQs</h3>

@@ -39,7 +39,7 @@
     }
 
     &_small {
-      @include padding(top, 2);
+      @include padding(top, 6);
       @include padding(bottom, 1);
       @include padding(left right, 3);
       @include small;

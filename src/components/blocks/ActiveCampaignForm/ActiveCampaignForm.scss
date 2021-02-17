@@ -13,9 +13,13 @@
     }
 
     &_content {
-      @include row;
+      @include col;
       align-items: center;
       justify-content: center;
+
+      @media (min-width: $screen-sm-min) {
+        @include row;
+      }
     }
 
     input {
@@ -35,6 +39,7 @@
       @include padding(left right, 3);
       font-size: 11px;
       text-align: center;
+      min-width: 174px;
     }
 
     &__loading,

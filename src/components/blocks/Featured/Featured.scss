@@ -34,6 +34,7 @@
     @media (min-width: $screen-sm-min) {
       background-image: url('../../../assets/images/partners/companies_desktop.png');
       height: 400px;
+      background-size: contain;
     }
 
     &_img {

@@ -18,7 +18,7 @@
   &__logo {
     @include col;
     align-items: flex-end;
-    max-width: 288px;
+    max-width: 320px;
 
     &_imglogo {
       @include padding(top, 3);
