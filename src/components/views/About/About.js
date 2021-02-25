@@ -1,10 +1,13 @@
 // @flow
 import React, { Component } from 'react';
 import { Mixpanel } from '../../../Mixpanel';
+import { Helmet } from 'react-helmet';
 
 import { Header, Footer } from '../../blocks';
 import { ButtonNextPage } from '../../elements';
 import portrait from '../../../assets/images/course/henry-portrait.jpg';
+
+import thumbnail from '../../../assets/images/thumbnail.jpg';
 
 import './About.scss';
 
@@ -18,6 +21,22 @@ export default class About extends Component<Props> {
   render() {
     return (
       <div className="aboutContainer">
+        <Helmet>
+          <title>Prod MBA • About</title>
+          <meta
+            property="og:description"
+            content="Prod MBA was founded to provide hands-on, tactical training to fast-track your product career."
+          />
+          <meta property="og:image" content={thumbnail} />
+          <meta property="og:url" content="https://prod.mba" />
+          <meta name="twitter:image" content={thumbnail} />
+          <meta name="twitter:card" content={thumbnail} />
+          <meta
+            name="twitter:image:alt"
+            content="Prod MBA Training Programme"
+          />
+        </Helmet>
+
         <Header dark />
         <h1>About</h1>
         <div className="about">

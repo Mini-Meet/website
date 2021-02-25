@@ -22,7 +22,7 @@ export default class Legal extends Component {
           <span>
             Product Mastery products are developed by Scribe Services Ltd., a
             limited company based in London, United Kingdom, and operated by our
-            team based between London & Berlin. Our website (productmastery.co),
+            team based between London & Berlin. Our website (https://prod.mba),
             as well as our sub-domains (such as this one) are run by our
             internal team. We use third party services to build our products,
             keep in touch with customers and to help us understand how we can

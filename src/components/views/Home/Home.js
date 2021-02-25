@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import LinkedInTag from 'react-linkedin-insight';
+import { Helmet } from 'react-helmet';
 
 import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
@@ -38,6 +39,8 @@ import testimonialCollageSmall from '../../../assets/images/testimonials/collage
 import richard from '../../../assets/images/testimonials/richard.png';
 import antonia from '../../../assets/images/testimonials/antonia.png';
 import stefanos from '../../../assets/images/testimonials/stefanos.jpeg';
+
+import thumbnail from '../../../assets/images/thumbnail.jpg';
 
 import './Home.scss';
 
@@ -716,6 +719,23 @@ export default class Home extends Component<Props> {
   render() {
     return (
       <div className="homePageWrapper">
+        <Helmet>
+          <title>
+            Prod MBA: We Fast-Track Product Managers/Owners to Head of Product
+          </title>
+          <meta
+            property="og:description"
+            content="Fast-Track Your Path to Head of Product With Our Part-Time, Hands-On Product Management Prod MBA 8-Week Training Programme"
+          />
+          <meta property="og:image" content={thumbnail} />
+          <meta property="og:url" content="https://prod.mba" />
+          <meta name="twitter:image" content={thumbnail} />
+          <meta name="twitter:card" content={thumbnail} />
+          <meta
+            name="twitter:image:alt"
+            content="Prod MBA Training Programme"
+          />
+        </Helmet>
         <Header light />
         <Hero
           title="We Fast-Track POs & PMs to Head of Product"

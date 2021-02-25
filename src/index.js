@@ -18,7 +18,6 @@ import Privacy from './components/views/Privacy/Privacy';
 import Legal from './components/views/Legal/Legal';
 // acquisiton experiment
 // import Mba from './components/views/Mba/Mba';
-import MbaFelix from './components/views/MbaFelix/MbaFelix';
 import Mentors from './components/views/Mentors/Mentors';
 import Referee from './components/views/Referee/Referee';
 import Referral from './components/views/Referral/Referral';
@@ -46,8 +45,6 @@ ReactDOM.render(
         <Route path="/referee" exact component={Referee} />
         <Route path="/register" exact component={Register} />
         <Route path="/legal" exact component={Legal} />
-        <Route path="/prod-mba" exact component={Home} />
-        <Route path="/prod-mba-2020" exact component={MbaFelix} />
         <Route path="/mentors" exact component={Mentors} />
         <Route path="/referrals/:referralLink" exact component={Referral} />
         <Route path="/register" exact component={Register} />
