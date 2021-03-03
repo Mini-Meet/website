@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
 import LinkedInTag from 'react-linkedin-insight';
-import { Helmet } from 'react-helmet';
 
 import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
@@ -30,7 +29,6 @@ import curriculum3Steps from '../../../assets/images/course/curriculum_2.jpg';
 import curriculumSchedule from '../../../assets/images/course/curriculum_3.jpg';
 import curriculumExperience from '../../../assets/images/course/curriculum_experience_people.png';
 import curriculumSkills from '../../../assets/images/course/curriculum_skills.png';
-import curriculumFeatureFactory from '../../../assets/images/course/curriculum_feature_factory.jpg';
 import curriculumOverview from '../../../assets/images/course/curriculum_overview.png';
 import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyback.png';
 
@@ -40,8 +38,6 @@ import testimonialCollageSmall from '../../../assets/images/testimonials/collage
 import richard from '../../../assets/images/testimonials/richard.png';
 import antonia from '../../../assets/images/testimonials/antonia.png';
 import stefanos from '../../../assets/images/testimonials/stefanos.jpeg';
-
-import thumbnail from '../../../assets/images/thumbnail.jpg';
 
 import './HomeB.scss';
 
@@ -277,7 +273,7 @@ const contentOne = (
     <p>&nbsp;</p>
     <p>
       Furthermore, many companies invest a huge amount of money into product
-      teams that do not deliver a return on investment. It's estimated that
+      teams that do not deliver a return on investment. It{"'"}s estimated that
       80-90% of product ideas do not deliver a positive business outcome.
       Considering a product team costs around £400,000 per year, this means at
       least £300,000 is spent on wasted product work each year.

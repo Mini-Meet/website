@@ -12,7 +12,7 @@ type Props = {
   submitEmail: Function,
 };
 
-export default class ActiveCampaignForm extends Component {
+export default class ActiveCampaignForm extends Component<Props> {
   render() {
     // const formResponse = (
     // window.location.href.match(/success\/\?type=(.*\b)/) ?
@@ -44,7 +44,7 @@ export default class ActiveCampaignForm extends Component {
           <input type="hidden" name="v" value="2" />
           <div className="activeCampaign__form_content">
             <div className="">
-              <label htmlFor="email" className="_form-label"></label>
+              <label htmlFor="email" className="_form-label" id="label"></label>
               <div className="_field-wrapper">
                 <input
                   type="text"

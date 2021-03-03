@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
-import { Mixpanel } from '../../../Mixpanel';
 import { Helmet } from 'react-helmet';
+import { Mixpanel } from '../../../Mixpanel';
 
 import { Header, Footer } from '../../blocks';
 import { ButtonNextPage } from '../../elements';

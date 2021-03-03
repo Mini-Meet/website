@@ -39,8 +39,6 @@ import richard from '../../../assets/images/testimonials/richard.png';
 import antonia from '../../../assets/images/testimonials/antonia.png';
 import stefanos from '../../../assets/images/testimonials/stefanos.jpeg';
 
-import thumbnail from '../../../assets/images/thumbnail.jpg';
-
 import './HomeC.scss';
 
 type Props = {
@@ -275,7 +273,7 @@ const contentOne = (
     <p>&nbsp;</p>
     <p>
       Furthermore, many companies invest a huge amount of money into product
-      teams that do not deliver a return on investment. It's estimated that
+      teams that do not deliver a return on investment. It{"'"}s estimated that
       80-90% of product ideas do not deliver a positive business outcome.
       Considering a product team costs around £400,000 per year, this means at
       least £300,000 is spent on wasted product work each year.
