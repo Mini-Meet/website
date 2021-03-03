@@ -3,6 +3,8 @@ export { default as About } from './About/About';
 export { default as Booking } from './Booking/Booking';
 export { default as Casestudy } from './Casestudy/Casestudy.js';
 export { default as Home } from './Home/Home';
+export { default as HomeB } from './HomeB/HomeB';
+export { default as HomeC } from './HomeC/HomeC';
 export { default as Legal } from './Legal/Legal';
 export { default as Mentors } from './Mentors/Mentors';
 export { default as Privacy } from './Privacy/Privacy';

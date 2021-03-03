@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
 import LinkedInTag from 'react-linkedin-insight';
-import { Helmet } from 'react-helmet';
 
 import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
@@ -42,7 +41,7 @@ import stefanos from '../../../assets/images/testimonials/stefanos.jpeg';
 
 import thumbnail from '../../../assets/images/thumbnail.jpg';
 
-import './Home.scss';
+import './HomeC.scss';
 
 type Props = {
   //
@@ -707,14 +706,14 @@ const ctaHeader = 'Level-up Your Product Career';
 const ctaSupportText =
   'Take the free 7-day Mini MBA to learn product vision, strategy & customer insight in practice, as well as for info on applying to our Jun 2021 cohort:';
 
-const mixpanelEvent = '11. MBA Next';
+const mixpanelEvent = '12.C MBA Next';
 const facebookEvent = 'Search';
 
-const formId = 1;
+const formId = 19;
 
-export default class Home extends Component<Props> {
+export default class HomeC extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('11. MBA');
+    Mixpanel.track('12.C MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
   }
@@ -722,23 +721,6 @@ export default class Home extends Component<Props> {
   render() {
     return (
       <div className="homePageWrapper">
-        <Helmet>
-          <title>
-            Prod MBA: We Fast-Track Product Managers/Owners to Head of Product
-          </title>
-          <meta
-            property="og:description"
-            content="Fast-Track Your Path to Head of Product With Our Part-Time, Hands-On Product Management Prod MBA 8-Week Training Programme"
-          />
-          <meta property="og:image" content={thumbnail} />
-          <meta property="og:url" content="https://prod.mba" />
-          <meta name="twitter:image" content={thumbnail} />
-          <meta name="twitter:card" content={thumbnail} />
-          <meta
-            name="twitter:image:alt"
-            content="Prod MBA Training Programme"
-          />
-        </Helmet>
         <Header light />
         <Hero
           title="We Fast-Track POs & PMs to Head of Product"
@@ -870,7 +852,7 @@ export default class Home extends Component<Props> {
               sectionHeader="Curriculum"
               toggleItems={toggleItems}
             />
-            <h4 className="curriculum__cta">{ctaHeader}</h4>
+            <h4 className="curriculum__cta">Level-up your product career</h4>
             <p className="curriculum__small">{ctaSupportText}</p>
             {
               // <MailchimpForm

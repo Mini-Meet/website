@@ -7,6 +7,11 @@ import { Button } from '../../elements';
 
 import './ActiveCampaignForm.scss';
 
+type Props = {
+  formId: Number,
+  submitEmail: Function,
+};
+
 export default class ActiveCampaignForm extends Component {
   render() {
     // const formResponse = (
@@ -18,7 +23,8 @@ export default class ActiveCampaignForm extends Component {
     const ACTIVE_CAMPAIGN_FORM_ACTION_URL =
       'https://productmastery.activehosted.com/proc.php?';
 
-    const formId = 1;
+    const { formId, submitEmail } = this.props;
+    // const formId = 1;
 
     return (
       <div className="activeCampaign">
@@ -53,6 +59,7 @@ export default class ActiveCampaignForm extends Component {
                 id="_form_newsletter_submit"
                 className="_submit"
                 type="submit"
+                onClick={submitEmail}
               >
                 GET MINI MBA
               </Button>

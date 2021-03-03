@@ -18,6 +18,8 @@ type Props = {
   nextPageUrl: string,
   onClick: Function,
   activeCampaignForm: boolean,
+  formId: Number,
+  submitEmail: Function,
   buttonNext: boolean,
   //
   mailchimpForm: boolean,
@@ -39,6 +41,8 @@ export default class Description extends Component<Props> {
       nextPageUrl,
       onClick,
       activeCampaignForm,
+      formId,
+      submitEmail,
       buttonNext,
       //
       mailchimpForm,
@@ -74,7 +78,12 @@ export default class Description extends Component<Props> {
                       subTextUrlText={subTextUrlText}
                     />
                   )}
-                  {activeCampaignForm && <ActiveCampaignForm />}
+                  {activeCampaignForm && (
+                    <ActiveCampaignForm
+                      formId={formId}
+                      submitEmail={submitEmail}
+                    />
+                  )}
                 </div>
               </div>
             </div>

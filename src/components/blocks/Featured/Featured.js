@@ -11,9 +11,11 @@ type Props = {
   nextPageUrl: string,
   onClick: Function,
   buttonNext: boolean,
-  textAboveCTA: string,
+  ctaSupportText: string,
   //
   activeCampaignForm: boolean,
+  formId: Number,
+  submitEmail: Function,
   subText: string,
   subTextUrl: string,
   subTextUrlText: string,
@@ -27,17 +29,19 @@ export default class Featured extends Component<Props> {
       nextPageUrl,
       onClick,
       buttonNext,
-      textAboveCTA,
+      ctaSupportText,
       //
       activeCampaignForm,
+      formId,
+      submitEmail,
     } = this.props;
 
     return (
       <div className="featured">
         <p className="featured__header">{header}</p>
         <div className="featured__logos"></div>
-        <h4 className="featured__cta">Learn how to join these alumni</h4>
-        <p className="featured__small">{textAboveCTA}</p>
+        <h4 className="featured__cta">Learn how to join these alumni:</h4>
+        <p className="featured__small">{ctaSupportText}</p>
         <div className="featured__button">
           {buttonNext && (
             <ButtonNextPage
@@ -46,7 +50,9 @@ export default class Featured extends Component<Props> {
               btnText={btnText}
             />
           )}
-          {activeCampaignForm && <ActiveCampaignForm />}
+          {activeCampaignForm && (
+            <ActiveCampaignForm formId={formId} submitEmail={submitEmail} />
+          )}
         </div>
       </div>
     );

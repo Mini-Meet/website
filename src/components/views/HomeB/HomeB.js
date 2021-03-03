@@ -28,9 +28,10 @@ import {
 import curriculumAssignment from '../../../assets/images/course/curriculum_1a.jpg';
 import curriculum3Steps from '../../../assets/images/course/curriculum_2.jpg';
 import curriculumSchedule from '../../../assets/images/course/curriculum_3.jpg';
-import curriculumOverview from '../../../assets/images/course/curriculum_overview.png';
+import curriculumExperience from '../../../assets/images/course/curriculum_experience_people.png';
+import curriculumSkills from '../../../assets/images/course/curriculum_skills.png';
 import curriculumFeatureFactory from '../../../assets/images/course/curriculum_feature_factory.jpg';
-import curriculumCompetencies from '../../../assets/images/course/four_graph.png';
+import curriculumOverview from '../../../assets/images/course/curriculum_overview.png';
 import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyback.png';
 
 import testimonialCollage from '../../../assets/images/testimonials/collage.jpg';
@@ -42,7 +43,7 @@ import stefanos from '../../../assets/images/testimonials/stefanos.jpeg';
 
 import thumbnail from '../../../assets/images/thumbnail.jpg';
 
-import './Home.scss';
+import './HomeB.scss';
 
 type Props = {
   //
@@ -703,18 +704,18 @@ const toggleItems = [
 // const calendlyUrl = 'https://calendly.com/henry_latham/prod-mba';
 const signUpUrl = 'https://productmastery.ac-page.com/sign-up';
 const signUpCTA = 'JOIN FREE MINI MBA';
-const ctaHeader = 'Level-up Your Product Career';
+const ctaHeader = 'Become A Confident, Effective Product Leader';
 const ctaSupportText =
-  'Take the free 7-day Mini MBA to learn product vision, strategy & customer insight in practice, as well as for info on applying to our Jun 2021 cohort:';
+  'Take the free 7-day Mini MBA, as well as get more info on applying to our Jun 2021 cohort:';
 
-const mixpanelEvent = '11. MBA Next';
+const mixpanelEvent = '12.B MBA Next';
 const facebookEvent = 'Search';
 
-const formId = 1;
+const formId = 21;
 
-export default class Home extends Component<Props> {
+export default class HomeB extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('11. MBA');
+    Mixpanel.track('12.B MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
   }
@@ -722,27 +723,10 @@ export default class Home extends Component<Props> {
   render() {
     return (
       <div className="homePageWrapper">
-        <Helmet>
-          <title>
-            Prod MBA: We Fast-Track Product Managers/Owners to Head of Product
-          </title>
-          <meta
-            property="og:description"
-            content="Fast-Track Your Path to Head of Product With Our Part-Time, Hands-On Product Management Prod MBA 8-Week Training Programme"
-          />
-          <meta property="og:image" content={thumbnail} />
-          <meta property="og:url" content="https://prod.mba" />
-          <meta name="twitter:image" content={thumbnail} />
-          <meta name="twitter:card" content={thumbnail} />
-          <meta
-            name="twitter:image:alt"
-            content="Prod MBA Training Programme"
-          />
-        </Helmet>
         <Header light />
         <Hero
-          title="We Fast-Track POs & PMs to Head of Product"
-          subtitleOne="The Prod MBA is a hands-on, part-time bootcamp designed for PMs & POs to become an effective product leader by actually building a real product from idea to revenue in just 8 weeks"
+          title="Become The Product Leader Everyone Wants to Work For"
+          subtitleOne="We fast-track PM/POs to Head of Product with our hands-on, part-time product bootcamp, where you learn through building a real product from scratch"
           subtitleTwo={ctaSupportText}
           activeCampaignForm
           formId={formId}
@@ -779,14 +763,14 @@ export default class Home extends Component<Props> {
           quote="I managed to craft & validate a company-wide product strategy within 3 weeks of joining my new role - as well as getting buy-in from stakeholders along the way - thanks to the frameworks I learnt from Prod MBA."
         />
         <Description
-          header="Become A Confident Product Leader"
+          header="Grow Through Real Product Experience"
           // e.g. Richard - 9 MVOs - years of work - and cash
           // "Become A 'Product Rainmaker'"
-          description1="Frustrated in your current role? Stuck focused on delivery? Understand the theoory, but unable to prioritise or influence what you work on in practice?"
+          description1="Don't let your current role hold you back from accelerating your product career."
           description2="Gain autonomy, purpose & rapid promotion by learning how to build products that deliver massive value for your company."
-          description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10."
+          description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10. Get started now:"
           // dollarise this!
-          image={curriculumCompetencies}
+          image={curriculumExperience}
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
@@ -802,12 +786,12 @@ export default class Home extends Component<Props> {
         />
         <Description
           reverse
-          header="Stop The Feature Factory"
+          header="Master The Skills of A Head of Product"
           // "30% found a new role"
           description1="Escape the repetitive cycle of building an endless list of features that don't really make sense."
-          description2="Learn how to align stakeholders & product teams around a product strategy that makes sense through prioritised, high-value feature experiments."
-          description3="Unlock greater profit & growth with our framework to achieve Product/Market Fit:"
-          image={curriculumFeatureFactory}
+          description2="Learn how to align stakeholders & rally a team around a customer-driven product strategy - and execute with prioritised, high-value feature experiments."
+          description3="Start becoming an effective product leader with our free Mini MBA:"
+          image={curriculumSkills}
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
@@ -822,11 +806,11 @@ export default class Home extends Component<Props> {
           subTextUrl="/legal"
         />
         <Description
-          header="This is Not Just 'Another Course'"
+          header="You Deserve Better"
           // Focus on confidence and soft skills
-          description1="The Prod MBA is an intense 8-week, part-time training programme crafted by a team of experienced product mentors, run in small groups of carefully selected applicants, to take you through the process of product strategy, discovery & validation to achieve Offer/Market Fit, in the pursuit of Product/Market Fit."
-          description2="A Scrum certification or overly-theoretical Udemy course may make you feel like you 'know product', but it won't help you become a product expert."
-          description3="The Prod MBA will."
+          description1="Purpose & progress are your right, but you'll need to put the work in. The Prod MBA is not just 'another course', like those Scrum certifications you wasted time & money on."
+          description2="It is an intense 8-week, part-time training programme crafted by a team of experienced product mentors, run in small groups of carefully selected applicants to put theory into practice."
+          description3="Start prioritising your career today:"
           image={curriculumOverview}
           // next page button
           nextPageUrl={signUpUrl}
@@ -870,7 +854,7 @@ export default class Home extends Component<Props> {
               sectionHeader="Curriculum"
               toggleItems={toggleItems}
             />
-            <h4 className="curriculum__cta">{ctaHeader}</h4>
+            <h4 className="curriculum__cta">Level-up your product career</h4>
             <p className="curriculum__small">{ctaSupportText}</p>
             {
               // <MailchimpForm

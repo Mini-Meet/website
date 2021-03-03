@@ -15,4 +15,8 @@
     @media (min-width: $screen-sm-min) {
     }
   }
+
+  &__cta {
+    @include padding(bottom, 5);
+  }
 }

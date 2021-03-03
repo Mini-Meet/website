@@ -14,6 +14,8 @@ import About from './components/views/About/About.js';
 import Booking from './components/views/Booking/Booking';
 import Casestudy from './components/views/Casestudy/Casestudy.js';
 import Home from './components/views/Home/Home';
+import HomeB from './components/views/HomeB/HomeB';
+import HomeC from './components/views/HomeC/HomeC';
 import Privacy from './components/views/Privacy/Privacy';
 import Legal from './components/views/Legal/Legal';
 // acquisiton experiment
@@ -38,6 +40,8 @@ ReactDOM.render(
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/home" exact component={Home} />
+        <Route path="/b" exact component={HomeB} />
+        <Route path="/c" exact component={HomeC} />
         <Route path="/about" exact component={About} />
         <Route path="/book-session" exact component={Booking} />
         <Route path="/case-study" exact component={Casestudy} />

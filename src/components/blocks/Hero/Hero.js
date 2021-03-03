@@ -22,6 +22,8 @@ type Props = {
   referralForm: boolean,
   mailchimpForm: boolean,
   activeCampaignForm: boolean,
+  formId: Number,
+  submitEmail: Function,
 };
 
 export default class Hero extends Component<Props> {
@@ -42,6 +44,8 @@ export default class Hero extends Component<Props> {
       referralForm,
       mailchimpForm,
       activeCampaignForm,
+      formId,
+      submitEmail,
     } = this.props;
 
     return (
@@ -80,7 +84,9 @@ export default class Hero extends Component<Props> {
           />
         )}
 
-        {activeCampaignForm && <ActiveCampaignForm />}
+        {activeCampaignForm && (
+          <ActiveCampaignForm formId={formId} submitEmail={submitEmail} />
+        )}
       </div>
     );
   }
