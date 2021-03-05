@@ -891,5 +891,6 @@ export default class HomeB extends Component<Props> {
   handleSubmitEmail = () => {
     Mixpanel.track(`${mixpanelEvent}`);
     FacebookPixel.track(`${facebookEvent}`);
+    console.log(`${facebookEvent}`);
   };
 }
