@@ -24,6 +24,9 @@ import Mentors from './components/views/Mentors/Mentors';
 import Referee from './components/views/Referee/Referee';
 import Referral from './components/views/Referral/Referral';
 import Register from './components/views/Register/Register';
+import StoryAntonia from './components/views/Story/StoryAntonia';
+import StoryLuke from './components/views/Story/StoryLuke';
+import StoryRichard from './components/views/Story/StoryRichard';
 import AcceptReferral from './components/views/Referral/AcceptReferral';
 
 // Main App layout
@@ -52,6 +55,9 @@ ReactDOM.render(
         <Route path="/mentors" exact component={Mentors} />
         <Route path="/referrals/:referralLink" exact component={Referral} />
         <Route path="/register" exact component={Register} />
+        <Route path="/story/luke" exact component={StoryLuke} />
+        <Route path="/story/richard" exact component={StoryRichard} />
+        <Route path="/story/antonia" exact component={StoryAntonia} />
         <Route
           path="/referrals/accept/:referralLink"
           exact

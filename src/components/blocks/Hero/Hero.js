@@ -92,6 +92,6 @@ export default class Hero extends Component<Props> {
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track('11. / MBA Subtext Link');
+    Mixpanel.track('12. / MBA Subtext Link');
   };
 }

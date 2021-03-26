@@ -18,6 +18,7 @@ import {
   SectionSummary,
   Stats,
   Mentors,
+  Stories,
   Testimonial,
 } from '../../blocks';
 
@@ -35,7 +36,7 @@ import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyb
 import testimonialCollage from '../../../assets/images/testimonials/collage.jpg';
 import testimonialCollageSmall from '../../../assets/images/testimonials/collageSmall.jpg';
 
-import richard from '../../../assets/images/testimonials/richard.png';
+// import richard from '../../../assets/images/testimonials/richard.png';
 import antonia from '../../../assets/images/testimonials/antonia.png';
 import stefanos from '../../../assets/images/testimonials/stefanos.jpeg';
 
@@ -704,13 +705,14 @@ const ctaHeader = 'Level-up Your Product Career';
 const ctaSupportText =
   'Take the free 7-day Mini MBA to learn product vision, strategy & customer insight in practice, as well as for info on applying to our Jun 2021 cohort:';
 
-const mixpanelEvent = '12.C MBA Next';
+const mixpanelEvent = '12.C MBA Submit';
 const facebookEvent = 'Search';
 
 const formId = 19;
 
 export default class HomeC extends Component<Props> {
   componentDidMount() {
+    window.scrollTo(0, 0);
     Mixpanel.track('12.C MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
@@ -753,11 +755,13 @@ export default class HomeC extends Component<Props> {
           mixpanelEvent={mixpanelEvent}
           facebookEvent={facebookEvent}
         />
-        <Testimonial
-          name="Richard, Lead Product Manager"
-          img={richard}
-          quote="I managed to craft & validate a company-wide product strategy within 3 weeks of joining my new role - as well as getting buy-in from stakeholders along the way - thanks to the frameworks I learnt from Prod MBA."
-        />
+        {
+          // <Testimonial
+          //   name="Richard, Lead Product Manager"
+          //   img={richard}
+          //   quote="I managed to craft & validate a company-wide product strategy within 3 weeks of joining my new role - as well as getting buy-in from stakeholders along the way - thanks to the frameworks I learnt from Prod MBA."
+          // />
+        }
         <Description
           header="Become A Confident Product Leader"
           // e.g. Richard - 9 MVOs - years of work - and cash
@@ -821,6 +825,7 @@ export default class HomeC extends Component<Props> {
           subTextUrlText="Terms & Conditions"
           subTextUrl="/legal"
         />
+        <Stories header="Outcomes PMs/POs Have Got From Prod MBA:" />
         <Testimonial
           name="Antonia, PM (Promoted to Senior PM within 3 months)"
           img={antonia}

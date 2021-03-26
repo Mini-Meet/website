@@ -21,4 +21,5 @@ export { default as RefereeInput } from './RefereeInput/RefereeInput.js';
 export { default as Section } from './Section/Section.js';
 export { default as SectionSummary } from './SectionSummary/SectionSummary.js';
 export { default as Stats } from './Stats/Stats.js';
+export { default as Stories } from './Stories/Stories';
 export { default as Testimonial } from './Testimonial/Testimonial.js';

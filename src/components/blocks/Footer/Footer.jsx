@@ -60,9 +60,7 @@ class Footer extends Component {
         <div className="footer__logo">
           <div className="footer__logo_book">
             <img alt="logo" src={Book} className="footer__logo_bookimg" />
-            <p>
-              Want to learn about the secret to effective product leadership?
-            </p>
+            <p>Want to learn the secrets to effective product leadership?</p>
             <a
               href="https://www.amazon.com/Product-Leadership-Starts-You-Surprising-ebook/dp/B08R8MK71C/ref=sr_1_1?dchild=1&keywords=product+leadership+starts+with+you&qid=1610011047&sr=8-1"
               onClick={this.goToBook}

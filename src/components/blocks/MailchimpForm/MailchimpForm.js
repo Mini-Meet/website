@@ -26,7 +26,7 @@ const CustomForm = ({ onSubscribe }: FormTypes) => {
 
   const submit = () => {
     if (email && email.value && email.value.indexOf('@') > -1) {
-      Mixpanel.track(`11.MBA Subscribe`);
+      Mixpanel.track(`12.MBA Subscribe`);
       FacebookPixel.track(`Subscribe`);
 
       onSubscribe({
@@ -148,17 +148,17 @@ export default class MailchimpForm extends Component<Props> {
   }
 
   goToSubTextLink = () => {
-    Mixpanel.track('11. / Home Subtext Link');
+    Mixpanel.track('12. / Home Subtext Link');
   };
 
   goToBookSession = () => {
-    Mixpanel.track('11. MBA / Book Call');
+    Mixpanel.track('12. MBA / Book Call');
     FacebookPixel.track('SubmitApplication');
     LinkedInTag.track('2862329');
   };
 
   goToPdf = () => {
-    Mixpanel.track('11. MBA / View PDF');
+    Mixpanel.track('12. MBA / View PDF');
     FacebookPixel.track('Lead');
   };
 }

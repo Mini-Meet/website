@@ -9,16 +9,17 @@ import { Mixpanel } from '../../../Mixpanel';
 // import { Button } from '../../elements';
 
 import {
+  ActiveCampaignForm,
   Description,
-  Header,
-  Hero,
   Featured,
   Footer,
+  Header,
+  Hero,
   Image,
-  ActiveCampaignForm,
+  Mentors,
   SectionSummary,
   Stats,
-  Mentors,
+  Stories,
   Testimonial,
 } from '../../blocks';
 
@@ -28,15 +29,15 @@ import {
 import curriculumAssignment from '../../../assets/images/course/curriculum_1a.jpg';
 import curriculum3Steps from '../../../assets/images/course/curriculum_2.jpg';
 import curriculumSchedule from '../../../assets/images/course/curriculum_3.jpg';
+import curriculumExperience from '../../../assets/images/course/curriculum_experience_people.png';
+import curriculumSkills from '../../../assets/images/course/curriculum_skills.png';
 import curriculumOverview from '../../../assets/images/course/curriculum_overview.png';
-import curriculumFeatureFactory from '../../../assets/images/course/curriculum_feature_factory.jpg';
-import curriculumCompetencies from '../../../assets/images/course/four_graph.png';
 import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyback.png';
 
 import testimonialCollage from '../../../assets/images/testimonials/collage.jpg';
 import testimonialCollageSmall from '../../../assets/images/testimonials/collageSmall.jpg';
 
-import richard from '../../../assets/images/testimonials/richard.png';
+// import richard from '../../../assets/images/testimonials/richard.png';
 import antonia from '../../../assets/images/testimonials/antonia.png';
 import stefanos from '../../../assets/images/testimonials/stefanos.jpeg';
 
@@ -705,16 +706,17 @@ const signUpUrl = 'https://productmastery.ac-page.com/sign-up';
 const signUpCTA = 'JOIN FREE MINI MBA';
 const ctaHeader = 'Level-up Your Product Career';
 const ctaSupportText =
-  'Take the free 7-day Mini MBA to learn product vision, strategy & customer insight in practice, as well as for info on applying to our Jun 2021 cohort:';
+  'Try the free 7-day Mini MBA to learn skills to fast-track your product career:';
 
-const mixpanelEvent = '11. MBA Next';
+const mixpanelEvent = '12. MBA Submit';
 const facebookEvent = 'Search';
 
 const formId = 1;
 
 export default class Home extends Component<Props> {
   componentDidMount() {
-    Mixpanel.track('11. MBA');
+    window.scrollTo(0, 0);
+    Mixpanel.track('12. MBA');
     FacebookPixel.track('ViewContent');
     LinkedInTag.track('2862345'); // Page view
   }
@@ -773,20 +775,22 @@ export default class Home extends Component<Props> {
           mixpanelEvent={mixpanelEvent}
           facebookEvent={facebookEvent}
         />
-        <Testimonial
-          name="Richard, Lead Product Manager"
-          img={richard}
-          quote="I managed to craft & validate a company-wide product strategy within 3 weeks of joining my new role - as well as getting buy-in from stakeholders along the way - thanks to the frameworks I learnt from Prod MBA."
-        />
+        {
+          // <Testimonial
+          //   name="Richard, Lead Product Manager"
+          //   img={richard}
+          //   quote="I managed to craft & validate a company-wide product strategy within 3 weeks of joining my new role - as well as getting buy-in from stakeholders along the way - thanks to the frameworks I learnt from Prod MBA."
+          // />
+        }
         <Description
-          header="Become A Confident Product Leader"
+          header="Master The Skills of A Head of Product"
           // e.g. Richard - 9 MVOs - years of work - and cash
           // "Become A 'Product Rainmaker'"
-          description1="Frustrated in your current role? Stuck focused on delivery? Understand the theoory, but unable to prioritise or influence what you work on in practice?"
-          description2="Gain autonomy, purpose & rapid promotion by learning how to build products that deliver massive value for your company."
-          description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10."
+          description1="Don't let your current role hold you back from accelerating your product career."
+          description2="Gain autonomy, purpose & rapid promotion by learning how to build real products that deliver massive value."
+          description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10. Get started now:"
           // dollarise this!
-          image={curriculumCompetencies}
+          image={curriculumExperience}
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
@@ -802,12 +806,12 @@ export default class Home extends Component<Props> {
         />
         <Description
           reverse
-          header="Stop The Feature Factory"
+          header="Grow Through Real Product Experience"
           // "30% found a new role"
           description1="Escape the repetitive cycle of building an endless list of features that don't really make sense."
-          description2="Learn how to align stakeholders & product teams around a product strategy that makes sense through prioritised, high-value feature experiments."
-          description3="Unlock greater profit & growth with our framework to achieve Product/Market Fit:"
-          image={curriculumFeatureFactory}
+          description2="Learn how to align stakeholders & rally a team around a customer-driven product strategy - and execute with prioritised, high-value feature experiments."
+          description3="Start becoming an effective product leader with our free Mini MBA:"
+          image={curriculumSkills}
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
@@ -841,6 +845,7 @@ export default class Home extends Component<Props> {
           subTextUrlText="Terms & Conditions"
           subTextUrl="/legal"
         />
+        <Stories header="Outcomes PMs/POs Have Got From Prod MBA:" />
         <Testimonial
           name="Antonia, PM (Promoted to Senior PM within 3 months)"
           img={antonia}

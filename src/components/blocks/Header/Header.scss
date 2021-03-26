@@ -1,8 +1,11 @@
 @import '../../../styles/main';
 
 .header {
+  @include row;
+
   &__logo {
     @include padding(all, 2);
+    @include padding(left, 1);
     @include opacity(1);
     max-width: 120px; // default logo width: 140px;
     position: absolute;
@@ -15,6 +18,41 @@
 
     &:hover {
       @include opacity(1.2);
+    }
+  }
+
+  &__right {
+    right: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+
+    @media (min-width: $screen-sm-min) {
+      right: 0;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      padding-top: 26px;
+      @include padding(right bottom, 3);
+    }
+
+    p {
+      display: none;
+
+      @media (min-width: $screen-sm-min) {
+        @include padding(right, 2);
+        color: $dark;
+        display: flex;
+      }
+    }
+
+    &_cta {
+      @include padding(right, 0);
+
+      @media (min-width: $screen-sm-min) {
+        @include padding(right, 2);
+      }
     }
   }
 }

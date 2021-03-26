@@ -1,0 +1,86 @@
+@import '../../../../styles/main';
+
+.storyCard {
+  @include background-white;
+  @include padding(bottom, 3);
+  @include margin(all, 2);
+  @include col;
+  @include card-elevation;
+  border-radius: 8px;
+  max-width: 280px;
+
+  @media (min-width: $screen-sm-min) {
+    //
+  }
+
+  &:hover {
+    box-shadow: 0 20px 40px $phone-elevation;
+  }
+
+  &__hero {
+    @include padding(top bottom, 3);
+    background-color: $primary-20;
+    border-radius: 8px 8px 0 0;
+
+    &_image {
+      border-radius: 8px;
+      height: 40px;
+      width: 40px;
+    }
+
+    &_text {
+      @include padding(top, 0);
+    }
+  }
+
+  &__header {
+    @include flex;
+    @include padding(top bottom, 2);
+    @include padding(left right, 2);
+
+    &_profile {
+      @include circular-radius;
+      height: 40px;
+      width: 40px;
+    }
+
+    &_text {
+      @include col;
+      align-self: center;
+      width: 100%;
+      font-weight: 300;
+    }
+
+    &_textName {
+      @include padding(left, 0);
+      margin: 2px 4px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    &_textRole {
+      @include padding(left, 0);
+      margin: 2px 4px;
+      text-align: left;
+      font-size: 12px;
+    }
+  }
+
+  &__quote {
+    @include padding(left right, 2);
+    @include padding(top, 2);
+    @include padding(bottom, 3);
+    font-size: 18px;
+    color: $dark;
+    font-style: italic;
+  }
+
+  &__cta {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
