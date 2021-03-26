@@ -49,7 +49,7 @@ export default class StoryAntonia extends Component {
         </div>
         <div className="storyPage__body">
           <img alt="Onboarding" src={antonia} className="storyPage__body_img" />
-          <h3>I Was Doing Problem The Wrong Way</h3>
+          <h3>We Were Doing Product Wrong</h3>
           <p>
             Even though I was active in the Berlin startup scene, and already in
             a product role by the time the Prod MBA rolled around, I never
