@@ -3,9 +3,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import alumni from '../../../assets/images/mentors/alumnimentors.png';
 import dom from '../../../assets/images/mentors/dom.jpeg';
 import henry from '../../../assets/images/mentors/henry.jpg';
-import sofi from '../../../assets/images/mentors/sofi.jpeg';
 
 import Card from './Card/Card.jsx';
 
@@ -16,25 +16,29 @@ export default class Mentors extends Component {
     // NOTE: Testimonial Card Content
     const cards = [
       {
+        photo: henry,
+        name: 'Henry Latham',
+        linkedIn: true,
+        linkedinUrl: 'https://www.linkedin.com/in/henrylatham/',
+        title: '#product #entrepreneurship',
+        comment:
+          'Henry has bootstrapped 2 businesses to profitability, mentored over 100 aspiring product leaders & is author of the book "Product Leadership Starts With You". He has worked in product for 9 years & writes daily on LinkedIn. ',
+      },
+      {
         photo: dom,
         name: 'Dom Wolf',
+        linkedIn: true,
+        linkedinUrl: 'https://www.linkedin.com/in/~dom/',
         title: '#product #marketing',
         comment:
           'Dom is a senior product manager & strategy director with 11+ years of hands-on experience. With a marketing and product background, he`s an expert at building and growing award-winning platforms, mobile apps and websites.',
       },
       {
-        photo: henry,
-        name: 'Henry Latham',
-        title: '#product #entrepreneurship',
+        photo: alumni,
+        name: 'Prod MBA Alumni',
+        title: '#strategy #leadership #b2b #career',
         comment:
-          'Henry has 8 years of experience as a Founder & Head of Product with early-stage startups. He is the author of "Why Your Startup is Failing" & founder of the Prod MBA programme, where he teaches essential discovery & product operations skills to aspiring founders & ambitious product people.',
-      },
-      {
-        photo: sofi,
-        name: 'Sofi Newsham',
-        title: '#product #scale',
-        comment:
-          'Sofi is a Senior Product Manager & Consultant with a wealth of experience across marketplace, finance and eCommerce. She has rocketed revenue by millions, increased signups by up to 10 times & boosted user reported satisfaction by 5 NPS points - and loves using data to shape the perfect customer journey.',
+          'Our 7 alumni mentors work in senior product roles across Berlin & London. They will join some of the group sessions & workshops, as well as our alumni Circles.',
       },
     ];
 
@@ -52,7 +56,7 @@ export default class Mentors extends Component {
 
     return (
       <div className="mentors">
-        <h2 className="mentors__header">Our Mentors</h2>
+        <h2 className="mentors__header">Your Mentors</h2>
         <Slider {...settings}>
           {cards.map(person => {
             return (
@@ -63,6 +67,8 @@ export default class Mentors extends Component {
                 name={person.name}
                 title={person.title}
                 comment={person.comment}
+                linkedinUrl={person.linkedinUrl}
+                linkedIn={person.linkedIn}
               />
             );
           })}

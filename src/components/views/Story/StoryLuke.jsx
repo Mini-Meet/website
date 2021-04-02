@@ -7,7 +7,7 @@ import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 import { Header, Footer, ActiveCampaignForm, Stories } from '../../blocks';
 
-import thumbnail from '../../../assets/images/thumbnail.jpg';
+// import thumbnail from '../../../assets/images/thumbnail.jpg';
 import luke from '../../../assets/images/stories/luke.jpg';
 
 const ctaHeader = 'Level-up Your Product Career';
@@ -31,12 +31,12 @@ export default class StoryLuke extends Component {
     return (
       <div className="storyPage">
         <Helmet>
-          <title>Prod MBA • {title}</title>
+          <title>{title}</title>
           <meta property="og:description" content={title} />
-          <meta property="og:image" content={thumbnail} />
+          <meta property="og:image" content={luke} />
           <meta property="og:url" content="https://prod.mba/story/luke" />
-          <meta name="twitter:image" content={thumbnail} />
-          <meta name="twitter:card" content={thumbnail} />
+          <meta name="twitter:image" content={luke} />
+          <meta name="twitter:card" content={luke} />
           <meta
             name="twitter:image:alt"
             content="Prod MBA Training Programme"

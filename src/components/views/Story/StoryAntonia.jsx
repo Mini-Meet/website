@@ -7,7 +7,7 @@ import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 import { Header, Footer, ActiveCampaignForm, Stories } from '../../blocks';
 
-import thumbnail from '../../../assets/images/thumbnail.jpg';
+// import thumbnail from '../../../assets/images/thumbnail.jpg';
 import antonia from '../../../assets/images/stories/antonia.jpg';
 
 const ctaHeader = 'Level-up Your Product Career';
@@ -31,12 +31,12 @@ export default class StoryAntonia extends Component {
     return (
       <div className="storyPage">
         <Helmet>
-          <title>Prod MBA • {title}</title>
+          <title>{title}</title>
           <meta property="og:description" content={title} />
-          <meta property="og:image" content={thumbnail} />
+          <meta property="og:image" content={antonia} />
           <meta property="og:url" content="https://prod.mba/story/antonia" />
-          <meta name="twitter:image" content={thumbnail} />
-          <meta name="twitter:card" content={thumbnail} />
+          <meta name="twitter:image" content={antonia} />
+          <meta name="twitter:card" content={antonia} />
           <meta
             name="twitter:image:alt"
             content="Prod MBA Training Programme"
@@ -185,5 +185,6 @@ export default class StoryAntonia extends Component {
 
   handleBookCall = () => {
     Mixpanel.track('12. Antonia Book Call');
+    console.log('12. Antonia Book Call');
   };
 }

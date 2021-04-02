@@ -7,7 +7,7 @@ import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 import { Header, Footer, ActiveCampaignForm, Stories } from '../../blocks';
 
-import thumbnail from '../../../assets/images/thumbnail.jpg';
+// import thumbnail from '../../../assets/images/thumbnail.jpg';
 import richard from '../../../assets/images/stories/richard.jpg';
 
 const ctaHeader = 'Level-up Your Product Career';
@@ -31,12 +31,12 @@ export default class StoryRichard extends Component {
     return (
       <div className="storyPage">
         <Helmet>
-          <title>Prod MBA • {title}</title>
+          <title>{title}</title>
           <meta property="og:description" content={title} />
-          <meta property="og:image" content={thumbnail} />
-          <meta property="og:url" content="https://prod.mba/story/luke" />
-          <meta name="twitter:image" content={thumbnail} />
-          <meta name="twitter:card" content={thumbnail} />
+          <meta property="og:image" content={richard} />
+          <meta property="og:url" content="https://prod.mba/story/richard" />
+          <meta name="twitter:image" content={richard} />
+          <meta name="twitter:card" content={richard} />
           <meta
             name="twitter:image:alt"
             content="Prod MBA Training Programme"

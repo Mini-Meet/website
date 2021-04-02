@@ -22,10 +22,10 @@ export default class About extends Component<Props> {
     return (
       <div className="aboutContainer">
         <Helmet>
-          <title>Prod MBA • About</title>
+          <title>About the Prod MBA training programme & bootcamp</title>
           <meta
             property="og:description"
-            content="Prod MBA was founded to provide hands-on, tactical training to fast-track your product career."
+            content="Prod MBA was founded to provide hands-on, tactical training to fast-track your product career & your path to Head of Product."
           />
           <meta property="og:image" content={thumbnail} />
           <meta property="og:url" content="https://prod.mba" />

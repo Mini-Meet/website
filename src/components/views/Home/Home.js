@@ -726,12 +726,13 @@ export default class Home extends Component<Props> {
       <div className="homePageWrapper">
         <Helmet>
           <title>
-            Prod MBA: We Fast-Track Product Managers/Owners to Head of Product
+            Prod MBA: How To Accelerate Your Product Management Career
           </title>
           <meta
             property="og:description"
-            content="Fast-Track Your Path to Head of Product With Our Part-Time, Hands-On Product Management Prod MBA 8-Week Training Programme"
+            content="Fast-track your path to Head of Product with Prod MBA's hands-on, part-time product management 8-Week training programme & bootcamp, designed for Product Managers and Product Owners asking how to accelerate my product career"
           />
+          <link rel="canonical" href="http://prod.mba/" />
           <meta property="og:image" content={thumbnail} />
           <meta property="og:url" content="https://prod.mba" />
           <meta name="twitter:image" content={thumbnail} />
@@ -791,6 +792,7 @@ export default class Home extends Component<Props> {
           description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10. Get started now:"
           // dollarise this!
           image={curriculumExperience}
+          imageAltText="The Prod MBA Learning Experience & Bootcamp"
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
@@ -812,6 +814,7 @@ export default class Home extends Component<Props> {
           description2="Learn how to align stakeholders & rally a team around a customer-driven product strategy - and execute with prioritised, high-value feature experiments."
           description3="Start becoming an effective product leader with our free Mini MBA:"
           image={curriculumSkills}
+          imageAltText="4 key skills of an effective product manager & product leader"
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
@@ -832,6 +835,7 @@ export default class Home extends Component<Props> {
           description2="A Scrum certification or overly-theoretical Udemy course may make you feel like you 'know product', but it won't help you become a product expert."
           description3="The Prod MBA will."
           image={curriculumOverview}
+          imageAltText="How the Prod MBA works"
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}

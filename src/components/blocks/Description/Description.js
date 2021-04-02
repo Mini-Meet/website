@@ -14,6 +14,7 @@ type Props = {
   description2: string,
   description3: string,
   image: string,
+  imageAltText: string,
   btnText: string,
   nextPageUrl: string,
   onClick: Function,
@@ -37,6 +38,7 @@ export default class Description extends Component<Props> {
       description2,
       description3,
       image,
+      imageAltText,
       btnText,
       nextPageUrl,
       onClick,
@@ -90,7 +92,7 @@ export default class Description extends Component<Props> {
 
             <div className="description__imgblock">
               <img
-                alt="overview"
+                alt={imageAltText}
                 src={image}
                 className="description__imgblock_img"
               />
@@ -101,7 +103,7 @@ export default class Description extends Component<Props> {
           <div className="description description__reverse">
             <div className="description__imgblock">
               <img
-                alt="overview"
+                alt={imageAltText}
                 src={image}
                 className="description__imgblock_img"
               />

@@ -27,6 +27,22 @@
   width: 100%;
 }
 
+.card-header-texthead {
+  @include row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header-linkedin {
+  max-width: 40px;
+  color: $dark;
+  @include padding(all, 0);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 .card-header-text {
   @include col;
   align-self: center;
@@ -35,7 +51,8 @@
 
 .card-header-text-name {
   @include padding(left, 2);
-  margin: 2px 4px;
+  @include padding(bottom, reset);
+  margin: 0 4px;
   text-align: left;
 }
 
