@@ -12,29 +12,30 @@ export default class Legal extends Component {
           <h1>Terms & Conditions</h1>
           <h3>Objective</h3>
           <span>
-            OptimizeMe products are designed to help you improve remote team
-            culture through our suite of digital tools & professional advice
-            based on years of experience within the field of remote HR.
+            Product Mastery products are designed to help Product Managers build
+            great products & accelerate their career through our suite of
+            digital tools & professional advice based on years of experience
+            within the field of product management.
           </span>
           <br />
           <h3>Our Products</h3>
           <span>
-            OptimizeMe products are developed by Scribe Services Ltd., a limited
-            company based in London, United Kingdom, and operated by our team
-            based between London & Berlin. Our website (team.optimizeme.app), as
-            well as our sub-domains (such as this one) are run by our internal
-            team. We use third party services to build our products, keep in
-            touch with customers and to help us understand how we can improve
-            our products through analytics data. Many of those services collect
-            data about you, our customers, but we aim to also be as explicit and
-            transparent as possible when this is the case. As such, below we
-            outline precisely what those services are, how we use them, as well
-            as how we store & utilise any data those services provide. For any
-            questions, please reach out to Henry, our Head of Product &
-            Co-founder directly, at henrylatham5555@gmail.com. If you contact
-            OptimizeMe by e-mail, we may keep a record of your correspondence or
-            comments. We may ask for your name, e-mail address and contact
-            information in order to send you a reply.
+            Product Mastery products are developed by Scribe Services Ltd., a
+            limited company based in London, United Kingdom, and operated by our
+            team based between London & Berlin. Our website (https://prod.mba),
+            as well as our sub-domains (such as this one) are run by our
+            internal team. We use third party services to build our products,
+            keep in touch with customers and to help us understand how we can
+            improve our products through analytics data. Many of those services
+            collect data about you, our customers, but we aim to also be as
+            explicit and transparent as possible when this is the case. As such,
+            below we outline precisely what those services are, how we use them,
+            as well as how we store & utilise any data those services provide.
+            For any questions, please reach out to Henry, our Head of Product &
+            Co-founder directly, at henry@productmastery.co. If you contact
+            Product Mastery by e-mail, we may keep a record of your
+            correspondence or comments. We may ask for your name, e-mail address
+            and contact information in order to send you a reply.
           </span>
           <br />
           <h3>Data used by our website</h3>
@@ -94,10 +95,10 @@ export default class Legal extends Component {
             functionality within our products. If you contact us, however, we
             will respond & act swiftly to delete any data stored on our
             services. Please contact Henry, our Head of Product & Co-founder
-            directly if this is the case: henrylatham5555@gmail.com
+            directly if this is the case: henry@productmastery.co
           </span>
           <br />
-          <h3>Your use of the OptimizeMe Products</h3>
+          <h3>Your use of the Product Mastery Products</h3>
           <span>
             You agree that our products are for domestic and private use only
             and you will not use our products for any commercial, business or
@@ -143,23 +144,24 @@ export default class Legal extends Component {
           <br />
           <h3>“Sensitive” information</h3>
           <span>
-            OptimizeMe does not seek to collect “sensitive” Personal Information
-            about you (this includes details about your race or ethnicity,
-            religious or philosophical beliefs, sex life, sexual orientation,
-            political opinions, trade union membership, information about your
-            health and genetic and biometric data). Scribe does not wish to
-            receive any such data and will not request it. If Subscribers
-            voluntarily post such information on the Service or share it with
-            other Subscribers, the Subscriber assumes the risk of such
-            information being accessed, used or distributed by others as such
-            information has been manifestly made public by the Subscriber. Data
-            on children Persons under the age of 16 should not transfer Personal
-            Information to us unless they have the consent of their parent(s) or
-            guardian(s). We do not knowingly collect, nor do we want to receive,
-            personal information about individuals who are under 13 years of
-            age. If you are under the age of 13, please do not access our
-            Service at any time or in any manner. We will take appropriate steps
-            to delete the Personal Information of persons under the age of 13.
+            Product Mastery does not seek to collect “sensitive” Personal
+            Information about you (this includes details about your race or
+            ethnicity, religious or philosophical beliefs, sex life, sexual
+            orientation, political opinions, trade union membership, information
+            about your health and genetic and biometric data). Scribe does not
+            wish to receive any such data and will not request it. If
+            Subscribers voluntarily post such information on the Service or
+            share it with other Subscribers, the Subscriber assumes the risk of
+            such information being accessed, used or distributed by others as
+            such information has been manifestly made public by the Subscriber.
+            Data on children Persons under the age of 16 should not transfer
+            Personal Information to us unless they have the consent of their
+            parent(s) or guardian(s). We do not knowingly collect, nor do we
+            want to receive, personal information about individuals who are
+            under 13 years of age. If you are under the age of 13, please do not
+            access our Service at any time or in any manner. We will take
+            appropriate steps to delete the Personal Information of persons
+            under the age of 13.
           </span>
           <br />
           <h3>Your Rights to your Personal Information</h3>
@@ -233,13 +235,14 @@ export default class Legal extends Component {
             Personal Information we hold on your behalf, save that: (1) copies
             of your Personal Information may remain stored for limited periods
             of time on back-up media which shall be cleansed from time to time;
-            (2) OptimizeMe reserves the right to retain records of your Personal
-            Information if we reasonably require to maintain such records for
-            legal purposes, to investigate and respond to complaints, to enforce
-            our Terms of Use or to defend ourselves against any claim or
-            allegation, or if we require to retain such data for other
-            legitimate reasons; and (3) OptimizeMe shall be entitled to retain
-            any data in Generic Data obtained from your Personal Information.
+            (2) Product Mastery reserves the right to retain records of your
+            Personal Information if we reasonably require to maintain such
+            records for legal purposes, to investigate and respond to
+            complaints, to enforce our Terms of Use or to defend ourselves
+            against any claim or allegation, or if we require to retain such
+            data for other legitimate reasons; and (3) Product Mastery shall be
+            entitled to retain any data in Generic Data obtained from your
+            Personal Information.
           </span>
           <br />
           <br />

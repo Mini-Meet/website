@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Mixpanel } from '../../../Mixpanel';
 import Logo from '../../../assets/images/logoWhite.svg';
+import Book from '../../../assets/images/leadership_book.png';
 
 import './Footer.scss';
 
 class Footer extends Component {
   render() {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
-    const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
-    const courses = this.props.page === 'COURSES' ? 'active' : 'inactive';
-    const pricing = this.props.page === 'PRICING' ? 'active' : 'inactive';
+    const test = this.props.page === 'TEST' ? 'active' : 'inactive';
+    // const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
+    const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
       this.props.page === 'TERMS & CONDITIONS' ? 'active' : 'inactive';
@@ -24,35 +25,29 @@ class Footer extends Component {
           </div>
           <div className="footer__list_item">
             <a
-              className={about}
-              href="https://productmastery.substack.com/about"
-              onClick={this.goToAbout}
+              className={test}
+              href="https://test.prod.mba/"
+              onClick={this.goToSkillsTest}
               target="_blank"
               rel="noopener noreferrer"
             >
+              Product Skills Test
+            </a>
+          </div>
+          <div className="footer__list_item">
+            <Link to="/about" className={terms}>
               About
-            </a>
+            </Link>
           </div>
           <div className="footer__list_item">
             <a
-              className={courses}
-              href="https://courses.productmastery.co/"
-              onClick={this.goToCourses}
+              className={blog}
+              href="https://blog.prod.mba/"
+              onClick={this.goToBlog}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Courses
-            </a>
-          </div>
-          <div className="footer__list_item">
-            <a
-              className={pricing}
-              href="https://productmastery.substack.com/p/pricing"
-              onClick={this.goToPricing}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Pricing
+              Blog
             </a>
           </div>
           <div className="footer__list_item">
@@ -60,28 +55,42 @@ class Footer extends Component {
               Terms of Service
             </Link>
           </div>
-          {/*
-          <li className='footer__list_item'><Link to='/privacy' className={privacy}>PRIVACY POLICY</Link></li>
-        */}
         </div>
 
         <div className="footer__logo">
-          <Link to="/home">
-            <img alt="logo" src={Logo} className="footer__logo_img" />
+          <div className="footer__logo_book">
+            <img alt="logo" src={Book} className="footer__logo_bookimg" />
+            <p>Want to learn the secrets to effective product leadership?</p>
+            <a
+              href="https://www.amazon.com/Product-Leadership-Starts-You-Surprising-ebook/dp/B08R8MK71C/ref=sr_1_1?dchild=1&keywords=product+leadership+starts+with+you&qid=1610011047&sr=8-1"
+              onClick={this.goToBook}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>BUY BOOK FOR UNDER £1</p>
+            </a>
+          </div>
+          <Link to="/home" className="footer__logo_img">
+            <img alt="logo" src={Logo} className="footer__logo_imglogo" />
           </Link>
         </div>
       </div>
     );
   }
-
+  goToSkillsTest = () => {
+    Mixpanel.track('MBA / Footer / Skills Test');
+  };
   goToAbout = () => {
-    Mixpanel.track('A / Page / About');
+    Mixpanel.track('MBA / Footer / About');
   };
   goToCourses = () => {
-    Mixpanel.track('A / Page / PM101');
+    Mixpanel.track('MBA / Footer / PM101');
   };
   goToPricing = () => {
-    Mixpanel.track('A / Page / Pricing');
+    Mixpanel.track('MBA / Footer / Pricing');
+  };
+  goToBook = () => {
+    Mixpanel.track('MBA / Footer / Book');
   };
 }
 

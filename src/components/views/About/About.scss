@@ -1,0 +1,89 @@
+@import '../../../styles/main';
+
+.aboutContainer {
+  @include padding(top, 6);
+}
+
+.about {
+  @include col;
+  @include padding(bottom, 6);
+  @include padding(top, 3);
+
+  @media (min-width: $screen-sm-min) {
+    @include padding(left right, 3);
+    margin: 0 auto;
+    max-width: 50%;
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include row;
+    max-width: 100%;
+  }
+
+  &__img {
+    @include col;
+    @include padding(top, 2);
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    order: reverse;
+
+    @media (min-width: $screen-md-min) {
+      @include row;
+    }
+
+    &__bg {
+      @include card-elevation;
+      width: 100%;
+
+      @media (min-width: $screen-md-min) {
+        width: 70%;
+      }
+    }
+  }
+
+  &__text {
+    @include col;
+    @include padding(top, 4);
+    @include padding(bottom, 2);
+    justify-content: center;
+
+    @media (min-width: $screen-sm-min) {
+      @include padding(top bottom, 1);
+    }
+
+    @media (min-width: $screen-md-min) {
+      @include padding(left, 4);
+      width: 50%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      margin: 24px auto;
+
+      @media (min-width: $screen-md-min) {
+        @include margin(left right, reset);
+        @include margin(top bottom, 2);
+      }
+    }
+  }
+
+  h4,
+  p {
+    @include padding(left right, 0);
+    max-width: 480px;
+    text-align: center;
+
+    @media (min-width: $screen-md-min) {
+      text-align: left;
+    }
+  }
+
+  p {
+    @include small;
+    color: $grey;
+  }
+}

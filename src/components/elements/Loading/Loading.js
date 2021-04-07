@@ -17,7 +17,7 @@ export default class Loading extends Component<Props> {
       <div className="loading">
         <Loader
           type="Triangle" // or "Grid"
-          color={dark ? '#73e4f0' : '#fff'} // $secondary : $white
+          color={dark ? '#e8b529' : '#fff'} // $secondary : $white
           height={60}
           width={60}
           timeout={30000000}

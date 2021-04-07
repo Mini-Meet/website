@@ -7,12 +7,12 @@
 
 @mixin border-input {
   @extend %border-base;
-  border-color: $light-grey;
+  border-color: transparentize($secondary, 0.6);
 }
 
 @mixin border-input-focus {
   @extend %border-base;
-  border-color: transparentize($dark, 0.98);
+  border-color: transparentize($secondary, 0.2);
 }
 
 @mixin border-button {

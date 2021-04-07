@@ -20,7 +20,7 @@
 
 @mixin h1 {
   @extend %header-text;
-  font-size: 38px;
+  font-size: 32px;
 
   @media (min-width: $screen-sm-min) {
     font-size: 46px;
@@ -76,8 +76,7 @@ h4 {
 
 @mixin h5 {
   @extend %header-text;
-  font-family: 'Karla', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 h5 {
@@ -111,9 +110,8 @@ li {
 }
 
 @mixin link {
-  @extend %header-text;
+  @extend %text-base;
   color: $primary;
-  font-size: 11px;
 }
 
 a {

@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 
-import { Mixpanel } from '../../../Mixpanel';
+// import { Mixpanel } from '../../../Mixpanel';
 import { Toggle } from '../../elements';
 
 import './SectionSummary.scss';
@@ -43,6 +43,9 @@ export default class SectionSummary extends Component<Props> {
   onShowToggle = (toggle: ToggleProps) => {
     const { sectionHeader } = this.props;
 
-    Mixpanel.track(`${sectionHeader} / ${toggle.title} / Toggle`);
+    console.log(`${sectionHeader} / ${toggle.title}`);
+    console.log(`Toggle`);
+    // Mixpanel.track(`12.MBA ${sectionHeader} / ${toggle.title}`);
+    // Mixpanel.track(`12.MBA Toggle`);
   };
 }

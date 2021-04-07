@@ -1,36 +1,22 @@
 @import '../../../styles/main';
 
-.showcase {
-  @include background-white;
-  align-items: center;
+.imgFullWidth {
+  @include background-light;
 
-  &__img {
-    background-attachment: fixed;
-    background-image: url('../../../assets/images/showcase/appScreensMobile.png');
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 320px;
+  h3 {
+    @include padding(top, 5);
+    @include padding(bottom, 3);
+  }
 
-    // NOTE : Add for $screen-sm-min
+  img {
+    height: 100%;
+    width: 100%;
 
     @media (min-width: $screen-sm-min) {
-      background-attachment: inherit;
-      background-image: url('../../../assets/images/showcase/app-screens.png');
-      height: 560px;
     }
   }
 
-  &__list {
-    @include padding(top bottom right, 3);
-    @include padding(left, 4);
-    margin: 0 auto;
-    max-width: 420px;
-
-    &_item {
-      @include padding(top bottom, 1);
-      @include padding(left right, reset);
-      text-align: left;
-    }
+  &__cta {
+    @include padding(bottom, 5);
   }
 }

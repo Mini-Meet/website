@@ -19,19 +19,16 @@ export default class AcceptReferral extends Component {
       return;
     }
     axios
-      .post(
-        `https://api.tt-media.hr/api/referrals/accept/${referralLink}`,
-        {}
-      )
+      .post(`https://api.tt-media.hr/api/referrals/accept/${referralLink}`, {})
       .then(response => {
         if (response.data.hasError) {
           this.setState({ error: response.data.errMessage });
           return;
         }
         // Generic Mixpanel event to track funnel
-        Mixpanel.track('A / Referral / Accepted');
+        Mixpanel.track('Course / Referral / Accepted');
         // Success response - redirect and set tracker
-        Mixpanel.track(`A / Referral / Accepted: ${referralLink}`);
+        Mixpanel.track(`Course / Referral / Accepted: ${referralLink}`);
         window.location.href = 'www.productmastery.co';
       })
       .catch(() => {

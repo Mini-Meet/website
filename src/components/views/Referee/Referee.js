@@ -7,7 +7,7 @@ import './Referee.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('A / Page / Referee');
+    Mixpanel.track('Course / Page / Referee');
   }
 
   render() {
@@ -17,8 +17,10 @@ export default class Home extends Component {
         <Hero
           title="Upgrade Your"
           titleTwo="Product Career Now"
-          subtitle="Invite your friends to join our Beta Programme & enjoy FREE product membership for 1 year. Skip the growing waiting list by entering your email below & inviting your friends:"
-          refereeForm
+          subtitle="Invite 5 friends to join our Beta programme, skip the waiting list & enjoy 70% 0FF our Product Mastery Programme (saving €700!) when they accept!"
+          btnText="Next"
+          mixpanelEvent="Referee / Subscribed!"
+          referralForm
         />
       </div>
     );

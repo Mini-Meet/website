@@ -87,6 +87,7 @@
   &:hover {
     @include opacity(1.2);
     box-shadow: none;
+    transform: none;
   }
 
   i {

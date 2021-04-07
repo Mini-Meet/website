@@ -2,6 +2,10 @@
   border-radius: $corner-radius;
 }
 
+@mixin card-corner-radius {
+  border-radius: $card-corner-radius;
+}
+
 @mixin card-image-corner-radius {
   border-top-left-radius: $corner-radius;
   border-top-right-radius: $corner-radius;

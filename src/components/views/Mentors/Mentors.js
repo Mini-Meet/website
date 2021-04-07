@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import CookieBanner from 'react-cookie-banner';
-import { Link } from 'react-router-dom';
 
 import { Mixpanel } from '../../../Mixpanel';
 import {
@@ -9,32 +7,19 @@ import {
   Hero,
   Featured,
   ProductShowcase,
-  Testimonials,
+  Mentors,
 } from '../../blocks';
 
 import './Mentors.scss';
 
 export default class Home extends Component {
   componentDidMount() {
-    Mixpanel.track('A / Page / Mentors');
+    Mixpanel.track('Course / Page / Mentors');
   }
 
   render() {
     return (
       <div className="homePageWrapper">
-        <CookieBanner
-          message="This website uses cookies. Learn more: "
-          onAccept={() => {}}
-          cookie="user-has-accepted-cookies"
-          dismissOnScroll={false}
-          link={
-            <div>
-              <Link to="/legal" className="cookie-link">
-                Read Terms
-              </Link>
-            </div>
-          }
-        />
         <Header light />
         <div id="signup" />
         <Hero
@@ -54,7 +39,7 @@ export default class Home extends Component {
           url="#signup"
           cta="Become A Mentor >"
         />
-        <Testimonials />
+        <Mentors />
         <Hero
           title="Become a Product Mentor"
           subtitle="Add to Your CV & Experience Whilst Helping Junior/Mid-Level Product Managers Accelerate Their Career"

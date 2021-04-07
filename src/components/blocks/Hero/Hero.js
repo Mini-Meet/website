@@ -1,141 +1,97 @@
 // @flow
 import React, { Component } from 'react';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
+// import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
-import { Button, Loading } from '../../elements';
-import { RefereeInput } from '..';
+import { MailchimpForm, ActiveCampaignForm, RefereeInput } from '..';
+import { Button, ButtonNextPage } from '../../elements';
 import './Hero.scss';
 
 type Props = {
   title: string,
-  titleTwo: string,
-  subtitle: string,
+  subtitleOne: string,
+  subtitleTwo: string,
+  btnText: string,
+  subText: string,
+  subTextUrl: string,
+  subTextUrlText: string,
+  nextPage: boolean,
+  nextPageUrl: string,
+  onClick: Function,
+  externalPage: boolean,
   url: string,
-  mixpanelEvent: string,
-  typeform: boolean,
   referralForm: boolean,
   mailchimpForm: boolean,
-};
-
-type FormTypes = {
-  onSubscribe: Function,
-};
-
-const CustomForm = ({ onSubscribe }: FormTypes) => {
-  let email;
-  const submit = () => {
-    Mixpanel.track('A / Subscribed!');
-
-    if (email && email.value && email.value.indexOf('@') > -1) {
-      onSubscribe({
-        EMAIL: email.value,
-      });
-    }
-  };
-
-  return (
-    <div className="hero__form">
-      <input
-        ref={node => {
-          email = node;
-        }}
-        type="email"
-        placeholder="Enter your email"
-      />
-      <br />
-      <Button primary onClick={submit}>
-        Join Waiting List
-      </Button>
-    </div>
-  );
+  activeCampaignForm: boolean,
+  formId: Number,
+  submitEmail: Function,
 };
 
 export default class Hero extends Component<Props> {
   render() {
     const {
       title,
-      titleTwo,
-      subtitle,
-      typeform,
+      subtitleOne,
+      subtitleTwo,
+      btnText,
+      subText,
+      subTextUrl,
+      subTextUrlText,
+      nextPage,
+      nextPageUrl,
+      onClick,
+      externalPage,
+      url,
       referralForm,
       mailchimpForm,
-      url,
+      activeCampaignForm,
+      formId,
+      submitEmail,
     } = this.props;
 
     return (
       <div className="hero">
         <div className="hero__header">
           <h1>{title}</h1>
-          <h1>{titleTwo}</h1>
-          <p>{subtitle}</p>
+          <p className="hero__header_large">{subtitleOne}</p>
+          <p className="hero__header_small">{subtitleTwo}</p>
         </div>
 
-        {typeform && (
-          <div className="hero__typeform">
+        {nextPage && (
+          <div className="hero__nextPage">
+            <ButtonNextPage
+              nextPageUrl={nextPageUrl}
+              onClick={onClick}
+              btnText={btnText}
+            />
+          </div>
+        )}
+
+        {externalPage && (
+          <div className="hero__external">
             <a href={url} target="_blank" rel="noopener noreferrer">
-              <Button onClick={this.goToTypeform}>
-                Become a Product Mentor
-              </Button>
+              <Button onClick={onClick}>{btnText}</Button>
             </a>
           </div>
         )}
 
-        {referralForm && <RefereeInput />}
+        {referralForm && <RefereeInput mixpanelEvent="4. Referral Subscribe" />}
 
         {mailchimpForm && (
-          <MailchimpSubscribe
-            url={url}
-            render={({ subscribe, status, message }) => (
-              <div>
-                {(!status || status === 'error') && (
-                  <CustomForm
-                    status={status}
-                    message={message}
-                    onSubscribe={formData => subscribe(formData)}
-                  />
-                )}
-                {status === 'sending' && (
-                  <div className="hero__form__loading">
-                    <Loading dark />
-                  </div>
-                )}
-                {status === 'error' && (
-                  <p
-                    className="hero__form__error"
-                    // eslint-disable-next-line
-                    dangerouslySetInnerHTML={{ __html: message }}
-                  />
-                )}
-                {status === 'success' && (
-                  <div>
-                    <div className="hero__form__loading">
-                      <Loading dark />
-                    </div>
-                    <iframe
-                      title="Survey"
-                      id="typeform-full"
-                      width="100%"
-                      height="200%"
-                      frameBorder="0"
-                      src="https://productmastery.typeform.com/to/fAD2UV"
-                    ></iframe>
-                  </div>
-                )}
-                {!status && (
-                  <p className="hero__small">
-                    Access to the Public Beta is by invitation only. Request
-                    access today
-                  </p>
-                )}
-              </div>
-            )}
+          <MailchimpForm
+            subText={subText}
+            subTextUrl={subTextUrl}
+            subTextUrlText={subTextUrlText}
           />
+        )}
+
+        {activeCampaignForm && (
+          <ActiveCampaignForm formId={formId} submitEmail={submitEmail} />
         )}
       </div>
     );
   }
 
-  goToTypeform = () => {
-    Mixpanel.track(`A / ${this.props.mixpanelEvent}`);
+  goToSubTextLink = () => {
+    Mixpanel.track('12. / MBA Subtext Link');
   };
 }

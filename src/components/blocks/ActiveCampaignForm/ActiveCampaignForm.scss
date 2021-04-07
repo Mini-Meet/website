@@ -1,0 +1,83 @@
+@import '../../../styles/main';
+
+.activeCampaign {
+  &__form {
+    @include col;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 820px;
+
+    @media (min-width: $screen-sm-min) {
+      @include row;
+      align-items: center;
+    }
+
+    &_content {
+      @include col;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: $screen-sm-min) {
+        @include row;
+      }
+    }
+
+    input {
+      background-color: $white;
+      max-height: 40px;
+      min-width: 242px;
+
+      @media (min-width: $screen-sm-min) {
+        border-radius: 100px 0 0 100px;
+        margin-right: -24px;
+      }
+    }
+
+    button {
+      @include flex;
+      @include margin(left, reset);
+      @include padding(left right, 3);
+      font-size: 11px;
+      text-align: center;
+      min-width: 174px;
+    }
+
+    &__loading,
+    &__error,
+    &__success {
+      @include text;
+      @include padding(top bottom, 1);
+      margin: 0 auto;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    &__error {
+      color: $error;
+    }
+
+    &__success {
+      color: $success;
+    }
+  }
+
+  &__subtext {
+    @include small;
+    @include padding(top, 1);
+    @include padding(bottom, 3);
+    color: transparentize($dark, 0.7);
+
+    a {
+      color: transparentize($dark, 0.7);
+      text-decoration: underline;
+    }
+
+    &_link {
+      font-size: 12px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}

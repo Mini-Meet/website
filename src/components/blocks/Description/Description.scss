@@ -1,0 +1,112 @@
+@import '../../../styles/main';
+
+.description {
+  @include padding(left right, 0);
+  @include background-white;
+  @include col-reverse;
+
+  @media (min-width: $screen-md-min) {
+    @include padding(left right, 2);
+    @include row;
+  }
+
+  &__reverse {
+    @include col;
+
+    @media (min-width: $screen-md-min) {
+      @include row;
+    }
+  }
+
+  &__text {
+    @include col;
+    @include padding(top, 0);
+    @include padding(bottom, 4);
+    @include padding(left right, 0);
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $screen-md-min) {
+      @include padding(bottom, 4);
+      @include padding(top, 4);
+      @include padding(right, 0);
+      @include padding(left, 5);
+      margin: 0 auto;
+      max-width: 600px;
+      width: 50%;
+    }
+
+    &_reverse {
+      @media (min-width: $screen-md-min) {
+        @include padding(left, reset);
+        @include padding(right, 3);
+      }
+    }
+
+    &_header {
+      @include margin(bottom, 0);
+      @include margin(top, 2);
+
+      @media (min-width: $screen-md-min) {
+        @include margin(bottom, 2);
+        @include margin(top, reset);
+      }
+    }
+
+    &_main {
+      @include padding(left right, 0);
+
+      @media (min-width: $screen-md-min) {
+        @include padding(left right, reset);
+      }
+    }
+
+    h3,
+    p {
+      max-width: 480px;
+      text-align: center;
+      width: 100%;
+
+      @media (min-width: $screen-md-min) {
+        text-align: left;
+      }
+    }
+  }
+
+  &__imgblock {
+    @include padding(all, 0);
+    @include col;
+    width: 100%;
+
+    @media (min-width: $screen-md-min) {
+      width: 50%;
+    }
+
+    &_img {
+      margin: 16px auto 0;
+      width: 100%;
+
+      @media (min-width: $screen-sm-min) {
+        margin: 72px auto 32px;
+        width: 100%;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        margin: 72px auto 32px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__button {
+    @include padding(top, 2);
+
+    @media (min-width: $screen-md-min) {
+      @include row;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

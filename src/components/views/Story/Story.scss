@@ -1,0 +1,70 @@
+@import '../../../styles/main';
+
+.storyPage {
+  .header {
+    background-color: $primary-20;
+    position: fixed;
+    width: 100%;
+    height: 88px;
+
+    @media (min-width: $screen-sm-min) {
+      height: 120px;
+    }
+  }
+
+  &__hero {
+    @include margin(bottom, reset);
+    background-color: $primary-20;
+
+    @media (min-width: $screen-sm-min) {
+      @include margin(bottom, 4);
+    }
+
+    h1 {
+      @include padding(top, 6);
+      @include padding(bottom, 4);
+      @include padding(left right, 2);
+      text-align: left;
+
+      @media (min-width: $screen-sm-min) {
+        @include padding(top, 8);
+        @include padding(bottom, 5);
+        @include padding(left, 4);
+        max-width: 840px;
+      }
+    }
+  }
+
+  &__body {
+    margin: 0 auto;
+    max-width: 620px;
+
+    &_img {
+      width: 100%;
+    }
+
+    h3 {
+      @include padding(top, 4);
+      @include padding(bottom, 3);
+      @include padding(left right, 1);
+      text-align: left;
+    }
+
+    p {
+      @include padding(left right, 1);
+    }
+  }
+
+  &__signup {
+    @include padding(top, 4);
+    @include padding(bottom, 6);
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  &__about {
+    font-style: italic;
+  }
+}

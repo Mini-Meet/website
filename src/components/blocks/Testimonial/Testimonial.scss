@@ -1,0 +1,60 @@
+@import '../../../styles/main';
+
+.testimonial {
+  @include background-dark;
+  @include padding(left right, 0);
+  @include padding(top bottom, 2);
+
+  @media (min-width: $screen-md-min) {
+    @include row;
+    @include padding(left right, 6);
+  }
+
+  &__header {
+    @include col;
+    align-items: center;
+
+    @media (min-width: $screen-md-min) {
+      @include row;
+      @include margin(bottom, 2);
+    }
+
+    &_name {
+      @include caption-center;
+      @include padding(top bottom, 1);
+
+      @media (min-width: $screen-md-min) {
+      }
+    }
+
+    &_img {
+      border-radius: 100px;
+      width: 48px;
+
+      @media (min-width: $screen-md-min) {
+        @include margin(right, 1);
+      }
+    }
+  }
+
+  &__text {
+    @include col;
+    @include padding(top bottom, 3);
+    @include padding(left right, 2);
+    align-items: center;
+
+    @media (min-width: $screen-md-min) {
+      align-items: flex-start;
+    }
+
+    &_quote {
+      @include padding(left right, 0);
+    }
+
+    q {
+      @include margin(left right, reset);
+      color: $white;
+      font-size: 20px;
+    }
+  }
+}
