@@ -19,7 +19,8 @@ const facebookEvent = 'Search';
 
 const formId = 1;
 
-const title = 'How Antonia Became A More Confident Product Leader';
+const title =
+  'How Antonia Became A More Confident Product Leader With Prod MBA';
 
 export default class StoryAntonia extends Component {
   componentDidMount() {
