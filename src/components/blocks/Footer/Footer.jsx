@@ -11,6 +11,7 @@ class Footer extends Component {
     const home = this.props.page === 'HOME' ? 'active' : 'inactive';
     const test = this.props.page === 'TEST' ? 'active' : 'inactive';
     // const about = this.props.page === 'ABOUT' ? 'active' : 'inactive';
+    const podcast = this.props.page === 'BLOG' ? 'active' : 'inactive';
     const blog = this.props.page === 'BLOG' ? 'active' : 'inactive';
     // let privacy = this.props.page === 'PRIVACY POLICY' ? 'active' :'inactive'
     const terms =
@@ -38,6 +39,17 @@ class Footer extends Component {
             <Link to="/about" className={terms}>
               About
             </Link>
+          </div>
+          <div className="footer__list_item">
+            <a
+              className={podcast}
+              href="https://events.prod.mba/all-podcast-episodes"
+              onClick={this.goToPodcast}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Podcast
+            </a>
           </div>
           <div className="footer__list_item">
             <a
@@ -83,11 +95,11 @@ class Footer extends Component {
   goToAbout = () => {
     Mixpanel.track('MBA / Footer / About');
   };
-  goToCourses = () => {
-    Mixpanel.track('MBA / Footer / PM101');
+  goToPodcast = () => {
+    Mixpanel.track('MBA / Footer / Podcast');
   };
-  goToPricing = () => {
-    Mixpanel.track('MBA / Footer / Pricing');
+  goToBlog = () => {
+    Mixpanel.track('MBA / Footer / Blog');
   };
   goToBook = () => {
     Mixpanel.track('MBA / Footer / Book');
