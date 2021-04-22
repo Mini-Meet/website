@@ -32,7 +32,7 @@ class Footer extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Product Skills Test
+              How Good Are You At Product?
             </a>
           </div>
           <div className="footer__list_item">
