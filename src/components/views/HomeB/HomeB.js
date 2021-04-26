@@ -706,7 +706,7 @@ const ctaSupportText =
   'Take the free 7-day Mini MBA, as well as get more info on applying to our Jun 2021 cohort:';
 
 const mixpanelEvent = '12.B MBA Submit';
-const facebookEvent = 'Search';
+const facebookEvent = 'StartTrial'; // Search
 
 const formId = 21;
 
