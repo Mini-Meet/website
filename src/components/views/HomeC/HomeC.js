@@ -706,7 +706,7 @@ const ctaSupportText =
   'Take the free 7-day Mini MBA to learn product vision, strategy & customer insight in practice, as well as for info on applying to our Jun 2021 cohort:';
 
 const mixpanelEvent = '12.C MBA Submit';
-const facebookEvent = 'Search';
+const facebookEvent = 'StartTrial'; // Search
 
 const formId = 19;
 

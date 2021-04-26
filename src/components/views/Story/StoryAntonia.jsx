@@ -15,7 +15,7 @@ const ctaSupportText =
   'Try the free 7-day Mini MBA to learn skills to fast-track your product career:';
 
 const mixpanelEvent = '12. Antonia Submit';
-const facebookEvent = 'Search';
+const facebookEvent = 'StartTrial'; // Search
 
 const formId = 1;
 
