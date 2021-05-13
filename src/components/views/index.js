@@ -14,3 +14,5 @@ export { default as Referral } from './Referral/Referral';
 export { default as StoryLuke } from './Story/StoryLuke';
 export { default as StoryRichard } from './Story/StoryRichard';
 export { default as StoryAntonia } from './Story/StoryAntonia';
+export { default as StoryTom } from './Story/StoryTom';
+export { default as StoryElaine } from './Story/StoryElaine';
