@@ -27,6 +27,8 @@ import Register from './components/views/Register/Register';
 import StoryAntonia from './components/views/Story/StoryAntonia';
 import StoryLuke from './components/views/Story/StoryLuke';
 import StoryRichard from './components/views/Story/StoryRichard';
+import StoryTom from './components/views/Story/StoryTom';
+import StoryElaine from './components/views/Story/StoryElaine';
 import AcceptReferral from './components/views/Referral/AcceptReferral';
 
 // Main App layout
@@ -58,6 +60,8 @@ ReactDOM.render(
         <Route path="/story/luke" exact component={StoryLuke} />
         <Route path="/story/richard" exact component={StoryRichard} />
         <Route path="/story/antonia" exact component={StoryAntonia} />
+        <Route path="/story/tom" exact component={StoryTom} />
+        <Route path="/story/elaine" exact component={StoryElaine} />
         <Route
           path="/referrals/accept/:referralLink"
           exact
