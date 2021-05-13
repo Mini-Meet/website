@@ -28,9 +28,9 @@ import {
 import curriculumAssignment from '../../../assets/images/course/curriculum_1a.jpg';
 import curriculum3Steps from '../../../assets/images/course/curriculum_2.jpg';
 import curriculumSchedule from '../../../assets/images/course/curriculum_3.jpg';
+import curriculumExperience from '../../../assets/images/course/curriculum_experience_people.png';
+import curriculumSkills from '../../../assets/images/course/curriculum_skills.png';
 import curriculumOverview from '../../../assets/images/course/curriculum_overview.png';
-import curriculumFeatureFactory from '../../../assets/images/course/curriculum_feature_factory.jpg';
-import curriculumCompetencies from '../../../assets/images/course/four_graph.png';
 import curriculumMoneyback from '../../../assets/images/course/curriculum_moneyback.png';
 
 import testimonialCollage from '../../../assets/images/testimonials/collage.jpg';
@@ -706,7 +706,7 @@ const ctaSupportText =
   'Take the free 7-day Mini MBA to learn product vision, strategy & customer insight in practice, as well as for info on applying to our Jun 2021 cohort:';
 
 const mixpanelEvent = '12.C MBA Submit';
-const facebookEvent = 'StartTrial'; // Search
+const facebookEvent = 'Search'; // Search
 
 const formId = 19;
 
@@ -763,14 +763,15 @@ export default class HomeC extends Component<Props> {
           // />
         }
         <Description
-          header="Become A Confident Product Leader"
+          header="Master The Skills of A Head of Product"
           // e.g. Richard - 9 MVOs - years of work - and cash
           // "Become A 'Product Rainmaker'"
-          description1="Frustrated in your current role? Stuck focused on delivery? Understand the theoory, but unable to prioritise or influence what you work on in practice?"
-          description2="Gain autonomy, purpose & rapid promotion by learning how to build products that deliver massive value for your company."
-          description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10."
+          description1="Don't let your current role hold you back from accelerating your product career."
+          description2="Gain autonomy, purpose & rapid promotion by learning how to build real products that deliver massive value."
+          description3="With the Prod MBA, you will learn - and practice - the 4 Key Competencies of a true product leader, helping you to get there in 1-2 years, rather than 5-10. Get started now:"
           // dollarise this!
-          image={curriculumCompetencies}
+          image={curriculumExperience}
+          imageAltText="The Prod MBA Learning Experience & Bootcamp"
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
@@ -786,12 +787,13 @@ export default class HomeC extends Component<Props> {
         />
         <Description
           reverse
-          header="Stop The Feature Factory"
+          header="Grow Through Real Product Experience"
           // "30% found a new role"
           description1="Escape the repetitive cycle of building an endless list of features that don't really make sense."
-          description2="Learn how to align stakeholders & product teams around a product strategy that makes sense through prioritised, high-value feature experiments."
-          description3="Unlock greater profit & growth with our framework to achieve Product/Market Fit:"
-          image={curriculumFeatureFactory}
+          description2="Learn how to align stakeholders & rally a team around a customer-driven product strategy - and execute with prioritised, high-value feature experiments."
+          description3="Start becoming an effective product leader with our free Mini MBA:"
+          image={curriculumSkills}
+          imageAltText="4 key skills of an effective product manager & product leader"
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
@@ -812,6 +814,7 @@ export default class HomeC extends Component<Props> {
           description2="A Scrum certification or overly-theoretical Udemy course may make you feel like you 'know product', but it won't help you become a product expert."
           description3="The Prod MBA will."
           image={curriculumOverview}
+          imageAltText="How the Prod MBA works"
           // next page button
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
@@ -896,5 +899,6 @@ export default class HomeC extends Component<Props> {
   handleSubmitEmail = () => {
     Mixpanel.track(`${mixpanelEvent}`);
     FacebookPixel.track(`${facebookEvent}`);
+    console.log(`${facebookEvent}`);
   };
 }

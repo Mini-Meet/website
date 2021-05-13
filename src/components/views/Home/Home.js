@@ -709,7 +709,7 @@ const ctaSupportText =
   'Try the free 7-day Mini MBA to learn skills to fast-track your product career:';
 
 const mixpanelEvent = '12. MBA Submit';
-const facebookEvent = 'StartTrial'; // Search
+const facebookEvent = 'Search';
 
 const formId = 1;
 
