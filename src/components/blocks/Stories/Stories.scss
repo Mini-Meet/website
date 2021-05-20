@@ -19,11 +19,16 @@
 }
 
 .story {
-  @include col;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1024px;
   margin: 0 auto;
+  justify-content: center;
 
-  @media (min-width: $screen-sm-min) {
-    @include row;
+  @media screen and (min-width: 800px) {
+    .column {
+      flex: 1;
+    }
   }
 }
