@@ -52,12 +52,13 @@ export default class StoryLuke extends Component {
           <h3>My Career Felt Stuck.</h3>
           <p>
             I was working in product & “innovation”, but we never actually did
-            any innovation. We never even took products to market.
+            real innovation. Most product developments were technically driven,
+            without including customers at all.
           </p>
           <br />
           <p>
             It felt really frustrating to work on ideas that you knew would
-            never deliver any value.
+            never deliver any value to our customers.
           </p>
           <br />
           <p>
@@ -100,9 +101,9 @@ export default class StoryLuke extends Component {
           <br />
           <p>
             - Helping me find my dream role within 6 weeks of deciding it was
-            time to find a new role. (There were also over 100 applicants, all
-            of whom were much older and more qualified than me on paper - there
-            were even a few PhDs I was competing against!)
+            time to find a new role, asserting myself against over 100
+            applicants, with many more experienced and better qualified people
+            on paper, such as PhDs & successful founders.
           </p>
           <br />
           <p>
@@ -113,10 +114,10 @@ export default class StoryLuke extends Component {
           <br />
           <p>
             - Having greater impact with my work. I am THE one who shifts our
-            company’s focus away from solutions and towards customer
-            development. The Prod MBA gave me the confidence that this is always
-            the right approach. I also now understand how to facilitate
-            workshops to align our teams more effectively.
+            company’s focus away from solutions & over-engineering and towards
+            customer development. The Prod MBA gave me the confidence that this
+            is always the right approach. I also now understand how to
+            facilitate workshops to align our teams more effectively.
           </p>
           <br />
           <br />
@@ -130,8 +131,8 @@ export default class StoryLuke extends Component {
             >
               Tom
             </a>{' '}
-            is an experienced innovation manager based in Germany, currently at
-            Lohmann GmbH.
+            is an experienced innovation manager based in Germany, working for a
+            world-market leader in chemistry.
           </p>
           <div className="storyPage__signup">
             <h4 className="curriculum__cta">{ctaHeader}</h4>
