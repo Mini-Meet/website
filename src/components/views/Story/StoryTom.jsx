@@ -124,13 +124,7 @@ export default class StoryLuke extends Component {
           <p>_</p>
           <br />
           <p className="storyPage__about">
-            <a
-              href="https://www.linkedin.com/in/tom-schuemchen/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Tom
-            </a>{' '}
+            <b>Tom&nbsp;</b>
             is an experienced innovation manager based in Germany, working for a
             world-market leader in chemistry.
           </p>
