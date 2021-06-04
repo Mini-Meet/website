@@ -22,13 +22,14 @@
   }
 
   &__logos {
-    background-image: url('../../../assets/images/partners/companies_mobile_small.png');
+    background-image: url('../../../assets/images/partners/companies_mobile.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 340px;
 
-    @media (min-width: $screen-xs-min) {
+    @media (min-width: 424px) {
+      height: 360px;
     }
 
     @media (min-width: $screen-sm-min) {

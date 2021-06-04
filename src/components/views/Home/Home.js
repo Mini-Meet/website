@@ -49,9 +49,9 @@ type Props = {
   //
 };
 
-const launchDate = '7th Jun 2021';
+const launchDate = '4th Oct 2021';
 const noOfParticipants = '20';
-const courseCost = '£1,999';
+const courseCost = '£2,499';
 const fullCourseCost = '£2,999';
 
 const faqTwo = (
@@ -776,6 +776,7 @@ export default class Home extends Component<Props> {
           mixpanelEvent={mixpanelEvent}
           facebookEvent={facebookEvent}
         />
+        <Stats header="Some statistics:" />
         {
           // <Testimonial
           //   name="Richard, Lead Product Manager"
@@ -855,7 +856,6 @@ export default class Home extends Component<Props> {
           img={antonia}
           quote="Can I just say that I love this programme. I know we're only a week in, but this is the most hands-on thing I've ever done."
         />
-        <Stats header="Some statistics:" />
         <Image
           title="Some more love from our students"
           imgDesktop={testimonialCollage}
