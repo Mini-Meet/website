@@ -27,6 +27,7 @@ type Props = {
   subText: string,
   subTextUrl: string,
   subTextUrlText: string,
+  accelerator: boolean,
 };
 
 export default class Description extends Component<Props> {
@@ -51,6 +52,7 @@ export default class Description extends Component<Props> {
       subText,
       subTextUrl,
       subTextUrlText,
+      accelerator,
     } = this.props;
 
     return (
@@ -84,6 +86,7 @@ export default class Description extends Component<Props> {
                     <ActiveCampaignForm
                       formId={formId}
                       submitEmail={submitEmail}
+                      accelerator={accelerator}
                     />
                   )}
                 </div>
@@ -132,7 +135,13 @@ export default class Description extends Component<Props> {
                       subTextUrlText={subTextUrlText}
                     />
                   )}
-                  {activeCampaignForm && <ActiveCampaignForm />}
+                  {activeCampaignForm && (
+                    <ActiveCampaignForm
+                      formId={formId}
+                      submitEmail={submitEmail}
+                      accelerator={accelerator}
+                    />
+                  )}
                 </div>
               </div>
             </div>

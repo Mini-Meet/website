@@ -74,6 +74,10 @@
   }
 }
 
+.heroAccelerator {
+  @include background-accelerator-image;
+}
+
 iframe {
   @include margin(bottom, 5);
   border-bottom: 3200px solid $white;

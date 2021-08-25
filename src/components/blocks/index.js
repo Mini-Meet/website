@@ -12,6 +12,7 @@ export { default as Image } from './Image/Image';
 export { default as MailchimpForm } from './MailchimpForm/MailchimpForm.js';
 export { default as Menu } from './Menu/Menu.js';
 export { default as Mentors } from './Mentors/Mentors';
+export { default as MentorsAccelerator } from './Mentors/MentorsAccelerator';
 export { default as ModalConfirm } from './ModalConfirm/ModalConfirm.js';
 export { default as Newsletter } from './Newsletter/Newsletter.js';
 export { default as OnboardingCards } from './OnboardingCards/OnboardingCards.js';

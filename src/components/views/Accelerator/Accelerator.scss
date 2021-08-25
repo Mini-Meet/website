@@ -1,0 +1,53 @@
+@import '../../../styles/main';
+
+.curriculum {
+  @include col;
+  @include fade-in;
+  @include padding(bottom, 5);
+  @include padding(top, 4);
+  margin: 0 auto;
+  max-width: 620px;
+
+  &__cta {
+    @include padding(top, 4);
+    @include padding(bottom, 0);
+    @include padding(left right, 1);
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  &__small {
+    @include text;
+    @include small;
+    @include padding(bottom, 2);
+  }
+
+  &__main {
+    max-width: 720px;
+
+    &_largeImg {
+      margin-left: -20%;
+      width: 140% !important;
+    }
+
+    img {
+      @include padding(top bottom, 2);
+      width: 100%;
+    }
+
+    p {
+      min-width: 180px;
+    }
+
+    strong,
+    b {
+      color: $dark;
+    }
+
+    a {
+      font-size: 17px;
+    }
+  }
+}

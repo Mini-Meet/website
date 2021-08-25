@@ -11,6 +11,7 @@ import * as serviceWorker from './serviceWorker';
 
 // Components declaration
 import About from './components/views/About/About.js';
+import Accelerator from './components/views/Accelerator/Accelerator.js';
 import Booking from './components/views/Booking/Booking';
 import Casestudy from './components/views/Casestudy/Casestudy.js';
 import Home from './components/views/Home/Home';
@@ -50,6 +51,7 @@ ReactDOM.render(
         <Route path="/about" exact component={About} />
         <Route path="/book-session" exact component={Booking} />
         <Route path="/case-study" exact component={Casestudy} />
+        <Route path="/career-accelerator" exact component={Accelerator} />
         <Route path="/privacy" exact component={Privacy} />
         <Route path="/referee" exact component={Referee} />
         <Route path="/register" exact component={Register} />

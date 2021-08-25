@@ -12,6 +12,13 @@
   background-position: center left;
 }
 
+@mixin background-accelerator-image {
+  @extend %background-base;
+  background-attachment: fixed;
+  background-image: $background-accelerator-image;
+  background-position: center left;
+}
+
 @mixin background-white {
   @extend %background-base;
   background-color: $white;

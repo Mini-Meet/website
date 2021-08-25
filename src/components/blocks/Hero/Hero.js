@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import { FacebookPixel } from '../../../FacebookPixel';
 import { Mixpanel } from '../../../Mixpanel';
 import { MailchimpForm, ActiveCampaignForm, RefereeInput } from '..';
-import { Button, ButtonNextPage } from '../../elements';
+import { Button } from '../../elements';
 import './Hero.scss';
 
 type Props = {
@@ -11,6 +11,7 @@ type Props = {
   subtitleOne: string,
   subtitleTwo: string,
   btnText: string,
+  accelerator: boolean,
   subText: string,
   subTextUrl: string,
   subTextUrlText: string,
@@ -24,6 +25,7 @@ type Props = {
   activeCampaignForm: boolean,
   formId: Number,
   submitEmail: Function,
+  accelerator: boolean,
 };
 
 export default class Hero extends Component<Props> {
@@ -33,11 +35,11 @@ export default class Hero extends Component<Props> {
       subtitleOne,
       subtitleTwo,
       btnText,
+      accelerator,
       subText,
       subTextUrl,
       subTextUrlText,
       nextPage,
-      nextPageUrl,
       onClick,
       externalPage,
       url,
@@ -48,8 +50,10 @@ export default class Hero extends Component<Props> {
       submitEmail,
     } = this.props;
 
+    const heroBackgroundClass = accelerator ? 'hero heroAccelerator' : 'hero';
+
     return (
-      <div className="hero">
+      <div className={heroBackgroundClass}>
         <div className="hero__header">
           <h1>{title}</h1>
           <p className="hero__header_large">{subtitleOne}</p>
@@ -58,11 +62,7 @@ export default class Hero extends Component<Props> {
 
         {nextPage && (
           <div className="hero__nextPage">
-            <ButtonNextPage
-              nextPageUrl={nextPageUrl}
-              onClick={onClick}
-              btnText={btnText}
-            />
+            <Button onClick={onClick}>{btnText}</Button>
           </div>
         )}
 
@@ -85,7 +85,11 @@ export default class Hero extends Component<Props> {
         )}
 
         {activeCampaignForm && (
-          <ActiveCampaignForm formId={formId} submitEmail={submitEmail} />
+          <ActiveCampaignForm
+            formId={formId}
+            submitEmail={submitEmail}
+            accelerator={accelerator}
+          />
         )}
       </div>
     );

@@ -769,6 +769,7 @@ export default class Home extends Component<Props> {
           nextPageUrl={signUpUrl}
           btnText={signUpCTA}
           ctaSupportText={ctaSupportText}
+          ctaHeader="Learn how to join these alumni:"
           onClick={this.goToNextPage}
           subText="By sharing your email, you agree to our "
           subTextUrlText="Terms & Conditions"
@@ -866,7 +867,7 @@ export default class Home extends Component<Props> {
           formId={formId}
           submitEmail={this.handleSubmitEmail}
         />
-        <Mentors />
+        <Mentors headline="Your Mentors" />
         <Testimonial
           name="Stefanos, Product Owner"
           img={stefanos}
