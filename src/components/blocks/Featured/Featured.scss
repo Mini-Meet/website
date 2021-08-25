@@ -43,6 +43,16 @@
     }
   }
 
+  &__accel {
+    background-image: url('../../../assets/images/accelerator/brandsSmall.png');
+    height: 240px;
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url('../../../assets/images/accelerator/brands.png');
+      height: 200px;
+    }
+  }
+
   &__cta {
     @include padding(top, 4);
     color: $dark;

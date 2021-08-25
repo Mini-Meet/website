@@ -59,6 +59,16 @@
   @extend %button;
 }
 
+@mixin primary-accel-button {
+  @extend %button;
+  background-color: $accelerator-primary;
+  box-shadow: 0 4px 8px transparentize($accelerator-primary, 0.7);
+
+  &:hover {
+    box-shadow: 0 6px 12px transparentize($accelerator-primary, 0.8);
+  }
+}
+
 @mixin secondary-button {
   @extend %button;
   @include button-secondary-elevation-flat;

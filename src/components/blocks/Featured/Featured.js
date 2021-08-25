@@ -12,6 +12,7 @@ type Props = {
   onClick: Function,
   buttonNext: boolean,
   ctaSupportText: string,
+  ctaHeader: string,
   //
   activeCampaignForm: boolean,
   formId: Number,
@@ -19,6 +20,7 @@ type Props = {
   subText: string,
   subTextUrl: string,
   subTextUrlText: string,
+  accelerator: boolean,
 };
 
 export default class Featured extends Component<Props> {
@@ -26,21 +28,27 @@ export default class Featured extends Component<Props> {
     const {
       header,
       btnText,
+      accelerator,
       nextPageUrl,
       onClick,
       buttonNext,
       ctaSupportText,
+      ctaHeader,
       //
       activeCampaignForm,
       formId,
       submitEmail,
     } = this.props;
 
+    const featuredLogos = accelerator
+      ? 'featured__logos featured__accel'
+      : 'featured__logos';
+
     return (
       <div className="featured">
         <p className="featured__header">{header}</p>
-        <div className="featured__logos"></div>
-        <h4 className="featured__cta">Learn how to join these alumni:</h4>
+        <div className={featuredLogos}></div>
+        <h4 className="featured__cta">{ctaHeader}</h4>
         <p className="featured__small">{ctaSupportText}</p>
         <div className="featured__button">
           {buttonNext && (
@@ -51,7 +59,11 @@ export default class Featured extends Component<Props> {
             />
           )}
           {activeCampaignForm && (
-            <ActiveCampaignForm formId={formId} submitEmail={submitEmail} />
+            <ActiveCampaignForm
+              formId={formId}
+              submitEmail={submitEmail}
+              accelerator={accelerator}
+            />
           )}
         </div>
       </div>

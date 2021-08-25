@@ -1,5 +1,6 @@
 // Elements definition (ASC order)
 export { default as About } from './About/About';
+export { default as Accelerator } from './Accelerator/Accelerator';
 export { default as Booking } from './Booking/Booking';
 export { default as Casestudy } from './Casestudy/Casestudy.js';
 export { default as Home } from './Home/Home';

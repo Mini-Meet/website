@@ -21,3 +21,9 @@
 .quarternary {
   @include quarternary-button;
 }
+
+.accelerator {
+  @include primary-button;
+  min-height: 48px;
+  @include primary-accel-button;
+}

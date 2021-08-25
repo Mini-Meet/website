@@ -10,6 +10,7 @@ import './ActiveCampaignForm.scss';
 type Props = {
   formId: Number,
   submitEmail: Function,
+  accelerator: boolean,
 };
 
 export default class ActiveCampaignForm extends Component<Props> {
@@ -23,7 +24,7 @@ export default class ActiveCampaignForm extends Component<Props> {
     const ACTIVE_CAMPAIGN_FORM_ACTION_URL =
       'https://productmastery.activehosted.com/proc.php?';
 
-    const { formId, submitEmail } = this.props;
+    const { formId, submitEmail, accelerator } = this.props;
     // const formId = 1;
 
     return (
@@ -55,14 +56,27 @@ export default class ActiveCampaignForm extends Component<Props> {
               </div>
             </div>
             <div className="_button-wrapper">
-              <Button
-                id="_form_newsletter_submit"
-                className="_submit"
-                type="submit"
-                onClick={submitEmail}
-              >
-                GET MINI MBA
-              </Button>
+              {accelerator && (
+                <Button
+                  id="_form_newsletter_submit"
+                  className="_submit"
+                  accelerator="accelerator"
+                  type="submit"
+                  onClick={submitEmail}
+                >
+                  UNLOCK SECRETS
+                </Button>
+              )}
+              {!accelerator && (
+                <Button
+                  id="_form_newsletter_submit"
+                  className="_submit"
+                  type="submit"
+                  onClick={submitEmail}
+                >
+                  GET MINI MBA
+                </Button>
+              )}
             </div>
             <div className="_clear-element"></div>
           </div>

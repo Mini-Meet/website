@@ -13,6 +13,7 @@ type Props = {
   submitEmail: Function,
   ctaHeader: string,
   ctaSupportText: string,
+  accelerator: boolean,
 };
 
 export default class Card extends Component<Props> {
@@ -26,6 +27,7 @@ export default class Card extends Component<Props> {
       submitEmail,
       ctaSupportText,
       ctaHeader,
+      accelerator,
     } = this.props;
 
     return (
@@ -39,7 +41,11 @@ export default class Card extends Component<Props> {
           <div className="imgFullWidth__cta">
             <h4 className="curriculum__cta">{ctaHeader}</h4>
             <p className="curriculum__small">{ctaSupportText}</p>
-            <ActiveCampaignForm formId={formId} submitEmail={submitEmail} />
+            <ActiveCampaignForm
+              formId={formId}
+              submitEmail={submitEmail}
+              accelerator={accelerator}
+            />
           </div>
         )}
       </div>
