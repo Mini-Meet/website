@@ -159,9 +159,8 @@ export default class StoryAntonia extends Component {
             >
               Antonia
             </a>{' '}
-            has worked in product for 5 years & is now founder at Project Eva,
-            Senior PM in Prod Ops at AVIV & leader of the Prod MBA Women{"'"}s
-            Circle
+            has worked in product for 5 years & is leader of the Prod MBA Women
+            {"'"}s Circle
           </p>
           <div className="storyPage__signup">
             <h4 className="curriculum__cta">{ctaHeader}</h4>
